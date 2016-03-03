@@ -7,6 +7,6 @@
 	<key>version</key>
 	<integer>10</integer>
 	<key>dbname</key>
-	<string>depa.db</string>
+	<string>gauss.db</string>
 </dict>
 </plist>
