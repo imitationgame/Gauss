@@ -14,7 +14,6 @@
 		DAD676241C88BD6D00AC41FD /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675E01C88BD6D00AC41FD /* defs.plist */; };
 		DAD676251C88BD6D00AC41FD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD675E11C88BD6D00AC41FD /* Localizable.strings */; };
 		DAD676261C88BD6D00AC41FD /* appdel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD675E71C88BD6D00AC41FD /* appdel.m */; };
-		DAD676271C88BD6D00AC41FD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675E81C88BD6D00AC41FD /* Info.plist */; };
 		DAD676281C88BD6D00AC41FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD675E91C88BD6D00AC41FD /* main.m */; };
 		DAD676291C88BD6D00AC41FD /* analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD675EC1C88BD6D00AC41FD /* analytics.m */; };
 		DAD6762A1C88BD6D00AC41FD /* tools.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD675F01C88BD6D00AC41FD /* tools.m */; };
@@ -408,7 +407,6 @@
 			files = (
 				DAD676251C88BD6D00AC41FD /* Localizable.strings in Resources */,
 				DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */,
-				DAD676271C88BD6D00AC41FD /* Info.plist in Resources */,
 				DAD676211C88BD6D00AC41FD /* gauss.db in Resources */,
 				DAD676241C88BD6D00AC41FD /* defs.plist in Resources */,
 				DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */,
@@ -589,7 +587,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F43EDE9F8684A076E74D99C /* Pods-Gauss.debug.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = Gauss/Info.plist;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/Gauss/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -604,7 +603,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1041ABD466E7E956A4BCCEC7 /* Pods-Gauss.release.xcconfig */;
 			buildSettings = {
-				INFOPLIST_FILE = Gauss/Info.plist;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "$(SRCROOT)/Gauss/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
