@@ -1,6 +1,6 @@
 # Xcode
 #
-gauss/sourceteq/private/**
+Gauss/sourceteq/private/**
 #
 build/
 *.pbxuser
