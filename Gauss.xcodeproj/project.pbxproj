@@ -36,6 +36,8 @@
 /* Begin PBXFileReference section */
 		1041ABD466E7E956A4BCCEC7 /* Pods-Gauss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gauss.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gauss/Pods-Gauss.release.xcconfig"; sourceTree = "<group>"; };
 		3F43EDE9F8684A076E74D99C /* Pods-Gauss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gauss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gauss/Pods-Gauss.debug.xcconfig"; sourceTree = "<group>"; };
+		DA2A09B51C88C385003A19F6 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
+		DA2A09B61C88C385003A19F6 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA40FBB01C88A4F5009B974B /* Gauss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD675DC1C88BD6D00AC41FD /* gauss.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gauss.db; sourceTree = "<group>"; };
 		DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imateq.xcassets; sourceTree = "<group>"; };
@@ -118,6 +120,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DA2A09B41C88C385003A19F6 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				DA2A09B51C88C385003A19F6 /* private.h */,
+				DA2A09B61C88C385003A19F6 /* privateconstants.h */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
 		DA40FBA71C88A4F5009B974B = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +179,7 @@
 		DAD675E41C88BD6D00AC41FD /* sourceteq */ = {
 			isa = PBXGroup;
 			children = (
+				DA2A09B41C88C385003A19F6 /* private */,
 				DAD675E51C88BD6D00AC41FD /* core */,
 				DAD675EA1C88BD6D00AC41FD /* generic */,
 				DAD675F31C88BD6D00AC41FD /* lib */,
