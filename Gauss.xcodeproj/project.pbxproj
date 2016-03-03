@@ -21,16 +21,15 @@
 		DAD6762C1C88BD6D00AC41FD /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD675F81C88BD6D00AC41FD /* libdb.a */; };
 		DAD6762D1C88BD6D00AC41FD /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD675F91C88BD6D00AC41FD /* libtimerbg.a */; };
 		DAD6762E1C88BD6D00AC41FD /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD675FF1C88BD6D00AC41FD /* cmain.m */; };
-		DAD6762F1C88BD6D00AC41FD /* cpages.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD676021C88BD6D00AC41FD /* cpages.m */; };
 		DAD676301C88BD6D00AC41FD /* mdb.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD676061C88BD6D00AC41FD /* mdb.m */; };
 		DAD676311C88BD6D00AC41FD /* mdbcreate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD676081C88BD6D00AC41FD /* mdbcreate.m */; };
-		DAD676321C88BD6D00AC41FD /* mdbitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6760A1C88BD6D00AC41FD /* mdbitem.m */; };
 		DAD676331C88BD6D00AC41FD /* mdirs.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6760D1C88BD6D00AC41FD /* mdirs.m */; };
 		DAD676341C88BD6D00AC41FD /* msettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD676111C88BD6D00AC41FD /* msettings.m */; };
-		DAD676351C88BD6D00AC41FD /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD676181C88BD6D00AC41FD /* valert.m */; };
 		DAD676361C88BD6D00AC41FD /* vblur.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6761B1C88BD6D00AC41FD /* vblur.m */; };
 		DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6761D1C88BD6D00AC41FD /* viewbase.m */; };
 		DAD676381C88BD6D00AC41FD /* vspinner.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6761F1C88BD6D00AC41FD /* vspinner.m */; };
+		DAD6763B1C88BE5E00AC41FD /* cpages.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6763A1C88BE5E00AC41FD /* cpages.m */; };
+		DAD6763E1C88BE9F00AC41FD /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6763D1C88BE9F00AC41FD /* valert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,14 +59,10 @@
 		DAD675FC1C88BD6D00AC41FD /* c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
 		DAD675FE1C88BD6D00AC41FD /* cmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmain.h; sourceTree = "<group>"; };
 		DAD675FF1C88BD6D00AC41FD /* cmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmain.m; sourceTree = "<group>"; };
-		DAD676011C88BD6D00AC41FD /* cpages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpages.h; sourceTree = "<group>"; };
-		DAD676021C88BD6D00AC41FD /* cpages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cpages.m; sourceTree = "<group>"; };
 		DAD676051C88BD6D00AC41FD /* mdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdb.h; sourceTree = "<group>"; };
 		DAD676061C88BD6D00AC41FD /* mdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdb.m; sourceTree = "<group>"; };
 		DAD676071C88BD6D00AC41FD /* mdbcreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdbcreate.h; sourceTree = "<group>"; };
 		DAD676081C88BD6D00AC41FD /* mdbcreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdbcreate.m; sourceTree = "<group>"; };
-		DAD676091C88BD6D00AC41FD /* mdbitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdbitem.h; sourceTree = "<group>"; };
-		DAD6760A1C88BD6D00AC41FD /* mdbitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdbitem.m; sourceTree = "<group>"; };
 		DAD6760C1C88BD6D00AC41FD /* mdirs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdirs.h; sourceTree = "<group>"; };
 		DAD6760D1C88BD6D00AC41FD /* mdirs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdirs.m; sourceTree = "<group>"; };
 		DAD6760F1C88BD6D00AC41FD /* mgeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgeneral.h; sourceTree = "<group>"; };
@@ -75,8 +70,6 @@
 		DAD676111C88BD6D00AC41FD /* msettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msettings.m; sourceTree = "<group>"; };
 		DAD676121C88BD6D00AC41FD /* m.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m.h; sourceTree = "<group>"; };
 		DAD676141C88BD6D00AC41FD /* s.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s.h; sourceTree = "<group>"; };
-		DAD676171C88BD6D00AC41FD /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
-		DAD676181C88BD6D00AC41FD /* valert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = valert.m; sourceTree = "<group>"; };
 		DAD6761A1C88BD6D00AC41FD /* vblur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vblur.h; sourceTree = "<group>"; };
 		DAD6761B1C88BD6D00AC41FD /* vblur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vblur.m; sourceTree = "<group>"; };
 		DAD6761C1C88BD6D00AC41FD /* viewbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewbase.h; sourceTree = "<group>"; };
@@ -84,6 +77,10 @@
 		DAD6761E1C88BD6D00AC41FD /* vspinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vspinner.h; sourceTree = "<group>"; };
 		DAD6761F1C88BD6D00AC41FD /* vspinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vspinner.m; sourceTree = "<group>"; };
 		DAD676201C88BD6D00AC41FD /* v.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
+		DAD676391C88BE5E00AC41FD /* cpages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpages.h; sourceTree = "<group>"; };
+		DAD6763A1C88BE5E00AC41FD /* cpages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cpages.m; sourceTree = "<group>"; };
+		DAD6763C1C88BE9F00AC41FD /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
+		DAD6763D1C88BE9F00AC41FD /* valert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = valert.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,7 +221,6 @@
 			children = (
 				DAD675FC1C88BD6D00AC41FD /* c.h */,
 				DAD675FD1C88BD6D00AC41FD /* main */,
-				DAD676001C88BD6D00AC41FD /* pages */,
 			);
 			path = c;
 			sourceTree = "<group>";
@@ -232,19 +228,12 @@
 		DAD675FD1C88BD6D00AC41FD /* main */ = {
 			isa = PBXGroup;
 			children = (
+				DAD676391C88BE5E00AC41FD /* cpages.h */,
+				DAD6763A1C88BE5E00AC41FD /* cpages.m */,
 				DAD675FE1C88BD6D00AC41FD /* cmain.h */,
 				DAD675FF1C88BD6D00AC41FD /* cmain.m */,
 			);
 			path = main;
-			sourceTree = "<group>";
-		};
-		DAD676001C88BD6D00AC41FD /* pages */ = {
-			isa = PBXGroup;
-			children = (
-				DAD676011C88BD6D00AC41FD /* cpages.h */,
-				DAD676021C88BD6D00AC41FD /* cpages.m */,
-			);
-			path = pages;
 			sourceTree = "<group>";
 		};
 		DAD676031C88BD6D00AC41FD /* m */ = {
@@ -265,8 +254,6 @@
 				DAD676061C88BD6D00AC41FD /* mdb.m */,
 				DAD676071C88BD6D00AC41FD /* mdbcreate.h */,
 				DAD676081C88BD6D00AC41FD /* mdbcreate.m */,
-				DAD676091C88BD6D00AC41FD /* mdbitem.h */,
-				DAD6760A1C88BD6D00AC41FD /* mdbitem.m */,
 			);
 			path = db;
 			sourceTree = "<group>";
@@ -301,25 +288,17 @@
 		DAD676151C88BD6D00AC41FD /* v */ = {
 			isa = PBXGroup;
 			children = (
-				DAD676161C88BD6D00AC41FD /* alert */,
 				DAD676191C88BD6D00AC41FD /* general */,
 				DAD676201C88BD6D00AC41FD /* v.h */,
 			);
 			path = v;
 			sourceTree = "<group>";
 		};
-		DAD676161C88BD6D00AC41FD /* alert */ = {
-			isa = PBXGroup;
-			children = (
-				DAD676171C88BD6D00AC41FD /* valert.h */,
-				DAD676181C88BD6D00AC41FD /* valert.m */,
-			);
-			path = alert;
-			sourceTree = "<group>";
-		};
 		DAD676191C88BD6D00AC41FD /* general */ = {
 			isa = PBXGroup;
 			children = (
+				DAD6763C1C88BE9F00AC41FD /* valert.h */,
+				DAD6763D1C88BE9F00AC41FD /* valert.m */,
 				DAD6761A1C88BD6D00AC41FD /* vblur.h */,
 				DAD6761B1C88BD6D00AC41FD /* vblur.m */,
 				DAD6761C1C88BD6D00AC41FD /* viewbase.h */,
@@ -405,18 +384,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAD676341C88BD6D00AC41FD /* msettings.m in Sources */,
-				DAD676321C88BD6D00AC41FD /* mdbitem.m in Sources */,
+				DAD6763E1C88BE9F00AC41FD /* valert.m in Sources */,
 				DAD6762E1C88BD6D00AC41FD /* cmain.m in Sources */,
 				DAD676281C88BD6D00AC41FD /* main.m in Sources */,
-				DAD6762F1C88BD6D00AC41FD /* cpages.m in Sources */,
 				DAD676361C88BD6D00AC41FD /* vblur.m in Sources */,
 				DAD676301C88BD6D00AC41FD /* mdb.m in Sources */,
+				DAD6763B1C88BE5E00AC41FD /* cpages.m in Sources */,
 				DAD676261C88BD6D00AC41FD /* appdel.m in Sources */,
 				DAD676331C88BD6D00AC41FD /* mdirs.m in Sources */,
 				DAD676311C88BD6D00AC41FD /* mdbcreate.m in Sources */,
 				DAD676381C88BD6D00AC41FD /* vspinner.m in Sources */,
 				DAD676291C88BD6D00AC41FD /* analytics.m in Sources */,
-				DAD676351C88BD6D00AC41FD /* valert.m in Sources */,
 				DAD6762A1C88BD6D00AC41FD /* tools.m in Sources */,
 				DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */,
 				DAD6762B1C88BD6D00AC41FD /* updater.m in Sources */,
