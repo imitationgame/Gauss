@@ -15,7 +15,7 @@
 {
     cpages *pages = [[cpages alloc] init];
     self.pages = pages;
-    self = [super initWithRootViewController:[[cstats alloc] init]];
+    self = [super initWithRootViewController:pages];
     
     return self;
 }

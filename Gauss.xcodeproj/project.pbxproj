@@ -11,6 +11,8 @@
 		DA2A09B81C88D022003A19F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2A09B71C88D022003A19F6 /* Images.xcassets */; };
 		DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BB1C88DA99003A19F6 /* cstats.m */; };
 		DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BF1C88DAD0003A19F6 /* vstats.m */; };
+		DA2A09C41C88E3C6003A19F6 /* cplay.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09C31C88E3C6003A19F6 /* cplay.m */; };
+		DA2A09C71C88E4A8003A19F6 /* cplayitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09C61C88E4A8003A19F6 /* cplayitem.m */; };
 		DAD676211C88BD6D00AC41FD /* gauss.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DC1C88BD6D00AC41FD /* gauss.db */; };
 		DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */; };
 		DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DF1C88BD6D00AC41FD /* analytics.plist */; };
@@ -45,6 +47,10 @@
 		DA2A09BB1C88DA99003A19F6 /* cstats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cstats.m; sourceTree = "<group>"; };
 		DA2A09BE1C88DAD0003A19F6 /* vstats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstats.h; sourceTree = "<group>"; };
 		DA2A09BF1C88DAD0003A19F6 /* vstats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstats.m; sourceTree = "<group>"; };
+		DA2A09C21C88E3C6003A19F6 /* cplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cplay.h; sourceTree = "<group>"; };
+		DA2A09C31C88E3C6003A19F6 /* cplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cplay.m; sourceTree = "<group>"; };
+		DA2A09C51C88E4A8003A19F6 /* cplayitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cplayitem.h; sourceTree = "<group>"; };
+		DA2A09C61C88E4A8003A19F6 /* cplayitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cplayitem.m; sourceTree = "<group>"; };
 		DA40FBB01C88A4F5009B974B /* Gauss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD675DC1C88BD6D00AC41FD /* gauss.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gauss.db; sourceTree = "<group>"; };
 		DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imateq.xcassets; sourceTree = "<group>"; };
@@ -152,6 +158,17 @@
 				DA2A09BF1C88DAD0003A19F6 /* vstats.m */,
 			);
 			path = stats;
+			sourceTree = "<group>";
+		};
+		DA2A09C11C88E3BB003A19F6 /* play */ = {
+			isa = PBXGroup;
+			children = (
+				DA2A09C21C88E3C6003A19F6 /* cplay.h */,
+				DA2A09C31C88E3C6003A19F6 /* cplay.m */,
+				DA2A09C51C88E4A8003A19F6 /* cplayitem.h */,
+				DA2A09C61C88E4A8003A19F6 /* cplayitem.m */,
+			);
+			path = play;
 			sourceTree = "<group>";
 		};
 		DA40FBA71C88A4F5009B974B = {
@@ -282,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD675FC1C88BD6D00AC41FD /* c.h */,
+				DA2A09C11C88E3BB003A19F6 /* play */,
 				DA2A09B91C88DA84003A19F6 /* stats */,
 				DAD675FD1C88BD6D00AC41FD /* main */,
 			);
@@ -506,6 +524,7 @@
 				DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */,
 				DAD676301C88BD6D00AC41FD /* mdb.m in Sources */,
 				DAD6763B1C88BE5E00AC41FD /* cpages.m in Sources */,
+				DA2A09C71C88E4A8003A19F6 /* cplayitem.m in Sources */,
 				DAD676261C88BD6D00AC41FD /* appdel.m in Sources */,
 				DAD676331C88BD6D00AC41FD /* mdirs.m in Sources */,
 				DAD676311C88BD6D00AC41FD /* mdbcreate.m in Sources */,
@@ -513,6 +532,7 @@
 				DAD676291C88BD6D00AC41FD /* analytics.m in Sources */,
 				DAD6762A1C88BD6D00AC41FD /* tools.m in Sources */,
 				DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */,
+				DA2A09C41C88E3C6003A19F6 /* cplay.m in Sources */,
 				DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */,
 				DAD6762B1C88BD6D00AC41FD /* updater.m in Sources */,
 			);
