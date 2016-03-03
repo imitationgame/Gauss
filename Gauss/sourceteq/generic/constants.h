@@ -14,20 +14,6 @@
 #define footerid                @"footer"
 #define headerid                @"header"
 
-// sizes
-
-#define deltaline               300
-#define coorddelta              1000000.0
-
-// notifications
-
-#define notflowschanged         @"flowschanged"
-#define notflowsreload          @"flowsreload"
-#define notimageloaded          @"imageloaded"
-#define notloclistitemfetched   @"loclistitemfetched"
-#define notitemsloaded          @"itemsloaded"
-#define notlikedloaded          @"likedloaded"
-
 // extra
 
 #define stringdrawing           NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin
