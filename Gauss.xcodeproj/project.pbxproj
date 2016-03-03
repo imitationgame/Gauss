@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B642C6369DAE6F51A02864A5 /* libPods-Gauss.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F731575245052EA2617E6541 /* libPods-Gauss.a */; };
+		DA2A09B81C88D022003A19F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2A09B71C88D022003A19F6 /* Images.xcassets */; };
 		DAD676211C88BD6D00AC41FD /* gauss.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DC1C88BD6D00AC41FD /* gauss.db */; };
 		DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */; };
 		DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DF1C88BD6D00AC41FD /* analytics.plist */; };
@@ -37,6 +38,7 @@
 		3F43EDE9F8684A076E74D99C /* Pods-Gauss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gauss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gauss/Pods-Gauss.debug.xcconfig"; sourceTree = "<group>"; };
 		DA2A09B51C88C385003A19F6 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA2A09B61C88C385003A19F6 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
+		DA2A09B71C88D022003A19F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA40FBB01C88A4F5009B974B /* Gauss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD675DC1C88BD6D00AC41FD /* gauss.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gauss.db; sourceTree = "<group>"; };
 		DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imateq.xcassets; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */,
 				DAD675DE1C88BD6D00AC41FD /* langteq */,
 				DAD675E41C88BD6D00AC41FD /* sourceteq */,
+				DA2A09B71C88D022003A19F6 /* Images.xcassets */,
 			);
 			path = Gauss;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				DAD676251C88BD6D00AC41FD /* Localizable.strings in Resources */,
 				DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */,
 				DAD676211C88BD6D00AC41FD /* gauss.db in Resources */,
+				DA2A09B81C88D022003A19F6 /* Images.xcassets in Resources */,
 				DAD676241C88BD6D00AC41FD /* defs.plist in Resources */,
 				DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */,
 			);
@@ -587,6 +591,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F43EDE9F8684A076E74D99C /* Pods-Gauss.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Gauss/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -604,6 +610,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1041ABD466E7E956A4BCCEC7 /* Pods-Gauss.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Gauss/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
