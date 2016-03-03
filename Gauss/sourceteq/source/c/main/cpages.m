@@ -33,6 +33,7 @@
 }
 
 #pragma mark actions
+
 #pragma mark functionality
 
 -(void)changecontroller:(UIViewController*)controller direction:(UIPageViewControllerNavigationDirection)direction animated:(BOOL)animated
