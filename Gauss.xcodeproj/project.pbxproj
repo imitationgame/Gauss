@@ -6,8 +6,84 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DAD676211C88BD6D00AC41FD /* gauss.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DC1C88BD6D00AC41FD /* gauss.db */; };
+		DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */; };
+		DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DF1C88BD6D00AC41FD /* analytics.plist */; };
+		DAD676241C88BD6D00AC41FD /* defs.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675E01C88BD6D00AC41FD /* defs.plist */; };
+		DAD676251C88BD6D00AC41FD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAD675E11C88BD6D00AC41FD /* Localizable.strings */; };
+		DAD676261C88BD6D00AC41FD /* appdel.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD675E71C88BD6D00AC41FD /* appdel.m */; };
+		DAD676271C88BD6D00AC41FD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675E81C88BD6D00AC41FD /* Info.plist */; };
+		DAD676281C88BD6D00AC41FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD675E91C88BD6D00AC41FD /* main.m */; };
+		DAD676291C88BD6D00AC41FD /* analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD675EC1C88BD6D00AC41FD /* analytics.m */; };
+		DAD6762A1C88BD6D00AC41FD /* tools.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD675F01C88BD6D00AC41FD /* tools.m */; };
+		DAD6762B1C88BD6D00AC41FD /* updater.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD675F21C88BD6D00AC41FD /* updater.m */; };
+		DAD6762C1C88BD6D00AC41FD /* libdb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD675F81C88BD6D00AC41FD /* libdb.a */; };
+		DAD6762D1C88BD6D00AC41FD /* libtimerbg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAD675F91C88BD6D00AC41FD /* libtimerbg.a */; };
+		DAD6762E1C88BD6D00AC41FD /* cmain.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD675FF1C88BD6D00AC41FD /* cmain.m */; };
+		DAD6762F1C88BD6D00AC41FD /* cpages.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD676021C88BD6D00AC41FD /* cpages.m */; };
+		DAD676301C88BD6D00AC41FD /* mdb.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD676061C88BD6D00AC41FD /* mdb.m */; };
+		DAD676311C88BD6D00AC41FD /* mdbcreate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD676081C88BD6D00AC41FD /* mdbcreate.m */; };
+		DAD676321C88BD6D00AC41FD /* mdbitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6760A1C88BD6D00AC41FD /* mdbitem.m */; };
+		DAD676331C88BD6D00AC41FD /* mdirs.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6760D1C88BD6D00AC41FD /* mdirs.m */; };
+		DAD676341C88BD6D00AC41FD /* msettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD676111C88BD6D00AC41FD /* msettings.m */; };
+		DAD676351C88BD6D00AC41FD /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD676181C88BD6D00AC41FD /* valert.m */; };
+		DAD676361C88BD6D00AC41FD /* vblur.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6761B1C88BD6D00AC41FD /* vblur.m */; };
+		DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6761D1C88BD6D00AC41FD /* viewbase.m */; };
+		DAD676381C88BD6D00AC41FD /* vspinner.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6761F1C88BD6D00AC41FD /* vspinner.m */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DA40FBB01C88A4F5009B974B /* Gauss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauss.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAD675DC1C88BD6D00AC41FD /* gauss.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gauss.db; sourceTree = "<group>"; };
+		DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imateq.xcassets; sourceTree = "<group>"; };
+		DAD675DF1C88BD6D00AC41FD /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
+		DAD675E01C88BD6D00AC41FD /* defs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defs.plist; sourceTree = "<group>"; };
+		DAD675E21C88BD6D00AC41FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DAD675E31C88BD6D00AC41FD /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DAD675E61C88BD6D00AC41FD /* appdel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appdel.h; sourceTree = "<group>"; };
+		DAD675E71C88BD6D00AC41FD /* appdel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = appdel.m; sourceTree = "<group>"; };
+		DAD675E81C88BD6D00AC41FD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAD675E91C88BD6D00AC41FD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAD675EB1C88BD6D00AC41FD /* analytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = analytics.h; sourceTree = "<group>"; };
+		DAD675EC1C88BD6D00AC41FD /* analytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = analytics.m; sourceTree = "<group>"; };
+		DAD675ED1C88BD6D00AC41FD /* constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
+		DAD675EE1C88BD6D00AC41FD /* generic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = generic.h; sourceTree = "<group>"; };
+		DAD675EF1C88BD6D00AC41FD /* tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tools.h; sourceTree = "<group>"; };
+		DAD675F01C88BD6D00AC41FD /* tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tools.m; sourceTree = "<group>"; };
+		DAD675F11C88BD6D00AC41FD /* updater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = updater.h; sourceTree = "<group>"; };
+		DAD675F21C88BD6D00AC41FD /* updater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = updater.m; sourceTree = "<group>"; };
+		DAD675F51C88BD6D00AC41FD /* db.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = db.h; sourceTree = "<group>"; };
+		DAD675F71C88BD6D00AC41FD /* timerbg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timerbg.h; sourceTree = "<group>"; };
+		DAD675F81C88BD6D00AC41FD /* libdb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdb.a; sourceTree = "<group>"; };
+		DAD675F91C88BD6D00AC41FD /* libtimerbg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtimerbg.a; sourceTree = "<group>"; };
+		DAD675FC1C88BD6D00AC41FD /* c.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = c.h; sourceTree = "<group>"; };
+		DAD675FE1C88BD6D00AC41FD /* cmain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cmain.h; sourceTree = "<group>"; };
+		DAD675FF1C88BD6D00AC41FD /* cmain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cmain.m; sourceTree = "<group>"; };
+		DAD676011C88BD6D00AC41FD /* cpages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpages.h; sourceTree = "<group>"; };
+		DAD676021C88BD6D00AC41FD /* cpages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cpages.m; sourceTree = "<group>"; };
+		DAD676051C88BD6D00AC41FD /* mdb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdb.h; sourceTree = "<group>"; };
+		DAD676061C88BD6D00AC41FD /* mdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdb.m; sourceTree = "<group>"; };
+		DAD676071C88BD6D00AC41FD /* mdbcreate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdbcreate.h; sourceTree = "<group>"; };
+		DAD676081C88BD6D00AC41FD /* mdbcreate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdbcreate.m; sourceTree = "<group>"; };
+		DAD676091C88BD6D00AC41FD /* mdbitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdbitem.h; sourceTree = "<group>"; };
+		DAD6760A1C88BD6D00AC41FD /* mdbitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdbitem.m; sourceTree = "<group>"; };
+		DAD6760C1C88BD6D00AC41FD /* mdirs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mdirs.h; sourceTree = "<group>"; };
+		DAD6760D1C88BD6D00AC41FD /* mdirs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mdirs.m; sourceTree = "<group>"; };
+		DAD6760F1C88BD6D00AC41FD /* mgeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mgeneral.h; sourceTree = "<group>"; };
+		DAD676101C88BD6D00AC41FD /* msettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msettings.h; sourceTree = "<group>"; };
+		DAD676111C88BD6D00AC41FD /* msettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msettings.m; sourceTree = "<group>"; };
+		DAD676121C88BD6D00AC41FD /* m.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = m.h; sourceTree = "<group>"; };
+		DAD676141C88BD6D00AC41FD /* s.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = s.h; sourceTree = "<group>"; };
+		DAD676171C88BD6D00AC41FD /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
+		DAD676181C88BD6D00AC41FD /* valert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = valert.m; sourceTree = "<group>"; };
+		DAD6761A1C88BD6D00AC41FD /* vblur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vblur.h; sourceTree = "<group>"; };
+		DAD6761B1C88BD6D00AC41FD /* vblur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vblur.m; sourceTree = "<group>"; };
+		DAD6761C1C88BD6D00AC41FD /* viewbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = viewbase.h; sourceTree = "<group>"; };
+		DAD6761D1C88BD6D00AC41FD /* viewbase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = viewbase.m; sourceTree = "<group>"; };
+		DAD6761E1C88BD6D00AC41FD /* vspinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vspinner.h; sourceTree = "<group>"; };
+		DAD6761F1C88BD6D00AC41FD /* vspinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vspinner.m; sourceTree = "<group>"; };
+		DAD676201C88BD6D00AC41FD /* v.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = v.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -15,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD6762D1C88BD6D00AC41FD /* libtimerbg.a in Frameworks */,
+				DAD6762C1C88BD6D00AC41FD /* libdb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +118,216 @@
 		DA40FBB21C88A4F5009B974B /* Gauss */ = {
 			isa = PBXGroup;
 			children = (
+				DAD675DB1C88BD6D00AC41FD /* db */,
+				DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */,
+				DAD675DE1C88BD6D00AC41FD /* langteq */,
+				DAD675E41C88BD6D00AC41FD /* sourceteq */,
 			);
 			path = Gauss;
+			sourceTree = "<group>";
+		};
+		DAD675DB1C88BD6D00AC41FD /* db */ = {
+			isa = PBXGroup;
+			children = (
+				DAD675DC1C88BD6D00AC41FD /* gauss.db */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		DAD675DE1C88BD6D00AC41FD /* langteq */ = {
+			isa = PBXGroup;
+			children = (
+				DAD675DF1C88BD6D00AC41FD /* analytics.plist */,
+				DAD675E01C88BD6D00AC41FD /* defs.plist */,
+				DAD675E11C88BD6D00AC41FD /* Localizable.strings */,
+			);
+			path = langteq;
+			sourceTree = "<group>";
+		};
+		DAD675E41C88BD6D00AC41FD /* sourceteq */ = {
+			isa = PBXGroup;
+			children = (
+				DAD675E51C88BD6D00AC41FD /* core */,
+				DAD675EA1C88BD6D00AC41FD /* generic */,
+				DAD675F31C88BD6D00AC41FD /* lib */,
+				DAD675F81C88BD6D00AC41FD /* libdb.a */,
+				DAD675F91C88BD6D00AC41FD /* libtimerbg.a */,
+				DAD675FA1C88BD6D00AC41FD /* source */,
+			);
+			path = sourceteq;
+			sourceTree = "<group>";
+		};
+		DAD675E51C88BD6D00AC41FD /* core */ = {
+			isa = PBXGroup;
+			children = (
+				DAD675E61C88BD6D00AC41FD /* appdel.h */,
+				DAD675E71C88BD6D00AC41FD /* appdel.m */,
+				DAD675E81C88BD6D00AC41FD /* Info.plist */,
+				DAD675E91C88BD6D00AC41FD /* main.m */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		DAD675EA1C88BD6D00AC41FD /* generic */ = {
+			isa = PBXGroup;
+			children = (
+				DAD675EB1C88BD6D00AC41FD /* analytics.h */,
+				DAD675EC1C88BD6D00AC41FD /* analytics.m */,
+				DAD675ED1C88BD6D00AC41FD /* constants.h */,
+				DAD675EE1C88BD6D00AC41FD /* generic.h */,
+				DAD675EF1C88BD6D00AC41FD /* tools.h */,
+				DAD675F01C88BD6D00AC41FD /* tools.m */,
+				DAD675F11C88BD6D00AC41FD /* updater.h */,
+				DAD675F21C88BD6D00AC41FD /* updater.m */,
+			);
+			path = generic;
+			sourceTree = "<group>";
+		};
+		DAD675F31C88BD6D00AC41FD /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				DAD675F41C88BD6D00AC41FD /* db */,
+				DAD675F61C88BD6D00AC41FD /* timerbg */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		DAD675F41C88BD6D00AC41FD /* db */ = {
+			isa = PBXGroup;
+			children = (
+				DAD675F51C88BD6D00AC41FD /* db.h */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		DAD675F61C88BD6D00AC41FD /* timerbg */ = {
+			isa = PBXGroup;
+			children = (
+				DAD675F71C88BD6D00AC41FD /* timerbg.h */,
+			);
+			path = timerbg;
+			sourceTree = "<group>";
+		};
+		DAD675FA1C88BD6D00AC41FD /* source */ = {
+			isa = PBXGroup;
+			children = (
+				DAD675FB1C88BD6D00AC41FD /* c */,
+				DAD676031C88BD6D00AC41FD /* m */,
+				DAD676131C88BD6D00AC41FD /* s */,
+				DAD676151C88BD6D00AC41FD /* v */,
+			);
+			path = source;
+			sourceTree = "<group>";
+		};
+		DAD675FB1C88BD6D00AC41FD /* c */ = {
+			isa = PBXGroup;
+			children = (
+				DAD675FC1C88BD6D00AC41FD /* c.h */,
+				DAD675FD1C88BD6D00AC41FD /* main */,
+				DAD676001C88BD6D00AC41FD /* pages */,
+			);
+			path = c;
+			sourceTree = "<group>";
+		};
+		DAD675FD1C88BD6D00AC41FD /* main */ = {
+			isa = PBXGroup;
+			children = (
+				DAD675FE1C88BD6D00AC41FD /* cmain.h */,
+				DAD675FF1C88BD6D00AC41FD /* cmain.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		DAD676001C88BD6D00AC41FD /* pages */ = {
+			isa = PBXGroup;
+			children = (
+				DAD676011C88BD6D00AC41FD /* cpages.h */,
+				DAD676021C88BD6D00AC41FD /* cpages.m */,
+			);
+			path = pages;
+			sourceTree = "<group>";
+		};
+		DAD676031C88BD6D00AC41FD /* m */ = {
+			isa = PBXGroup;
+			children = (
+				DAD676041C88BD6D00AC41FD /* db */,
+				DAD6760B1C88BD6D00AC41FD /* dirs */,
+				DAD6760E1C88BD6D00AC41FD /* general */,
+				DAD676121C88BD6D00AC41FD /* m.h */,
+			);
+			path = m;
+			sourceTree = "<group>";
+		};
+		DAD676041C88BD6D00AC41FD /* db */ = {
+			isa = PBXGroup;
+			children = (
+				DAD676051C88BD6D00AC41FD /* mdb.h */,
+				DAD676061C88BD6D00AC41FD /* mdb.m */,
+				DAD676071C88BD6D00AC41FD /* mdbcreate.h */,
+				DAD676081C88BD6D00AC41FD /* mdbcreate.m */,
+				DAD676091C88BD6D00AC41FD /* mdbitem.h */,
+				DAD6760A1C88BD6D00AC41FD /* mdbitem.m */,
+			);
+			path = db;
+			sourceTree = "<group>";
+		};
+		DAD6760B1C88BD6D00AC41FD /* dirs */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6760C1C88BD6D00AC41FD /* mdirs.h */,
+				DAD6760D1C88BD6D00AC41FD /* mdirs.m */,
+			);
+			path = dirs;
+			sourceTree = "<group>";
+		};
+		DAD6760E1C88BD6D00AC41FD /* general */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6760F1C88BD6D00AC41FD /* mgeneral.h */,
+				DAD676101C88BD6D00AC41FD /* msettings.h */,
+				DAD676111C88BD6D00AC41FD /* msettings.m */,
+			);
+			path = general;
+			sourceTree = "<group>";
+		};
+		DAD676131C88BD6D00AC41FD /* s */ = {
+			isa = PBXGroup;
+			children = (
+				DAD676141C88BD6D00AC41FD /* s.h */,
+			);
+			path = s;
+			sourceTree = "<group>";
+		};
+		DAD676151C88BD6D00AC41FD /* v */ = {
+			isa = PBXGroup;
+			children = (
+				DAD676161C88BD6D00AC41FD /* alert */,
+				DAD676191C88BD6D00AC41FD /* general */,
+				DAD676201C88BD6D00AC41FD /* v.h */,
+			);
+			path = v;
+			sourceTree = "<group>";
+		};
+		DAD676161C88BD6D00AC41FD /* alert */ = {
+			isa = PBXGroup;
+			children = (
+				DAD676171C88BD6D00AC41FD /* valert.h */,
+				DAD676181C88BD6D00AC41FD /* valert.m */,
+			);
+			path = alert;
+			sourceTree = "<group>";
+		};
+		DAD676191C88BD6D00AC41FD /* general */ = {
+			isa = PBXGroup;
+			children = (
+				DAD6761A1C88BD6D00AC41FD /* vblur.h */,
+				DAD6761B1C88BD6D00AC41FD /* vblur.m */,
+				DAD6761C1C88BD6D00AC41FD /* viewbase.h */,
+				DAD6761D1C88BD6D00AC41FD /* viewbase.m */,
+				DAD6761E1C88BD6D00AC41FD /* vspinner.h */,
+				DAD6761F1C88BD6D00AC41FD /* vspinner.m */,
+			);
+			path = general;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +371,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = DA40FBA71C88A4F5009B974B;
 			productRefGroup = DA40FBB11C88A4F5009B974B /* Products */;
@@ -101,6 +388,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD676251C88BD6D00AC41FD /* Localizable.strings in Resources */,
+				DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */,
+				DAD676271C88BD6D00AC41FD /* Info.plist in Resources */,
+				DAD676211C88BD6D00AC41FD /* gauss.db in Resources */,
+				DAD676241C88BD6D00AC41FD /* defs.plist in Resources */,
+				DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,10 +404,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAD676341C88BD6D00AC41FD /* msettings.m in Sources */,
+				DAD676321C88BD6D00AC41FD /* mdbitem.m in Sources */,
+				DAD6762E1C88BD6D00AC41FD /* cmain.m in Sources */,
+				DAD676281C88BD6D00AC41FD /* main.m in Sources */,
+				DAD6762F1C88BD6D00AC41FD /* cpages.m in Sources */,
+				DAD676361C88BD6D00AC41FD /* vblur.m in Sources */,
+				DAD676301C88BD6D00AC41FD /* mdb.m in Sources */,
+				DAD676261C88BD6D00AC41FD /* appdel.m in Sources */,
+				DAD676331C88BD6D00AC41FD /* mdirs.m in Sources */,
+				DAD676311C88BD6D00AC41FD /* mdbcreate.m in Sources */,
+				DAD676381C88BD6D00AC41FD /* vspinner.m in Sources */,
+				DAD676291C88BD6D00AC41FD /* analytics.m in Sources */,
+				DAD676351C88BD6D00AC41FD /* valert.m in Sources */,
+				DAD6762A1C88BD6D00AC41FD /* tools.m in Sources */,
+				DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */,
+				DAD6762B1C88BD6D00AC41FD /* updater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DAD675E11C88BD6D00AC41FD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAD675E21C88BD6D00AC41FD /* en */,
+				DAD675E31C88BD6D00AC41FD /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DA40FBC51C88A4F5009B974B /* Debug */ = {
@@ -205,6 +526,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Gauss/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Gauss/sourceteq",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.Gauss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -216,6 +541,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Gauss/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Gauss/sourceteq",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = iturbide.Gauss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
