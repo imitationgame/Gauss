@@ -35,7 +35,7 @@
     [lbl setNumberOfLines:0];
     [lbl setTextAlignment:NSTextAlignmentCenter];
     [lbl setTextColor:[UIColor whiteColor]];
-    [lbl setFont:[UIFont fontWithName:fontname size:18]];
+    [lbl setFont:[UIFont fontWithName:fontregularname size:18]];
     [lbl setText:message];
     [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
     
