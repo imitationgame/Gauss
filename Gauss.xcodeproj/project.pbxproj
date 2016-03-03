@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B642C6369DAE6F51A02864A5 /* libPods-Gauss.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F731575245052EA2617E6541 /* libPods-Gauss.a */; };
 		DAD676211C88BD6D00AC41FD /* gauss.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DC1C88BD6D00AC41FD /* gauss.db */; };
 		DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */; };
 		DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DF1C88BD6D00AC41FD /* analytics.plist */; };
@@ -33,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1041ABD466E7E956A4BCCEC7 /* Pods-Gauss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gauss.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gauss/Pods-Gauss.release.xcconfig"; sourceTree = "<group>"; };
+		3F43EDE9F8684A076E74D99C /* Pods-Gauss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gauss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gauss/Pods-Gauss.debug.xcconfig"; sourceTree = "<group>"; };
 		DA40FBB01C88A4F5009B974B /* Gauss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD675DC1C88BD6D00AC41FD /* gauss.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gauss.db; sourceTree = "<group>"; };
 		DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imateq.xcassets; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		DAD6763A1C88BE5E00AC41FD /* cpages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cpages.m; sourceTree = "<group>"; };
 		DAD6763C1C88BE9F00AC41FD /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
 		DAD6763D1C88BE9F00AC41FD /* valert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = valert.m; sourceTree = "<group>"; };
+		F731575245052EA2617E6541 /* libPods-Gauss.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gauss.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,17 +94,37 @@
 			files = (
 				DAD6762D1C88BD6D00AC41FD /* libtimerbg.a in Frameworks */,
 				DAD6762C1C88BD6D00AC41FD /* libdb.a in Frameworks */,
+				B642C6369DAE6F51A02864A5 /* libPods-Gauss.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26A064D774832D3F7BF05FED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F731575245052EA2617E6541 /* libPods-Gauss.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		41B1264D112BDAB6AF60E583 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F43EDE9F8684A076E74D99C /* Pods-Gauss.debug.xcconfig */,
+				1041ABD466E7E956A4BCCEC7 /* Pods-Gauss.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DA40FBA71C88A4F5009B974B = {
 			isa = PBXGroup;
 			children = (
 				DA40FBB21C88A4F5009B974B /* Gauss */,
 				DA40FBB11C88A4F5009B974B /* Products */,
+				41B1264D112BDAB6AF60E583 /* Pods */,
+				26A064D774832D3F7BF05FED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -316,9 +340,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA40FBC71C88A4F5009B974B /* Build configuration list for PBXNativeTarget "Gauss" */;
 			buildPhases = (
+				043D917E749BB6552DAE96DF /* Check Pods Manifest.lock */,
 				DA40FBAC1C88A4F5009B974B /* Sources */,
 				DA40FBAD1C88A4F5009B974B /* Frameworks */,
 				DA40FBAE1C88A4F5009B974B /* Resources */,
+				029096129C6C88BD9B8A9CD8 /* Embed Pods Frameworks */,
+				3D540F5EF2A55CA949734E94 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -377,6 +404,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		029096129C6C88BD9B8A9CD8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gauss/Pods-Gauss-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		043D917E749BB6552DAE96DF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3D540F5EF2A55CA949734E94 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gauss/Pods-Gauss-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA40FBAC1C88A4F5009B974B /* Sources */ = {
@@ -500,6 +575,7 @@
 		};
 		DA40FBC81C88A4F5009B974B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F43EDE9F8684A076E74D99C /* Pods-Gauss.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Gauss/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -514,6 +590,7 @@
 		};
 		DA40FBC91C88A4F5009B974B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1041ABD466E7E956A4BCCEC7 /* Pods-Gauss.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = Gauss/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
