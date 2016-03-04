@@ -4,7 +4,7 @@
 
 @interface mcourseitem:NSObject
 
-@property(readonly, copy, nonatomic)NSString *name;
-@property(readonly, strong, nonatomic)NSArray<mcourseitemchapter*> *chapters;
+@property(copy, nonatomic)NSString *name;
+@property(strong, nonatomic)NSArray<mcourseitemchapter*> *chapters;
 
 @end

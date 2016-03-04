@@ -1,13 +1,6 @@
-//
-//  mcoursesubs1.h
-//  Gauss
-//
-//  Created by zero on 3/3/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mcourseitemchapter.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mcoursesubs1 : NSObject
+@interface mcoursesubs1:mcourseitemchapter
 
 @end
