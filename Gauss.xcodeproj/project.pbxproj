@@ -20,6 +20,11 @@
 		DA2A09DE1C892277003A19F6 /* mcourseitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09DD1C892277003A19F6 /* mcourseitem.m */; };
 		DA2A09E71C892347003A19F6 /* mcourseitemadd.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09E61C892347003A19F6 /* mcourseitemadd.m */; };
 		DA2A09EA1C892351003A19F6 /* mcourseitemsubs.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09E91C892351003A19F6 /* mcourseitemsubs.m */; };
+		DA2A09ED1C892499003A19F6 /* mcourseitemchapter.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09EC1C892499003A19F6 /* mcourseitemchapter.m */; };
+		DA2A09F21C892563003A19F6 /* mcourseadd1.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09F11C892563003A19F6 /* mcourseadd1.m */; };
+		DA2A09F51C89256F003A19F6 /* mcourseadd2.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09F41C89256F003A19F6 /* mcourseadd2.m */; };
+		DA2A09F81C89257B003A19F6 /* mcoursesubs1.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09F71C89257B003A19F6 /* mcoursesubs1.m */; };
+		DA2A09FB1C892586003A19F6 /* mcoursesubs2.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09FA1C892586003A19F6 /* mcoursesubs2.m */; };
 		DAD676211C88BD6D00AC41FD /* gauss.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DC1C88BD6D00AC41FD /* gauss.db */; };
 		DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */; };
 		DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DF1C88BD6D00AC41FD /* analytics.plist */; };
@@ -72,6 +77,16 @@
 		DA2A09E61C892347003A19F6 /* mcourseitemadd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcourseitemadd.m; sourceTree = "<group>"; };
 		DA2A09E81C892351003A19F6 /* mcourseitemsubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcourseitemsubs.h; sourceTree = "<group>"; };
 		DA2A09E91C892351003A19F6 /* mcourseitemsubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcourseitemsubs.m; sourceTree = "<group>"; };
+		DA2A09EB1C892499003A19F6 /* mcourseitemchapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcourseitemchapter.h; sourceTree = "<group>"; };
+		DA2A09EC1C892499003A19F6 /* mcourseitemchapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcourseitemchapter.m; sourceTree = "<group>"; };
+		DA2A09F01C892563003A19F6 /* mcourseadd1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcourseadd1.h; sourceTree = "<group>"; };
+		DA2A09F11C892563003A19F6 /* mcourseadd1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcourseadd1.m; sourceTree = "<group>"; };
+		DA2A09F31C89256F003A19F6 /* mcourseadd2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcourseadd2.h; sourceTree = "<group>"; };
+		DA2A09F41C89256F003A19F6 /* mcourseadd2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcourseadd2.m; sourceTree = "<group>"; };
+		DA2A09F61C89257B003A19F6 /* mcoursesubs1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcoursesubs1.h; sourceTree = "<group>"; };
+		DA2A09F71C89257B003A19F6 /* mcoursesubs1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcoursesubs1.m; sourceTree = "<group>"; };
+		DA2A09F91C892586003A19F6 /* mcoursesubs2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcoursesubs2.h; sourceTree = "<group>"; };
+		DA2A09FA1C892586003A19F6 /* mcoursesubs2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcoursesubs2.m; sourceTree = "<group>"; };
 		DA40FBB01C88A4F5009B974B /* Gauss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD675DC1C88BD6D00AC41FD /* gauss.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gauss.db; sourceTree = "<group>"; };
 		DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imateq.xcassets; sourceTree = "<group>"; };
@@ -216,8 +231,32 @@
 				DA2A09E61C892347003A19F6 /* mcourseitemadd.m */,
 				DA2A09E81C892351003A19F6 /* mcourseitemsubs.h */,
 				DA2A09E91C892351003A19F6 /* mcourseitemsubs.m */,
+				DA2A09EB1C892499003A19F6 /* mcourseitemchapter.h */,
+				DA2A09EC1C892499003A19F6 /* mcourseitemchapter.m */,
 			);
 			path = course;
+			sourceTree = "<group>";
+		};
+		DA2A09EE1C892555003A19F6 /* courseadd */ = {
+			isa = PBXGroup;
+			children = (
+				DA2A09F01C892563003A19F6 /* mcourseadd1.h */,
+				DA2A09F11C892563003A19F6 /* mcourseadd1.m */,
+				DA2A09F31C89256F003A19F6 /* mcourseadd2.h */,
+				DA2A09F41C89256F003A19F6 /* mcourseadd2.m */,
+			);
+			path = courseadd;
+			sourceTree = "<group>";
+		};
+		DA2A09EF1C892555003A19F6 /* coursesubs */ = {
+			isa = PBXGroup;
+			children = (
+				DA2A09F61C89257B003A19F6 /* mcoursesubs1.h */,
+				DA2A09F71C89257B003A19F6 /* mcoursesubs1.m */,
+				DA2A09F91C892586003A19F6 /* mcoursesubs2.h */,
+				DA2A09FA1C892586003A19F6 /* mcoursesubs2.m */,
+			);
+			path = coursesubs;
 			sourceTree = "<group>";
 		};
 		DA40FBA71C88A4F5009B974B = {
@@ -369,6 +408,8 @@
 		DAD676031C88BD6D00AC41FD /* m */ = {
 			isa = PBXGroup;
 			children = (
+				DA2A09EE1C892555003A19F6 /* courseadd */,
+				DA2A09EF1C892555003A19F6 /* coursesubs */,
 				DA2A09D81C892215003A19F6 /* course */,
 				DAD676041C88BD6D00AC41FD /* db */,
 				DAD6760B1C88BD6D00AC41FD /* dirs */,
@@ -572,12 +613,17 @@
 				DAD6762E1C88BD6D00AC41FD /* cmain.m in Sources */,
 				DAD676281C88BD6D00AC41FD /* main.m in Sources */,
 				DAD676361C88BD6D00AC41FD /* vblur.m in Sources */,
+				DA2A09ED1C892499003A19F6 /* mcourseitemchapter.m in Sources */,
 				DA2A09DB1C892232003A19F6 /* mcourse.m in Sources */,
 				DA2A09D41C891890003A19F6 /* vstatsbar.m in Sources */,
 				DA2A09CB1C88E5EC003A19F6 /* vplayitem.m in Sources */,
 				DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */,
+				DA2A09FB1C892586003A19F6 /* mcoursesubs2.m in Sources */,
+				DA2A09F51C89256F003A19F6 /* mcourseadd2.m in Sources */,
 				DAD676301C88BD6D00AC41FD /* mdb.m in Sources */,
 				DAD6763B1C88BE5E00AC41FD /* cpages.m in Sources */,
+				DA2A09F81C89257B003A19F6 /* mcoursesubs1.m in Sources */,
+				DA2A09F21C892563003A19F6 /* mcourseadd1.m in Sources */,
 				DA2A09C71C88E4A8003A19F6 /* cplayitem.m in Sources */,
 				DAD676261C88BD6D00AC41FD /* appdel.m in Sources */,
 				DAD676331C88BD6D00AC41FD /* mdirs.m in Sources */,
