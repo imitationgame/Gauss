@@ -34,4 +34,12 @@
     [db query:query];
 }
 
++(void)openchapter:(NSUInteger)dbid
+{
+    NSString *query = [NSString stringWithFormat:
+                       @"UPDATE chapter SET available=1 WHERE id=%@",
+                       @(dbid)];
+    [db query:query];
+}
+
 @end

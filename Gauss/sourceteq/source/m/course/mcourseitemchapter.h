@@ -5,6 +5,7 @@
 @interface mcourseitemchapter:NSObject
 
 -(instancetype)init:(mcourseitem*)course;
+-(void)open;
 
 @property(weak, nonatomic)mcourseitem *course;
 @property(copy, nonatomic)NSString *uniqueid;

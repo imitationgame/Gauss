@@ -6,7 +6,7 @@
 @interface mcourse:NSObject
 
 +(void)opencourse:(Class)courseclass;
-+(void)openchapter:(mcourseitemchapter*)chapter;
++(BOOL)opennextchapter:(mcourseitemchapter*)chapter;
 +(instancetype)singleton;
 -(NSUInteger)count;
 -(mcourseitem*)course:(NSUInteger)index;

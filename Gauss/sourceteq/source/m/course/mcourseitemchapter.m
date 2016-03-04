@@ -1,4 +1,5 @@
 #import "mcourseitemchapter.h"
+#import "mdb.h"
 
 @implementation mcourseitemchapter
 
@@ -13,6 +14,14 @@
     self.available = NO;
     
     return self;
+}
+
+#pragma mark public
+
+-(void)open
+{
+    self.available = YES;
+    [mdb openchapter:self.dbid];
 }
 
 @end
