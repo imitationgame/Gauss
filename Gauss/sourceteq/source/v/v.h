@@ -6,3 +6,4 @@
 #import "vstatscell.h"
 #import "vstatsbar.h"
 #import "vstatsinfo.h"
+#import "vstatsstatus.h"

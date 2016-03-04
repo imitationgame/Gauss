@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B642C6369DAE6F51A02864A5 /* libPods-Gauss.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F731575245052EA2617E6541 /* libPods-Gauss.a */; };
+		DA1098AD1C89E7A4007AB688 /* vstatsstatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1098AC1C89E7A4007AB688 /* vstatsstatus.m */; };
 		DA2A09B81C88D022003A19F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2A09B71C88D022003A19F6 /* Images.xcassets */; };
 		DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BB1C88DA99003A19F6 /* cstats.m */; };
 		DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BF1C88DAD0003A19F6 /* vstats.m */; };
@@ -54,6 +55,8 @@
 /* Begin PBXFileReference section */
 		1041ABD466E7E956A4BCCEC7 /* Pods-Gauss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gauss.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gauss/Pods-Gauss.release.xcconfig"; sourceTree = "<group>"; };
 		3F43EDE9F8684A076E74D99C /* Pods-Gauss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gauss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gauss/Pods-Gauss.debug.xcconfig"; sourceTree = "<group>"; };
+		DA1098AB1C89E7A4007AB688 /* vstatsstatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstatsstatus.h; sourceTree = "<group>"; };
+		DA1098AC1C89E7A4007AB688 /* vstatsstatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstatsstatus.m; sourceTree = "<group>"; };
 		DA2A09B51C88C385003A19F6 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA2A09B61C88C385003A19F6 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA2A09B71C88D022003A19F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -206,6 +209,8 @@
 				DA2A09FD1C893F3F003A19F6 /* vstatsheader.m */,
 				DA2A09FF1C894007003A19F6 /* vstatscell.h */,
 				DA2A0A001C894007003A19F6 /* vstatscell.m */,
+				DA1098AB1C89E7A4007AB688 /* vstatsstatus.h */,
+				DA1098AC1C89E7A4007AB688 /* vstatsstatus.m */,
 			);
 			path = stats;
 			sourceTree = "<group>";
@@ -648,6 +653,7 @@
 				DA2A09EA1C892351003A19F6 /* mcourseitemsubs.m in Sources */,
 				DA2A09C41C88E3C6003A19F6 /* cplay.m in Sources */,
 				DA2A09DE1C892277003A19F6 /* mcourseitem.m in Sources */,
+				DA1098AD1C89E7A4007AB688 /* vstatsstatus.m in Sources */,
 				DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */,
 				DA2A09E71C892347003A19F6 /* mcourseitemadd.m in Sources */,
 				DAD6762B1C88BD6D00AC41FD /* updater.m in Sources */,

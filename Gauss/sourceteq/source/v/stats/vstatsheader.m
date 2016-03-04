@@ -16,21 +16,17 @@
     [label setTextColor:[UIColor colorWithWhite:0 alpha:0.3]];
     self.label = label;
     
-    UIImageView *icon = [[UIImageView alloc] init];
-    [icon setClipsToBounds:YES];
-    [icon setContentMode:UIViewContentModeScaleAspectFit];
-    [icon setUserInteractionEnabled:NO];
-    [icon setTranslatesAutoresizingMaskIntoConstraints:NO];
-    self.icon = icon;
+    vstatsstatus *status = [[vstatsstatus alloc] init];
+    self.status = status;
     
     [self addSubview:label];
-    [self addSubview:icon];
+    [self addSubview:status];
     
-    NSDictionary *views = @{@"label":label, @"icon":icon};
+    NSDictionary *views = @{@"label":label, @"status":status};
     NSDictionary *metrics = @{};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-12-[icon(24)]-8-[label]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[icon(24)]-20-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-12-[status]-8-[label]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[status]-22-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label]-20-|" options:0 metrics:metrics views:views]];
     
     return self;
@@ -41,19 +37,10 @@
 -(void)config:(mcourseitem*)model
 {
     NSString *modelname = model.name;
-    NSString *iconasset;
-    
-    if(model.available)
-    {
-        iconasset = @"success";
-    }
-    else
-    {
-        iconasset = @"fail";
-    }
+    BOOL modelstatus = model.available;
     
     [self.label setText:modelname];
-    [self.icon setImage:[UIImage imageNamed:iconasset]];
+    [self.status changestatus:modelstatus];
 }
 
 @end
