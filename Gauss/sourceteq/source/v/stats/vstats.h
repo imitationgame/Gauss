@@ -11,5 +11,6 @@
 @property(weak, nonatomic)UICollectionView *collection;
 @property(weak, nonatomic)NSLayoutConstraint *layoutbarheight;
 @property(weak, nonatomic)NSLayoutConstraint *layoutinfoheight;
+@property(weak, nonatomic)NSLayoutConstraint *layoutinfotop;
 
 @end
