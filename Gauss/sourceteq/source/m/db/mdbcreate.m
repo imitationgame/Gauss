@@ -10,11 +10,11 @@
     query = @"CREATE TABLE course (id INTEGER PRIMARY KEY, available INTEGER, uniqueid TEXT COLLATE NOCASE);";
     [dbcon query:query];
     
-    query = @"CREATE TABLE chapter (id INTEGER PRIMARY KEY, uniqueid TEXT COLLATE NOCASE, timestamp INTEGER, score INTEGER);";
+    query = @"CREATE TABLE chapter (id INTEGER PRIMARY KEY, uniqueid TEXT COLLATE NOCASE, timestamp INTEGER, score INTEGER, available INTEGER);";
     [dbcon query:query];
     
-    [mdbcreate addcourse:dbcon class:[mcourseitemadd class] available:YES];
-    [mdbcreate addcourse:dbcon class:[mcourseitemsubs class] available:NO];
+    [mdbcreate addcourse:dbcon class:[mcourseitemadd class]];
+    [mdbcreate addcourse:dbcon class:[mcourseitemsubs class]];
     
     [mdbcreate addchapter:dbcon class:[mcourseadd1 class]];
     [mdbcreate addchapter:dbcon class:[mcourseadd2 class]];
@@ -22,19 +22,16 @@
     [mdbcreate addchapter:dbcon class:[mcoursesubs2 class]];
     
     [dbcon commit];
-    
-    NSLog(@"%@", [db rows:@"select * from course;"]);
-    NSLog(@"%@", [db rows:@"select * from chapter;"]);
 }
 
-+(void)addcourse:(db*)dbcon class:(Class)class available:(BOOL)available
++(void)addcourse:(db*)dbcon class:(Class)class
 {
     NSString *uniqueid = NSStringFromClass(class);
     NSString *query = [NSString stringWithFormat:
                        @"INSERT INTO course "
                        "(available, uniqueid) "
-                       "values(%@, \"%@\");",
-                       @(available), uniqueid];
+                       "values(0, \"%@\");",
+                       uniqueid];
     
     [dbcon query:query];
 }
@@ -44,8 +41,8 @@
     NSString *uniqueid = NSStringFromClass(class);
     NSString *query = [NSString stringWithFormat:
                        @"INSERT INTO chapter "
-                       "(uniqueid, timestamp, score) "
-                       "values(\"%@\", 0, 0);",
+                       "(uniqueid, timestamp, score, available) "
+                       "values(\"%@\", 0, 0, 0);",
                        uniqueid];
     
     [dbcon query:query];
