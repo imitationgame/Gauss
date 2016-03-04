@@ -6,6 +6,8 @@ static NSUInteger const barmaxheight = 65;
 static NSUInteger const infomaxheight = 250;
 static NSUInteger const headerheight = 40;
 static NSUInteger const cellheight = 60;
+static NSUInteger const linespacing = 2;
+static NSUInteger const footerspacing = 30;
 
 @implementation vstats
 
@@ -24,9 +26,9 @@ static NSUInteger const cellheight = 60;
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
-    [flow setMinimumLineSpacing:2];
+    [flow setMinimumLineSpacing:linespacing];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(2, 0, 20, 0)];
+    [flow setSectionInset:UIEdgeInsetsMake(linespacing, 0, footerspacing, 0)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setBackgroundColor:[UIColor clearColor]];
