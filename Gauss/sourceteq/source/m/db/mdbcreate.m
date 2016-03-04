@@ -14,7 +14,7 @@
     [dbcon query:query];
     
     [mdbcreate addcourse:dbcon class:[mcourseitemadd class] available:YES];
-    [mdbcreate addcourse:dbcon class:[mcourseitemsubs class] available:YES];
+    [mdbcreate addcourse:dbcon class:[mcourseitemsubs class] available:NO];
     
     [mdbcreate addchapter:dbcon class:[mcourseadd1 class]];
     [mdbcreate addchapter:dbcon class:[mcourseadd2 class]];
@@ -22,6 +22,9 @@
     [mdbcreate addchapter:dbcon class:[mcoursesubs2 class]];
     
     [dbcon commit];
+    
+    NSLog(@"%@", [db rows:@"select * from course;"]);
+    NSLog(@"%@", [db rows:@"select * from chapter;"]);
 }
 
 +(void)addcourse:(db*)dbcon class:(Class)class available:(BOOL)available

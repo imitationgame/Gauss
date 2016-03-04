@@ -6,14 +6,11 @@ NSString *documents;
 
 +(void)launch
 {
-    [[analytics singleton] start];
-    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                    ^
                    {
                        [updater update];
                        [msettings singleton];
-                       [mcourse singleton];
                        [mdb loadcourses];
                    });
 }
