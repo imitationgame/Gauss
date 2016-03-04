@@ -14,7 +14,7 @@
     [image setContentMode:UIViewContentModeScaleAspectFit];
     [image setUserInteractionEnabled:NO];
     [image setImage:[[UIImage imageNamed:@"rocket"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
-    [image setTintColor:colorsecond];
+    [image setTintColor:[UIColor whiteColor]];
     [image setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     [self addSubview:image];

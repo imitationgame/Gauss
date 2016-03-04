@@ -25,6 +25,8 @@
 		DA2A09F51C89256F003A19F6 /* mcourseadd2.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09F41C89256F003A19F6 /* mcourseadd2.m */; };
 		DA2A09F81C89257B003A19F6 /* mcoursesubs1.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09F71C89257B003A19F6 /* mcoursesubs1.m */; };
 		DA2A09FB1C892586003A19F6 /* mcoursesubs2.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09FA1C892586003A19F6 /* mcoursesubs2.m */; };
+		DA2A09FE1C893F3F003A19F6 /* vstatsheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09FD1C893F3F003A19F6 /* vstatsheader.m */; };
+		DA2A0A011C894007003A19F6 /* vstatscell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A0A001C894007003A19F6 /* vstatscell.m */; };
 		DAD676211C88BD6D00AC41FD /* gauss.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DC1C88BD6D00AC41FD /* gauss.db */; };
 		DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */; };
 		DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DF1C88BD6D00AC41FD /* analytics.plist */; };
@@ -87,6 +89,10 @@
 		DA2A09F71C89257B003A19F6 /* mcoursesubs1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcoursesubs1.m; sourceTree = "<group>"; };
 		DA2A09F91C892586003A19F6 /* mcoursesubs2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcoursesubs2.h; sourceTree = "<group>"; };
 		DA2A09FA1C892586003A19F6 /* mcoursesubs2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcoursesubs2.m; sourceTree = "<group>"; };
+		DA2A09FC1C893F3F003A19F6 /* vstatsheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstatsheader.h; sourceTree = "<group>"; };
+		DA2A09FD1C893F3F003A19F6 /* vstatsheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstatsheader.m; sourceTree = "<group>"; };
+		DA2A09FF1C894007003A19F6 /* vstatscell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstatscell.h; sourceTree = "<group>"; };
+		DA2A0A001C894007003A19F6 /* vstatscell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstatscell.m; sourceTree = "<group>"; };
 		DA40FBB01C88A4F5009B974B /* Gauss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD675DC1C88BD6D00AC41FD /* gauss.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gauss.db; sourceTree = "<group>"; };
 		DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imateq.xcassets; sourceTree = "<group>"; };
@@ -196,6 +202,10 @@
 				DA2A09D31C891890003A19F6 /* vstatsbar.m */,
 				DA2A09D51C891B80003A19F6 /* vstatsinfo.h */,
 				DA2A09D61C891B80003A19F6 /* vstatsinfo.m */,
+				DA2A09FC1C893F3F003A19F6 /* vstatsheader.h */,
+				DA2A09FD1C893F3F003A19F6 /* vstatsheader.m */,
+				DA2A09FF1C894007003A19F6 /* vstatscell.h */,
+				DA2A0A001C894007003A19F6 /* vstatscell.m */,
 			);
 			path = stats;
 			sourceTree = "<group>";
@@ -631,6 +641,8 @@
 				DAD676381C88BD6D00AC41FD /* vspinner.m in Sources */,
 				DAD676291C88BD6D00AC41FD /* analytics.m in Sources */,
 				DA2A09D71C891B80003A19F6 /* vstatsinfo.m in Sources */,
+				DA2A09FE1C893F3F003A19F6 /* vstatsheader.m in Sources */,
+				DA2A0A011C894007003A19F6 /* vstatscell.m in Sources */,
 				DAD6762A1C88BD6D00AC41FD /* tools.m in Sources */,
 				DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */,
 				DA2A09EA1C892351003A19F6 /* mcourseitemsubs.m in Sources */,

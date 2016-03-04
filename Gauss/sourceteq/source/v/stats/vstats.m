@@ -1,7 +1,11 @@
 #import "vstats.h"
 
-static const NSUInteger barmaxheight = 65;
-static const NSUInteger infomaxheight = 250;
+static NSString* const coursehaderid = @"course";
+static NSString* const chaptercellid = @"chapter";
+static NSUInteger const barmaxheight = 65;
+static NSUInteger const infomaxheight = 250;
+static NSUInteger const headerheight = 40;
+static NSUInteger const cellheight = 60;
 
 @implementation vstats
 
@@ -9,7 +13,7 @@ static const NSUInteger infomaxheight = 250;
 {
     self = [super init:controller];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
+    [self setBackgroundColor:colorsecond];
 
     vstatsbar *bar = [[vstatsbar alloc] init];
     self.bar = bar;
@@ -33,6 +37,8 @@ static const NSUInteger infomaxheight = 250;
     [collection setShowsHorizontalScrollIndicator:NO];
     [collection setShowsVerticalScrollIndicator:NO];
     [collection setAlwaysBounceVertical:YES];
+    [collection registerClass:[vstatsheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:coursehaderid];
+    [collection registerClass:[vstatscell class] forCellWithReuseIdentifier:chaptercellid];
     
     self.collection = collection;
     
@@ -59,21 +65,44 @@ static const NSUInteger infomaxheight = 250;
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    CGSize size = CGSizeMake(col.bounds.size.width, 40);
+    CGSize size = CGSizeMake(col.bounds.size.width, headerheight);
     
     return size;
 }
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    CGSize size = CGSizeMake(col.bounds.size.width, 80);
+    CGSize size = CGSizeMake(col.bounds.size.width, cellheight);
     
     return size;
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
-    return 0;
+    NSUInteger sections = [[mcourse singleton] count];
+    
+    return sections;
+}
+
+-(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
+{
+    NSUInteger items = [[mcourse singleton] course:section].chapters.count;
+    
+    return items;
+}
+
+-(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
+{
+    vstatsheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:coursehaderid forIndexPath:index];
+    
+    return header;
+}
+
+-(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
+{
+    vstatscell *cell = [col dequeueReusableCellWithReuseIdentifier:chaptercellid forIndexPath:index];
+    
+    return cell;
 }
 
 @end
