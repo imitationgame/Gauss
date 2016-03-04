@@ -1,13 +1,6 @@
-//
-//  mcourseitemadd.h
-//  Gauss
-//
-//  Created by zero on 3/3/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mcourseitem.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mcourseitemadd : NSObject
+@interface mcourseitemadd:mcourseitem
 
 @end
