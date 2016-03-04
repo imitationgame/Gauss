@@ -7,9 +7,12 @@
     NSString *query;
     db *dbcon = [db begin];
     
-    query = @"CREATE TABLE item (id INTEGER PRIMARY KEY, created INTEGER);";
+    query = @"CREATE TABLE course (id INTEGER PRIMARY KEY, available INTEGER, uniqueid TEXT COLLATE NOCASE);";
     
     [dbcon query:query];
+    
+    query = @"CREATE TABLE chapter (id INTEGER PRIMARY KEY, );";
+    
     [dbcon commit];
 }
 

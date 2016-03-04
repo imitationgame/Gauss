@@ -5,5 +5,6 @@
 @interface mdb:NSObject
 
 +(void)updatedb;
++(void)loadcourses;
 
 @end

@@ -5,7 +5,6 @@
 -(instancetype)init
 {
     self = [super init];
-    
     self.name = NSLocalizedString(@"course_subs_name", nil);
     self.chapters = @[
                       [[mcoursesubs1 alloc] init],

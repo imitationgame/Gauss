@@ -17,7 +17,8 @@
 -(instancetype)init
 {
     self = [super init];
-    
+
+    self.loaded = NO;
     array = @[
               [[mcourseitemadd alloc] init],
               [[mcourseitemsubs alloc] init]

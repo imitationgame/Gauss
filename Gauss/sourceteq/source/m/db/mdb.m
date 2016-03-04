@@ -21,4 +21,9 @@
     [mdbcreate create];
 }
 
++(void)loadcourses
+{
+    
+}
+
 @end
