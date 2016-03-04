@@ -13,6 +13,8 @@
 		DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BF1C88DAD0003A19F6 /* vstats.m */; };
 		DA2A09C41C88E3C6003A19F6 /* cplay.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09C31C88E3C6003A19F6 /* cplay.m */; };
 		DA2A09C71C88E4A8003A19F6 /* cplayitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09C61C88E4A8003A19F6 /* cplayitem.m */; };
+		DA2A09CB1C88E5EC003A19F6 /* vplayitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09CA1C88E5EC003A19F6 /* vplayitem.m */; };
+		DA2A09CE1C88F504003A19F6 /* vstatsrocket.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09CD1C88F504003A19F6 /* vstatsrocket.m */; };
 		DAD676211C88BD6D00AC41FD /* gauss.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DC1C88BD6D00AC41FD /* gauss.db */; };
 		DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */; };
 		DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DF1C88BD6D00AC41FD /* analytics.plist */; };
@@ -51,6 +53,10 @@
 		DA2A09C31C88E3C6003A19F6 /* cplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cplay.m; sourceTree = "<group>"; };
 		DA2A09C51C88E4A8003A19F6 /* cplayitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cplayitem.h; sourceTree = "<group>"; };
 		DA2A09C61C88E4A8003A19F6 /* cplayitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cplayitem.m; sourceTree = "<group>"; };
+		DA2A09C91C88E5EC003A19F6 /* vplayitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayitem.h; sourceTree = "<group>"; };
+		DA2A09CA1C88E5EC003A19F6 /* vplayitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayitem.m; sourceTree = "<group>"; };
+		DA2A09CC1C88F504003A19F6 /* vstatsrocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstatsrocket.h; sourceTree = "<group>"; };
+		DA2A09CD1C88F504003A19F6 /* vstatsrocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstatsrocket.m; sourceTree = "<group>"; };
 		DA40FBB01C88A4F5009B974B /* Gauss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD675DC1C88BD6D00AC41FD /* gauss.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gauss.db; sourceTree = "<group>"; };
 		DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imateq.xcassets; sourceTree = "<group>"; };
@@ -156,6 +162,8 @@
 			children = (
 				DA2A09BE1C88DAD0003A19F6 /* vstats.h */,
 				DA2A09BF1C88DAD0003A19F6 /* vstats.m */,
+				DA2A09CC1C88F504003A19F6 /* vstatsrocket.h */,
+				DA2A09CD1C88F504003A19F6 /* vstatsrocket.m */,
 			);
 			path = stats;
 			sourceTree = "<group>";
@@ -167,6 +175,15 @@
 				DA2A09C31C88E3C6003A19F6 /* cplay.m */,
 				DA2A09C51C88E4A8003A19F6 /* cplayitem.h */,
 				DA2A09C61C88E4A8003A19F6 /* cplayitem.m */,
+			);
+			path = play;
+			sourceTree = "<group>";
+		};
+		DA2A09C81C88E5DF003A19F6 /* play */ = {
+			isa = PBXGroup;
+			children = (
+				DA2A09C91C88E5EC003A19F6 /* vplayitem.h */,
+				DA2A09CA1C88E5EC003A19F6 /* vplayitem.m */,
 			);
 			path = play;
 			sourceTree = "<group>";
@@ -369,6 +386,7 @@
 		DAD676151C88BD6D00AC41FD /* v */ = {
 			isa = PBXGroup;
 			children = (
+				DA2A09C81C88E5DF003A19F6 /* play */,
 				DA2A09BD1C88DAC8003A19F6 /* stats */,
 				DAD676191C88BD6D00AC41FD /* general */,
 				DAD676201C88BD6D00AC41FD /* v.h */,
@@ -521,6 +539,7 @@
 				DAD6762E1C88BD6D00AC41FD /* cmain.m in Sources */,
 				DAD676281C88BD6D00AC41FD /* main.m in Sources */,
 				DAD676361C88BD6D00AC41FD /* vblur.m in Sources */,
+				DA2A09CB1C88E5EC003A19F6 /* vplayitem.m in Sources */,
 				DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */,
 				DAD676301C88BD6D00AC41FD /* mdb.m in Sources */,
 				DAD6763B1C88BE5E00AC41FD /* cpages.m in Sources */,
@@ -533,6 +552,7 @@
 				DAD6762A1C88BD6D00AC41FD /* tools.m in Sources */,
 				DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */,
 				DA2A09C41C88E3C6003A19F6 /* cplay.m in Sources */,
+				DA2A09CE1C88F504003A19F6 /* vstatsrocket.m in Sources */,
 				DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */,
 				DAD6762B1C88BD6D00AC41FD /* updater.m in Sources */,
 			);
