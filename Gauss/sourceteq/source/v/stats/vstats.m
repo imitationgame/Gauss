@@ -1,6 +1,6 @@
 #import "vstats.h"
 
-static const NSUInteger rocketwidth = 100;
+static const NSUInteger barmaxheight = 65;
 
 @implementation vstats
 
@@ -10,30 +10,23 @@ static const NSUInteger rocketwidth = 100;
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
 
-    vstatsrocket *rocket = [[vstatsrocket alloc] init];
-    self.rocket = rocket;
+    vstatsbar *bar = [[vstatsbar alloc] init];
+    self.bar = bar;
     
-    [self addSubview:rocket];
+    [self addSubview:bar];
     
-    self.consrocketleft = [NSLayoutConstraint constraintWithItem:rocket attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1 constant:1];
-    NSDictionary *views = @{@"rocket":rocket};
-    NSDictionary *metrics = @{@"rocketwidth":@(rocketwidth)};
+    NSDictionary *views = @{@"bar":bar};
+    NSDictionary *metrics = @{};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[rocket(rocketwidth)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-100-[rocket(150)]" options:0 metrics:metrics views:views]];
-    [self addConstraint:self.consrocketleft];
+    self.layoutbarheight = [NSLayoutConstraint constraintWithItem:bar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:barmaxheight];
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]" options:0 metrics:metrics views:views]];
+    [self addConstraint:self.layoutbarheight];
     
     return self;
 }
 
--(void)layoutSubviews
-{
-    CGFloat totalwidth = self.bounds.size.width;
-    CGFloat width_rocket = totalwidth - rocketwidth;
-    CGFloat margin = width_rocket / 2.0;
-    self.consrocketleft.constant = margin;
-    
-    [super layoutSubviews];
-}
+
 
 @end

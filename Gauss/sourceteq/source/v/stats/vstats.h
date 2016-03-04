@@ -1,11 +1,11 @@
 #import "appdel.h"
 #import "viewbase.h"
 
-@class vstatsrocket;
+@class vstatsbar;
 
 @interface vstats:viewbase
 
-@property(weak, nonatomic)vstatsrocket *rocket;
-@property(weak, nonatomic)NSLayoutConstraint *consrocketleft;
+@property(weak, nonatomic)vstatsbar *bar;
+@property(weak, nonatomic)NSLayoutConstraint *layoutbarheight;
 
 @end
