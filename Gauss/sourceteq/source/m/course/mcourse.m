@@ -67,6 +67,13 @@
 
 #pragma mark public
 
+-(void)ready
+{
+    self.loaded = YES;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:notcoursesloaded object:nil];
+}
+
 -(NSUInteger)count
 {
     NSUInteger count = array.count;
