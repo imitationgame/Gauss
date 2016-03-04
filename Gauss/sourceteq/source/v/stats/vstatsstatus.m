@@ -10,8 +10,6 @@
     [self setUserInteractionEnabled:NO];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.layer setCornerRadius:4];
-    [self.layer setBorderWidth:2];
-    [self.layer setBorderColor:colorsecond.CGColor];
     
     return self;
 }
@@ -31,7 +29,7 @@
     
     if(status)
     {
-        color = [UIColor colorWithRed:0.8 green:0.9 blue:0.2 alpha:1];
+        color = [UIColor colorWithRed:0.3 green:0.7 blue:0.8 alpha:1];
     }
     else
     {

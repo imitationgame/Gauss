@@ -4,3 +4,6 @@
 
 "course_add_name"="Addition";
 "course_subs_name"="Substraction";
+
+"chapter_cel_notactive"="Chapter not active";
+"chapter_cel_nevertaken"="Chapter never taken";

@@ -55,8 +55,7 @@
 -(instancetype)init
 {
     self = [super init];
-
-    self.loaded = NO;
+    
     array = @[
               [[mcourseitemadd alloc] init],
               [[mcourseitemsubs alloc] init]
@@ -69,8 +68,6 @@
 
 -(void)ready
 {
-    self.loaded = YES;
-    
     [[NSNotificationCenter defaultCenter] postNotificationName:notcoursesloaded object:nil];
 }
 

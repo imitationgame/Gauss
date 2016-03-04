@@ -12,6 +12,13 @@ NSString *documents;
                        [updater update];
                        [msettings singleton];
                        [mdb loadcourses];
+                       
+                       if(![[mcourse singleton] course:0].available)
+                       {
+                           [mcourse opencourse:[mcourseitemadd class]];
+                       }
+                       
+                       [[mcourse singleton] ready];
                    });
 }
 

@@ -27,4 +27,11 @@
     self.view = [[vstats alloc] init:self];
 }
 
+#pragma mark public
+
+-(void)play:(mcourseitemchapter*)chapter
+{
+    [[cmain singleton].pages sectionplay];
+}
+
 @end

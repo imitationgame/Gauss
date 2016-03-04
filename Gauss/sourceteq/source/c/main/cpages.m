@@ -48,9 +48,9 @@
 
 #pragma mark public
 
--(void)sectionplay
+-(void)sectionplay:(mcourseitemchapter*)chapter
 {
-    [self changecontroller:[[cplay alloc] init] direction:UIPageViewControllerNavigationDirectionForward animated:YES];
+    [self changecontroller:[[cplay alloc] init:chapter] direction:UIPageViewControllerNavigationDirectionForward animated:YES];
 }
 
 -(void)sectionstats:(UIPageViewControllerNavigationDirection)direction animated:(BOOL)animated

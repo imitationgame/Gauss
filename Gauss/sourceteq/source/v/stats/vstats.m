@@ -42,7 +42,6 @@ static NSUInteger const footerspacing = 50;
     [collection setAlwaysBounceVertical:YES];
     [collection registerClass:[vstatsheader class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:coursehaderid];
     [collection registerClass:[vstatscell class] forCellWithReuseIdentifier:chaptercellid];
-    
     self.collection = collection;
     
     [self addSubview:info];
@@ -64,7 +63,32 @@ static NSUInteger const footerspacing = 50;
     [self addConstraint:self.layoutinfoheight];
     [self addConstraint:self.layoutinfotop];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedcoursesloaded:) name:notcoursesloaded object:nil];
+    
     return self;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark notified
+
+-(void)notifiedcoursesloaded:(NSNotification*)notification
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^
+                   {
+                       [self refresh];
+                   });
+}
+
+#pragma mark functionality
+
+-(void)refresh
+{
+    [self.collection reloadData];
 }
 
 #pragma mark -
@@ -182,6 +206,11 @@ static NSUInteger const footerspacing = 50;
     [cell config:itemindex model:chapter];
     
     return cell;
+}
+
+-(BOOL)collectionView:(UICollectionView*)col shouldSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    return NO;
 }
 
 @end

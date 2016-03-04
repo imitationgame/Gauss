@@ -2,7 +2,7 @@
 
 @interface cpages:UIPageViewController
 
--(void)sectionplay;
+-(void)sectionplay:(mcourseitemchapter*)chapter;
 -(void)sectionstats:(UIPageViewControllerNavigationDirection)direction animated:(BOOL)animated;
 -(void)sectionconfig;
 
