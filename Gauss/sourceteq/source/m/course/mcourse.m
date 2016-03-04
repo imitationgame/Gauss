@@ -5,6 +5,28 @@
     NSArray *array;
 }
 
++(void)opencourse:(Class)courseclass
+{
+    NSUInteger count = [[mcourse singleton] count];
+    
+    for(NSUInteger i = 0; i < count; i++)
+    {
+        mcourseitem *incourse = [[mcourse singleton] course:i];
+        
+        if([incourse isKindOfClass:courseclass])
+        {
+            [incourse open];
+            
+            break;
+        }
+    }
+}
+
++(void)openchapter:(mcourseitemchapter*)chapter
+{
+    
+}
+
 +(instancetype)singleton
 {
     static mcourse *single;

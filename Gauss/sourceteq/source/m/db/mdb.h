@@ -6,5 +6,6 @@
 
 +(void)updatedb;
 +(void)loadcourses;
++(void)opencourse:(NSUInteger)dbid;
 
 @end

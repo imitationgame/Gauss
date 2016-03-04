@@ -26,4 +26,12 @@
     
 }
 
++(void)opencourse:(NSUInteger)dbid
+{
+    NSString *query = [NSString stringWithFormat:
+                       @"UPDATE course SET available=1 WHERE id=%@",
+                       @(dbid)];
+    [db query:query];
+}
+
 @end

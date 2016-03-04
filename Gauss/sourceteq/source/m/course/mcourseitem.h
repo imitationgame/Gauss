@@ -4,6 +4,8 @@
 
 @interface mcourseitem:NSObject
 
+-(void)open;
+
 @property(copy, nonatomic)NSString *uniqueid;
 @property(copy, nonatomic)NSString *name;
 @property(strong, nonatomic)NSArray<mcourseitemchapter*> *chapters;

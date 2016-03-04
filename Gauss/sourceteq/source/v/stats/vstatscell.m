@@ -12,26 +12,22 @@
     [labelindex setBackgroundColor:[UIColor clearColor]];
     [labelindex setUserInteractionEnabled:NO];
     [labelindex setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [labelindex setFont:[UIFont fontWithName:fontregularname size:18]];
-    [labelindex setTextColor:[UIColor colorWithWhite:0 alpha:0.4]];
+    [labelindex setFont:[UIFont fontWithName:fontregularname size:16]];
+    [labelindex setTextColor:[UIColor colorWithWhite:0 alpha:0.6]];
     self.labelindex = labelindex;
     
-    UIImageView *iconstatus = [[UIImageView alloc] init];
-    [iconstatus setClipsToBounds:YES];
-    [iconstatus setContentMode:UIViewContentModeScaleAspectFit];
-    [iconstatus setUserInteractionEnabled:NO];
-    [iconstatus setTranslatesAutoresizingMaskIntoConstraints:NO];
-    self.iconstatus = iconstatus;
+    vstatsstatus *status = [[vstatsstatus alloc] init];
+    self.status = status;
     
     [self addSubview:labelindex];
-    [self addSubview:iconstatus];
+    [self addSubview:status];
     
-    NSDictionary *views = @{@"labelindex":labelindex, @"iconstatus":iconstatus};
+    NSDictionary *views = @{@"labelindex":labelindex, @"status":status};
     NSDictionary *metrics = @{};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-15-[iconstatus(17)]-8-[labelindex]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[iconstatus]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[labelindex]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-12-[status]-8-[labelindex]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[status]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[labelindex]" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -41,20 +37,11 @@
 -(void)config:(NSUInteger)index model:(mcourseitemchapter*)model
 {
     self.model = model;
+    BOOL modelstatus = model.available;
     NSString *indexstring = [NSString stringWithFormat:@"%@", @(index)];
-    NSString *assetstatus;
-    
-    if(model.available)
-    {
-        assetstatus = @"success";
-    }
-    else
-    {
-        assetstatus = @"fail";
-    }
     
     [self.labelindex setText:indexstring];
-    [self.iconstatus setImage:[UIImage imageNamed:assetstatus]];
+    [self.status changestatus:modelstatus];
 }
 
 @end
