@@ -3,9 +3,9 @@
 static NSString* const coursehaderid = @"course";
 static NSString* const chaptercellid = @"chapter";
 static NSUInteger const barmaxheight = 65;
-static NSUInteger const infomaxheight = 250;
-static NSUInteger const headerheight = 40;
-static NSUInteger const cellheight = 60;
+static NSUInteger const infomaxheight = 280;
+static NSUInteger const headerheight = 50;
+static NSUInteger const cellheight = 70;
 static NSUInteger const linespacing = 2;
 static NSUInteger const footerspacing = 30;
 
@@ -15,7 +15,7 @@ static NSUInteger const footerspacing = 30;
 {
     self = [super init:controller];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:colorsecond];
+    [self setBackgroundColor:[UIColor colorWithWhite:0.98 alpha:1]];
 
     vstatsbar *bar = [[vstatsbar alloc] init];
     self.bar = bar;
@@ -48,7 +48,7 @@ static NSUInteger const footerspacing = 30;
     [self addSubview:collection];
     [self addSubview:bar];
     
-    NSDictionary *views = @{@"bar":bar, @"info":info};
+    NSDictionary *views = @{@"bar":bar, @"info":info, @"col":collection};
     NSDictionary *metrics = @{};
     
     self.layoutbarheight = [NSLayoutConstraint constraintWithItem:bar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:barmaxheight];
@@ -56,8 +56,10 @@ static NSUInteger const footerspacing = 30;
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[info]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]-0-[info]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar]-0-[info]-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutbarheight];
+    [self addConstraint:self.layoutinfoheight];
     
     return self;
 }
@@ -96,6 +98,7 @@ static NSUInteger const footerspacing = 30;
 -(UICollectionReusableView*)collectionView:(UICollectionView*)col viewForSupplementaryElementOfKind:(NSString*)kind atIndexPath:(NSIndexPath*)index
 {
     vstatsheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:coursehaderid forIndexPath:index];
+    [header config:[[mcourse singleton] course:index.section]];
     
     return header;
 }
