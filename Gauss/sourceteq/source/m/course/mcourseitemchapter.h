@@ -6,5 +6,6 @@
 @property(nonatomic)NSUInteger dbid;
 @property(nonatomic)NSUInteger timestmap;
 @property(nonatomic)NSUInteger score;
+@property(nonatomic)BOOL available;
 
 @end
