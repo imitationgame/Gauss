@@ -13,9 +13,9 @@
 
 #pragma mark public
 
--(void)config:(NSUInteger)index last:(NSUInteger)timestamp score:(NSUInteger)score available:(BOOL)available
+-(void)config:(NSUInteger)index model:(mcourseitemchapter*)model
 {
-    
+    self.model = model;
 }
 
 @end

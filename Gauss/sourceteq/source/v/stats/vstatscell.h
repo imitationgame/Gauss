@@ -1,7 +1,11 @@
 #import "appdel.h"
 
+@class mcourseitemchapter;
+
 @interface vstatscell:UICollectionViewCell
 
--(void)config:(NSUInteger)index last:(NSUInteger)timestamp score:(NSUInteger)score available:(BOOL)available;
+-(void)config:(NSUInteger)index model:(mcourseitemchapter*)model;
+
+@property(weak, nonatomic)mcourseitemchapter *model;
 
 @end

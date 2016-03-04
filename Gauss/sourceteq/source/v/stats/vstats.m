@@ -7,7 +7,7 @@ static NSUInteger const barminheight = 20;
 static NSUInteger const infostartingheight = 300;
 static NSUInteger const infominheight = 100;
 static NSUInteger const headerheight = 80;
-static NSUInteger const cellheight = 70;
+static NSUInteger const cellheight = 110;
 static NSUInteger const linespacing = 2;
 static NSUInteger const footerspacing = 30;
 
@@ -173,7 +173,13 @@ static NSUInteger const footerspacing = 30;
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
+    NSUInteger course = index.section - 1;
+    NSUInteger item = index.item;
+    NSUInteger itemindex = item + 1;
+    mcourseitemchapter *chapter = [[mcourse singleton] course:course].chapters[item];
+    
     vstatscell *cell = [col dequeueReusableCellWithReuseIdentifier:chaptercellid forIndexPath:index];
+    [cell config:itemindex model:chapter];
     
     return cell;
 }
