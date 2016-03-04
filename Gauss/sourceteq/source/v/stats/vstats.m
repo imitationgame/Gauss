@@ -73,7 +73,7 @@ static const NSUInteger infomaxheight = 250;
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
-    
+    return 0;
 }
 
 @end

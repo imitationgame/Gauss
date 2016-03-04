@@ -1,13 +1,10 @@
-//
-//  mcourseitem.h
-//  Gauss
-//
-//  Created by zero on 3/3/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@class mcourseitemchapter;
 
-@interface mcourseitem : NSObject
+@interface mcourseitem:NSObject
+
+@property(copy, nonatomic)NSString *name;
+@property(strong, nonatomic)NSArray<mcourseitemchapter*> *chapters;
 
 @end
