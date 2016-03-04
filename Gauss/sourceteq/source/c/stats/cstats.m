@@ -2,6 +2,14 @@
 
 @implementation cstats
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    [self setExtendedLayoutIncludesOpaqueBars:NO];
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+}
+
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
