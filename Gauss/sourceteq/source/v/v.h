@@ -3,3 +3,4 @@
 #import "valert.h"
 #import "vstats.h"
 #import "vstatsbar.h"
+#import "vstatsinfo.h"
