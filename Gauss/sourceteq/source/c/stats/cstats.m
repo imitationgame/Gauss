@@ -16,22 +16,16 @@
     [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
-}
-
 -(void)loadView
 {
-    self.view = [[vstats alloc] init:self];
+    self.view = [[vplayitem alloc] init:self];
 }
 
 #pragma mark public
 
 -(void)play:(mcourseitemchapter*)chapter
 {
-    [[cmain singleton].pages sectionplay];
+    [[cmain singleton].pages sectionplay:chapter];
 }
 
 @end

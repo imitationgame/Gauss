@@ -7,3 +7,5 @@
 #import "vstatsbar.h"
 #import "vstatsinfo.h"
 #import "vstatsstatus.h"
+#import "vplayitem.h"
+#import "vplaybar.h"

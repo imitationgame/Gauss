@@ -203,7 +203,7 @@ static NSUInteger const footerspacing = 50;
     mcourseitemchapter *chapter = [[mcourse singleton] course:course].chapters[item];
     
     vstatscell *cell = [col dequeueReusableCellWithReuseIdentifier:chaptercellid forIndexPath:index];
-    [cell config:itemindex model:chapter];
+    [cell config:itemindex model:chapter controller:(cstats*)self.controller];
     
     return cell;
 }
