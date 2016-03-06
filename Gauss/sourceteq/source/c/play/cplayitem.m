@@ -2,6 +2,11 @@
 
 @implementation cplayitem
 
+-(void)loadView
+{
+    self.view = [[vplayitem alloc] init:self];
+}
+
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;
