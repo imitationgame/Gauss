@@ -6,6 +6,7 @@
 {
     self = [super init];
     self.value = value;
+    self.trivia = NO;
     
     return self;
 }

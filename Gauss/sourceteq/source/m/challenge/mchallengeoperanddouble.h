@@ -1,6 +1,6 @@
 #import "appdel.h"
-#import "mchallengeoperanddouble.h"
+#import "mchallengeoperand.h"
 
-@interface mchallengeoperanddouble:mchallengeoperanddouble
+@interface mchallengeoperanddouble:mchallengeoperand
 
 @end
