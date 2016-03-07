@@ -39,9 +39,13 @@ static NSUInteger const defaultoperands = 2;
 -(mchallengeoperand*)randomoperand
 {
     mchallengeoperand *operand;
-    CGFloat valuerange = (self.maxnumber + 1) - self.minnumber;
-    CGFloat value = arc4random_uniform(valuerange) + self.minnumber;
+    CGFloat maxnumber = (self.maxnumber + 1) * multiplier;
+    CGFloat minnumber = self.minnumber * multiplier;
+    CGFloat valuerange = maxnumber - minnumber;
+    CGFloat value = arc4random_uniform(valuerange);
     BOOL isdecimal = NO;
+    value += self.minnumber;
+    value /= multiplier;
     
     if(self.decimals)
     {
