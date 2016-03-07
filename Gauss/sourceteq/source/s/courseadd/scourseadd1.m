@@ -5,6 +5,10 @@
 -(instancetype)init
 {
     self = [super init];
+ 
+    self.operations = @[
+                        [[moperationadd alloc] init]
+                        ];
     
     return self;
 }
