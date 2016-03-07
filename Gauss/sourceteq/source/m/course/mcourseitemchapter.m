@@ -9,6 +9,8 @@
     self.course = course;
     self.uniqueid = NSStringFromClass([self class]);
     self.timestmap = 0;
+    self.timeout = 10;
+    self.extratime = 0;
     self.score = 0;
     self.dbid = 0;
     self.available = NO;
