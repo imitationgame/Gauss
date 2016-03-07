@@ -78,7 +78,7 @@ static NSUInteger const defaultoperands = 2;
 
 -(void)make:(mchallenge*)challenge
 {
-    NSAssert(!self.operations.count, @"Operations not defined.", NSStringFromClass([self class]));
+    NSAssert(self.operations.count, @"Operations not defined.", NSStringFromClass([self class]));
     
     NSMutableArray<mchallengeoperand*> *operands = [NSMutableArray array];
     NSMutableArray<moperation*> *operations = [NSMutableArray array];
