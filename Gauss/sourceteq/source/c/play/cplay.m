@@ -5,7 +5,7 @@
 -(instancetype)init:(mcourseitemchapter*)chapter
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    [self setViewControllers:@[[[cplayitem alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+    [self next:NO];
     self.chapter = chapter;
     
     return self;
@@ -19,6 +19,20 @@
 -(BOOL)prefersStatusBarHidden
 {
     return NO;
+}
+
+#pragma mark functionality
+
+-(void)next:(BOOL)animated
+{
+    [self setViewControllers:@[[[cplayitem alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:animated completion:nil];
+}
+
+#pragma mark public
+
+-(void)playnext
+{
+    [self next:YES];
 }
 
 @end
