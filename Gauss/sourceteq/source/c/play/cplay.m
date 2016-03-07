@@ -29,7 +29,7 @@
     
     mchallenge *challenge;
     
-    [self setViewControllers:@[[[cplayitem alloc] init:challenge]] direction:UIPageViewControllerNavigationDirectionForward animated:animated completion:nil];
+    [self setViewControllers:@[[[cplayitem alloc] init:self challenge:challenge]] direction:UIPageViewControllerNavigationDirectionForward animated:animated completion:nil];
 }
 
 #pragma mark public

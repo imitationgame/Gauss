@@ -2,10 +2,11 @@
 
 @implementation cplayitem
 
--(instancetype)init:(mchallenge*)challenge
+-(instancetype)init:(cplay*)play challenge:(mchallenge*)challenge
 {
     self = [super init];
-    
+
+    self.play = play;
     self.challenge = challenge;
     
     return self;
