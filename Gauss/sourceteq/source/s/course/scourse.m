@@ -1,6 +1,9 @@
 #import "scourse.h"
 #import "appdel.h"
 
+static NSUInteger const multiplier = 100;
+static NSUInteger const defaultoperands = 2;
+
 @implementation scourse
 
 -(instancetype)init
@@ -31,6 +34,26 @@
     NSMutableArray<mchallengeoperand*> *operands = [NSMutableArray array];
     NSMutableArray<moperation*> *operations = [NSMutableArray array];
     mchallengeoperand *result;
+    NSInteger totaloperands = self.maxoperands - defaultoperands;
+    
+    if(totaloperands < 1)
+    {
+        totaloperands = defaultoperands;
+    }
+    else
+    {
+        totaloperands = defaultoperands + arc4random_uniform(totaloperands + 1.0);
+    }
+    
+    for(NSUInteger i = 0; i < totaloperands; i++)
+    {
+        mchallengeoperand *operand = [[mchallengeoperand alloc] init];
+        
+        if(i < totaloperands - 1)
+        {
+            
+        }
+    }
     
     challenge.operands = operands;
     challenge.operations = operations;
