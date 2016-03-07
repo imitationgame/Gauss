@@ -25,9 +25,11 @@
 
 -(void)next:(BOOL)animated
 {
+#warning "define how to create a challenge"
+    
     mchallenge *challenge;
     
-    [self setViewControllers:@[[[cplayitem alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:animated completion:nil];
+    [self setViewControllers:@[[[cplayitem alloc] init:challenge]] direction:UIPageViewControllerNavigationDirectionForward animated:animated completion:nil];
 }
 
 #pragma mark public
