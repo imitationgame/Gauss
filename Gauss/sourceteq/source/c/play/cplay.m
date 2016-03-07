@@ -5,8 +5,8 @@
 -(instancetype)init:(mcourseitemchapter*)chapter
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    [self next:NO];
     self.chapter = chapter;
+    [self next:NO];
     
     return self;
 }
