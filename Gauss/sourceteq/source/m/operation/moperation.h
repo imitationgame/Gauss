@@ -2,4 +2,6 @@
 
 @interface moperation:NSObject
 
+@property(copy, nonatomic)NSString *symbol;
+
 @end
