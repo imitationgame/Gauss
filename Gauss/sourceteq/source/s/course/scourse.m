@@ -69,6 +69,29 @@ static NSUInteger const defaultoperands = 2;
     return operand;
 }
 
+-(mchallengeoperanddouble*)resultfrom:(NSArray<mchallengeoperand*>*)operands operations:(NSArray<moperation*>*)operations
+{
+    mchallengeoperanddouble *operand;
+    NSUInteger count = operands.count;
+    CGFloat sum = 0;
+    
+    for(NSUInteger i = 0; i < count; i++)
+    {
+        mchallengeoperand *inoperand = operands[i];
+        
+        if(i)
+        {
+            moperation *operation = operations[i];
+        }
+        else
+        {
+            sum += inoperand.value;
+        }
+    }
+    
+    return operand;
+}
+
 #pragma mark public
 
 -(mchallenge*)challenge
