@@ -18,3 +18,8 @@
 #import "mchallengetime.h"
 #import "moperationadd.h"
 #import "mplayitem.h"
+#import "mplayitemcelloperand.h"
+#import "mplayitemcelloperation.h"
+#import "mplayitemcellequals.h"
+#import "mplayitemcellresult.h"
+#import "mplayitemcelltrivia.h"

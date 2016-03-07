@@ -40,6 +40,12 @@
 		DACCC1411C8E1A4100754C2C /* mchallengeoperanddouble.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1401C8E1A4100754C2C /* mchallengeoperanddouble.m */; };
 		DACCC1441C8E3ED100754C2C /* vplayitemchallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1431C8E3ED100754C2C /* vplayitemchallenge.m */; };
 		DACCC1481C8E433400754C2C /* mplayitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1471C8E433400754C2C /* mplayitem.m */; };
+		DACCC14B1C8E443900754C2C /* mplayitemcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC14A1C8E443900754C2C /* mplayitemcell.m */; };
+		DACCC14E1C8E46C500754C2C /* mplayitemcelloperand.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC14D1C8E46C500754C2C /* mplayitemcelloperand.m */; };
+		DACCC1511C8E46EB00754C2C /* mplayitemcelloperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1501C8E46EB00754C2C /* mplayitemcelloperation.m */; };
+		DACCC1541C8E470700754C2C /* mplayitemcellequals.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1531C8E470700754C2C /* mplayitemcellequals.m */; };
+		DACCC1571C8E471400754C2C /* mplayitemcellresult.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1561C8E471400754C2C /* mplayitemcellresult.m */; };
+		DACCC15A1C8E472B00754C2C /* mplayitemcelltrivia.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1591C8E472B00754C2C /* mplayitemcelltrivia.m */; };
 		DAD676211C88BD6D00AC41FD /* gauss.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DC1C88BD6D00AC41FD /* gauss.db */; };
 		DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */; };
 		DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DF1C88BD6D00AC41FD /* analytics.plist */; };
@@ -133,6 +139,18 @@
 		DACCC1431C8E3ED100754C2C /* vplayitemchallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayitemchallenge.m; sourceTree = "<group>"; };
 		DACCC1461C8E433400754C2C /* mplayitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayitem.h; sourceTree = "<group>"; };
 		DACCC1471C8E433400754C2C /* mplayitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayitem.m; sourceTree = "<group>"; };
+		DACCC1491C8E443900754C2C /* mplayitemcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayitemcell.h; sourceTree = "<group>"; };
+		DACCC14A1C8E443900754C2C /* mplayitemcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayitemcell.m; sourceTree = "<group>"; };
+		DACCC14C1C8E46C500754C2C /* mplayitemcelloperand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayitemcelloperand.h; sourceTree = "<group>"; };
+		DACCC14D1C8E46C500754C2C /* mplayitemcelloperand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayitemcelloperand.m; sourceTree = "<group>"; };
+		DACCC14F1C8E46EB00754C2C /* mplayitemcelloperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayitemcelloperation.h; sourceTree = "<group>"; };
+		DACCC1501C8E46EB00754C2C /* mplayitemcelloperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayitemcelloperation.m; sourceTree = "<group>"; };
+		DACCC1521C8E470700754C2C /* mplayitemcellequals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayitemcellequals.h; sourceTree = "<group>"; };
+		DACCC1531C8E470700754C2C /* mplayitemcellequals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayitemcellequals.m; sourceTree = "<group>"; };
+		DACCC1551C8E471400754C2C /* mplayitemcellresult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayitemcellresult.h; sourceTree = "<group>"; };
+		DACCC1561C8E471400754C2C /* mplayitemcellresult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayitemcellresult.m; sourceTree = "<group>"; };
+		DACCC1581C8E472B00754C2C /* mplayitemcelltrivia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayitemcelltrivia.h; sourceTree = "<group>"; };
+		DACCC1591C8E472B00754C2C /* mplayitemcelltrivia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayitemcelltrivia.m; sourceTree = "<group>"; };
 		DAD675DC1C88BD6D00AC41FD /* gauss.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gauss.db; sourceTree = "<group>"; };
 		DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imateq.xcassets; sourceTree = "<group>"; };
 		DAD675DF1C88BD6D00AC41FD /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
@@ -402,6 +420,18 @@
 			children = (
 				DACCC1461C8E433400754C2C /* mplayitem.h */,
 				DACCC1471C8E433400754C2C /* mplayitem.m */,
+				DACCC1491C8E443900754C2C /* mplayitemcell.h */,
+				DACCC14A1C8E443900754C2C /* mplayitemcell.m */,
+				DACCC14C1C8E46C500754C2C /* mplayitemcelloperand.h */,
+				DACCC14D1C8E46C500754C2C /* mplayitemcelloperand.m */,
+				DACCC14F1C8E46EB00754C2C /* mplayitemcelloperation.h */,
+				DACCC1501C8E46EB00754C2C /* mplayitemcelloperation.m */,
+				DACCC1521C8E470700754C2C /* mplayitemcellequals.h */,
+				DACCC1531C8E470700754C2C /* mplayitemcellequals.m */,
+				DACCC1551C8E471400754C2C /* mplayitemcellresult.h */,
+				DACCC1561C8E471400754C2C /* mplayitemcellresult.m */,
+				DACCC1581C8E472B00754C2C /* mplayitemcelltrivia.h */,
+				DACCC1591C8E472B00754C2C /* mplayitemcelltrivia.m */,
 			);
 			path = playitem;
 			sourceTree = "<group>";
@@ -736,6 +766,7 @@
 				DAD6762E1C88BD6D00AC41FD /* cmain.m in Sources */,
 				DACCC13E1C8E1A3400754C2C /* mchallengeoperandint.m in Sources */,
 				DACCC1311C8DED0600754C2C /* scourseadd1.m in Sources */,
+				DACCC1541C8E470700754C2C /* mplayitemcellequals.m in Sources */,
 				DACCC1251C8DC86B00754C2C /* mchallenge.m in Sources */,
 				DA1098B01C8A5C6C007AB688 /* vplayitembar.m in Sources */,
 				DAD676281C88BD6D00AC41FD /* main.m in Sources */,
@@ -743,6 +774,7 @@
 				DAD676361C88BD6D00AC41FD /* vblur.m in Sources */,
 				DA2A09ED1C892499003A19F6 /* mcourseitemchapter.m in Sources */,
 				DACCC1441C8E3ED100754C2C /* vplayitemchallenge.m in Sources */,
+				DACCC14B1C8E443900754C2C /* mplayitemcell.m in Sources */,
 				DA2A09DB1C892232003A19F6 /* mcourse.m in Sources */,
 				DACCC1411C8E1A4100754C2C /* mchallengeoperanddouble.m in Sources */,
 				DA2A09D41C891890003A19F6 /* vstatsbar.m in Sources */,
@@ -762,11 +794,14 @@
 				DAD676331C88BD6D00AC41FD /* mdirs.m in Sources */,
 				DAD676311C88BD6D00AC41FD /* mdbcreate.m in Sources */,
 				DAD676381C88BD6D00AC41FD /* vspinner.m in Sources */,
+				DACCC15A1C8E472B00754C2C /* mplayitemcelltrivia.m in Sources */,
 				DAD676291C88BD6D00AC41FD /* analytics.m in Sources */,
+				DACCC1571C8E471400754C2C /* mplayitemcellresult.m in Sources */,
 				DA2A09D71C891B80003A19F6 /* vstatsinfo.m in Sources */,
 				DA2A09FE1C893F3F003A19F6 /* vstatsheader.m in Sources */,
 				DA2A0A011C894007003A19F6 /* vstatscell.m in Sources */,
 				DAD6762A1C88BD6D00AC41FD /* tools.m in Sources */,
+				DACCC1511C8E46EB00754C2C /* mplayitemcelloperation.m in Sources */,
 				DACCC1281C8DE42700754C2C /* mchallengetime.m in Sources */,
 				DACCC13B1C8E025D00754C2C /* mchallengeoperand.m in Sources */,
 				DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */,
@@ -774,6 +809,7 @@
 				DA2A09C41C88E3C6003A19F6 /* cplay.m in Sources */,
 				DA2A09DE1C892277003A19F6 /* mcourseitem.m in Sources */,
 				DA1098AD1C89E7A4007AB688 /* vstatsstatus.m in Sources */,
+				DACCC14E1C8E46C500754C2C /* mplayitemcelloperand.m in Sources */,
 				DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */,
 				DA2A09E71C892347003A19F6 /* mcourseitemadd.m in Sources */,
 				DAD6762B1C88BD6D00AC41FD /* updater.m in Sources */,
