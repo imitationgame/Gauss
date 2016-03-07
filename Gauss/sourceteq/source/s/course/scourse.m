@@ -78,14 +78,16 @@ static NSUInteger const defaultoperands = 2;
     for(NSUInteger i = 0; i < count; i++)
     {
         mchallengeoperand *inoperand = operands[i];
+        CGFloat currentvalue = inoperand.value;
         
         if(i)
         {
-            moperation *operation = operations[i];
+            moperation *operation = operations[i - 1];
+            sum = [operation operate:sum with:currentvalue];
         }
         else
         {
-            sum += inoperand.value;
+            sum += currentvalue;
         }
     }
     
@@ -142,7 +144,7 @@ static NSUInteger const defaultoperands = 2;
         [operands addObject:operand];
     }
     
-    result = [self randomoperand];
+    result = [self resultfrom:operands operations:operations];
     
     challenge.operands = operands;
     challenge.operations = operations;
