@@ -5,7 +5,7 @@
 -(instancetype)init
 {
     self = [super init];
-    [self setBackgroundColor:[UIColor clearColor]];
+    [self setBackgroundColor:colormain];
     [self setClipsToBounds:YES];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     

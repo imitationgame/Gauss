@@ -18,7 +18,7 @@
 
 -(void)loadView
 {
-    self.view = [[vplayitem alloc] init:self];
+    self.view = [[vstats alloc] init:self];
 }
 
 #pragma mark public
