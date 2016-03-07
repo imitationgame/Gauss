@@ -2,7 +2,7 @@
 
 @class cplayitem;
 
-@interface vplaybar:UIView
+@interface vplayitembar:UIView
 
 -(instancetype)init:(cplayitem*)controller;
 

@@ -1,6 +1,6 @@
-#import "vplaybar.h"
+#import "vplayitembar.h"
 
-@implementation vplaybar
+@implementation vplayitembar
 
 -(instancetype)init:(cplayitem*)controller
 {

@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B642C6369DAE6F51A02864A5 /* libPods-Gauss.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F731575245052EA2617E6541 /* libPods-Gauss.a */; };
 		DA1098AD1C89E7A4007AB688 /* vstatsstatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1098AC1C89E7A4007AB688 /* vstatsstatus.m */; };
-		DA1098B01C8A5C6C007AB688 /* vplaybar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1098AF1C8A5C6C007AB688 /* vplaybar.m */; };
+		DA1098B01C8A5C6C007AB688 /* vplayitembar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1098AF1C8A5C6C007AB688 /* vplayitembar.m */; };
 		DA2A09B81C88D022003A19F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2A09B71C88D022003A19F6 /* Images.xcassets */; };
 		DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BB1C88DA99003A19F6 /* cstats.m */; };
 		DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BF1C88DAD0003A19F6 /* vstats.m */; };
@@ -38,6 +38,7 @@
 		DACCC13B1C8E025D00754C2C /* mchallengeoperand.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC13A1C8E025D00754C2C /* mchallengeoperand.m */; };
 		DACCC13E1C8E1A3400754C2C /* mchallengeoperandint.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC13D1C8E1A3400754C2C /* mchallengeoperandint.m */; };
 		DACCC1411C8E1A4100754C2C /* mchallengeoperanddouble.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1401C8E1A4100754C2C /* mchallengeoperanddouble.m */; };
+		DACCC1441C8E3ED100754C2C /* vplayitemchallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1431C8E3ED100754C2C /* vplayitemchallenge.m */; };
 		DAD676211C88BD6D00AC41FD /* gauss.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DC1C88BD6D00AC41FD /* gauss.db */; };
 		DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */; };
 		DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DF1C88BD6D00AC41FD /* analytics.plist */; };
@@ -67,8 +68,8 @@
 		3F43EDE9F8684A076E74D99C /* Pods-Gauss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gauss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gauss/Pods-Gauss.debug.xcconfig"; sourceTree = "<group>"; };
 		DA1098AB1C89E7A4007AB688 /* vstatsstatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstatsstatus.h; sourceTree = "<group>"; };
 		DA1098AC1C89E7A4007AB688 /* vstatsstatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstatsstatus.m; sourceTree = "<group>"; };
-		DA1098AE1C8A5C6C007AB688 /* vplaybar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplaybar.h; sourceTree = "<group>"; };
-		DA1098AF1C8A5C6C007AB688 /* vplaybar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplaybar.m; sourceTree = "<group>"; };
+		DA1098AE1C8A5C6C007AB688 /* vplayitembar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayitembar.h; sourceTree = "<group>"; };
+		DA1098AF1C8A5C6C007AB688 /* vplayitembar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayitembar.m; sourceTree = "<group>"; };
 		DA2A09B51C88C385003A19F6 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA2A09B61C88C385003A19F6 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA2A09B71C88D022003A19F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -127,6 +128,8 @@
 		DACCC13D1C8E1A3400754C2C /* mchallengeoperandint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mchallengeoperandint.m; sourceTree = "<group>"; };
 		DACCC13F1C8E1A4100754C2C /* mchallengeoperanddouble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallengeoperanddouble.h; sourceTree = "<group>"; };
 		DACCC1401C8E1A4100754C2C /* mchallengeoperanddouble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mchallengeoperanddouble.m; sourceTree = "<group>"; };
+		DACCC1421C8E3ED100754C2C /* vplayitemchallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayitemchallenge.h; sourceTree = "<group>"; };
+		DACCC1431C8E3ED100754C2C /* vplayitemchallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayitemchallenge.m; sourceTree = "<group>"; };
 		DAD675DC1C88BD6D00AC41FD /* gauss.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gauss.db; sourceTree = "<group>"; };
 		DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imateq.xcassets; sourceTree = "<group>"; };
 		DAD675DF1C88BD6D00AC41FD /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
@@ -261,8 +264,10 @@
 			children = (
 				DA2A09C91C88E5EC003A19F6 /* vplayitem.h */,
 				DA2A09CA1C88E5EC003A19F6 /* vplayitem.m */,
-				DA1098AE1C8A5C6C007AB688 /* vplaybar.h */,
-				DA1098AF1C8A5C6C007AB688 /* vplaybar.m */,
+				DA1098AE1C8A5C6C007AB688 /* vplayitembar.h */,
+				DA1098AF1C8A5C6C007AB688 /* vplayitembar.m */,
+				DACCC1421C8E3ED100754C2C /* vplayitemchallenge.h */,
+				DACCC1431C8E3ED100754C2C /* vplayitemchallenge.m */,
 			);
 			path = play;
 			sourceTree = "<group>";
@@ -719,11 +724,12 @@
 				DACCC13E1C8E1A3400754C2C /* mchallengeoperandint.m in Sources */,
 				DACCC1311C8DED0600754C2C /* scourseadd1.m in Sources */,
 				DACCC1251C8DC86B00754C2C /* mchallenge.m in Sources */,
-				DA1098B01C8A5C6C007AB688 /* vplaybar.m in Sources */,
+				DA1098B01C8A5C6C007AB688 /* vplayitembar.m in Sources */,
 				DAD676281C88BD6D00AC41FD /* main.m in Sources */,
 				DACCC12E1C8DE5D500754C2C /* scourse.m in Sources */,
 				DAD676361C88BD6D00AC41FD /* vblur.m in Sources */,
 				DA2A09ED1C892499003A19F6 /* mcourseitemchapter.m in Sources */,
+				DACCC1441C8E3ED100754C2C /* vplayitemchallenge.m in Sources */,
 				DA2A09DB1C892232003A19F6 /* mcourse.m in Sources */,
 				DACCC1411C8E1A4100754C2C /* mchallengeoperanddouble.m in Sources */,
 				DA2A09D41C891890003A19F6 /* vstatsbar.m in Sources */,

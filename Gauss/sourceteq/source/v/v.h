@@ -8,4 +8,5 @@
 #import "vstatsinfo.h"
 #import "vstatsstatus.h"
 #import "vplayitem.h"
-#import "vplaybar.h"
+#import "vplayitembar.h"
+#import "vplayitemchallenge.h"
