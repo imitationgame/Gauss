@@ -1,6 +1,14 @@
 #import "vplayitem.h"
 
+@interface vplayitem ()
+
+@property(weak, nonatomic)cplayitem *controller;
+
+@end
+
 @implementation vplayitem
+
+@dynamic controller;
 
 -(instancetype)init:(cplayitem*)controller
 {

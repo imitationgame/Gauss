@@ -1,7 +1,11 @@
 #import "appdel.h"
 
+@class mchallenge;
+
 @interface cplayitem:UIViewController
 
--(void)playitem;
+-(instancetype)init:(mchallenge*)challenge;
+
+@property(weak, nonatomic)mchallenge *challenge;
 
 @end

@@ -25,6 +25,8 @@
 
 -(void)next:(BOOL)animated
 {
+    mchallenge *challenge;
+    
     [self setViewControllers:@[[[cplayitem alloc] init]] direction:UIPageViewControllerNavigationDirectionForward animated:animated completion:nil];
 }
 
