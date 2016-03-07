@@ -82,12 +82,13 @@ static NSUInteger const defaultoperands = 2;
 
 -(void)make:(mchallenge*)challenge
 {
-    NSAssert(self.operations.count, @"Operations not defined.", NSStringFromClass([self class]));
+    NSAssert(self.operations.count, @"Operations not defined", NSStringFromClass([self class]));
     
     NSMutableArray<mchallengeoperand*> *operands = [NSMutableArray array];
     NSMutableArray<moperation*> *operations = [NSMutableArray array];
     mchallengeoperand *result;
     NSInteger totaloperands = self.maxoperands - defaultoperands;
+    NSUInteger triviaoperand;
     
     if(totaloperands < 1)
     {
@@ -98,9 +99,16 @@ static NSUInteger const defaultoperands = 2;
         totaloperands = defaultoperands + arc4random_uniform(totaloperands + 1.0);
     }
     
+    triviaoperand = arc4random_uniform((CGFloat)totaloperands);
+    
     for(NSUInteger i = 0; i < totaloperands; i++)
     {
         mchallengeoperand *operand = [self randomoperand];
+        
+        if(i == triviaoperand)
+        {
+            operand.trivia = YES;
+        }
         
         if(i < totaloperands - 1)
         {

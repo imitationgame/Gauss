@@ -11,7 +11,15 @@
     for(NSUInteger i = 0; i < count; i++)
     {
         mchallengeoperand *operand = self.operands[i];
-        [string appendFormat:@"%@", operand];
+        
+        if(operand.trivia)
+        {
+            [string appendFormat:@"[%@]", operand];
+        }
+        else
+        {
+            [string appendFormat:@"%@", operand];
+        }
         
         if(i < count - 1)
         {
