@@ -35,6 +35,7 @@
 		DACCC1311C8DED0600754C2C /* scourseadd1.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1301C8DED0600754C2C /* scourseadd1.m */; };
 		DACCC1351C8DF12200754C2C /* moperation.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1341C8DF12200754C2C /* moperation.m */; };
 		DACCC1381C8DF21700754C2C /* moperationadd.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1371C8DF21700754C2C /* moperationadd.m */; };
+		DACCC13B1C8E025D00754C2C /* mchallengeoperand.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC13A1C8E025D00754C2C /* mchallengeoperand.m */; };
 		DAD676211C88BD6D00AC41FD /* gauss.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DC1C88BD6D00AC41FD /* gauss.db */; };
 		DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */; };
 		DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DF1C88BD6D00AC41FD /* analytics.plist */; };
@@ -118,6 +119,8 @@
 		DACCC1341C8DF12200754C2C /* moperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moperation.m; sourceTree = "<group>"; };
 		DACCC1361C8DF21700754C2C /* moperationadd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moperationadd.h; sourceTree = "<group>"; };
 		DACCC1371C8DF21700754C2C /* moperationadd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moperationadd.m; sourceTree = "<group>"; };
+		DACCC1391C8E025D00754C2C /* mchallengeoperand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallengeoperand.h; sourceTree = "<group>"; };
+		DACCC13A1C8E025D00754C2C /* mchallengeoperand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mchallengeoperand.m; sourceTree = "<group>"; };
 		DAD675DC1C88BD6D00AC41FD /* gauss.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gauss.db; sourceTree = "<group>"; };
 		DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imateq.xcassets; sourceTree = "<group>"; };
 		DAD675DF1C88BD6D00AC41FD /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
@@ -332,6 +335,8 @@
 			children = (
 				DACCC1231C8DC86B00754C2C /* mchallenge.h */,
 				DACCC1241C8DC86B00754C2C /* mchallenge.m */,
+				DACCC1391C8E025D00754C2C /* mchallengeoperand.h */,
+				DACCC13A1C8E025D00754C2C /* mchallengeoperand.m */,
 				DACCC1261C8DE42700754C2C /* mchallengetime.h */,
 				DACCC1271C8DE42700754C2C /* mchallengetime.m */,
 			);
@@ -731,6 +736,7 @@
 				DA2A0A011C894007003A19F6 /* vstatscell.m in Sources */,
 				DAD6762A1C88BD6D00AC41FD /* tools.m in Sources */,
 				DACCC1281C8DE42700754C2C /* mchallengetime.m in Sources */,
+				DACCC13B1C8E025D00754C2C /* mchallengeoperand.m in Sources */,
 				DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */,
 				DA2A09EA1C892351003A19F6 /* mcourseitemsubs.m in Sources */,
 				DA2A09C41C88E3C6003A19F6 /* cplay.m in Sources */,
