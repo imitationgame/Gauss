@@ -2,4 +2,6 @@
 
 @interface cplayitem:UIViewController
 
+-(void)playitem;
+
 @end
