@@ -13,6 +13,8 @@
 @property(copy, nonatomic)NSString *uniqueid;
 @property(nonatomic)NSUInteger dbid;
 @property(nonatomic)NSUInteger timestmap;
+@property(nonatomic)NSUInteger totalchallenges;
+@property(nonatomic)NSUInteger currentchallenge;
 @property(nonatomic)NSUInteger timeout;
 @property(nonatomic)NSUInteger extratime;
 @property(nonatomic)NSUInteger score;
