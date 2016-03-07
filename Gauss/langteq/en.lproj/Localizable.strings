@@ -1,9 +1,10 @@
-
-
-// courses
-
 "course_add_name"="Addition";
 "course_subs_name"="Substraction";
 
 "chapter_cel_notactive"="Chapter not active";
 "chapter_cel_nevertaken"="Chapter never taken";
+
+"play_back_alert_title"="Stop playing?";
+"play_back_alert_message"="All progress will be lost";
+"play_back_alert_accept"="Stop";
+"play_back_alert_cancel"="Keep playing";

@@ -29,4 +29,27 @@
     return NO;
 }
 
+#pragma mark public
+
+-(void)back
+{
+    NSString *alerttitle = NSLocalizedString(@"play_back_alert_title", nil);
+    NSString *alertmessage = NSLocalizedString(@"play_back_alert_message", nil);
+    NSString *alertcancel = NSLocalizedString(@"play_back_alert_cancel", nil);
+    NSString *alertaccept = NSLocalizedString(@"play_back_alert_accept", nil);
+    
+    [[[UIAlertView alloc] initWithTitle:alerttitle message:alertmessage delegate:self cancelButtonTitle:alertcancel otherButtonTitles:alertaccept, nil] show];
+}
+
+#pragma mark -
+#pragma mark alert del
+
+-(void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)index
+{
+    if(index)
+    {
+        [[cmain singleton].pages sectionstats:UIPageViewControllerNavigationDirectionReverse animated:YES];
+    }
+}
+
 @end

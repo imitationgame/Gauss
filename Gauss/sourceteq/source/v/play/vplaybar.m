@@ -2,12 +2,14 @@
 
 @implementation vplaybar
 
--(instancetype)init:(cplayitem*)playitem
+-(instancetype)init:(cplayitem*)controller
 {
     self = [super init];
     [self setBackgroundColor:colormain];
     [self setClipsToBounds:YES];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    self.controller = controller;
     
     UIButton *buttonback = [[UIButton alloc] init];
     [buttonback setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -34,7 +36,7 @@
 
 -(void)actionback:(UIButton*)button
 {
-    
+    [self.controller back];
 }
 
 @end
