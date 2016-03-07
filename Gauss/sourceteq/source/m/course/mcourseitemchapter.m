@@ -11,7 +11,6 @@
     self.timestmap = 0;
     self.totalchallenges = 10;
     self.currentchallenge = 0;
-    self.timeout = 10;
     self.extratime = 0;
     self.score = 0;
     self.dbid = 0;
