@@ -21,6 +21,8 @@
 {
     NSInteger timeleft = 0;
     NSUInteger current = [NSDate date].timeIntervalSince1970;
+    NSUInteger timeelapsed = current - self.starting;
+    timeleft = self.limit - timeelapsed;
     
     return timeleft;
 }
