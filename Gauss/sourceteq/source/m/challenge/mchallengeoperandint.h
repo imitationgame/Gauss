@@ -1,13 +1,6 @@
-//
-//  mchallengeoperandint.h
-//  Gauss
-//
-//  Created by zero on 3/7/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mchallengeoperand.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mchallengeoperandint : NSObject
+@interface mchallengeoperandint:mchallengeoperand
 
 @end

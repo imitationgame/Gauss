@@ -13,7 +13,6 @@
 #import "mcoursesubs1.h"
 #import "mcoursesubs2.h"
 #import "mchallenge.h"
-#import "mchallengeoperand.h"
 #import "mchallengeoperandint.h"
 #import "mchallengeoperanddouble.h"
 #import "mchallengetime.h"

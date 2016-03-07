@@ -343,12 +343,12 @@
 				DACCC1241C8DC86B00754C2C /* mchallenge.m */,
 				DACCC1391C8E025D00754C2C /* mchallengeoperand.h */,
 				DACCC13A1C8E025D00754C2C /* mchallengeoperand.m */,
-				DACCC1261C8DE42700754C2C /* mchallengetime.h */,
-				DACCC1271C8DE42700754C2C /* mchallengetime.m */,
 				DACCC13C1C8E1A3400754C2C /* mchallengeoperandint.h */,
 				DACCC13D1C8E1A3400754C2C /* mchallengeoperandint.m */,
 				DACCC13F1C8E1A4100754C2C /* mchallengeoperanddouble.h */,
 				DACCC1401C8E1A4100754C2C /* mchallengeoperanddouble.m */,
+				DACCC1261C8DE42700754C2C /* mchallengetime.h */,
+				DACCC1271C8DE42700754C2C /* mchallengetime.m */,
 			);
 			path = challenge;
 			sourceTree = "<group>";
