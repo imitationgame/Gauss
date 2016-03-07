@@ -18,6 +18,53 @@ static NSUInteger const defaultoperands = 2;
     return self;
 }
 
+#pragma mark functionality
+
+-(moperation*)randomoperation
+{
+    moperation *operation;
+    NSUInteger countoperations = self.operations.count;
+    NSUInteger selectedoperation = 0;
+    
+    if(countoperations > 1)
+    {
+        selectedoperation = arc4random_uniform((CGFloat)countoperations);
+    }
+    
+    operation = self.operations[selectedoperation];
+    
+    return operation;
+}
+
+-(mchallengeoperand*)randomoperand
+{
+    mchallengeoperand *operand;
+    CGFloat valuerange = (self.maxnumber + 1) - self.minnumber;
+    CGFloat value = arc4random_uniform(valuerange) + self.minnumber;
+    BOOL isdecimal = NO;
+    
+    if(self.decimals)
+    {
+        NSUInteger shoulddecimal = arc4random_uniform(2);
+        
+        if(shoulddecimal)
+        {
+            isdecimal = YES;
+        }
+    }
+    
+    if(isdecimal)
+    {
+        operand = [[mchallengeoperanddouble alloc] init:value];
+    }
+    else
+    {
+        operand = [[mchallengeoperandint alloc] init:value];
+    }
+    
+    return operand;
+}
+
 #pragma mark public
 
 -(mchallenge*)challenge
@@ -31,13 +78,12 @@ static NSUInteger const defaultoperands = 2;
 
 -(void)make:(mchallenge*)challenge
 {
+    NSAssert(!self.operations.count, @"Operations not defined.", NSStringFromClass([self class]));
+    
     NSMutableArray<mchallengeoperand*> *operands = [NSMutableArray array];
     NSMutableArray<moperation*> *operations = [NSMutableArray array];
     mchallengeoperand *result;
     NSInteger totaloperands = self.maxoperands - defaultoperands;
-    NSUInteger countoperations = self.operations.count;
-    
-    NSAssert(!countoperations, @"Operations not defined.", NSStringFromClass([self class]));
     
     if(totaloperands < 1)
     {
@@ -50,37 +96,18 @@ static NSUInteger const defaultoperands = 2;
     
     for(NSUInteger i = 0; i < totaloperands; i++)
     {
-        mchallengeoperand *operand;
-        CGFloat valuerange = (self.maxnumber + 1) - self.minnumber;
-        CGFloat value = arc4random_uniform(valuerange) + self.minnumber;
-        BOOL isdecimal = NO;
-        
-        if(self.decimals)
-        {
-            NSUInteger shoulddecimal = arc4random_uniform(2);
-            
-            if(shoulddecimal)
-            {
-                isdecimal = YES;
-            }
-        }
-        
-        if(isdecimal)
-        {
-            operand = [[mchallengeoperanddouble alloc] init:value];
-        }
-        else
-        {
-            operand = [[mchallengeoperandint alloc] init:value];
-        }
+        mchallengeoperand *operand = [self randomoperand];
         
         if(i < totaloperands - 1)
         {
-            NSUInteger selectedoperation = 0;
+            moperation *operation = [self randomoperation];
+            [operations addObject:operation];
         }
         
         [operands addObject:operand];
     }
+    
+    result = [self randomoperand];
     
     challenge.operands = operands;
     challenge.operations = operations;

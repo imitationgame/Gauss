@@ -9,6 +9,8 @@
     self.play = play;
     self.challenge = challenge;
     
+    NSLog(@"%@", challenge);
+    
     return self;
 }
 

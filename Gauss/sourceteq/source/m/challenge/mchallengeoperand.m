@@ -1,4 +1,5 @@
 #import "mchallengeoperand.h"
+#import "appdel.h"
 
 @implementation mchallengeoperand
 
@@ -9,6 +10,14 @@
     self.trivia = NO;
     
     return self;
+}
+
+-(NSString*)description
+{
+    NSNumber *number = @(self.value);
+    NSString *string = [[tools singleton] numbertostring:number];
+    
+    return string;
 }
 
 @end
