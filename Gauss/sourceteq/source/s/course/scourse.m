@@ -91,6 +91,8 @@ static NSUInteger const defaultoperands = 2;
         }
     }
     
+    operand = [[mchallengeoperanddouble alloc] init:sum];
+    
     return operand;
 }
 
