@@ -2,9 +2,9 @@
 
 @interface mchallengeoperand:NSObject
 
--(instancetype)init:(double)value;
+-(instancetype)init:(CGFloat)value;
 
-@property(nonatomic)double value;
+@property(nonatomic)CGFloat value;
 @property(nonatomic)BOOL trivia;
 
 @end

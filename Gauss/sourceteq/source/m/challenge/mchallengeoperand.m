@@ -2,7 +2,7 @@
 
 @implementation mchallengeoperand
 
--(instancetype)init:(double)value
+-(instancetype)init:(CGFloat)value
 {
     self = [super init];
     self.value = value;
