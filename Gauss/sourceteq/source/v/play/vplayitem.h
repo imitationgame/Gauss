@@ -1,10 +1,10 @@
 #import "appdel.h"
 #import "viewbase.h"
 
-@class vplaybar;
+@class vplayitembar;
 
 @interface vplayitem:viewbase
 
-@property(weak, nonatomic)vplaybar *bar;
+@property(weak, nonatomic)vplayitembar *bar;
 
 @end

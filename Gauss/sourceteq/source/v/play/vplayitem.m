@@ -16,7 +16,7 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     
-    vplaybar *bar = [[vplaybar alloc] init:controller];
+    vplayitembar *bar = [[vplayitembar alloc] init:controller];
     self.bar = bar;
     
     [self addSubview:bar];

@@ -17,3 +17,4 @@
 #import "mchallengeoperanddouble.h"
 #import "mchallengetime.h"
 #import "moperationadd.h"
+#import "mplayitem.h"
