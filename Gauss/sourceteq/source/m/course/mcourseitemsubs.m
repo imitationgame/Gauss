@@ -6,10 +6,9 @@
 {
     self = [super init];
     self.name = NSLocalizedString(@"course_subs_name", nil);
-    self.chapters = @[
-                      [[mcoursesubs1 alloc] init:self],
-                      [[mcoursesubs2 alloc] init:self]
-                      ];
+    
+    [self add:[[mcoursesubs1 alloc] init]];
+    [self add:[[mcoursesubs2 alloc] init]];
     
     return self;
 }

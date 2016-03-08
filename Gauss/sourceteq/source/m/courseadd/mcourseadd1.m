@@ -2,9 +2,9 @@
 
 @implementation mcourseadd1
 
--(instancetype)init:(mcourseitem*)course
+-(instancetype)init
 {
-    self = [super init:course];
+    self = [super init];
     self.strategy = [[scourseadd1 alloc] init];
     
     return self;

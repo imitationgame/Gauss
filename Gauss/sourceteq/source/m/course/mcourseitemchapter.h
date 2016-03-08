@@ -6,7 +6,6 @@
 
 @interface mcourseitemchapter:NSObject
 
--(instancetype)init:(mcourseitem*)course index:(NSUInteger)index;
 -(void)open;
 -(BOOL)keepplaying;
 -(mchallenge*)challenge;
