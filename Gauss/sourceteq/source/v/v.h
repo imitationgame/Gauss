@@ -15,3 +15,4 @@
 #import "vplayitemchallengeequals.h"
 #import "vplayitemchallengeresult.h"
 #import "vplayitemchallengetrivia.h"
+#import "vplayitemchallengetriviainput.h"
