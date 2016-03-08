@@ -1,7 +1,7 @@
 #import "mplayitemcelloperand.h"
 
 static NSUInteger const labelfontsize = 40;
-static NSUInteger const labelhrmargin = 20;
+static NSUInteger const labelhrmargin = 10;
 
 @interface mplayitemcelloperand ()
 

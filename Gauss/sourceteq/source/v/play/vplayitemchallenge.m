@@ -1,6 +1,7 @@
 #import "vplayitemchallenge.h"
 
 static NSUInteger const cellheight = 100;
+static NSUInteger const insetshr = 25;
 
 @implementation vplayitemchallenge
 
@@ -19,7 +20,6 @@ static NSUInteger const cellheight = 100;
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:0];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsZero];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setBackgroundColor:[UIColor clearColor]];
@@ -48,6 +48,13 @@ static NSUInteger const cellheight = 100;
 
 #pragma mark -
 #pragma mark col del
+
+-(UIEdgeInsets)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout insetForSectionAtIndex:(NSInteger)section
+{
+    UIEdgeInsets insets = UIEdgeInsetsMake(0, insetshr, 0, insetshr);
+    
+    return insets;
+}
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {

@@ -1,6 +1,6 @@
 #import "mplayitemcellequals.h"
 
-static NSUInteger const equalswidth = 30;
+static NSUInteger const equalswidth = 25;
 
 @implementation mplayitemcellequals
 
