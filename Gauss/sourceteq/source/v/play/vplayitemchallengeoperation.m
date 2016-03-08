@@ -7,6 +7,7 @@
     self = [super initWithFrame:frame];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
+    [self setUserInteractionEnabled:NO];
     
     UILabel *label = [[UILabel alloc] init];
     [label setClipsToBounds:YES];
