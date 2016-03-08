@@ -12,6 +12,7 @@ static NSUInteger const insetstop = 20;
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self setUserInteractionEnabled:NO];
     self.controller = controller;
     self.model = [[mplayitem alloc] init:controller.challenge];
     

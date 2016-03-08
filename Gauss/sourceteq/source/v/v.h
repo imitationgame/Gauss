@@ -16,3 +16,4 @@
 #import "vplayitemchallengeresult.h"
 #import "vplayitemchallengetrivia.h"
 #import "vplayitemchallengetriviainput.h"
+#import "vplayitemcontrols.h"
