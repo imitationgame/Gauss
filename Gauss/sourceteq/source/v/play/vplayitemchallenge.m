@@ -18,7 +18,7 @@ static NSUInteger const cellheight = 100;
     [flow setFooterReferenceSize:CGSizeZero];
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:0];
-    [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
     [flow setSectionInset:UIEdgeInsetsZero];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];

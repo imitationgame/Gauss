@@ -1,6 +1,7 @@
 #import "mplayitemcelloperand.h"
 
-static NSUInteger const labelfontsize = 20;
+static NSUInteger const labelfontsize = 40;
+static NSUInteger const labelhrmargin = 20;
 
 @interface mplayitemcelloperand ()
 
@@ -26,7 +27,8 @@ static NSUInteger const labelfontsize = 20;
     
     CGRect rectbounding = [astring boundingRectWithSize:CGSizeMake(320, labelfontsize + 5) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil];
     CGSize sizebounding = rectbounding.size;
-    self.width = ceilf(sizebounding.width);
+    CGFloat widthbounding = ceilf(sizebounding.width);
+    self.width = widthbounding + (labelhrmargin * 2);
     
     return self;
 }
