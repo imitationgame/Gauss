@@ -13,7 +13,7 @@
 -(instancetype)init:(moperation*)model
 {
     self = [super init:model];
-    self.cellclass = [UICollectionViewCell class];
+    self.cellclass = [vplayitemchallengeoperation class];
     
     return self;
 }

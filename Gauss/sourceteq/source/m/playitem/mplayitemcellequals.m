@@ -5,6 +5,7 @@
 -(instancetype)init
 {
     self = [super init:nil];
+    self.cellclass = [vplayitemchallengeequals class];
     
     return self;
 }

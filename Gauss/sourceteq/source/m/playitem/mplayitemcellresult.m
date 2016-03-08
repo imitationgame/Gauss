@@ -13,7 +13,7 @@
 -(instancetype)init:(mchallengeoperand*)model
 {
     self = [super init:model];
-    self.cellclass = [UICollectionViewCell class];
+    self.cellclass = [vplayitemchallengeresult class];
     
     return self;
 }

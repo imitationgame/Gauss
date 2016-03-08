@@ -33,6 +33,7 @@ static NSUInteger const cellheight = 100;
     [collection setDataSource:self];
     [collection setDelegate:self];
     self.collection = collection;
+    [self.model registercollection:collection];
     
     [self addSubview:collection];
     
