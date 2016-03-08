@@ -6,7 +6,7 @@
 
 @interface mcourseitemchapter:NSObject
 
--(instancetype)init:(mcourseitem*)course;
+-(instancetype)init:(mcourseitem*)course index:(NSUInteger)index;
 -(void)open;
 -(BOOL)keepplaying;
 -(mchallenge*)challenge;
@@ -20,6 +20,7 @@
 @property(nonatomic)NSUInteger currentchallenge;
 @property(nonatomic)NSUInteger extratime;
 @property(nonatomic)NSUInteger score;
+@property(nonatomic)NSUInteger index;
 @property(nonatomic)BOOL available;
 
 @end

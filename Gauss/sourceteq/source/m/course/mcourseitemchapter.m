@@ -3,7 +3,7 @@
 
 @implementation mcourseitemchapter
 
--(instancetype)init:(mcourseitem*)course
+-(instancetype)init:(mcourseitem*)course index:(NSUInteger)index
 {
     self = [super init];
     self.course = course;
@@ -13,6 +13,7 @@
     self.currentchallenge = 0;
     self.extratime = 0;
     self.score = 0;
+    self.index = index;
     self.dbid = 0;
     self.available = NO;
     
