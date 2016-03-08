@@ -31,6 +31,7 @@
 		DA2A0A011C894007003A19F6 /* vstatscell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A0A001C894007003A19F6 /* vstatscell.m */; };
 		DA46B9BD1C8F1D4600AA8421 /* vplayitemchallengetriviainput.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46B9BC1C8F1D4600AA8421 /* vplayitemchallengetriviainput.m */; };
 		DA46B9C01C8F312A00AA8421 /* vplayitemcontrols.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46B9BF1C8F312A00AA8421 /* vplayitemcontrols.m */; };
+		DA46B9C31C8F980600AA8421 /* vplayitemloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46B9C21C8F980600AA8421 /* vplayitemloader.m */; };
 		DACCC1251C8DC86B00754C2C /* mchallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1241C8DC86B00754C2C /* mchallenge.m */; };
 		DACCC1281C8DE42700754C2C /* mchallengetime.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1271C8DE42700754C2C /* mchallengetime.m */; };
 		DACCC12E1C8DE5D500754C2C /* scourse.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC12D1C8DE5D500754C2C /* scourse.m */; };
@@ -128,6 +129,8 @@
 		DA46B9BC1C8F1D4600AA8421 /* vplayitemchallengetriviainput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayitemchallengetriviainput.m; sourceTree = "<group>"; };
 		DA46B9BE1C8F312A00AA8421 /* vplayitemcontrols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayitemcontrols.h; sourceTree = "<group>"; };
 		DA46B9BF1C8F312A00AA8421 /* vplayitemcontrols.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayitemcontrols.m; sourceTree = "<group>"; };
+		DA46B9C11C8F980600AA8421 /* vplayitemloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayitemloader.h; sourceTree = "<group>"; };
+		DA46B9C21C8F980600AA8421 /* vplayitemloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayitemloader.m; sourceTree = "<group>"; };
 		DACCC1231C8DC86B00754C2C /* mchallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallenge.h; sourceTree = "<group>"; };
 		DACCC1241C8DC86B00754C2C /* mchallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mchallenge.m; sourceTree = "<group>"; };
 		DACCC1261C8DE42700754C2C /* mchallengetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallengetime.h; sourceTree = "<group>"; };
@@ -324,6 +327,8 @@
 				DA46B9BC1C8F1D4600AA8421 /* vplayitemchallengetriviainput.m */,
 				DA46B9BE1C8F312A00AA8421 /* vplayitemcontrols.h */,
 				DA46B9BF1C8F312A00AA8421 /* vplayitemcontrols.m */,
+				DA46B9C11C8F980600AA8421 /* vplayitemloader.h */,
+				DA46B9C21C8F980600AA8421 /* vplayitemloader.m */,
 			);
 			path = play;
 			sourceTree = "<group>";
@@ -834,6 +839,7 @@
 				DAD676311C88BD6D00AC41FD /* mdbcreate.m in Sources */,
 				DAD676381C88BD6D00AC41FD /* vspinner.m in Sources */,
 				DACCC15A1C8E472B00754C2C /* mplayitemcelltrivia.m in Sources */,
+				DA46B9C31C8F980600AA8421 /* vplayitemloader.m in Sources */,
 				DAD676291C88BD6D00AC41FD /* analytics.m in Sources */,
 				DACCC1571C8E471400754C2C /* mplayitemcellresult.m in Sources */,
 				DA2A09D71C891B80003A19F6 /* vstatsinfo.m in Sources */,
