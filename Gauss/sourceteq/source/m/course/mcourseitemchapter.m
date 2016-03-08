@@ -27,4 +27,24 @@
     [mdb openchapter:self.dbid];
 }
 
+-(BOOL)keepplaying
+{
+    BOOL keep = NO;
+    
+    if(self.currentchallenge < self.totalchallenges)
+    {
+        keep = YES;
+    }
+    
+    return keep;
+}
+
+-(mchallenge*)challenge
+{
+    mchallenge *challenge = [self.strategy challenge];
+    self.currentchallenge++;
+    
+    return challenge;
+}
+
 @end

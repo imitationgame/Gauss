@@ -29,6 +29,8 @@
     return NO;
 }
 
+#pragma mark functionality
+
 #pragma mark public
 
 -(void)back
@@ -43,7 +45,7 @@
 
 -(void)submit:(NSString*)answer
 {
-    
+    [self.play playnext];
 }
 
 #pragma mark -

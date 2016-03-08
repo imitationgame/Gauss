@@ -2,11 +2,14 @@
 
 @class mcourseitem;
 @class scourse;
+@class mchallenge;
 
 @interface mcourseitemchapter:NSObject
 
 -(instancetype)init:(mcourseitem*)course;
 -(void)open;
+-(BOOL)keepplaying;
+-(mchallenge*)challenge;
 
 @property(weak, nonatomic)mcourseitem *course;
 @property(strong, nonatomic)scourse *strategy;

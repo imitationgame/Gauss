@@ -12,4 +12,10 @@
     return self;
 }
 
+#pragma mark public
+
+-(void)configure:(UICollectionViewCell*)cell
+{
+}
+
 @end

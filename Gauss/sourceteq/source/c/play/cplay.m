@@ -25,7 +25,7 @@
 
 -(void)next:(BOOL)animated
 {
-    mchallenge *challenge = [self.chapter.strategy challenge];
+    mchallenge *challenge = [self.chapter challenge];
     [self setViewControllers:@[[[cplayitem alloc] init:self challenge:challenge]] direction:UIPageViewControllerNavigationDirectionForward animated:animated completion:nil];
 }
 
@@ -33,7 +33,14 @@
 
 -(void)playnext
 {
-    [self next:YES];
+    if([self.chapter keepplaying])
+    {
+        [self next:YES];
+    }
+    else
+    {
+        
+    }
 }
 
 @end
