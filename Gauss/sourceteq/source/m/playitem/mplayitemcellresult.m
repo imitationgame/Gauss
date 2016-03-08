@@ -22,7 +22,7 @@ static NSUInteger const labelhrmargin = 6;
     self.cellclass = [vplayitemchallengeresult class];
     
     NSString *string = [[tools singleton] numbertostring:@(model.value)];
-    NSDictionary *attributes = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:labelfontsize]};
+    NSDictionary *attributes = @{NSFontAttributeName:[UIFont fontWithName:fontregularname size:labelfontsize]};
     astring = [[NSAttributedString alloc] initWithString:string attributes:attributes];
     
     CGRect rectbounding = [astring boundingRectWithSize:CGSizeMake(320, labelfontsize + 5) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil];

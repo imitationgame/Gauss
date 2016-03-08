@@ -1,6 +1,6 @@
 #import "mplayitemcelltrivia.h"
 
-static NSUInteger const triviawidth = 100;
+static NSUInteger const triviawidth = 80;
 
 @interface mplayitemcelltrivia ()
 

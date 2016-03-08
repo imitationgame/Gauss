@@ -1,7 +1,8 @@
 #import "vplayitemchallenge.h"
 
-static NSUInteger const cellheight = 70;
+static NSUInteger const cellheight = 46;
 static NSUInteger const insetshr = 25;
+static NSUInteger const insetstop = 20;
 
 @implementation vplayitemchallenge
 
@@ -51,7 +52,7 @@ static NSUInteger const insetshr = 25;
 
 -(UIEdgeInsets)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout insetForSectionAtIndex:(NSInteger)section
 {
-    UIEdgeInsets insets = UIEdgeInsetsMake(0, insetshr, 0, insetshr);
+    UIEdgeInsets insets = UIEdgeInsetsMake(insetstop, insetshr, 0, insetshr);
     
     return insets;
 }

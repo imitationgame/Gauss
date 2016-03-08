@@ -1,7 +1,7 @@
 #import "scourse.h"
 #import "appdel.h"
 
-static NSUInteger const multiplier = 100;
+static NSInteger const multiplier = 100;
 static NSUInteger const defaultoperands = 2;
 
 @implementation scourse
@@ -14,16 +14,6 @@ static NSUInteger const defaultoperands = 2;
     self.maxoperands = 2;
     self.timeout = 10;
     self.decimals = NO;
-    
-    /*
-     
-     self.minnumber = -300;
-     self.maxnumber = 900;
-     self.maxoperands = 15;
-     self.timeout = 10;
-     self.decimals = YES;
-     
-     */
     
     return self;
 }
@@ -54,8 +44,8 @@ static NSUInteger const defaultoperands = 2;
     CGFloat valuerange = maxnumber - minnumber;
     CGFloat value = arc4random_uniform(valuerange);
     BOOL isdecimal = NO;
-    value += self.minnumber;
     value /= multiplier;
+    value += self.minnumber;
     
     if(self.decimals)
     {

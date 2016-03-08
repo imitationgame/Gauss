@@ -1,7 +1,7 @@
 #import "vplayitemchallengetrivia.h"
 
 static NSUInteger const hrmargin = 8;
-static NSUInteger const vrmargin = 5;
+static NSUInteger const vrmargin = 2;
 
 @implementation vplayitemchallengetrivia
 
