@@ -2,7 +2,7 @@
 
 @class cplayitem;
 
-@interface vplayitemcontrols:UIView
+@interface vplayitemcontrols:UIView<UITextFieldDelegate>
 
 -(instancetype)init:(cplayitem*)controller;
 
