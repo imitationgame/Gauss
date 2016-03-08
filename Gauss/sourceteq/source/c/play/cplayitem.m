@@ -31,8 +31,7 @@
     if(firsttime)
     {
         firsttime = NO;
-        [self.challenge.time start];
-        [self.view.controls start];
+        [self start];
     }
 }
 
@@ -53,26 +52,22 @@
 
 #pragma mark functionality
 
+-(void)start
+{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_MSEC * 200), dispatch_get_main_queue(),
+                   ^
+                   {
+                       [self.challenge.time start];
+                       [self.view.controls start];
+                   });
+}
+
 -(void)answer:(NSString*)answer
 {
-    BOOL pass = NO;
+    double received = answer.doubleValue;
+    double expected = self.challenge.trivia.value;
     
-    if(answer.length)
-    {
-        double received = answer.doubleValue;
-        double expected = self.challenge.trivia.value;
-        
-        if(received == expected)
-        {
-            pass = YES;
-        }
-        else
-        {
-            NSLog(@"expted: %@, received: %@", @(expected), @(received));
-        }
-    }
-    
-    if(pass)
+    if(received == expected)
     {
         NSUInteger score = self.challenge.chapter.index * self.challenge.time.extratime;
         [self.challenge.chapter success:score];
@@ -81,7 +76,7 @@
     }
     else
     {
-        NSLog(@"wrong answer");
+        NSLog(@"expted: %@, received: %@", @(expected), @(received));
     }
     
     self.challenge = nil;

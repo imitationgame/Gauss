@@ -10,7 +10,7 @@ static NSUInteger const defaultoperands = 2;
 {
     self = [super init];
     self.minnumber = 0;
-    self.maxnumber = 9;
+    self.maxnumber = 3;
     self.maxoperands = 2;
     self.timeout = 10;
     self.decimals = NO;

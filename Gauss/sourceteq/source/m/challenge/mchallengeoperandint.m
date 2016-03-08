@@ -4,7 +4,7 @@
 
 -(instancetype)init:(CGFloat)value
 {
-    self = [super init:ceilf(value)];
+    self = [super init:floorf(value)];
     
     return self;
 }
