@@ -1,6 +1,6 @@
 #import "appdel.h"
 #import "mplayitemcell.h"
 
-@interface mplayitemcelloperation:mplayitem
+@interface mplayitemcelloperation:mplayitemcell
 
 @end

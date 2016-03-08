@@ -1,11 +1,18 @@
 #import "mplayitemcelloperand.h"
 
+@interface mplayitemcelloperand ()
+
+@property(weak, nonatomic)mchallengeoperand *model;
+
+@end
+
 @implementation mplayitemcelloperand
 
--(instancetype)init
+@dynamic model;
+
+-(instancetype)init:(mchallengeoperand*)model
 {
-    self = [super init];
-    
+    self = [super init:model];
     self.cellclass = [UICollectionViewCell class];
     
     return self;
