@@ -1,6 +1,11 @@
 #import "vplayitemcontrols.h"
 
+static NSString* const fieldplaceholder = @"0";
+
 @implementation vplayitemcontrols
+{
+    BOOL submited;
+}
 
 -(instancetype)init:(cplayitem*)controller
 {
@@ -9,6 +14,7 @@
     [self setBackgroundColor:[colorsecond colorWithAlphaComponent:0.2]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.controller = controller;
+    submited = NO;
     
     UIView *border = [[UIView alloc] init];
     [border setUserInteractionEnabled:NO];
@@ -36,11 +42,33 @@
     [buttonnext addTarget:self action:@selector(actionnext:) forControlEvents:UIControlEventTouchUpInside];
     self.buttonnext = buttonnext;
     
+    UITextField *field = [[UITextField alloc] init];
+    [field setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+    [field setAutocorrectionType:UITextAutocorrectionTypeNo];
+    [field setBackgroundColor:[UIColor clearColor]];
+    [field setBorderStyle:UITextBorderStyleNone];
+    [field setClearButtonMode:UITextFieldViewModeNever];
+    [field setClearsOnBeginEditing:NO];
+    [field setClearsOnInsertion:NO];
+    [field setClipsToBounds:YES];
+    [field setDelegate:self];
+    [field setFont:[UIFont fontWithName:fontregularname size:16]];
+    [field setKeyboardAppearance:UIKeyboardAppearanceLight];
+    [field setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
+    [field setPlaceholder:fieldplaceholder];
+    [field setReturnKeyType:UIReturnKeyDone];
+    [field setSpellCheckingType:UITextSpellCheckingTypeNo];
+    [field setTextColor:[UIColor blackColor]];
+    [field setTintColor:[UIColor blackColor]];
+    [field setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.field = field;
+    
+    [basefield addSubview:field];
     [self addSubview:border];
     [self addSubview:basefield];
     [self addSubview:buttonnext];
     
-    NSDictionary *views = @{@"border":border, @"basefield":basefield, @"buttonnext":buttonnext};
+    NSDictionary *views = @{@"border":border, @"basefield":basefield, @"buttonnext":buttonnext, @"field":field};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
@@ -48,6 +76,8 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border(1)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[basefield]-10-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[buttonnext]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[field]-5-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[field]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -56,10 +86,36 @@
 
 -(void)actionnext:(UIButton*)button
 {
-    [self setUserInteractionEnabled:NO];
-    [button setSelected:YES];
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+    [self submit];
+}
+
+#pragma mark functionality
+
+-(void)submit
+{
+    if(!submited)
+    {
+        submited = YES;
+        [self setUserInteractionEnabled:NO];
+        [self.buttonnext setSelected:YES];
+        [self.controller submit:@""];
+    }
+}
+
+#pragma mark -
+#pragma mark field del
+
+-(void)textFieldDidEndEditing:(UITextField*)field
+{
+    [self submit];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField*)field
+{
+    [field resignFirstResponder];
     
-    [self.controller submit:@""];
+    return YES;
 }
 
 @end

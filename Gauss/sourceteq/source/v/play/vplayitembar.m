@@ -36,6 +36,7 @@
 
 -(void)actionback:(UIButton*)button
 {
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
     [self.controller back];
 }
 
