@@ -1,6 +1,17 @@
 #import "cplayitem.h"
 
+@interface cplayitem ()
+
+@property(strong, nonatomic)vplayitem *view;
+
+@end
+
 @implementation cplayitem
+{
+    BOOL firsttime;
+}
+
+@dynamic view;
 
 -(instancetype)init:(cplay*)play challenge:(mchallenge*)challenge
 {
@@ -8,8 +19,21 @@
 
     self.play = play;
     self.challenge = challenge;
+    firsttime = YES;
     
     return self;
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if(firsttime)
+    {
+        firsttime = NO;
+        [self.challenge.time start];
+        [self.view.controls start];
+    }
 }
 
 -(void)loadView
@@ -59,6 +83,8 @@
     {
         NSLog(@"wrong answer");
     }
+    
+    self.challenge = nil;
 }
 
 #pragma mark public

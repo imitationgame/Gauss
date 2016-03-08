@@ -5,6 +5,7 @@
 @interface vplayitemcontrols:UIView<UITextFieldDelegate>
 
 -(instancetype)init:(cplayitem*)controller;
+-(void)start;
 
 @property(weak, nonatomic)cplayitem *controller;
 @property(weak, nonatomic)UITextField *field;

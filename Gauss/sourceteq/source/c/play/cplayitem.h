@@ -10,6 +10,6 @@
 -(void)back;
 
 @property(weak, nonatomic)cplay *play;
-@property(weak, nonatomic)mchallenge *challenge;
+@property(strong, nonatomic)mchallenge *challenge;
 
 @end

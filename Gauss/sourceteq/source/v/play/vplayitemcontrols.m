@@ -101,6 +101,13 @@
     }
 }
 
+#pragma mark public
+
+-(void)start
+{
+    [self.field becomeFirstResponder];
+}
+
 #pragma mark -
 #pragma mark field del
 

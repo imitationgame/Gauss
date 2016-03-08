@@ -1,6 +1,14 @@
 #import "cstats.h"
 
+@interface cstats ()
+
+@property(strong, nonatomic)vstats *view;
+
+@end
+
 @implementation cstats
+
+@dynamic view;
 
 -(void)viewDidLoad
 {
