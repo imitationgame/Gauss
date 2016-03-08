@@ -5,7 +5,6 @@
 -(NSString*)description
 {
     NSMutableString *string = [NSMutableString string];
-    
     NSUInteger count = self.operands.count;
     
     for(NSUInteger i = 0; i < count; i++)

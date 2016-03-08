@@ -135,6 +135,7 @@ static NSUInteger const defaultoperands = 2;
         if(i == triviaoperand)
         {
             operand.trivia = YES;
+            challenge.trivia = operand;
         }
         
         if(i < totaloperands - 1)

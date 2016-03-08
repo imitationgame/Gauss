@@ -6,6 +6,7 @@
 {
     self = [super init];
     self.limit = limit;
+    self.extratime = 0;
     
     return self;
 }
@@ -27,19 +28,16 @@
     return timeleft;
 }
 
--(NSUInteger)end
+-(void)end
 {
-    NSUInteger extratime = 0;
     NSUInteger timeelapsed;
     self.ending = [NSDate date].timeIntervalSince1970;
     timeelapsed = self.ending - self.starting;
     
     if(timeelapsed < self.limit)
     {
-        extratime = self.limit - timeelapsed;
+        self.extratime = self.limit - timeelapsed;
     }
-    
-    return extratime;
 }
 
 @end

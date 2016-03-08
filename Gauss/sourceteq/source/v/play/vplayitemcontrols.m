@@ -94,6 +94,7 @@
     if(!submited)
     {
         submited = YES;
+        [self.controller.challenge.time end];
         [self setUserInteractionEnabled:NO];
         [self.buttonnext setSelected:YES];
         [self.controller submit:self.field.text];

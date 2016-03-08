@@ -5,10 +5,11 @@
 -(instancetype)init:(NSUInteger)limit;
 -(void)start;
 -(NSInteger)tick;
--(NSUInteger)end;
+-(void)end;
 
 @property(nonatomic)NSUInteger limit;
 @property(nonatomic)NSUInteger starting;
 @property(nonatomic)NSUInteger ending;
+@property(nonatomic)NSUInteger extratime;
 
 @end

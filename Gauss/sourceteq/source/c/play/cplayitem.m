@@ -9,8 +9,6 @@
     self.play = play;
     self.challenge = challenge;
     
-    NSLog(@"%@", challenge);
-    
     return self;
 }
 
@@ -33,7 +31,34 @@
 
 -(void)answer:(NSString*)answer
 {
+    BOOL pass = NO;
     
+    if(answer.length)
+    {
+        double received = answer.doubleValue;
+        double expected = self.challenge.trivia.value;
+        
+        if(received == expected)
+        {
+            pass = YES;
+        }
+        else
+        {
+            NSLog(@"expted: %@, received: %@", @(expected), @(received));
+        }
+    }
+    
+    if(pass)
+    {
+        NSUInteger score = self.challenge.chapter.index * self.challenge.time.extratime;
+        [self.challenge.chapter success:score];
+        
+        NSLog(@"scored %@", @(score));
+    }
+    else
+    {
+        NSLog(@"wrong answer");
+    }
 }
 
 #pragma mark public
