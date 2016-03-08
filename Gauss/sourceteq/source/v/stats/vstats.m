@@ -199,11 +199,10 @@ static NSUInteger const footerspacing = 50;
 {
     NSUInteger course = index.section - 1;
     NSUInteger item = index.item;
-    NSUInteger itemindex = item + 1;
     mcourseitemchapter *chapter = [mcourse singleton].courses[course].chapters[item];
     
     vstatscell *cell = [col dequeueReusableCellWithReuseIdentifier:chaptercellid forIndexPath:index];
-    [cell config:itemindex model:chapter controller:(cstats*)self.controller];
+    [cell config:chapter controller:(cstats*)self.controller];
     
     return cell;
 }

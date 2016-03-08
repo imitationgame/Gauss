@@ -6,7 +6,7 @@
 
 @interface vstatscell:UICollectionViewCell
 
--(void)config:(NSUInteger)index model:(mcourseitemchapter*)model controller:(cstats*)controller;
+-(void)config:(mcourseitemchapter*)model controller:(cstats*)controller;
 
 @property(weak, nonatomic)cstats *controller;
 @property(weak, nonatomic)mcourseitemchapter *model;

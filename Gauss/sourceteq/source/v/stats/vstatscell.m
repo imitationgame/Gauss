@@ -66,7 +66,7 @@
 
 #pragma mark public
 
--(void)config:(NSUInteger)index model:(mcourseitemchapter*)model controller:(cstats*)controller
+-(void)config:(mcourseitemchapter*)model controller:(cstats*)controller
 {
     self.controller = controller;
     self.model = model;
@@ -75,7 +75,7 @@
     BOOL buttonplayhidden = YES;
     NSUInteger timestamp = model.timestmap;
     NSUInteger score = model.score;
-    NSString *indexstring = [NSString stringWithFormat:@"%@", @(index)];
+    NSString *indexstring = [NSString stringWithFormat:@"%@", @(model.index)];
     NSString *notice = @"";
     
     if(modelstatus)
