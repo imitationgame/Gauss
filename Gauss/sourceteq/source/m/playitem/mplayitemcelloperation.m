@@ -1,6 +1,6 @@
 #import "mplayitemcelloperation.h"
 
-static NSUInteger const labelfontsize = 50;
+static NSUInteger const labelfontsize = 55;
 static NSUInteger const labelhrmargin = 5;
 
 @interface mplayitemcelloperation ()
