@@ -10,3 +10,8 @@
 #import "vplayitem.h"
 #import "vplayitembar.h"
 #import "vplayitemchallenge.h"
+#import "vplayitemchallengeoperand.h"
+#import "vplayitemchallengeoperation.h"
+#import "vplayitemchallengeequals.h"
+#import "vplayitemchallengeresult.h"
+#import "vplayitemchallengetrivia.h"
