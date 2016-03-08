@@ -1,5 +1,7 @@
 #import "mplayitemcelltrivia.h"
 
+static NSUInteger const triviawidth = 100;
+
 @interface mplayitemcelltrivia ()
 
 @property(weak, nonatomic)mchallengeoperand *model;
@@ -14,6 +16,7 @@
 {
     self = [super init:model];
     self.cellclass = [vplayitemchallengetrivia class];
+    self.width = triviawidth;
     
     return self;
 }

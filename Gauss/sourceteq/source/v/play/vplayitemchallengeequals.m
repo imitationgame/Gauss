@@ -1,7 +1,7 @@
 #import "vplayitemchallengeequals.h"
 
-static NSUInteger const barhrmargin = 2;
-static NSUInteger const barheight = 6;
+static NSUInteger const barhrmargin = 4;
+static NSUInteger const barheight = 4;
 static NSUInteger const barspacing = 3;
 
 @implementation vplayitemchallengeequals
@@ -20,13 +20,13 @@ static NSUInteger const barspacing = 3;
     [topbar setUserInteractionEnabled:NO];
     [topbar setTranslatesAutoresizingMaskIntoConstraints:NO];
     [topbar setClipsToBounds:YES];
-    [topbar setBackgroundColor:colorsecond];
+    [topbar setBackgroundColor:colorthird];
     
     UIView *bottombar = [[UIView alloc] init];
     [bottombar setUserInteractionEnabled:NO];
     [bottombar setTranslatesAutoresizingMaskIntoConstraints:NO];
     [bottombar setClipsToBounds:YES];
-    [bottombar setBackgroundColor:colorsecond];
+    [bottombar setBackgroundColor:colorthird];
     
     [self addSubview:topbar];
     [self addSubview:bottombar];

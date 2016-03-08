@@ -14,7 +14,7 @@
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setUserInteractionEnabled:NO];
     [label setTextAlignment:NSTextAlignmentCenter];
-    [label setTextColor:colormain];
+    [label setTextColor:colorthird];
     self.label = label;
     
     [self addSubview:label];

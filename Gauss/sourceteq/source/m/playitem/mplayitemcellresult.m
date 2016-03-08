@@ -1,7 +1,7 @@
 #import "mplayitemcellresult.h"
 
-static NSUInteger const labelfontsize = 44;
-static NSUInteger const labelhrmargin = 10;
+static NSUInteger const labelfontsize = 28;
+static NSUInteger const labelhrmargin = 6;
 
 @interface mplayitemcellresult ()
 
