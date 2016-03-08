@@ -15,6 +15,16 @@ static NSUInteger const defaultoperands = 2;
     self.timeout = 10;
     self.decimals = NO;
     
+    /*
+     
+     self.minnumber = -300;
+     self.maxnumber = 900;
+     self.maxoperands = 15;
+     self.timeout = 10;
+     self.decimals = YES;
+     
+     */
+    
     return self;
 }
 

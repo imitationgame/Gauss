@@ -1,6 +1,6 @@
 #import "vplayitemchallenge.h"
 
-static NSUInteger const cellheight = 100;
+static NSUInteger const cellheight = 70;
 static NSUInteger const insetshr = 25;
 
 @implementation vplayitemchallenge
