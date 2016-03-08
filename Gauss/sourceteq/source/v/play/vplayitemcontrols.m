@@ -29,6 +29,7 @@
     [buttonnext setClipsToBounds:YES];
     [buttonnext setImage:[[UIImage imageNamed:@"next"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
     [buttonnext setImage:[[UIImage imageNamed:@"next"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateHighlighted];
+    [buttonnext setImage:[[UIImage imageNamed:@"next"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateSelected];
     [buttonnext.imageView setContentMode:UIViewContentModeScaleAspectFit];
     [buttonnext.imageView setClipsToBounds:YES];
     [buttonnext.imageView setTintColor:colormain];
@@ -55,7 +56,10 @@
 
 -(void)actionnext:(UIButton*)button
 {
+    [self setUserInteractionEnabled:NO];
+    [button setSelected:YES];
     
+    [self.controller submit:@""];
 }
 
 @end

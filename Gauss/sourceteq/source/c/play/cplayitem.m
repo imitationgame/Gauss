@@ -41,6 +41,11 @@
     [[[UIAlertView alloc] initWithTitle:alerttitle message:alertmessage delegate:self cancelButtonTitle:alertcancel otherButtonTitles:alertaccept, nil] show];
 }
 
+-(void)submit:(NSString*)answer
+{
+    
+}
+
 #pragma mark -
 #pragma mark alert del
 
