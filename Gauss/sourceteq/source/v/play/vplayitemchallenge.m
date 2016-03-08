@@ -34,6 +34,8 @@ static NSUInteger const cellheight = 100;
     [collection setDelegate:self];
     self.collection = collection;
     
+    [self addSubview:collection];
+    
     NSDictionary *views = @{@"col":collection};
     NSDictionary *metrics = @{};
     
