@@ -51,4 +51,17 @@
     [self.cells addObject:cellresult];
 }
 
+#pragma mark public
+
+-(void)registercollection:(UICollectionView*)collection
+{
+    NSUInteger count = self.cells.count;
+    
+    for(NSUInteger i = 0; i < count; i++)
+    {
+        mplayitemcell *cell = self.cells[i];
+        [collection registerClass:cell.cellclass forCellWithReuseIdentifier:cell.cellid];
+    }
+}
+
 @end
