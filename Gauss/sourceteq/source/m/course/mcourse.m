@@ -1,17 +1,14 @@
 #import "mcourse.h"
 
 @implementation mcourse
-{
-    NSArray *array;
-}
 
 +(void)opencourse:(Class)courseclass
 {
-    NSUInteger count = [[mcourse singleton] count];
+    NSUInteger count = [mcourse singleton].courses.count;
     
     for(NSUInteger i = 0; i < count; i++)
     {
-        mcourseitem *incourse = [[mcourse singleton] course:i];
+        mcourseitem *incourse = [mcourse singleton].courses[i];
         
         if([incourse isKindOfClass:courseclass])
         {
@@ -56,10 +53,10 @@
 {
     self = [super init];
     
-    array = @[
-              [[mcourseitemadd alloc] init],
-              [[mcourseitemsubs alloc] init]
-              ];
+    self.courses = @[
+                     [[mcourseitemadd alloc] init],
+                     [[mcourseitemsubs alloc] init]
+                     ];
     
     return self;
 }
@@ -69,20 +66,6 @@
 -(void)ready
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:notcoursesloaded object:nil];
-}
-
--(NSUInteger)count
-{
-    NSUInteger count = array.count;
-    
-    return count;
-}
-
--(mcourseitem*)course:(NSUInteger)index
-{
-    mcourseitem *item = array[index];
-    
-    return item;
 }
 
 @end

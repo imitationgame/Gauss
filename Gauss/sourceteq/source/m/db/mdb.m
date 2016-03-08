@@ -28,11 +28,11 @@
     NSArray *rawcourses;
     NSArray *rawchapters;
     
-    NSUInteger count = [[mcourse singleton] count];
+    NSUInteger count = [mcourse singleton].courses.count;
     
     for(NSUInteger i = 0; i < count; i++)
     {
-        mcourseitem *course = [[mcourse singleton] course:i];
+        mcourseitem *course = [mcourse singleton].courses[i];
         [localcourses addObject:course];
         [localchapters addObjectsFromArray:course.chapters];
     }

@@ -34,13 +34,49 @@ static NSUInteger const controlsheight = 50;
     NSDictionary *views = @{@"bar":bar, @"challenge":challenge, @"controls":controls};
     NSDictionary *metrics = @{@"controlsheight":@(controlsheight)};
     
+    self.layoutcontrolsbottom = [NSLayoutConstraint constraintWithItem:controls attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[challenge]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[controls]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar(65)]-0-[challenge]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[controls(controlsheight)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[controls(controlsheight)]" options:0 metrics:metrics views:views]];
+    [self addConstraint:self.layoutcontrolsbottom];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedkeyboardchange:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
     return self;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark notified
+
+-(void)notifiedkeyboardchange:(NSNotification*)notification
+{
+    CGFloat ypos;
+    CGRect keyrect = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat origin = keyrect.origin.y;
+    CGFloat screenheight = [UIScreen mainScreen].bounds.size.height;
+    
+    if(origin < screenheight)
+    {
+        ypos = -(screenheight - origin);
+    }
+    else
+    {
+        ypos = 0;
+    }
+    
+    self.layoutcontrolsbottom.constant = ypos;
+    
+    [UIView animateWithDuration:1.5 animations:
+     ^
+     {
+         [self layoutIfNeeded];
+     }];
 }
 
 @end

@@ -167,7 +167,7 @@ static NSUInteger const footerspacing = 50;
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
-    NSUInteger sections = [[mcourse singleton] count] + 1;
+    NSUInteger sections = [mcourse singleton].courses.count + 1;
     
     return sections;
 }
@@ -179,7 +179,7 @@ static NSUInteger const footerspacing = 50;
     if(section)
     {
         NSUInteger course = section - 1;
-        items = [[mcourse singleton] course:course].chapters.count;
+        items = [mcourse singleton].courses[course].chapters.count;
     }
     
     return items;
@@ -190,7 +190,7 @@ static NSUInteger const footerspacing = 50;
     NSUInteger course = index.section - 1;
     
     vstatsheader *header = [col dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:coursehaderid forIndexPath:index];
-    [header config:[[mcourse singleton] course:course]];
+    [header config:[mcourse singleton].courses[course]];
     
     return header;
 }
@@ -200,7 +200,7 @@ static NSUInteger const footerspacing = 50;
     NSUInteger course = index.section - 1;
     NSUInteger item = index.item;
     NSUInteger itemindex = item + 1;
-    mcourseitemchapter *chapter = [[mcourse singleton] course:course].chapters[item];
+    mcourseitemchapter *chapter = [mcourse singleton].courses[course].chapters[item];
     
     vstatscell *cell = [col dequeueReusableCellWithReuseIdentifier:chaptercellid forIndexPath:index];
     [cell config:itemindex model:chapter controller:(cstats*)self.controller];

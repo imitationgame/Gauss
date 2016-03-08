@@ -1,7 +1,5 @@
 #import "vplayitemcontrols.h"
 
-static NSString* const fieldplaceholder = @"0";
-
 @implementation vplayitemcontrols
 {
     BOOL submited;
@@ -28,7 +26,7 @@ static NSString* const fieldplaceholder = @"0";
     [basefield setTranslatesAutoresizingMaskIntoConstraints:NO];
     [basefield.layer setCornerRadius:4];
     [basefield.layer setBorderWidth:1];
-    [basefield.layer setBorderColor:[colorsecond colorWithAlphaComponent:0.5].CGColor];
+    [basefield.layer setBorderColor:[colorsecond colorWithAlphaComponent:0.6].CGColor];
     
     UIButton *buttonnext = [[UIButton alloc] init];
     [buttonnext setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -52,10 +50,9 @@ static NSString* const fieldplaceholder = @"0";
     [field setClearsOnInsertion:NO];
     [field setClipsToBounds:YES];
     [field setDelegate:self];
-    [field setFont:[UIFont fontWithName:fontregularname size:16]];
+    [field setFont:[UIFont fontWithName:fontregularname size:18]];
     [field setKeyboardAppearance:UIKeyboardAppearanceLight];
     [field setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
-    [field setPlaceholder:fieldplaceholder];
     [field setReturnKeyType:UIReturnKeyDone];
     [field setSpellCheckingType:UITextSpellCheckingTypeNo];
     [field setTextColor:[UIColor blackColor]];
@@ -72,12 +69,12 @@ static NSString* const fieldplaceholder = @"0";
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[basefield]-0-[buttonnext(80)]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-6-[basefield]-0-[buttonnext(70)]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[border(1)]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[basefield]-10-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-6-[basefield]-6-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[buttonnext]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[field]-5-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[field]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-7-[field]-5-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-2-[field]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -99,7 +96,7 @@ static NSString* const fieldplaceholder = @"0";
         submited = YES;
         [self setUserInteractionEnabled:NO];
         [self.buttonnext setSelected:YES];
-        [self.controller submit:@""];
+        [self.controller submit:self.field.text];
     }
 }
 

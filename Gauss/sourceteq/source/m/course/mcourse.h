@@ -9,7 +9,7 @@
 +(BOOL)opennextchapter:(mcourseitemchapter*)chapter;
 +(instancetype)singleton;
 -(void)ready;
--(NSUInteger)count;
--(mcourseitem*)course:(NSUInteger)index;
+
+@property(strong, nonatomic)NSArray<mcourseitem*> *courses;
 
 @end

@@ -13,7 +13,7 @@ NSString *documents;
                        [msettings singleton];
                        [mdb loadcourses];
                        
-                       if(![[mcourse singleton] course:0].available)
+                       if(![mcourse singleton].courses[0].available)
                        {
                            [mcourse opencourse:[mcourseitemadd class]];
                        }
