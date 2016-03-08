@@ -74,6 +74,7 @@ static NSUInteger const cellheight = 100;
 {
     mplayitemcell *cellmodel = self.model.cells[index.item];
     UICollectionViewCell *cell = [col dequeueReusableCellWithReuseIdentifier:cellmodel.cellid forIndexPath:index];
+    [cellmodel configure:cell];
     
     return cell;
 }

@@ -8,7 +8,6 @@
     
     self.model = model;
     self.cellid = NSStringFromClass([self class]);
-    self.width = 100;
     
     return self;
 }

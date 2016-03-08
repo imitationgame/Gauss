@@ -18,4 +18,11 @@
     return self;
 }
 
+#pragma mark -
+#pragma mark item cell
+
+-(void)configure:(vplayitemchallengeoperand*)cell
+{
+}
+
 @end
