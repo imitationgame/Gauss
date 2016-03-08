@@ -1,13 +1,12 @@
-//
-//  vplayitemcontrols.h
-//  Gauss
-//
-//  Created by zero on 3/8/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@class cplayitem;
 
-@interface vplayitemcontrols : NSObject
+@interface vplayitemcontrols:UIView
+
+-(instancetype)init:(cplayitem*)controller;
+
+@property(weak, nonatomic)cplayitem *controller;
+@property(weak, nonatomic)UIView *basefield;
 
 @end
