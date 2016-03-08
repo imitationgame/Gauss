@@ -31,6 +31,11 @@
 
 #pragma mark functionality
 
+-(void)answer:(NSString*)answer
+{
+    
+}
+
 #pragma mark public
 
 -(void)back
@@ -45,6 +50,12 @@
 
 -(void)submit:(NSString*)answer
 {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^
+                   {
+                       [self answer:answer];
+                   });
+    
     [self.play playnext];
 }
 
