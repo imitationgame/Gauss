@@ -1,8 +1,8 @@
 #import "vplayitemchallengeequals.h"
 
-static NSUInteger const barhrmargin = 10;
-static NSUInteger const barheight = 25;
-static NSUInteger const barspacing = 10;
+static NSUInteger const barhrmargin = 2;
+static NSUInteger const barheight = 6;
+static NSUInteger const barspacing = 3;
 
 @implementation vplayitemchallengeequals
 {
