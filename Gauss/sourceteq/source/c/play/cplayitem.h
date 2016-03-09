@@ -6,6 +6,7 @@
 @interface cplayitem:UIViewController<UIAlertViewDelegate>
 
 -(instancetype)init:(cplay*)play challenge:(mchallenge*)challenge;
+-(void)start;
 -(void)submit:(NSString*)answer;
 -(void)back;
 

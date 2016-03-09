@@ -17,6 +17,7 @@ static NSUInteger const clocksize = 120;
     [self setUserInteractionEnabled:NO];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.size = clocksize;
+    self.delegate = delegate;
     
     currentdegree = -M_PI_2;
     counter = 0;

@@ -87,4 +87,12 @@ static NSUInteger const controlsheight = 50;
      }];
 }
 
+#pragma mark public
+
+-(void)start
+{
+    [self.challenge setHidden:NO];
+    [self.controller.challenge.time start];
+}
+
 @end

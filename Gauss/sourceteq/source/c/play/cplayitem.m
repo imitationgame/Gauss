@@ -37,16 +37,6 @@
 
 #pragma mark functionality
 
--(void)start
-{
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_MSEC * 200), dispatch_get_main_queue(),
-                   ^
-                   {
-                       [self.challenge.time start];
-                       [self.view.controls start];
-                   });
-}
-
 -(void)answer:(NSString*)answer
 {
     double received = answer.doubleValue;
@@ -68,6 +58,18 @@
 }
 
 #pragma mark public
+
+-(void)start
+{
+    [self.view.loader removeFromSuperview];
+    [self.view.controls start];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_MSEC * 200), dispatch_get_main_queue(),
+                   ^
+                   {
+                       [self.view start];
+                   });
+}
 
 -(void)back
 {

@@ -105,6 +105,7 @@
 
 -(void)start
 {
+    [self setHidden:NO];
     [self.field becomeFirstResponder];
 }
 

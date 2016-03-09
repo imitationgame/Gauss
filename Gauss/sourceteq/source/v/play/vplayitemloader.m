@@ -10,7 +10,6 @@
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     self.controller = controller;
-    
     NSString *stringtitle = controller.challenge.chapter.course.name;
     NSString *stringsubtitle = [NSString stringWithFormat:NSLocalizedString(@"play_loader_subtitle", nil), @(controller.challenge.chapter.index)];
     NSString *stringstats = [NSString stringWithFormat:NSLocalizedString(@"play_loader_stats", nil), @(controller.challenge.chapter.currentchallenge), @(controller.challenge.chapter.totalchallenges)];
@@ -100,7 +99,7 @@
 
 -(void)clockdone
 {
-    
+    [self.controller start];
 }
 
 @end
