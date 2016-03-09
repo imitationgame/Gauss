@@ -8,7 +8,7 @@
 -(instancetype)init:(id<vclockprotocol>)delegate;
 
 @property(weak, nonatomic)id<vclockprotocol> delegate;
-@property(strong, nonatomic)timerbg *timer;
+@property(weak, nonatomic)timerbg *timer;
 @property(nonatomic)NSUInteger size;
 
 @end

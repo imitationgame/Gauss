@@ -45,6 +45,8 @@
 
 -(void)answer:(NSString*)answer
 {
+    NSLog(@"submit answer %@", @(self.challenge.chapter.currentchallenge));
+    
     double received = answer.doubleValue;
     double expected = self.challenge.trivia.value;
     
@@ -141,7 +143,10 @@
     
     if(self.challenge.time.extratime < 1)
     {
+        [[UIApplication sharedApplication].keyWindow endEditing:YES];
         [self submit];
+        
+        NSLog(@"submit timeout %@", @(self.challenge.chapter.currentchallenge));
     }
     else
     {
