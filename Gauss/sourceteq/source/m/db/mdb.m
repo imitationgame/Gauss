@@ -41,7 +41,7 @@
     NSString *query = @"SELECT id, available, uniqueid FROM course ORDER BY id ASC;";
     rawcourses = [dbcon rows:query];
     
-    query = @"SELECT id, uniqueid, timestamp, score, available FROM chapter ORDER BY id ASC;";
+    query = @"SELECT id, uniqueid, timestamp, score, available, tried, passed FROM chapter ORDER BY id ASC;";
     rawchapters = [dbcon rows:query];
     
     [dbcon commit];
@@ -79,6 +79,8 @@
         NSUInteger dbid = [rawchapter[@"id"] unsignedIntegerValue];
         NSUInteger timestamp = [rawchapter[@"timestamp"] unsignedIntegerValue];
         NSUInteger score = [rawchapter[@"score"] unsignedIntegerValue];
+        NSUInteger tried = [rawchapter[@"tried"] unsignedIntegerValue];
+        NSUInteger passed = [rawchapter[@"passed"] unsignedIntegerValue];
         BOOL available = [rawchapter[@"available"] boolValue];
         NSUInteger countchapters = localcourses.count;
         
@@ -90,8 +92,10 @@
             {
                 chapter.dbid = dbid;
                 chapter.timestmap = timestamp;
-                chapter.score = score;
                 chapter.available = available;
+                chapter.totalscore = score;
+                chapter.totaltried = tried;
+                chapter.totalpassed = passed;
                 
                 j = countchapters;
             }
@@ -112,6 +116,17 @@
     NSString *query = [NSString stringWithFormat:
                        @"UPDATE chapter SET available=1 WHERE id=%@",
                        @(dbid)];
+    [db query:query];
+}
+
++(void)updatechapter:(mcourseitemchapter*)chapter
+{
+    NSString *query = [NSString stringWithFormat:
+                       @"UPDATE chapter SET "
+                       "score=%@, tried=%@, passed=%@ "
+                       "WHERE id=%@;",
+                       @(chapter.score), @(chapter.totaltried), @(chapter.totalpassed), @(chapter.dbid)];
+    
     [db query:query];
 }
 

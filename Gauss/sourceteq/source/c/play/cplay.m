@@ -39,6 +39,16 @@
     [self setViewControllers:@[controller] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 }
 
+#pragma mark functionality
+
+-(void)save
+{
+    [self.chapter save];
+    
+    self.scoreready = YES;
+    [[NSNotificationCenter defaultCenter] postNotificationName:notscoreready object:nil];
+}
+
 #pragma mark public
 
 -(void)playnext
@@ -57,8 +67,11 @@
 {
     if(![self.chapter keepplaying])
     {
-        self.scoreready = YES;
-        [[NSNotificationCenter defaultCenter] postNotificationName:notscoreready object:nil];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                       ^
+                       {
+                           [self save];
+                       });
     }
 }
 

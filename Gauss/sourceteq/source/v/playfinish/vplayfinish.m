@@ -51,7 +51,17 @@ static NSString* const finishcellid = @"cellid";
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedscoreready:) name:notscoreready object:nil];
     
+    if(self.controller.play.scoreready)
+    {
+        [self showscore];
+    }
+    
     return self;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark notified

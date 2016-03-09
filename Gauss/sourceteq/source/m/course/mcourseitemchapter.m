@@ -12,6 +12,9 @@
     self.timestmap = 0;
     self.index = 0;
     self.dbid = 0;
+    self.totalscore = 0;
+    self.totaltried = 0;
+    self.totalpassed = 0;
     self.available = NO;
     
     return self;
@@ -31,6 +34,14 @@
 {
     self.available = YES;
     [mdb openchapter:self.dbid];
+}
+
+-(void)save
+{
+    self.totalscore += self.score;
+    self.totaltried += self.totalchallenges;
+    self.totalpassed += self.passedchallenges;
+    [mdb updatechapter:self];
 }
 
 -(BOOL)keepplaying

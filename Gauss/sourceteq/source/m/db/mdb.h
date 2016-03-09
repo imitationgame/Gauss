@@ -1,6 +1,7 @@
 #import "appdel.h"
 
 @class mdbitem;
+@class mcourseitemchapter;
 
 @interface mdb:NSObject
 
@@ -8,5 +9,6 @@
 +(void)loadcourses;
 +(void)opencourse:(NSUInteger)dbid;
 +(void)openchapter:(NSUInteger)dbid;
++(void)updatechapter:(mcourseitemchapter*)chapter;
 
 @end
