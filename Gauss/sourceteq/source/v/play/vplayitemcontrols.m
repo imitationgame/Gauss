@@ -1,9 +1,6 @@
 #import "vplayitemcontrols.h"
 
 @implementation vplayitemcontrols
-{
-    BOOL submited;
-}
 
 -(instancetype)init:(cplayitem*)controller
 {
@@ -12,7 +9,7 @@
     [self setBackgroundColor:[colorsecond colorWithAlphaComponent:0.2]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.controller = controller;
-    submited = NO;
+    self.active = YES;
     
     UIView *border = [[UIView alloc] init];
     [border setUserInteractionEnabled:NO];
@@ -91,9 +88,9 @@
 
 -(void)submit
 {
-    if(!submited)
+    if(self.active)
     {
-        submited = YES;
+        self.active = NO;
         [self.controller.challenge.time end];
         [self setUserInteractionEnabled:NO];
         [self.buttonnext setSelected:YES];
@@ -106,6 +103,18 @@
 -(void)start
 {
     [self setHidden:NO];
+    [self.field becomeFirstResponder];
+}
+
+-(void)deactivate
+{
+    self.active = NO;
+    [self.field resignFirstResponder];
+}
+
+-(void)reactivate
+{
+    self.active = YES;
     [self.field becomeFirstResponder];
 }
 

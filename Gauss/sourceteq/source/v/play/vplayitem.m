@@ -22,7 +22,7 @@ static NSUInteger const controlsheight = 50;
     self.bar = bar;
     
     vplayitemchallenge *challenge = [[vplayitemchallenge alloc] init:controller];
-    [challenge setHidden:YES];
+    [challenge setAlpha:0];
     self.challenge = challenge;
     
     vplayitemloader *loader = [[vplayitemloader alloc] init:controller];
@@ -91,8 +91,15 @@ static NSUInteger const controlsheight = 50;
 
 -(void)start
 {
-    [self.challenge setHidden:NO];
-    [self.controller.challenge.time start];
+    [UIView animateWithDuration:0.8 animations:
+     ^
+     {
+         [self.challenge setAlpha:1];
+     } completion:
+     ^(BOOL done)
+     {
+         [self.controller.challenge.time start];
+     }];
 }
 
 @end

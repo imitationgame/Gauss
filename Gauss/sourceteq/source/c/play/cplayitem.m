@@ -63,12 +63,7 @@
 {
     [self.view.loader removeFromSuperview];
     [self.view.controls start];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_MSEC * 200), dispatch_get_main_queue(),
-                   ^
-                   {
-                       [self.view start];
-                   });
+    [self.view start];
 }
 
 -(void)back
@@ -100,6 +95,10 @@
     if(index)
     {
         [[cmain singleton].pages sectionstats:UIPageViewControllerNavigationDirectionReverse animated:YES];
+    }
+    else
+    {
+        [self.view.controls reactivate];
     }
 }
 

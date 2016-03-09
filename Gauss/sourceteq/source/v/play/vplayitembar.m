@@ -36,6 +36,7 @@
 
 -(void)actionback:(UIButton*)button
 {
+    [((vplayitem*)self.controller.view).controls deactivate];
     [[UIApplication sharedApplication].keyWindow endEditing:YES];
     [self.controller back];
 }
