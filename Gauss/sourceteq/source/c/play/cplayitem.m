@@ -80,9 +80,16 @@
     [self.view start];
 }
 
+-(void)startclock
+{
+    [self.challenge.time start];
+    [self.timer resume];
+}
+
 -(void)submit
 {
     [self.timer pause];
+    [self.challenge.time end];
     NSString *answer = self.view.controls.field.text;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
@@ -130,7 +137,7 @@
 
 -(void)timerbgtick
 {
-    self.challenge.time.extratime--;
+    [self.challenge.time tick];
     
     if(self.challenge.time.extratime < 1)
     {

@@ -98,7 +98,7 @@ static NSUInteger const controlsheight = 50;
      } completion:
      ^(BOOL done)
      {
-         [self.controller.timer resume];
+         [self.controller startclock];
      }];
 }
 

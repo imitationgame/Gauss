@@ -8,6 +8,7 @@
 
 -(instancetype)init:(cplay*)play challenge:(mchallenge*)challenge;
 -(void)start;
+-(void)startclock;
 -(void)submit;
 -(void)back;
 -(void)displaytime;
