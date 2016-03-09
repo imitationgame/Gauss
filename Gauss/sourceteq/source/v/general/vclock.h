@@ -1,5 +1,10 @@
 #import "appdel.h"
 
-@interface vclock:UIView
+@class timerbg;
+
+@interface vclock:UIView<timerbgdel>
+
+@property(strong, nonatomic)timerbg *timer;
+@property(nonatomic)NSUInteger size;
 
 @end

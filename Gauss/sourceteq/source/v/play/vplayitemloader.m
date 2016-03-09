@@ -41,17 +41,35 @@
     [label setAttributedText:mut];
     [label setNumberOfLines:0];
     
+    vclock *clock = [[vclock alloc] init];
+    self.clock = clock;
+    
     [self addSubview:label];
+    [self addSubview:clock];
     [self addSubview:buttonstop];
     
-    NSDictionary *views = @{@"buttonstop":buttonstop, @"label":label};
+    NSDictionary *views = @{@"buttonstop":buttonstop, @"label":label, @"clock":clock};
     NSDictionary *metrics = @{};
     
+    self.layoutclockleft = [NSLayoutConstraint constraintWithItem:clock attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1 constant:0];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-100-[buttonstop]-100-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label]-200-[buttonstop(100)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label]-40-[clock]-40-[buttonstop(100)]" options:0 metrics:metrics views:views]];
+    [self addConstraint:self.layoutclockleft];
     
     return self;
+}
+
+-(void)layoutSubviews
+{
+    CGFloat clocksize = self.clock.size;
+    CGFloat screenwidth = [UIScreen mainScreen].bounds.size.width;
+    CGFloat remainwidth = screenwidth - clocksize;
+    CGFloat marginwidth = remainwidth / 2.0;
+    
+    self.layoutclockleft.constant = marginwidth;
+    
+    [super layoutSubviews];
 }
 
 #pragma mark action

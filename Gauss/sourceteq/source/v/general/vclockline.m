@@ -1,9 +1,7 @@
 #import "vclockline.h"
 
-static CGFloat const linewidth = 5;
-static CGFloat const linerad = 0.1;
-static CGFloat const radorigin = 0;
-static CGFloat const linemargin = 5;
+static CGFloat const linewidth = 8;
+static CGFloat const linerad = 0.025;
 
 @implementation vclockline
 
@@ -23,7 +21,7 @@ static CGFloat const linemargin = 5;
 {
     CGFloat width = rect.size.width;
     CGFloat width_2 = width / 2.0;
-    CGFloat linelenght = width_2 - linemargin;
+    CGFloat linelenght = width_2 - linewidth;
     CGFloat endingdegree = self.degree + linerad;
     
     CGContextRef context = UIGraphicsGetCurrentContext();
