@@ -7,12 +7,8 @@
 {
     self = [super init];
     self.uniqueid = NSStringFromClass([self class]);
-    self.timestmap = 0;
     self.totalchallenges = 10;
-    self.currentchallenge = 0;
-    self.passedchallenges = 0;
-    self.extratime = 0;
-    self.score = 0;
+    self.timestmap = 0;
     self.index = 0;
     self.dbid = 0;
     self.available = NO;
@@ -21,6 +17,14 @@
 }
 
 #pragma mark public
+
+-(void)startplaying
+{
+    self.currentchallenge = 0;
+    self.passedchallenges = 0;
+    self.extratime = 0;
+    self.score = 0;
+}
 
 -(void)open
 {

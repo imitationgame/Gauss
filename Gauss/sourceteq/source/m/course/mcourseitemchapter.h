@@ -7,6 +7,7 @@
 @interface mcourseitemchapter:NSObject
 
 -(void)open;
+-(void)startplaying;
 -(BOOL)keepplaying;
 -(mchallenge*)challenge;
 -(void)success:(NSUInteger)score;

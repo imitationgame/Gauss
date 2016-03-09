@@ -240,6 +240,7 @@ static NSUInteger const footerspacing = 50;
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
     mcourseitemchapter *chapter = [self chapterfor:index];
+    [chapter startplaying];
     [self.controller play:chapter];
 }
 
