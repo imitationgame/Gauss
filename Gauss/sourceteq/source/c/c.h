@@ -1,5 +1,6 @@
 #import "cmain.h"
 #import "cpages.h"
+#import "ctoast.h"
 #import "cstats.h"
 #import "cplay.h"
 #import "cplayitem.h"

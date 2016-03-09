@@ -4,6 +4,7 @@
 #import "vclock.h"
 #import "vclockline.h"
 #import "vclockprotocol.h"
+#import "vtoast.h"
 #import "vstats.h"
 #import "vstatsheader.h"
 #import "vstatscell.h"

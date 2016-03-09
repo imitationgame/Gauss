@@ -49,6 +49,16 @@
         self.maxscore = self.score;
     }
     
+    if(self.course.chapters.count > self.index)
+    {
+        mcourseitemchapter *nextchapter = self.course.chapters[self.index];
+        
+        if(!nextchapter.available)
+        {
+            [nextchapter open];
+        }
+    }
+    
     [mdb updatechapter:self];
 }
 
