@@ -93,7 +93,7 @@
                 chapter.dbid = dbid;
                 chapter.timestmap = timestamp;
                 chapter.available = available;
-                chapter.totalscore = score;
+                chapter.maxscore = score;
                 chapter.totaltried = tried;
                 chapter.totalpassed = passed;
                 
@@ -125,7 +125,7 @@
                        @"UPDATE chapter SET "
                        "score=%@, tried=%@, passed=%@ "
                        "WHERE id=%@;",
-                       @(chapter.score), @(chapter.totaltried), @(chapter.totalpassed), @(chapter.dbid)];
+                       @(chapter.maxscore), @(chapter.totaltried), @(chapter.totalpassed), @(chapter.dbid)];
     
     [db query:query];
 }

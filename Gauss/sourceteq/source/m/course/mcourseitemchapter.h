@@ -6,6 +6,7 @@
 
 @interface mcourseitemchapter:NSObject
 
+-(void)startplaying;
 -(void)open;
 -(void)save;
 -(BOOL)keepplaying;
@@ -23,7 +24,8 @@
 @property(nonatomic)NSUInteger extratime;
 @property(nonatomic)NSUInteger score;
 @property(nonatomic)NSUInteger index;
-@property(nonatomic)NSUInteger totalscore;
+@property(nonatomic)NSUInteger maxscore;
+@property(nonatomic)NSUInteger oldmaxscore;
 @property(nonatomic)NSUInteger totaltried;
 @property(nonatomic)NSUInteger totalpassed;
 @property(nonatomic)BOOL available;

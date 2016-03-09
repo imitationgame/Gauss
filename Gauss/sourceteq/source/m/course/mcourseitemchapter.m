@@ -12,7 +12,8 @@
     self.timestmap = 0;
     self.index = 0;
     self.dbid = 0;
-    self.totalscore = 0;
+    self.maxscore = 0;
+    self.oldmaxscore = 0;
     self.totaltried = 0;
     self.totalpassed = 0;
     self.available = NO;
@@ -38,9 +39,15 @@
 
 -(void)save
 {
-    self.totalscore += self.score;
     self.totaltried += self.totalchallenges;
     self.totalpassed += self.passedchallenges;
+    
+    if(self.score > self.maxscore)
+    {
+        self.oldmaxscore = self.maxscore;
+        self.maxscore = self.score;
+    }
+    
     [mdb updatechapter:self];
 }
 
