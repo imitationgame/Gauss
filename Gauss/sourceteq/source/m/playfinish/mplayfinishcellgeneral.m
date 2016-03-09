@@ -6,11 +6,11 @@
 {
     self = [super init:chapter];
     
-    self.cellheight = 100;
+    self.cellheight = 260;
     
-    NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont fontWithName:fontregularname size:18], NSForegroundColorAttributeName:colormain};
+    NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont fontWithName:fontregularname size:20], NSForegroundColorAttributeName:[UIColor blackColor]};
     NSDictionary *dictsubtitle = @{NSFontAttributeName:[UIFont fontWithName:fontregularname size:16], NSForegroundColorAttributeName:colorthird};
-    NSDictionary *dictscore = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:26], NSForegroundColorAttributeName:colormain};
+    NSDictionary *dictscore = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:30], NSForegroundColorAttributeName:colormain};
     NSString *stringtitle = chapter.course.name;
     NSString *stringsubtitle = [NSString stringWithFormat:NSLocalizedString(@"play_finish_subtitle", nil), @(chapter.index)];
     NSString *stringscore = [[tools singleton] numbertostring:@(chapter.score)];

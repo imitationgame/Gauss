@@ -6,6 +6,7 @@
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.chapter = chapter;
+    self.scoreready = NO;
     [self next:NO];
     
     return self;
@@ -49,6 +50,15 @@
     else
     {
         [self finish];
+    }
+}
+
+-(void)scorecomputed
+{
+    if(![self.chapter keepplaying])
+    {
+        self.scoreready = YES;
+        [[NSNotificationCenter defaultCenter] postNotificationName:notscoreready object:nil];
     }
 }
 

@@ -68,6 +68,8 @@
     {
         NSLog(@"expected: %@, received: %@", @(expected), @(received));
     }
+    
+    [self.play scorecomputed];
 }
 
 #pragma mark public

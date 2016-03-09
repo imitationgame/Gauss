@@ -17,8 +17,6 @@ static NSString* const finishcellid = @"cellid";
     self = [super init:controller];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:1]];
-    
-    self.model = [[mplayfinish alloc] init:controller.play.chapter];
     vplayfinishbar *bar = [[vplayfinishbar alloc] init];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
@@ -42,14 +40,37 @@ static NSString* const finishcellid = @"cellid";
     self.collection = collection;
     
     [self addSubview:bar];
+    [self addSubview:collection];
     
     NSDictionary *views = @{@"bar":bar, @"col":collection};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar(65)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar(65)]-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedscoreready:) name:notscoreready object:nil];
     
     return self;
+}
+
+#pragma mark notified
+
+-(void)notifiedscoreready:(NSNotification*)notification
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^
+                   {
+                       [self showscore];
+                   });
+}
+
+#pragma mark functionality
+
+-(void)showscore
+{
+    self.model = [[mplayfinish alloc] init:self.controller.play.chapter];
+    [self.collection reloadData];
 }
 
 #pragma mark -

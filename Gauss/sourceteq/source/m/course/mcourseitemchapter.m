@@ -7,7 +7,8 @@
 {
     self = [super init];
     self.uniqueid = NSStringFromClass([self class]);
-    self.totalchallenges = 10;
+//    self.totalchallenges = 10;
+        self.totalchallenges = 2;
     self.timestmap = 0;
     self.index = 0;
     self.dbid = 0;

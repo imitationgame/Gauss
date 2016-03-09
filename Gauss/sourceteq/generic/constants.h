@@ -2,9 +2,10 @@
 #define colorsecond             [UIColor colorWithRed:0.8549 green:0.8549 blue:0.8549 alpha:1]
 #define colorthird              [UIColor colorWithWhite:0.55294 alpha:1]
 
-// define
+// notifications
 
 #define notcoursesloaded        @"coursesloaded"
+#define notscoreready           @"scoreready"
 
 // font
 

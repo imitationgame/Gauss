@@ -6,7 +6,9 @@
 
 -(instancetype)init:(mcourseitemchapter*)chapter;
 -(void)playnext;
+-(void)scorecomputed;
 
 @property(weak, nonatomic)mcourseitemchapter *chapter;
+@property(nonatomic)BOOL scoreready;
 
 @end
