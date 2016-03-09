@@ -126,6 +126,7 @@
 		DA2A09FD1C893F3F003A19F6 /* vstatsheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstatsheader.m; sourceTree = "<group>"; };
 		DA2A09FF1C894007003A19F6 /* vstatscell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstatscell.h; sourceTree = "<group>"; };
 		DA2A0A001C894007003A19F6 /* vstatscell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstatscell.m; sourceTree = "<group>"; };
+		DA3AB4231C9066F600D233AE /* vclockprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vclockprotocol.h; sourceTree = "<group>"; };
 		DA40FBB01C88A4F5009B974B /* Gauss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gauss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA46B9BB1C8F1D4600AA8421 /* vplayitemchallengetriviainput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayitemchallengetriviainput.h; sourceTree = "<group>"; };
 		DA46B9BC1C8F1D4600AA8421 /* vplayitemchallengetriviainput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayitemchallengetriviainput.m; sourceTree = "<group>"; };
@@ -682,6 +683,7 @@
 				DA46B9C51C8FB1E300AA8421 /* vclock.m */,
 				DA46B9C71C8FB31D00AA8421 /* vclockline.h */,
 				DA46B9C81C8FB31D00AA8421 /* vclockline.m */,
+				DA3AB4231C9066F600D233AE /* vclockprotocol.h */,
 			);
 			path = general;
 			sourceTree = "<group>";
