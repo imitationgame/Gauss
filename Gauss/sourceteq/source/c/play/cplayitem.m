@@ -14,7 +14,7 @@
 {
     self = [super init];
 
-    self.submited = NO;
+    self.submited = YES;
     self.play = play;
     self.challenge = challenge;
     self.timer = [timerbg millis:150 delegate:self background:NO];
@@ -83,6 +83,7 @@
 {
     [self.challenge.time start];
     [self.timer resume];
+    self.submited = NO;
 }
 
 -(void)submit

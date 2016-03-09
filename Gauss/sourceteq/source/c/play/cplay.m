@@ -26,7 +26,16 @@
 -(void)next:(BOOL)animated
 {
     mchallenge *challenge = [self.chapter challenge];
-    [self setViewControllers:@[[[cplayitem alloc] init:self challenge:challenge]] direction:UIPageViewControllerNavigationDirectionForward animated:animated completion:nil];
+    cplayitem *controller = [[cplayitem alloc] init:self challenge:challenge];
+    
+    [self setViewControllers:@[controller] direction:UIPageViewControllerNavigationDirectionForward animated:animated completion:nil];
+}
+
+-(void)finish
+{
+    cplayfinish *controller = [[cplayfinish alloc] init:self];
+    
+    [self setViewControllers:@[controller] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 }
 
 #pragma mark public
@@ -39,7 +48,7 @@
     }
     else
     {
-        
+        [self finish];
     }
 }
 

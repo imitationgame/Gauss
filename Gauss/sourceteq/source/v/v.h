@@ -21,3 +21,4 @@
 #import "vplayitemchallengetriviainput.h"
 #import "vplayitemcontrols.h"
 #import "vplayitemloader.h"
+#import "vplayfinish.h"
