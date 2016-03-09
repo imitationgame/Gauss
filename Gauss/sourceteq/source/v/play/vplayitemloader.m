@@ -47,7 +47,7 @@
     [label setAttributedText:mut];
     [label setNumberOfLines:0];
     
-    vclock *clock = [[vclock alloc] init];
+    vclock *clock = [[vclock alloc] init:self];
     self.clock = clock;
     
     [self addSubview:label];
@@ -93,6 +93,14 @@
         [self.clock.timer pause];
         [self.buttonstop setSelected:YES];
     }
+}
+
+#pragma mark -
+#pragma mark clock del
+
+-(void)clockdone
+{
+    
 }
 
 @end

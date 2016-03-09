@@ -9,7 +9,7 @@ static NSUInteger const clocksize = 120;
     NSUInteger counter;
 }
 
--(instancetype)init
+-(instancetype)init:(id<vclockprotocol>)delegate
 {
     self = [super init];
     [self setClipsToBounds:YES];
@@ -65,6 +65,7 @@ static NSUInteger const clocksize = 120;
     {
         [self.timer pause];
         self.timer = nil;
+        [self.delegate clockdone];
     }
     else
     {

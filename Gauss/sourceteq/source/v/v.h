@@ -3,6 +3,7 @@
 #import "valert.h"
 #import "vclock.h"
 #import "vclockline.h"
+#import "vclockprotocol.h"
 #import "vstats.h"
 #import "vstatsheader.h"
 #import "vstatscell.h"

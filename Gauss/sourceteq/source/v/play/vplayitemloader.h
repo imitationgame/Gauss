@@ -1,9 +1,10 @@
 #import "appdel.h"
+#import "vclockprotocol.h"
 
 @class cplayitem;
 @class vclock;
 
-@interface vplayitemloader:UIView
+@interface vplayitemloader:UIView<vclockprotocol>
 
 -(instancetype)init:(cplayitem*)controller;
 
