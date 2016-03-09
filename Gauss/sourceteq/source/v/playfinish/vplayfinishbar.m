@@ -8,7 +8,7 @@
     [self setUserInteractionEnabled:NO];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:colorsecond];
+    [self setBackgroundColor:colorthird];
     
     return self;
 }

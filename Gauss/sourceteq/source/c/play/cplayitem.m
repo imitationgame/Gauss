@@ -77,13 +77,13 @@
     [self.view.loader removeFromSuperview];
     [self.view.controls start];
     [self.view start];
+    self.submited = NO;
 }
 
 -(void)startclock
 {
     [self.challenge.time start];
     [self.timer resume];
-    self.submited = NO;
 }
 
 -(void)submit

@@ -22,4 +22,6 @@
 #import "vplayitemcontrols.h"
 #import "vplayitemloader.h"
 #import "vplayfinish.h"
+#import "vplayfinishcell.h"
 #import "vplayfinishbar.h"
+#import "vplayfinishpaychart.h"

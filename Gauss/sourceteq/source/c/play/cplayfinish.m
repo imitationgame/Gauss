@@ -1,6 +1,14 @@
 #import "cplayfinish.h"
 
+@interface cplayfinish ()
+
+@property(strong, nonatomic)vplayfinish *view;
+
+@end
+
 @implementation cplayfinish
+
+@dynamic view;
 
 -(instancetype)init:(cplay*)play
 {
@@ -18,6 +26,11 @@
 -(BOOL)prefersStatusBarHidden
 {
     return NO;
+}
+
+-(void)loadView
+{
+    self.view = [[vplayfinish alloc] init:self];
 }
 
 @end
