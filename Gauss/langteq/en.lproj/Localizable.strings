@@ -11,3 +11,4 @@
 "play_loader_subtitle"="\nChapter %@";
 "play_loader_stats"="\nChallenge %@ of %@";
 "play_bar_timer"="%@:%@";
+"play_finish_subtitle"="\nChapter %@\n\nScore\n";

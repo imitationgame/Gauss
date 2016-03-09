@@ -3,4 +3,6 @@
 
 @interface mplayfinishcellgeneral:mplayfinishcell
 
+@property(strong, nonatomic)NSMutableAttributedString *string;
+
 @end

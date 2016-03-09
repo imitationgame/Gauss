@@ -25,3 +25,4 @@
 #import "vplayfinishcell.h"
 #import "vplayfinishbar.h"
 #import "vplayfinishpaychart.h"
+#import "vplayfinishgeneral.h"

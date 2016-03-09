@@ -6,18 +6,13 @@
 {
     self = [super init];
 
-    self.chapter = chapter;
-    self.cells = [NSMutableArray array];
+    self.cells = @[
+                   [[mplayfinishcellgeneral alloc] init:chapter],
+                   [[mplayfinishcellfails alloc] init:chapter],
+                   [[mplayfinishcellpoints alloc] init:chapter]
+                   ];
     
     return self;
-}
-
-#pragma mark functionality
-
--(void)add:(mplayitemcell*)cell
-{
-    cell.
-    [self.cells addObject:cell];
 }
 
 @end
