@@ -45,7 +45,7 @@
     
     if(received == expected)
     {
-        NSUInteger score = self.challenge.chapter.index * self.challenge.time.extratime;
+        NSUInteger score = self.challenge.chapter.index * (self.challenge.time.extratime + 1);
         [self.challenge.chapter success:score];
         
         NSLog(@"scored %@", @(score));
@@ -102,6 +102,8 @@
     }
     else
     {
+        self.challenge.time.extratime = 0;
+        [self.timer resume];
         [self.view.controls reactivate];
     }
 }
