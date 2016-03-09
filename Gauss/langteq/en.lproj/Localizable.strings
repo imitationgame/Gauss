@@ -12,5 +12,5 @@
 "play_loader_stats"="\nChallenge %@ of %@";
 "play_bar_timer"="%@:%@";
 "play_finish_subtitle"="\nChapter %@\n\n\n\nScore\n";
-"play_finish_maxscore"="\nMax score:%@";
+"play_finish_maxscore"="\nMax score: %@";
 "play_finish_newrecord"="\nNew max score!";

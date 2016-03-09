@@ -123,9 +123,10 @@
 {
     NSString *query = [NSString stringWithFormat:
                        @"UPDATE chapter SET "
-                       "score=%@, tried=%@, passed=%@ "
+                       "score=%@, tried=%@, passed=%@, timestamp=%@ "
                        "WHERE id=%@;",
-                       @(chapter.maxscore), @(chapter.totaltried), @(chapter.totalpassed), @(chapter.dbid)];
+                       @(chapter.maxscore), @(chapter.totaltried), @(chapter.totalpassed),
+                       @(chapter.timestmap), @(chapter.dbid)];
     
     [db query:query];
 }

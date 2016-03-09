@@ -41,10 +41,11 @@
 {
     self.totaltried += self.totalchallenges;
     self.totalpassed += self.passedchallenges;
+    self.oldmaxscore = self.maxscore;
+    self.timestmap = [NSDate date].timeIntervalSince1970;
     
     if(self.score > self.maxscore)
     {
-        self.oldmaxscore = self.maxscore;
         self.maxscore = self.score;
     }
     

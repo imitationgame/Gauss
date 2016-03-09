@@ -84,7 +84,7 @@
     BOOL modelstatus = model.available;
     BOOL labelnoticehidden = NO;
     NSUInteger timestamp = model.timestmap;
-    NSUInteger score = model.score;
+    NSUInteger score = model.maxscore;
     NSString *indexstring = [NSString stringWithFormat:@"%@", @(model.index)];
     NSString *notice = @"";
     

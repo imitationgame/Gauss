@@ -17,7 +17,7 @@
     NSString *stringscore = [[tools singleton] numbertostring:@(chapter.score)];
     NSString *stringmax;
     
-    if(chapter.score >= chapter.oldmaxscore)
+    if(chapter.score > chapter.oldmaxscore)
     {
         stringmax = NSLocalizedString(@"play_finish_newrecord", nil);
     }
