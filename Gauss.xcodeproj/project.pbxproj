@@ -414,6 +414,20 @@
 			path = playitem;
 			sourceTree = "<group>";
 		};
+		DA894E5E1C90B45000EDD0F4 /* playfinish */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = playfinish;
+			sourceTree = "<group>";
+		};
+		DA894E5F1C90B47400EDD0F4 /* playfinish */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = playfinish;
+			sourceTree = "<group>";
+		};
 		DACCC1221C8DC78200754C2C /* challenge */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,6 +621,7 @@
 		DAD676031C88BD6D00AC41FD /* m */ = {
 			isa = PBXGroup;
 			children = (
+				DA894E5F1C90B47400EDD0F4 /* playfinish */,
 				DACCC1451C8E431400754C2C /* playitem */,
 				DACCC1321C8DF11800754C2C /* operation */,
 				DACCC1221C8DC78200754C2C /* challenge */,
@@ -665,6 +680,7 @@
 		DAD676151C88BD6D00AC41FD /* v */ = {
 			isa = PBXGroup;
 			children = (
+				DA894E5E1C90B45000EDD0F4 /* playfinish */,
 				DA894E3C1C90B42300EDD0F4 /* playitem */,
 				DA2A09BD1C88DAC8003A19F6 /* stats */,
 				DAD676191C88BD6D00AC41FD /* general */,
