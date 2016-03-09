@@ -29,7 +29,7 @@
     [buttonstop setImage:[[UIImage imageNamed:@"pause"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateHighlighted];
     [buttonstop.imageView setContentMode:UIViewContentModeScaleAspectFit];
     [buttonstop.imageView setClipsToBounds:YES];
-    [buttonstop.imageView setTintColor:[UIColor colorWithWhite:0 alpha:0.1]];
+    [buttonstop.imageView setTintColor:colormain];
     [buttonstop addTarget:self action:@selector(actionstop:) forControlEvents:UIControlEventTouchUpInside];
     self.buttonstop = buttonstop;
     
@@ -54,8 +54,8 @@
     self.layoutclockleft = [NSLayoutConstraint constraintWithItem:clock attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1 constant:0];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-100-[buttonstop]-100-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label]-60-[clock]" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label]-60-[buttonstop(clocksize)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-30-[label]-70-[clock]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label]-70-[buttonstop(clocksize)]" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutclockleft];
     
     return self;
