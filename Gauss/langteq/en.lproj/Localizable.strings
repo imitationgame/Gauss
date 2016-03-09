@@ -9,3 +9,4 @@
 "play_back_alert_accept"="Stop";
 "play_back_alert_cancel"="Keep playing";
 "play_loader_subtitle"="\nChapter %@";
+"play_loader_stats"="\nChallenge %@ of %@";
