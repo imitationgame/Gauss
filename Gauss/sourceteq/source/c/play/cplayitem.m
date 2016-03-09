@@ -16,6 +16,7 @@
 
     self.play = play;
     self.challenge = challenge;
+    self.timer = [timerbg millis:1000 delegate:self background:NO];
     
     return self;
 }
@@ -51,7 +52,7 @@
     }
     else
     {
-        NSLog(@"expted: %@, received: %@", @(expected), @(received));
+        NSLog(@"expected: %@, received: %@", @(expected), @(received));
     }
     
     self.challenge = nil;
@@ -76,8 +77,10 @@
     [[[UIAlertView alloc] initWithTitle:alerttitle message:alertmessage delegate:self cancelButtonTitle:alertcancel otherButtonTitles:alertaccept, nil] show];
 }
 
--(void)submit:(NSString*)answer
+-(void)submit
 {
+    NSString *answer = self.view.controls.field.text;
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                    ^
                    {
@@ -100,6 +103,22 @@
     else
     {
         [self.view.controls reactivate];
+    }
+}
+
+#pragma mark timer bg
+
+-(void)timerbgtick
+{
+    self.challenge.time.extratime--;
+    
+    if(self.challenge.time.extratime < 1)
+    {
+        [self submit];
+    }
+    else
+    {
+        [self.view.bar print:self.challenge.time.extratime];
     }
 }
 

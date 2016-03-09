@@ -40,4 +40,11 @@
     [self.controller back];
 }
 
+#pragma mark public
+
+-(void)print:(NSUInteger)secondsleft
+{
+    
+}
+
 @end

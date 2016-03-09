@@ -91,10 +91,10 @@
     if(self.active)
     {
         self.active = NO;
-        [self.controller.challenge.time end];
+        [self.controller.timer pause];
         [self setUserInteractionEnabled:NO];
         [self.buttonnext setSelected:YES];
-        [self.controller submit:self.field.text];
+        [self.controller submit];
     }
 }
 
