@@ -1,6 +1,8 @@
 #import "vblur.h"
 #import "vspinner.h"
 #import "valert.h"
+#import "vclock.h"
+#import "vclockline.h"
 #import "vstats.h"
 #import "vstatsheader.h"
 #import "vstatscell.h"
