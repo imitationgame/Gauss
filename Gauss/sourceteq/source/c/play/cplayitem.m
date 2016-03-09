@@ -16,9 +16,14 @@
 
     self.play = play;
     self.challenge = challenge;
-    self.timer = [timerbg millis:1000 delegate:self background:NO];
+    self.timer = [timerbg millis:300 delegate:self background:NO];
     
     return self;
+}
+
+-(void)dealloc
+{
+    [self.timer pause];
 }
 
 -(void)loadView
@@ -45,7 +50,15 @@
     
     if(received == expected)
     {
-        NSUInteger score = self.challenge.chapter.index * (self.challenge.time.extratime + 1);
+        NSInteger extratime = self.challenge.time.extratime + 1;
+        NSUInteger score;
+        
+        if(extratime < 1)
+        {
+            extratime = 1;
+        }
+        
+        score = self.challenge.chapter.index * extratime;
         [self.challenge.chapter success:score];
         
         NSLog(@"scored %@", @(score));
@@ -67,6 +80,20 @@
     [self.view start];
 }
 
+-(void)submit
+{
+    [self.timer pause];
+    NSString *answer = self.view.controls.field.text;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^
+                   {
+                       [self answer:answer];
+                   });
+    
+    [self.play playnext];
+}
+
 -(void)back
 {
     NSString *alerttitle = NSLocalizedString(@"play_back_alert_title", nil);
@@ -77,17 +104,9 @@
     [[[UIAlertView alloc] initWithTitle:alerttitle message:alertmessage delegate:self cancelButtonTitle:alertcancel otherButtonTitles:alertaccept, nil] show];
 }
 
--(void)submit
+-(void)displaytime
 {
-    NSString *answer = self.view.controls.field.text;
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
-                   ^
-                   {
-                       [self answer:answer];
-                   });
-    
-    [self.play playnext];
+    [self.view.bar print:self.challenge.time.extratime];
 }
 
 #pragma mark -
@@ -102,7 +121,6 @@
     }
     else
     {
-        self.challenge.time.extratime = 0;
         [self.timer resume];
         [self.view.controls reactivate];
     }
@@ -120,7 +138,7 @@
     }
     else
     {
-        [self.view.bar print:self.challenge.time.extratime];
+        [self displaytime];
     }
 }
 

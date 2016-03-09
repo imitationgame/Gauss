@@ -10,6 +10,7 @@
 -(void)start;
 -(void)submit;
 -(void)back;
+-(void)displaytime;
 
 @property(weak, nonatomic)cplay *play;
 @property(strong, nonatomic)mchallenge *challenge;

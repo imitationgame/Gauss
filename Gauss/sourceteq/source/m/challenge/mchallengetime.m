@@ -11,4 +11,23 @@
     return self;
 }
 
+#pragma mark public
+
+-(void)start
+{
+    self.starting = [NSDate date].timeIntervalSince1970;
+}
+
+-(void)end
+{
+    self.ending = [NSDate date].timeIntervalSince1970;
+}
+
+-(void)tick
+{
+    NSInteger current = [NSDate date].timeIntervalSince1970;
+    
+    
+}
+
 @end

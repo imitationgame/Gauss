@@ -91,7 +91,6 @@
     if(self.active)
     {
         self.active = NO;
-        [self.controller.timer pause];
         [self setUserInteractionEnabled:NO];
         [self.buttonnext setSelected:YES];
         [self.controller submit];
