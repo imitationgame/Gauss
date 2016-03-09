@@ -16,6 +16,7 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:1]];
     
+    self.model = [[mplayfinish alloc] init:controller.play.chapter];
     vplayfinishbar *bar = [[vplayfinishbar alloc] init];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
