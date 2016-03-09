@@ -9,7 +9,6 @@
     [self setBackgroundColor:[colorsecond colorWithAlphaComponent:0.2]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     self.controller = controller;
-    self.active = YES;
     
     UIView *border = [[UIView alloc] init];
     [border setUserInteractionEnabled:NO];
@@ -88,13 +87,9 @@
 
 -(void)submit
 {
-    if(self.active)
-    {
-        self.active = NO;
-        [self setUserInteractionEnabled:NO];
-        [self.buttonnext setSelected:YES];
-        [self.controller submit];
-    }
+    [self setUserInteractionEnabled:NO];
+    [self.buttonnext setSelected:YES];
+    [self.controller submit];
 }
 
 #pragma mark public
@@ -107,13 +102,11 @@
 
 -(void)deactivate
 {
-    self.active = NO;
     [self.field resignFirstResponder];
 }
 
 -(void)reactivate
 {
-    self.active = YES;
     [self.field becomeFirstResponder];
 }
 

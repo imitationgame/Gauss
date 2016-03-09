@@ -14,9 +14,10 @@
 {
     self = [super init];
 
+    self.submited = NO;
     self.play = play;
     self.challenge = challenge;
-    self.timer = [timerbg millis:300 delegate:self background:NO];
+    self.timer = [timerbg millis:150 delegate:self background:NO];
     
     return self;
 }
@@ -45,8 +46,6 @@
 
 -(void)answer:(NSString*)answer
 {
-    NSLog(@"submit answer %@", @(self.challenge.chapter.currentchallenge));
-    
     double received = answer.doubleValue;
     double expected = self.challenge.trivia.value;
     
@@ -69,8 +68,6 @@
     {
         NSLog(@"expected: %@, received: %@", @(expected), @(received));
     }
-    
-    self.challenge = nil;
 }
 
 #pragma mark public
@@ -90,17 +87,22 @@
 
 -(void)submit
 {
-    [self.timer pause];
-    [self.challenge.time end];
-    NSString *answer = self.view.controls.field.text;
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
-                   ^
-                   {
-                       [self answer:answer];
-                   });
-    
-    [self.play playnext];
+    if(!self.submited)
+    {
+        self.submited = YES;
+        
+        [self.timer pause];
+        [self.challenge.time end];
+        NSString *answer = self.view.controls.field.text;
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                       ^
+                       {
+                           [self answer:answer];
+                       });
+        
+        [self.play playnext];
+    }
 }
 
 -(void)back
@@ -145,13 +147,9 @@
     {
         [[UIApplication sharedApplication].keyWindow endEditing:YES];
         [self submit];
-        
-        NSLog(@"submit timeout %@", @(self.challenge.chapter.currentchallenge));
     }
-    else
-    {
-        [self displaytime];
-    }
+    
+    [self displaytime];
 }
 
 @end

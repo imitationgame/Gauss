@@ -1,5 +1,7 @@
 #import "vplayitembar.h"
 
+static NSString* const timerfont = @"Courier";
+
 @implementation vplayitembar
 
 -(instancetype)init:(cplayitem*)controller
@@ -27,7 +29,7 @@
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setTextAlignment:NSTextAlignmentRight];
     [label setTextColor:[UIColor whiteColor]];
-    [label setFont:[UIFont fontWithName:fontregularname size:18]];
+    [label setFont:[UIFont fontWithName:timerfont size:15]];
     self.label = label;
     
     [self addSubview:label];

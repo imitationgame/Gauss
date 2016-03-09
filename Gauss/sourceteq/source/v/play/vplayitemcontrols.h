@@ -13,6 +13,5 @@
 @property(weak, nonatomic)UITextField *field;
 @property(weak, nonatomic)UIButton *buttonnext;
 @property(weak, nonatomic)UIView *basefield;
-@property(nonatomic)BOOL active;
 
 @end

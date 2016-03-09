@@ -16,5 +16,6 @@
 @property(weak, nonatomic)cplay *play;
 @property(strong, nonatomic)mchallenge *challenge;
 @property(weak, nonatomic)timerbg *timer;
+@property(nonatomic)BOOL submited;
 
 @end
