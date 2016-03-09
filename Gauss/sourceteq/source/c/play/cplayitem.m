@@ -7,9 +7,6 @@
 @end
 
 @implementation cplayitem
-{
-    BOOL firsttime;
-}
 
 @dynamic view;
 
@@ -19,20 +16,8 @@
 
     self.play = play;
     self.challenge = challenge;
-    firsttime = YES;
     
     return self;
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    if(firsttime)
-    {
-        firsttime = NO;
-        [self start];
-    }
 }
 
 -(void)loadView

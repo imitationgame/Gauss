@@ -8,3 +8,4 @@
 "play_back_alert_message"="All progress will be lost";
 "play_back_alert_accept"="Stop";
 "play_back_alert_cancel"="Keep playing";
+"play_loader_subtitle"="\nChapter %@";

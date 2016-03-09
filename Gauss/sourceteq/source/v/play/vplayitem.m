@@ -22,23 +22,31 @@ static NSUInteger const controlsheight = 50;
     self.bar = bar;
     
     vplayitemchallenge *challenge = [[vplayitemchallenge alloc] init:controller];
+    [challenge setHidden:YES];
     self.challenge = challenge;
     
+    vplayitemloader *loader = [[vplayitemloader alloc] init:controller];
+    self.loader = loader;
+    
     vplayitemcontrols *controls = [[vplayitemcontrols alloc] init:controller];
+    [controls setHidden:YES];
     self.controls = controls;
     
     [self addSubview:challenge];
+    [self addSubview:loader];
     [self addSubview:controls];
     [self addSubview:bar];
     
-    NSDictionary *views = @{@"bar":bar, @"challenge":challenge, @"controls":controls};
+    NSDictionary *views = @{@"bar":bar, @"challenge":challenge, @"controls":controls, @"loader":loader};
     NSDictionary *metrics = @{@"controlsheight":@(controlsheight)};
     
     self.layoutcontrolsbottom = [NSLayoutConstraint constraintWithItem:controls attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[challenge]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[controls]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[loader]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar(65)]-0-[challenge]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bar]-0-[loader]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[controls(controlsheight)]" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutcontrolsbottom];
     
