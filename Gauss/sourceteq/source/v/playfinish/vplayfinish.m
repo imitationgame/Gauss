@@ -14,7 +14,7 @@
 {
     self = [super init:controller];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
+    [self setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:1]];
     
     vplayfinishbar *bar = [[vplayfinishbar alloc] init];
     

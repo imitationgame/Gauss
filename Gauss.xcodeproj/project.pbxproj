@@ -45,6 +45,11 @@
 		DA894E651C90BB4100EDD0F4 /* vplayfinishbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E641C90BB4100EDD0F4 /* vplayfinishbar.m */; };
 		DA894E681C90BE7200EDD0F4 /* vplayfinishpaychart.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E671C90BE7200EDD0F4 /* vplayfinishpaychart.m */; };
 		DA894E6B1C90C08200EDD0F4 /* vplayfinishcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E6A1C90C08200EDD0F4 /* vplayfinishcell.m */; };
+		DA894E6E1C90C30500EDD0F4 /* mplayfinish.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E6D1C90C30500EDD0F4 /* mplayfinish.m */; };
+		DA894E711C90C41900EDD0F4 /* mplayfinishcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E701C90C41900EDD0F4 /* mplayfinishcell.m */; };
+		DA894E741C90C42E00EDD0F4 /* mplayfinishcellfails.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E731C90C42E00EDD0F4 /* mplayfinishcellfails.m */; };
+		DA894E771C90C44400EDD0F4 /* mplayfinishcellgeneral.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E761C90C44400EDD0F4 /* mplayfinishcellgeneral.m */; };
+		DA894E7A1C90C45100EDD0F4 /* mplayfinishcellpoints.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E791C90C45100EDD0F4 /* mplayfinishcellpoints.m */; };
 		DACCC1251C8DC86B00754C2C /* mchallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1241C8DC86B00754C2C /* mchallenge.m */; };
 		DACCC1281C8DE42700754C2C /* mchallengetime.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1271C8DE42700754C2C /* mchallengetime.m */; };
 		DACCC12E1C8DE5D500754C2C /* scourse.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC12D1C8DE5D500754C2C /* scourse.m */; };
@@ -165,6 +170,16 @@
 		DA894E671C90BE7200EDD0F4 /* vplayfinishpaychart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayfinishpaychart.m; sourceTree = "<group>"; };
 		DA894E691C90C08200EDD0F4 /* vplayfinishcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayfinishcell.h; sourceTree = "<group>"; };
 		DA894E6A1C90C08200EDD0F4 /* vplayfinishcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayfinishcell.m; sourceTree = "<group>"; };
+		DA894E6C1C90C30500EDD0F4 /* mplayfinish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayfinish.h; sourceTree = "<group>"; };
+		DA894E6D1C90C30500EDD0F4 /* mplayfinish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayfinish.m; sourceTree = "<group>"; };
+		DA894E6F1C90C41900EDD0F4 /* mplayfinishcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayfinishcell.h; sourceTree = "<group>"; };
+		DA894E701C90C41900EDD0F4 /* mplayfinishcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayfinishcell.m; sourceTree = "<group>"; };
+		DA894E721C90C42E00EDD0F4 /* mplayfinishcellfails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayfinishcellfails.h; sourceTree = "<group>"; };
+		DA894E731C90C42E00EDD0F4 /* mplayfinishcellfails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayfinishcellfails.m; sourceTree = "<group>"; };
+		DA894E751C90C44400EDD0F4 /* mplayfinishcellgeneral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayfinishcellgeneral.h; sourceTree = "<group>"; };
+		DA894E761C90C44400EDD0F4 /* mplayfinishcellgeneral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayfinishcellgeneral.m; sourceTree = "<group>"; };
+		DA894E781C90C45100EDD0F4 /* mplayfinishcellpoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayfinishcellpoints.h; sourceTree = "<group>"; };
+		DA894E791C90C45100EDD0F4 /* mplayfinishcellpoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayfinishcellpoints.m; sourceTree = "<group>"; };
 		DACCC1231C8DC86B00754C2C /* mchallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallenge.h; sourceTree = "<group>"; };
 		DACCC1241C8DC86B00754C2C /* mchallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mchallenge.m; sourceTree = "<group>"; };
 		DACCC1261C8DE42700754C2C /* mchallengetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallengetime.h; sourceTree = "<group>"; };
@@ -444,6 +459,16 @@
 		DA894E5F1C90B47400EDD0F4 /* playfinish */ = {
 			isa = PBXGroup;
 			children = (
+				DA894E6C1C90C30500EDD0F4 /* mplayfinish.h */,
+				DA894E6D1C90C30500EDD0F4 /* mplayfinish.m */,
+				DA894E6F1C90C41900EDD0F4 /* mplayfinishcell.h */,
+				DA894E701C90C41900EDD0F4 /* mplayfinishcell.m */,
+				DA894E721C90C42E00EDD0F4 /* mplayfinishcellfails.h */,
+				DA894E731C90C42E00EDD0F4 /* mplayfinishcellfails.m */,
+				DA894E751C90C44400EDD0F4 /* mplayfinishcellgeneral.h */,
+				DA894E761C90C44400EDD0F4 /* mplayfinishcellgeneral.m */,
+				DA894E781C90C45100EDD0F4 /* mplayfinishcellpoints.h */,
+				DA894E791C90C45100EDD0F4 /* mplayfinishcellpoints.m */,
 			);
 			path = playfinish;
 			sourceTree = "<group>";
@@ -878,6 +903,7 @@
 				DA894E621C90B49400EDD0F4 /* vplayfinish.m in Sources */,
 				DAD676301C88BD6D00AC41FD /* mdb.m in Sources */,
 				DAD6763B1C88BE5E00AC41FD /* cpages.m in Sources */,
+				DA894E771C90C44400EDD0F4 /* mplayfinishcellgeneral.m in Sources */,
 				DA2A09F81C89257B003A19F6 /* mcoursesubs1.m in Sources */,
 				DA2A09F21C892563003A19F6 /* mcourseadd1.m in Sources */,
 				DA2A09C71C88E4A8003A19F6 /* cplayitem.m in Sources */,
@@ -890,6 +916,8 @@
 				DA46B9C61C8FB1E300AA8421 /* vclock.m in Sources */,
 				DA894E5B1C90B42300EDD0F4 /* vplayitemchallengetriviainput.m in Sources */,
 				DA894E561C90B42300EDD0F4 /* vplayitemchallengeequals.m in Sources */,
+				DA894E6E1C90C30500EDD0F4 /* mplayfinish.m in Sources */,
+				DA894E711C90C41900EDD0F4 /* mplayfinishcell.m in Sources */,
 				DA894E5C1C90B42300EDD0F4 /* vplayitemcontrols.m in Sources */,
 				DAD676381C88BD6D00AC41FD /* vspinner.m in Sources */,
 				DA894E531C90B42300EDD0F4 /* vplayitem.m in Sources */,
@@ -898,6 +926,7 @@
 				DA894E6B1C90C08200EDD0F4 /* vplayfinishcell.m in Sources */,
 				DAD676291C88BD6D00AC41FD /* analytics.m in Sources */,
 				DA894E3B1C90B2FE00EDD0F4 /* cplayfinish.m in Sources */,
+				DA894E741C90C42E00EDD0F4 /* mplayfinishcellfails.m in Sources */,
 				DA46B9C91C8FB31D00AA8421 /* vclockline.m in Sources */,
 				DACCC1571C8E471400754C2C /* mplayitemcellresult.m in Sources */,
 				DA2A09D71C891B80003A19F6 /* vstatsinfo.m in Sources */,
@@ -917,6 +946,7 @@
 				DACCC14E1C8E46C500754C2C /* mplayitemcelloperand.m in Sources */,
 				DA894E551C90B42300EDD0F4 /* vplayitemchallenge.m in Sources */,
 				DA894E681C90BE7200EDD0F4 /* vplayfinishpaychart.m in Sources */,
+				DA894E7A1C90C45100EDD0F4 /* mplayfinishcellpoints.m in Sources */,
 				DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */,
 				DA894E591C90B42300EDD0F4 /* vplayitemchallengeresult.m in Sources */,
 				DA2A09E71C892347003A19F6 /* mcourseitemadd.m in Sources */,
