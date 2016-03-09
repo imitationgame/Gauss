@@ -3,3 +3,4 @@
 #import "cstats.h"
 #import "cplay.h"
 #import "cplayitem.h"
+#import "cplayfinish.h"
