@@ -1,13 +1,5 @@
-//
-//  mplayfinishcell.h
-//  Gauss
-//
-//  Created by zero on 3/9/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import <UIKit/UIKit.h>
 
-#import <Foundation/Foundation.h>
-
-@interface mplayfinishcell : NSObject
+@interface mplayfinishcell:NSObject
 
 @end

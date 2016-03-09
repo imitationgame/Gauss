@@ -24,3 +24,6 @@
 #import "mplayitemcellresult.h"
 #import "mplayitemcelltrivia.h"
 #import "mplayfinish.h"
+#import "mplayfinishcellfails.h"
+#import "mplayfinishcellgeneral.h"
+#import "mplayfinishcellpoints.h"
