@@ -20,7 +20,7 @@ static NSUInteger const clocksize = 130;
     
     currentdegree = -M_PI_2;
     counter = 0;
-    self.timer = [timerbg millis:20 delegate:self background:NO];
+    self.timer = [timerbg millis:30 delegate:self background:NO];
     [self.timer resume];
     
     return self;
