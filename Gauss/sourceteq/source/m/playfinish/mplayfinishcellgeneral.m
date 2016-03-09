@@ -6,6 +6,8 @@
 {
     self = [super init:chapter];
     
+    self.cellheight = 100;
+    
     NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont fontWithName:fontregularname size:18], NSForegroundColorAttributeName:colormain};
     NSDictionary *dictsubtitle = @{NSFontAttributeName:[UIFont fontWithName:fontregularname size:16], NSForegroundColorAttributeName:colorthird};
     NSDictionary *dictscore = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:26], NSForegroundColorAttributeName:colormain};
@@ -21,6 +23,15 @@
     [self.string appendAttributedString:attrscore];
     
     return self;
+}
+
+#pragma mark -
+#pragma mark finish cell
+
+-(void)configure:(vplayfinishcell*)cell
+{
+    vplayfinishgeneral *overview = [[vplayfinishgeneral alloc] init:self.string];
+    [cell configure:overview];
 }
 
 @end

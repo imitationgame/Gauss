@@ -1,5 +1,7 @@
 #import "vplayfinish.h"
 
+static NSString* const finishcellid = @"cellid";
+
 @interface vplayfinish ()
 
 @property(weak, nonatomic)cplayfinish *controller;
@@ -36,6 +38,8 @@
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     [collection setDataSource:self];
     [collection setDelegate:self];
+    [collection registerClass:[vplayfinishcell class] forCellWithReuseIdentifier:finishcellid];
+    self.collection = collection;
     
     [self addSubview:bar];
     
@@ -46,6 +50,40 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar(65)]" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark -
+#pragma mark col del
+
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
+{
+    NSUInteger item = index.item;
+    CGFloat width = col.bounds.size.width;
+    NSUInteger height = self.model.cells[item].cellheight;
+    CGSize size = CGSizeMake(width, height);
+    
+    return size;
+}
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
+{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
+{
+    NSInteger count = self.model.cells.count;
+    
+    return count;
+}
+
+-(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
+{
+    NSUInteger item = index.item;
+    vplayfinishcell *cellview = [col dequeueReusableCellWithReuseIdentifier:finishcellid forIndexPath:index];
+    [self.model.cells[item] configure:cellview];
+    
+    return cellview;
 }
 
 @end

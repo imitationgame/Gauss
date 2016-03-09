@@ -7,6 +7,6 @@
 
 -(instancetype)init:(mcourseitemchapter*)chapter;
 
-@property(strong, nonatomic)NSArray<mplayitemcell*> *cells;
+@property(strong, nonatomic)NSArray<mplayfinishcell*> *cells;
 
 @end
