@@ -7,6 +7,7 @@
 
 -(void)config:(mcourseitemchapter*)model;
 
+@property(weak, nonatomic)mcourseitemchapter *model;
 @property(weak, nonatomic)vstatsstatus *status;
 @property(weak, nonatomic)UILabel *labelindex;
 @property(weak, nonatomic)UILabel *labelnotice;

@@ -64,7 +64,14 @@
     }
     else
     {
-        [self setBackgroundColor:[UIColor whiteColor]];
+        if(self.model.available)
+        {
+            [self setBackgroundColor:[UIColor whiteColor]];
+        }
+        else
+        {
+            [self setBackgroundColor:[UIColor clearColor]];
+        }
     }
 }
 
@@ -72,6 +79,8 @@
 
 -(void)config:(mcourseitemchapter*)model
 {
+    self.model = model;
+    
     BOOL modelstatus = model.available;
     BOOL labelnoticehidden = NO;
     NSUInteger timestamp = model.timestmap;
