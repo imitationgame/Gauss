@@ -1,7 +1,7 @@
 #import "vclock.h"
 
 static CGFloat const clockdelta = 0.0698132;
-static NSUInteger const clocksize = 130;
+static NSUInteger const clocksize = 120;
 
 @implementation vclock
 {

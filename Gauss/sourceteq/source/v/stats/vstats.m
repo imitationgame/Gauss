@@ -11,7 +11,15 @@ static NSUInteger const cellheight = 140;
 static NSUInteger const linespacing = 2;
 static NSUInteger const footerspacing = 50;
 
+@interface vstats ()
+
+@property(weak, nonatomic)cstats *controller;
+
+@end
+
 @implementation vstats
+
+@dynamic controller;
 
 -(instancetype)init:(cstats*)controller
 {
@@ -89,6 +97,15 @@ static NSUInteger const footerspacing = 50;
 -(void)refresh
 {
     [self.collection reloadData];
+}
+
+-(mcourseitemchapter*)chapterfor:(NSIndexPath*)index
+{
+    NSUInteger course = index.section - 1;
+    NSUInteger item = index.item;
+    mcourseitemchapter *chapter = [mcourse singleton].courses[course].chapters[item];
+    
+    return chapter;
 }
 
 #pragma mark -
@@ -197,19 +214,33 @@ static NSUInteger const footerspacing = 50;
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    NSUInteger course = index.section - 1;
-    NSUInteger item = index.item;
-    mcourseitemchapter *chapter = [mcourse singleton].courses[course].chapters[item];
-    
+    mcourseitemchapter *chapter = [self chapterfor:index];
     vstatscell *cell = [col dequeueReusableCellWithReuseIdentifier:chaptercellid forIndexPath:index];
-    [cell config:chapter controller:(cstats*)self.controller];
+    [cell config:chapter];
     
     return cell;
 }
 
+-(BOOL)collectionView:(UICollectionView*)col shouldHighlightItemAtIndexPath:(NSIndexPath*)index
+{
+    mcourseitemchapter *chapter = [self chapterfor:index];
+    BOOL highlight = chapter.available;
+    
+    return highlight;
+}
+
 -(BOOL)collectionView:(UICollectionView*)col shouldSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    return NO;
+    mcourseitemchapter *chapter = [self chapterfor:index];
+    BOOL selectable = chapter.available;
+    
+    return selectable;
+}
+
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    mcourseitemchapter *chapter = [self chapterfor:index];
+    [self.controller play:chapter];
 }
 
 @end
