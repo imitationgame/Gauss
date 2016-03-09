@@ -22,3 +22,4 @@
 #import "vplayitemcontrols.h"
 #import "vplayitemloader.h"
 #import "vplayfinish.h"
+#import "vplayfinishbar.h"
