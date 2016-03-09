@@ -1,15 +1,13 @@
 #import "appdel.h"
 
-@interface mchallengetime:NSObject
+@class timerbg;
+
+@interface mchallengetime:NSObject<timerbgdel>
 
 -(instancetype)init:(NSUInteger)limit;
--(void)start;
--(NSInteger)tick;
--(void)end;
 
+@property(strong, nonatomic)timerbg *timer;
 @property(nonatomic)NSUInteger limit;
-@property(nonatomic)NSUInteger starting;
-@property(nonatomic)NSUInteger ending;
-@property(nonatomic)NSUInteger extratime;
+@property(nonatomic)NSInteger extratime;
 
 @end

@@ -94,6 +94,7 @@
 {
     if(index)
     {
+        [[UIApplication sharedApplication].keyWindow endEditing:YES];
         [[cmain singleton].pages sectionstats:UIPageViewControllerNavigationDirectionReverse animated:YES];
     }
     else

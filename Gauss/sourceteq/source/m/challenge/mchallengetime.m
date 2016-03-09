@@ -6,38 +6,18 @@
 {
     self = [super init];
     self.limit = limit;
-    self.extratime = 0;
+    self.extratime = limit;
+    self.timer = [timerbg millis:1000 delegate:self background:YES];
     
     return self;
 }
 
-#pragma mark public
+#pragma mark -
+#pragma mark timer del
 
--(void)start
+-(void)timerbgtick
 {
-    self.starting = [NSDate date].timeIntervalSince1970;
-}
-
--(NSInteger)tick
-{
-    NSInteger timeleft = 0;
-    NSUInteger current = [NSDate date].timeIntervalSince1970;
-    NSUInteger timeelapsed = current - self.starting;
-    timeleft = self.limit - timeelapsed;
-    
-    return timeleft;
-}
-
--(void)end
-{
-    NSUInteger timeelapsed;
-    self.ending = [NSDate date].timeIntervalSince1970;
-    timeelapsed = self.ending - self.starting;
-    
-    if(timeelapsed < self.limit)
-    {
-        self.extratime = self.limit - timeelapsed;
-    }
+    self.extratime--;
 }
 
 @end
