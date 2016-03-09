@@ -26,8 +26,8 @@
 -(void)tick
 {
     NSInteger current = [NSDate date].timeIntervalSince1970;
-    
-    
+    NSInteger elapsed = current - self.starting;
+    self.extratime = self.limit - elapsed;
 }
 
 @end
