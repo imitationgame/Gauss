@@ -6,6 +6,7 @@
 
 -(void)config:(mplayfinishcellpointscell*)model;
 
+@property(weak, nonatomic)NSLayoutConstraint *layoutbarwidth;
 @property(weak, nonatomic)UILabel *label;
 
 @end
