@@ -8,6 +8,7 @@
 
     self.cells = @[
                    [[mplayfinishcellgeneral alloc] init:chapter],
+                   [[mplayfinishcellchapters alloc] init:chapter],
                    [[mplayfinishcellfails alloc] init:chapter],
                    [[mplayfinishcellpoints alloc] init:chapter]
                    ];

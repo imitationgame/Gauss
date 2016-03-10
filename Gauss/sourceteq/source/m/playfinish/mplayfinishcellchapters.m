@@ -1,7 +1,7 @@
 #import "mplayfinishcellchapters.h"
 
 static NSUInteger const marginvertical = 60;
-static NSUInteger const cellsize = 50;
+static NSUInteger const cellsize = 30;
 
 @implementation mplayfinishcellchapters
 
@@ -24,7 +24,7 @@ static NSUInteger const cellsize = 50;
 
 -(void)configure:(vplayfinishcell*)cell
 {
-    vplayfinishpoints *overview = [[vplayfinishpoints alloc] init:self];
+    vplayfinishchapters *overview = [[vplayfinishchapters alloc] init:self];
     [cell configure:overview];
 }
 
