@@ -18,6 +18,7 @@
 		DA1F22BB1C91F04900BE2458 /* mplayfinishcellchapters.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22BA1C91F04900BE2458 /* mplayfinishcellchapters.m */; };
 		DA1F22BE1C91F59900BE2458 /* vplayfinishchapters.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22BD1C91F59900BE2458 /* vplayfinishchapters.m */; };
 		DA1F22C11C91F5A300BE2458 /* vplayfinishchapterscell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22C01C91F5A300BE2458 /* vplayfinishchapterscell.m */; };
+		DA1F22C51C922CE200BE2458 /* cstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22C41C922CE200BE2458 /* cstore.m */; };
 		DA2A09B81C88D022003A19F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2A09B71C88D022003A19F6 /* Images.xcassets */; };
 		DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BB1C88DA99003A19F6 /* cstats.m */; };
 		DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BF1C88DAD0003A19F6 /* vstats.m */; };
@@ -125,6 +126,8 @@
 		DA1F22BD1C91F59900BE2458 /* vplayfinishchapters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayfinishchapters.m; sourceTree = "<group>"; };
 		DA1F22BF1C91F5A300BE2458 /* vplayfinishchapterscell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayfinishchapterscell.h; sourceTree = "<group>"; };
 		DA1F22C01C91F5A300BE2458 /* vplayfinishchapterscell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayfinishchapterscell.m; sourceTree = "<group>"; };
+		DA1F22C31C922CE200BE2458 /* cstore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cstore.h; sourceTree = "<group>"; };
+		DA1F22C41C922CE200BE2458 /* cstore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cstore.m; sourceTree = "<group>"; };
 		DA2A09B51C88C385003A19F6 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA2A09B61C88C385003A19F6 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA2A09B71C88D022003A19F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -327,6 +330,15 @@
 				1041ABD466E7E956A4BCCEC7 /* Pods-Gauss.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DA1F22C21C922CD700BE2458 /* store */ = {
+			isa = PBXGroup;
+			children = (
+				DA1F22C31C922CE200BE2458 /* cstore.h */,
+				DA1F22C41C922CE200BE2458 /* cstore.m */,
+			);
+			path = store;
 			sourceTree = "<group>";
 		};
 		DA2A09B41C88C385003A19F6 /* private */ = {
@@ -701,6 +713,7 @@
 			isa = PBXGroup;
 			children = (
 				DAD675FC1C88BD6D00AC41FD /* c.h */,
+				DA1F22C21C922CD700BE2458 /* store */,
 				DA2A09C11C88E3BB003A19F6 /* play */,
 				DA2A09B91C88DA84003A19F6 /* stats */,
 				DAD675FD1C88BD6D00AC41FD /* main */,
@@ -1021,6 +1034,7 @@
 				DA894E7A1C90C45100EDD0F4 /* mplayfinishcellpoints.m in Sources */,
 				DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */,
 				DA894E591C90B42300EDD0F4 /* vplayitemchallengeresult.m in Sources */,
+				DA1F22C51C922CE200BE2458 /* cstore.m in Sources */,
 				DA2A09E71C892347003A19F6 /* mcourseitemadd.m in Sources */,
 				DAD6762B1C88BD6D00AC41FD /* updater.m in Sources */,
 			);

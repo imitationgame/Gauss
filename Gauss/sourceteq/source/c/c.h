@@ -5,3 +5,4 @@
 #import "cplay.h"
 #import "cplayitem.h"
 #import "cplayfinish.h"
+#import "cstore.h"
