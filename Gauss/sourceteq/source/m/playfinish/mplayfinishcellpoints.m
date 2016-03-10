@@ -32,7 +32,7 @@ static NSUInteger const cellvertical = 60;
 
 -(void)configure:(vplayfinishcell*)cell
 {
-    vplayfinishpoints *overview = [[vplayfinishpoints alloc] init];
+    vplayfinishpoints *overview = [[vplayfinishpoints alloc] init:self];
     [cell configure:overview];
 }
 

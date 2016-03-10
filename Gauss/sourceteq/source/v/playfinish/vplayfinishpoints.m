@@ -21,10 +21,11 @@ static NSString* const pointcellid = @"cellid";
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
     [flow setSectionInset:UIEdgeInsetsMake(model.marginvr, 0, model.marginvr, 0)];
     
-    UICollectionView *collection = [[UICollectionView alloc] init];
+    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setClipsToBounds:YES];
     [collection setUserInteractionEnabled:NO];
     [collection setBackgroundColor:[UIColor clearColor]];
+    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     [collection setScrollEnabled:NO];
     [collection setBounces:NO];
     [collection setDelegate:self];

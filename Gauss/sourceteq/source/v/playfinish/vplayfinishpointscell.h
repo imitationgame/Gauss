@@ -6,4 +6,6 @@
 
 -(void)config:(mplayfinishcellpointscell*)model;
 
+@property(weak, nonatomic)UILabel *label;
+
 @end
