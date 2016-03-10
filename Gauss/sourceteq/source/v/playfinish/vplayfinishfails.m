@@ -1,6 +1,6 @@
 #import "vplayfinishfails.h"
 
-static CGFloat const delta = 0.03;
+static CGFloat const delta = 0.02;
 static NSUInteger const margin = 100;
 
 @implementation vplayfinishfails

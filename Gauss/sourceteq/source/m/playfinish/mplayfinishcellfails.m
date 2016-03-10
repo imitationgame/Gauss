@@ -10,7 +10,12 @@
     self = [super init];
     self.cellheight = 400;
     
-    breakpoint = 2;
+    NSUInteger totalchallenges = chapter.totalchallenges;
+    NSUInteger passedchallenges = chapter.passedchallenges;
+    CGFloat percentpassed = passedchallenges / (CGFloat)totalchallenges;
+    CGFloat degrees = percentpassed * 360;
+    CGFloat radians = degrees * M_PI / 180.0;
+    breakpoint = radians;
     
     return self;
 }
