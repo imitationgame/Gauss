@@ -18,3 +18,5 @@
 "play_finish_maxscore"="\nMax score: %@";
 "play_finish_newrecord"="\nNew max score!";
 "play_finish_bar_button"="Done";
+
+"toast_continue"="Continue";

@@ -60,7 +60,7 @@
             NSString *toastmessage = [NSString stringWithFormat:NSLocalizedString(@"course_open", nil), @(nextindex), coursename];
 
             [ctoast toast:toastmessage];
-//            [nextchapter open];
+            [nextchapter open];
         }
     }
     

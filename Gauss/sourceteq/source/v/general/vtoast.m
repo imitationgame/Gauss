@@ -19,6 +19,7 @@ static NSUInteger const buttonheight = 50;
     self = [super init:controller];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
+    [self setAlpha:0];
     
     vblur *blur = [vblur dark];
     [blur setAlpha:0.9];
@@ -26,7 +27,6 @@ static NSUInteger const buttonheight = 50;
     UIView *base = [[UIView alloc] init];
     [base setBackgroundColor:[UIColor whiteColor]];
     [base setClipsToBounds:YES];
-    [base setUserInteractionEnabled:NO];
     [base setTranslatesAutoresizingMaskIntoConstraints:NO];
     [base.layer setCornerRadius:5];
     
@@ -43,6 +43,11 @@ static NSUInteger const buttonheight = 50;
     UIButton *button = [[UIButton alloc] init];
     [button setBackgroundColor:colormain];
     [button setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [button setTitle:NSLocalizedString(@"toast_continue", nil) forState:UIControlStateNormal];
+    [button setTitleColor:colorsecond forState:UIControlStateNormal];
+    [button setTitleColor:[colorsecond colorWithAlphaComponent:0.1] forState:UIControlStateHighlighted];
+    [button.titleLabel setFont:[UIFont fontWithName:fontboldname size:21]];
+    [button addTarget:self action:@selector(actiondismiss:) forControlEvents:UIControlEventTouchUpInside];
     
     [base addSubview:label];
     [base addSubview:button];
@@ -64,6 +69,12 @@ static NSUInteger const buttonheight = 50;
     [self addConstraint:self.layoutbaseleft];
     [self addConstraint:self.layoutbasetop];
     
+    [UIView animateWithDuration:0.8 animations:
+     ^
+     {
+         [self setAlpha:1];
+     }];
+    
     return self;
 }
 
@@ -82,9 +93,21 @@ static NSUInteger const buttonheight = 50;
     [super layoutSubviews];
 }
 
--(void)touchesBegan:(NSSet<UITouch*>*)touches withEvent:(UIEvent*)event
+#pragma mark actions
+
+-(void)actiondismiss:(UIButton*)button
 {
-    [self.controller dismiss];
+    [button setUserInteractionEnabled:NO];
+    
+    [UIView animateWithDuration:0.7 animations:
+     ^
+     {
+         [self setAlpha:0];
+     } completion:
+     ^(BOOL done)
+     {
+         [self.controller dismiss];
+     }];
 }
 
 @end
