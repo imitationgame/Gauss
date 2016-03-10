@@ -47,6 +47,7 @@
     [self addSubview:labelelapsed];
     [self addSubview:labelscore];
     [self addSubview:status];
+    [self addSubview:buttonstore];
     
     NSDictionary *views = @{@"labelindex":labelindex, @"status":status, @"labelnotice":labelnotice, @"labelelapsed":labelelapsed, @"labelscore":labelscore};
     NSDictionary *metrics = @{};

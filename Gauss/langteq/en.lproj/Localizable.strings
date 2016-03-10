@@ -5,6 +5,7 @@
 
 "chapter_cel_notactive"="Chapter not active";
 "chapter_cel_nevertaken"="Chapter never taken";
+"chapter_cel_buttonstore"="Store";
 
 "play_back_alert_title"="Stop playing?";
 "play_back_alert_message"="All progress will be lost";
