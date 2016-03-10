@@ -1,13 +1,6 @@
-//
-//  mplayfinishcellpointscellmaxcourse.h
-//  Gauss
-//
-//  Created by zero on 3/10/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mplayfinishcellpointscell.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mplayfinishcellpointscellmaxcourse : NSObject
+@interface mplayfinishcellpointscellmaxcourse:mplayfinishcellpointscell
 
 @end

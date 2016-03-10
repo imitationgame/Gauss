@@ -15,6 +15,7 @@
 		DA1F22B21C91DAB600BE2458 /* mplayfinishcellpointscellmaxscore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22B11C91DAB600BE2458 /* mplayfinishcellpointscellmaxscore.m */; };
 		DA1F22B51C91DAC300BE2458 /* mplayfinishcellpointscellcurrentscore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22B41C91DAC300BE2458 /* mplayfinishcellpointscellcurrentscore.m */; };
 		DA1F22B81C91ECF400BE2458 /* mplayfinishcellpointscellmaxcourse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22B71C91ECF400BE2458 /* mplayfinishcellpointscellmaxcourse.m */; };
+		DA1F22BB1C91F04900BE2458 /* mplayfinishcellchapters.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22BA1C91F04900BE2458 /* mplayfinishcellchapters.m */; };
 		DA2A09B81C88D022003A19F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2A09B71C88D022003A19F6 /* Images.xcassets */; };
 		DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BB1C88DA99003A19F6 /* cstats.m */; };
 		DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BF1C88DAD0003A19F6 /* vstats.m */; };
@@ -116,6 +117,8 @@
 		DA1F22B41C91DAC300BE2458 /* mplayfinishcellpointscellcurrentscore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayfinishcellpointscellcurrentscore.m; sourceTree = "<group>"; };
 		DA1F22B61C91ECF400BE2458 /* mplayfinishcellpointscellmaxcourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayfinishcellpointscellmaxcourse.h; sourceTree = "<group>"; };
 		DA1F22B71C91ECF400BE2458 /* mplayfinishcellpointscellmaxcourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayfinishcellpointscellmaxcourse.m; sourceTree = "<group>"; };
+		DA1F22B91C91F04900BE2458 /* mplayfinishcellchapters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayfinishcellchapters.h; sourceTree = "<group>"; };
+		DA1F22BA1C91F04900BE2458 /* mplayfinishcellchapters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayfinishcellchapters.m; sourceTree = "<group>"; };
 		DA2A09B51C88C385003A19F6 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA2A09B61C88C385003A19F6 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA2A09B71C88D022003A19F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -500,6 +503,8 @@
 				DA894E731C90C42E00EDD0F4 /* mplayfinishcellfails.m */,
 				DA894E751C90C44400EDD0F4 /* mplayfinishcellgeneral.h */,
 				DA894E761C90C44400EDD0F4 /* mplayfinishcellgeneral.m */,
+				DA1F22B91C91F04900BE2458 /* mplayfinishcellchapters.h */,
+				DA1F22BA1C91F04900BE2458 /* mplayfinishcellchapters.m */,
 				DA894E781C90C45100EDD0F4 /* mplayfinishcellpoints.h */,
 				DA894E791C90C45100EDD0F4 /* mplayfinishcellpoints.m */,
 				DA1F22AD1C91D98900BE2458 /* mplayfinishcellpointscell.h */,
@@ -964,6 +969,7 @@
 				DA894E651C90BB4100EDD0F4 /* vplayfinishbar.m in Sources */,
 				DA1F22A91C91D3CD00BE2458 /* vplayfinishpoints.m in Sources */,
 				DA1F22AF1C91D98900BE2458 /* mplayfinishcellpointscell.m in Sources */,
+				DA1F22BB1C91F04900BE2458 /* mplayfinishcellchapters.m in Sources */,
 				DA1F22B81C91ECF400BE2458 /* mplayfinishcellpointscellmaxcourse.m in Sources */,
 				DA46B9C61C8FB1E300AA8421 /* vclock.m in Sources */,
 				DA894E5B1C90B42300EDD0F4 /* vplayitemchallengetriviainput.m in Sources */,

@@ -21,5 +21,6 @@
 "play_finish_fails_badge"="Passed";
 "play_finish_points_maxscore"="Max score";
 "play_finish_points_currentscore"="Current score";
+"play_finish_points_maxcourse"="Max in course";
 
 "toast_continue"="Continue";

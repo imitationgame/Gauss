@@ -13,11 +13,27 @@ static NSUInteger const cellvertical = 34;
     
     NSUInteger currentscore = chapter.score;
     NSUInteger maxscore = chapter.maxscore;
-    CGFloat currentpercent = currentscore / (CGFloat)maxscore;
+    CGFloat maxcourse = maxscore;
+    
+    NSUInteger countchapters = chapter.course.chapters.count;
+    
+    for(NSUInteger i = 0; i < countchapters; i++)
+    {
+        mcourseitemchapter *inchapter = chapter.course.chapters[i];
+        
+        if(inchapter != chapter)
+        {
+            maxcourse = MAX(maxcourse, inchapter.maxscore);
+        }
+    }
+    
+    CGFloat currentpercent = currentscore / maxcourse;
+    CGFloat maxpercent = maxscore / maxcourse;
     
     self.cells = @[
                    [[mplayfinishcellpointscellcurrentscore alloc] init:currentpercent],
-                   [[mplayfinishcellpointscellmaxscore alloc] init:1],
+                   [[mplayfinishcellpointscellmaxscore alloc] init:maxpercent],
+                   [[mplayfinishcellpointscellmaxcourse alloc] init:1],
                    ];
     
     self.cellheight = self.marginvr * 2;
