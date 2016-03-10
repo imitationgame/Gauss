@@ -55,23 +55,12 @@
         
         if(!nextchapter.available)
         {
-            [nextchapter open];
+            [ctoast toast:@"shisus"];
+//            [nextchapter open];
         }
     }
     
     [mdb updatechapter:self];
-}
-
--(BOOL)keepplaying
-{
-    BOOL keep = NO;
-    
-    if(self.currentchallenge < self.totalchallenges)
-    {
-        keep = YES;
-    }
-    
-    return keep;
 }
 
 -(mchallenge*)challenge

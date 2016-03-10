@@ -9,7 +9,6 @@
 -(void)startplaying;
 -(void)open;
 -(void)save;
--(BOOL)keepplaying;
 -(mchallenge*)challenge;
 -(void)success:(NSUInteger)score;
 

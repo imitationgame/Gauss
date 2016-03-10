@@ -7,6 +7,7 @@
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.chapter = chapter;
     self.scoreready = NO;
+    self.keepplaying = YES;
     [self next:NO];
     
     return self;
@@ -51,9 +52,11 @@
 
 #pragma mark public
 
--(void)playnext
+-(void)playnext:(NSUInteger)currentindex
 {
-    if([self.chapter keepplaying])
+    self.keepplaying = currentindex < self.chapter.totalchallenges;
+    
+    if(self.keepplaying)
     {
         [self next:YES];
     }
@@ -65,7 +68,7 @@
 
 -(void)scorecomputed
 {
-    if(![self.chapter keepplaying])
+    if(!self.keepplaying)
     {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                        ^

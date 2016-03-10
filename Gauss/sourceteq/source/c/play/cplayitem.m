@@ -104,7 +104,7 @@
                            [self answer:answer];
                        });
         
-        [self.play playnext];
+        [self.play playnext:self.challenge.chapter.currentchallenge];
     }
 }
 
