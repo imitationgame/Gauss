@@ -1,5 +1,9 @@
 #import "tools.h"
 
+static NSUInteger const dayseconds = 86400;
+static NSUInteger const hourseconds = 3600;
+static NSUInteger const minuteseconds = 60;
+
 @implementation tools
 {
     NSNumberFormatter *numformatter;
@@ -71,6 +75,35 @@
     str = [str stringByReplacingOccurrencesOfString:@"&#34;" withString:@"\""];
     
     return str;
+}
+
++(NSString*)elapsedtimefrom:(NSUInteger)timestamp
+{
+    NSString *string;
+    NSUInteger currenttime = [NSDate date].timeIntervalSince1970;
+    NSUInteger elapsedtime = currenttime = timestamp;
+    NSUInteger days = elapsedtime / dayseconds;
+    
+    if(days)
+    {
+        string = [NSString stringWithFormat:NSLocalizedString(@"elapsedtime_days", nil), @(days)];
+    }
+    else
+    {
+        NSUInteger hours = (elapsedtime % dayseconds) / hourseconds;
+        
+        if(hours)
+        {
+            string = [NSString stringWithFormat:NSLocalizedString(@"elapsedtime_minutes", nil), @(hours)];
+        }
+        else
+        {
+            NSUInteger minutes = (elapsedtime % hourseconds) / minuteseconds;
+            string = [NSString stringWithFormat:NSLocalizedString(@"elapsedtime_minutes", nil), @(minutes)];
+        }
+    }
+    
+    return string;
 }
 
 #pragma mark -

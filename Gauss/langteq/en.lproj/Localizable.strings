@@ -25,3 +25,7 @@
 "play_finish_chapters_title"="Chapters in this course";
 
 "toast_continue"="Continue";
+
+"elapsedtime_days"="%@ days";
+"elapsedtime_hours"="%@ hours";
+"elapsedtime_minutes"="%@ minutes";
