@@ -27,3 +27,4 @@
 #import "mplayfinishcellfails.h"
 #import "mplayfinishcellgeneral.h"
 #import "mplayfinishcellpoints.h"
+#import "mplayfinishcellpointscell.h"
