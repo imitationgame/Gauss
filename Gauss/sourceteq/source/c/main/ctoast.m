@@ -8,7 +8,7 @@
                    ^
                    {
                        ctoast *controller = [[ctoast alloc] init:message];
-                       [[cmain singleton] presentViewController:controller animated:YES completion:nil];
+                       [[cmain singleton] presentViewController:controller animated:NO completion:nil];
                    });
 }
 
@@ -40,7 +40,7 @@
 
 -(void)dismiss
 {
-    [[cmain singleton] dismissViewControllerAnimated:YES completion:nil];
+    [[cmain singleton] dismissViewControllerAnimated:NO completion:nil];
 }
 
 @end
