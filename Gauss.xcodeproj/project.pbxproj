@@ -43,7 +43,7 @@
 		DA894E5D1C90B42300EDD0F4 /* vplayitemloader.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E521C90B42300EDD0F4 /* vplayitemloader.m */; };
 		DA894E621C90B49400EDD0F4 /* vplayfinish.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E611C90B49400EDD0F4 /* vplayfinish.m */; };
 		DA894E651C90BB4100EDD0F4 /* vplayfinishbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E641C90BB4100EDD0F4 /* vplayfinishbar.m */; };
-		DA894E681C90BE7200EDD0F4 /* vplayfinishpaychart.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E671C90BE7200EDD0F4 /* vplayfinishpaychart.m */; };
+		DA894E681C90BE7200EDD0F4 /* vplayfinishfails.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E671C90BE7200EDD0F4 /* vplayfinishfails.m */; };
 		DA894E6B1C90C08200EDD0F4 /* vplayfinishcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E6A1C90C08200EDD0F4 /* vplayfinishcell.m */; };
 		DA894E6E1C90C30500EDD0F4 /* mplayfinish.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E6D1C90C30500EDD0F4 /* mplayfinish.m */; };
 		DA894E711C90C41900EDD0F4 /* mplayfinishcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA894E701C90C41900EDD0F4 /* mplayfinishcell.m */; };
@@ -169,8 +169,8 @@
 		DA894E611C90B49400EDD0F4 /* vplayfinish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayfinish.m; sourceTree = "<group>"; };
 		DA894E631C90BB4100EDD0F4 /* vplayfinishbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayfinishbar.h; sourceTree = "<group>"; };
 		DA894E641C90BB4100EDD0F4 /* vplayfinishbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayfinishbar.m; sourceTree = "<group>"; };
-		DA894E661C90BE7200EDD0F4 /* vplayfinishpaychart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayfinishpaychart.h; sourceTree = "<group>"; };
-		DA894E671C90BE7200EDD0F4 /* vplayfinishpaychart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayfinishpaychart.m; sourceTree = "<group>"; };
+		DA894E661C90BE7200EDD0F4 /* vplayfinishfails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayfinishfails.h; sourceTree = "<group>"; };
+		DA894E671C90BE7200EDD0F4 /* vplayfinishfails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayfinishfails.m; sourceTree = "<group>"; };
 		DA894E691C90C08200EDD0F4 /* vplayfinishcell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayfinishcell.h; sourceTree = "<group>"; };
 		DA894E6A1C90C08200EDD0F4 /* vplayfinishcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayfinishcell.m; sourceTree = "<group>"; };
 		DA894E6C1C90C30500EDD0F4 /* mplayfinish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayfinish.h; sourceTree = "<group>"; };
@@ -459,8 +459,8 @@
 				DA894E6A1C90C08200EDD0F4 /* vplayfinishcell.m */,
 				DA894E631C90BB4100EDD0F4 /* vplayfinishbar.h */,
 				DA894E641C90BB4100EDD0F4 /* vplayfinishbar.m */,
-				DA894E661C90BE7200EDD0F4 /* vplayfinishpaychart.h */,
-				DA894E671C90BE7200EDD0F4 /* vplayfinishpaychart.m */,
+				DA894E661C90BE7200EDD0F4 /* vplayfinishfails.h */,
+				DA894E671C90BE7200EDD0F4 /* vplayfinishfails.m */,
 				DA894E7B1C90D11000EDD0F4 /* vplayfinishgeneral.h */,
 				DA894E7C1C90D11000EDD0F4 /* vplayfinishgeneral.m */,
 			);
@@ -963,7 +963,7 @@
 				DA1098AD1C89E7A4007AB688 /* vstatsstatus.m in Sources */,
 				DACCC14E1C8E46C500754C2C /* mplayitemcelloperand.m in Sources */,
 				DA894E551C90B42300EDD0F4 /* vplayitemchallenge.m in Sources */,
-				DA894E681C90BE7200EDD0F4 /* vplayfinishpaychart.m in Sources */,
+				DA894E681C90BE7200EDD0F4 /* vplayfinishfails.m in Sources */,
 				DA894E7A1C90C45100EDD0F4 /* mplayfinishcellpoints.m in Sources */,
 				DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */,
 				DA894E591C90B42300EDD0F4 /* vplayitemchallengeresult.m in Sources */,
