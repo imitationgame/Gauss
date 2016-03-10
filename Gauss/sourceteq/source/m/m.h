@@ -27,4 +27,5 @@
 #import "mplayfinishcellfails.h"
 #import "mplayfinishcellgeneral.h"
 #import "mplayfinishcellpoints.h"
-#import "mplayfinishcellpointscell.h"
+#import "mplayfinishcellpointscellmaxscore.h"
+#import "mplayfinishcellpointscellcurrentscore.h"

@@ -12,6 +12,8 @@
 		DA1F22A91C91D3CD00BE2458 /* vplayfinishpoints.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22A81C91D3CD00BE2458 /* vplayfinishpoints.m */; };
 		DA1F22AC1C91D6CF00BE2458 /* vplayfinishpointscell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22AB1C91D6CF00BE2458 /* vplayfinishpointscell.m */; };
 		DA1F22AF1C91D98900BE2458 /* mplayfinishcellpointscell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22AE1C91D98900BE2458 /* mplayfinishcellpointscell.m */; };
+		DA1F22B21C91DAB600BE2458 /* mplayfinishcellpointscellmaxscore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22B11C91DAB600BE2458 /* mplayfinishcellpointscellmaxscore.m */; };
+		DA1F22B51C91DAC300BE2458 /* mplayfinishcellpointscellcurrentscore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22B41C91DAC300BE2458 /* mplayfinishcellpointscellcurrentscore.m */; };
 		DA2A09B81C88D022003A19F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2A09B71C88D022003A19F6 /* Images.xcassets */; };
 		DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BB1C88DA99003A19F6 /* cstats.m */; };
 		DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BF1C88DAD0003A19F6 /* vstats.m */; };
@@ -107,6 +109,10 @@
 		DA1F22AB1C91D6CF00BE2458 /* vplayfinishpointscell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayfinishpointscell.m; sourceTree = "<group>"; };
 		DA1F22AD1C91D98900BE2458 /* mplayfinishcellpointscell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayfinishcellpointscell.h; sourceTree = "<group>"; };
 		DA1F22AE1C91D98900BE2458 /* mplayfinishcellpointscell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayfinishcellpointscell.m; sourceTree = "<group>"; };
+		DA1F22B01C91DAB600BE2458 /* mplayfinishcellpointscellmaxscore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayfinishcellpointscellmaxscore.h; sourceTree = "<group>"; };
+		DA1F22B11C91DAB600BE2458 /* mplayfinishcellpointscellmaxscore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayfinishcellpointscellmaxscore.m; sourceTree = "<group>"; };
+		DA1F22B31C91DAC300BE2458 /* mplayfinishcellpointscellcurrentscore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayfinishcellpointscellcurrentscore.h; sourceTree = "<group>"; };
+		DA1F22B41C91DAC300BE2458 /* mplayfinishcellpointscellcurrentscore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayfinishcellpointscellcurrentscore.m; sourceTree = "<group>"; };
 		DA2A09B51C88C385003A19F6 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA2A09B61C88C385003A19F6 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA2A09B71C88D022003A19F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -495,6 +501,10 @@
 				DA894E791C90C45100EDD0F4 /* mplayfinishcellpoints.m */,
 				DA1F22AD1C91D98900BE2458 /* mplayfinishcellpointscell.h */,
 				DA1F22AE1C91D98900BE2458 /* mplayfinishcellpointscell.m */,
+				DA1F22B01C91DAB600BE2458 /* mplayfinishcellpointscellmaxscore.h */,
+				DA1F22B11C91DAB600BE2458 /* mplayfinishcellpointscellmaxscore.m */,
+				DA1F22B31C91DAC300BE2458 /* mplayfinishcellpointscellcurrentscore.h */,
+				DA1F22B41C91DAC300BE2458 /* mplayfinishcellpointscellcurrentscore.m */,
 			);
 			path = playfinish;
 			sourceTree = "<group>";
@@ -927,6 +937,7 @@
 				DA2A09D41C891890003A19F6 /* vstatsbar.m in Sources */,
 				DA894E571C90B42300EDD0F4 /* vplayitemchallengeoperand.m in Sources */,
 				DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */,
+				DA1F22B21C91DAB600BE2458 /* mplayfinishcellpointscellmaxscore.m in Sources */,
 				DACCC1381C8DF21700754C2C /* moperationadd.m in Sources */,
 				DA894E7D1C90D11000EDD0F4 /* vplayfinishgeneral.m in Sources */,
 				DA2A09FB1C892586003A19F6 /* mcoursesubs2.m in Sources */,
@@ -942,6 +953,7 @@
 				DACCC1481C8E433400754C2C /* mplayitem.m in Sources */,
 				DAD676261C88BD6D00AC41FD /* appdel.m in Sources */,
 				DAD676331C88BD6D00AC41FD /* mdirs.m in Sources */,
+				DA1F22B51C91DAC300BE2458 /* mplayfinishcellpointscellcurrentscore.m in Sources */,
 				DA894E831C90ED1C00EDD0F4 /* vtoast.m in Sources */,
 				DAD676311C88BD6D00AC41FD /* mdbcreate.m in Sources */,
 				DA894E651C90BB4100EDD0F4 /* vplayfinishbar.m in Sources */,
