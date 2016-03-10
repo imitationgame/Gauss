@@ -33,4 +33,11 @@
     self.view = [[vplayfinish alloc] init:self];
 }
 
+#pragma mark public
+
+-(void)done
+{
+    [[cmain singleton].pages sectionstats:UIPageViewControllerNavigationDirectionReverse animated:YES];
+}
+
 @end

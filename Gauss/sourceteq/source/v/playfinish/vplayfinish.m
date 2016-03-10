@@ -17,7 +17,7 @@ static NSString* const finishcellid = @"cellid";
     self = [super init:controller];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:1]];
-    vplayfinishbar *bar = [[vplayfinishbar alloc] init];
+    vplayfinishbar *bar = [[vplayfinishbar alloc] init:controller];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setHeaderReferenceSize:CGSizeZero];
