@@ -1,7 +1,7 @@
 #import "vtoast.h"
 
 static NSUInteger const basewidth = 280;
-static NSUInteger const baseheight = 340;
+static NSUInteger const baseheight = 250;
 static NSUInteger const buttonheight = 50;
 
 @interface vtoast ()
@@ -35,7 +35,7 @@ static NSUInteger const buttonheight = 50;
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setNumberOfLines:0];
-    [label setFont:[UIFont fontWithName:fontregularname size:18]];
+    [label setFont:[UIFont fontWithName:fontregularname size:22]];
     [label setTextColor:colorthird];
     [label setTextAlignment:NSTextAlignmentCenter];
     [label setText:controller.message];

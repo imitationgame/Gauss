@@ -55,7 +55,11 @@
         
         if(!nextchapter.available)
         {
-            [ctoast toast:@"shisus"];
+            NSString *coursename = self.course.name;
+            NSUInteger nextindex = nextchapter.index;
+            NSString *toastmessage = [NSString stringWithFormat:NSLocalizedString(@"course_open", nil), @(nextindex), coursename];
+
+            [ctoast toast:toastmessage];
 //            [nextchapter open];
         }
     }
