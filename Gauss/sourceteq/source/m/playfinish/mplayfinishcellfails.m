@@ -1,11 +1,16 @@
 #import "mplayfinishcellfails.h"
 
 @implementation mplayfinishcellfails
+{
+    CGFloat breakpoint;
+}
 
 -(instancetype)init:(mcourseitemchapter*)chapter
 {
     self = [super init];
-    self.cellheight = 350;
+    self.cellheight = 400;
+    
+    breakpoint = 2;
     
     return self;
 }
@@ -16,7 +21,7 @@
 
 -(void)configure:(vplayfinishcell*)cell
 {
-    vplayfinishfails *overview = [[vplayfinishfails alloc] init];
+    vplayfinishfails *overview = [[vplayfinishfails alloc] init:breakpoint];
     [cell configure:overview];
 }
 
