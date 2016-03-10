@@ -1,6 +1,6 @@
 #import "mplayfinishcellchapters.h"
 
-static NSUInteger const marginvertical = 60;
+static NSUInteger const marginvertical = 70;
 static NSUInteger const cellsize = 30;
 
 @implementation mplayfinishcellchapters

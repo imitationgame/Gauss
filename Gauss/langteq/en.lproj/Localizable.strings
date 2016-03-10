@@ -22,5 +22,6 @@
 "play_finish_points_maxscore"="Max score";
 "play_finish_points_currentscore"="Current score";
 "play_finish_points_maxcourse"="Max in course";
+"play_finish_chapters_title"="Chapters in this course";
 
 "toast_continue"="Continue";
