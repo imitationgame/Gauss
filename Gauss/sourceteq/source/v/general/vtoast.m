@@ -19,7 +19,6 @@ static NSUInteger const buttonheight = 50;
     self = [super init:controller];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
-    [self setAlpha:0];
     
     vblur *blur = [vblur dark];
     [blur setAlpha:0.9];
@@ -45,8 +44,8 @@ static NSUInteger const buttonheight = 50;
     [button setTranslatesAutoresizingMaskIntoConstraints:NO];
     [button setTitle:NSLocalizedString(@"toast_continue", nil) forState:UIControlStateNormal];
     [button setTitleColor:colorsecond forState:UIControlStateNormal];
-    [button setTitleColor:[colorsecond colorWithAlphaComponent:0.1] forState:UIControlStateHighlighted];
-    [button.titleLabel setFont:[UIFont fontWithName:fontboldname size:21]];
+    [button setTitleColor:[colorsecond colorWithAlphaComponent:0.2] forState:UIControlStateHighlighted];
+    [button.titleLabel setFont:[UIFont fontWithName:fontboldname size:18]];
     [button addTarget:self action:@selector(actiondismiss:) forControlEvents:UIControlEventTouchUpInside];
     
     [base addSubview:label];
@@ -68,12 +67,6 @@ static NSUInteger const buttonheight = 50;
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[label]-0-[button(buttonheight)]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutbaseleft];
     [self addConstraint:self.layoutbasetop];
-    
-    [UIView animateWithDuration:0.8 animations:
-     ^
-     {
-         [self setAlpha:1];
-     }];
     
     return self;
 }
@@ -99,7 +92,7 @@ static NSUInteger const buttonheight = 50;
 {
     [button setUserInteractionEnabled:NO];
     
-    [UIView animateWithDuration:0.7 animations:
+    [UIView animateWithDuration:0.4 animations:
      ^
      {
          [self setAlpha:0];
