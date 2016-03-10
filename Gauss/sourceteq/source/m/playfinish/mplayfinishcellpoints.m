@@ -1,7 +1,7 @@
 #import "mplayfinishcellpoints.h"
 
-static NSUInteger const marginvertical = 50;
-static NSUInteger const cellvertical = 60;
+static NSUInteger const marginvertical = 60;
+static NSUInteger const cellvertical = 34;
 
 @implementation mplayfinishcellpoints
 

@@ -8,7 +8,7 @@
 -(instancetype)init:(mcourseitemchapter*)chapter
 {
     self = [super init];
-    self.cellheight = 500;
+    self.cellheight = 450;
     
     NSUInteger totalchallenges = chapter.totalchallenges;
     NSUInteger passedchallenges = chapter.passedchallenges;
