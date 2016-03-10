@@ -17,8 +17,6 @@
     CGFloat radians = degrees * M_PI / 180.0;
     breakpoint = radians;
     
-    NSLog(@"%@", @(radians));
-    
     return self;
 }
 

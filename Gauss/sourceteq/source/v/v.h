@@ -27,3 +27,5 @@
 #import "vplayfinishbar.h"
 #import "vplayfinishfails.h"
 #import "vplayfinishgeneral.h"
+#import "vplayfinishpoints.h"
+#import "vplayfinishpointscell.h"

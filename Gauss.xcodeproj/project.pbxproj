@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		B642C6369DAE6F51A02864A5 /* libPods-Gauss.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F731575245052EA2617E6541 /* libPods-Gauss.a */; };
 		DA1098AD1C89E7A4007AB688 /* vstatsstatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1098AC1C89E7A4007AB688 /* vstatsstatus.m */; };
+		DA1F22A91C91D3CD00BE2458 /* vplayfinishpoints.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22A81C91D3CD00BE2458 /* vplayfinishpoints.m */; };
+		DA1F22AC1C91D6CF00BE2458 /* vplayfinishpointscell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22AB1C91D6CF00BE2458 /* vplayfinishpointscell.m */; };
 		DA2A09B81C88D022003A19F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2A09B71C88D022003A19F6 /* Images.xcassets */; };
 		DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BB1C88DA99003A19F6 /* cstats.m */; };
 		DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BF1C88DAD0003A19F6 /* vstats.m */; };
@@ -98,6 +100,10 @@
 		3F43EDE9F8684A076E74D99C /* Pods-Gauss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gauss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gauss/Pods-Gauss.debug.xcconfig"; sourceTree = "<group>"; };
 		DA1098AB1C89E7A4007AB688 /* vstatsstatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstatsstatus.h; sourceTree = "<group>"; };
 		DA1098AC1C89E7A4007AB688 /* vstatsstatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstatsstatus.m; sourceTree = "<group>"; };
+		DA1F22A71C91D3CD00BE2458 /* vplayfinishpoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayfinishpoints.h; sourceTree = "<group>"; };
+		DA1F22A81C91D3CD00BE2458 /* vplayfinishpoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayfinishpoints.m; sourceTree = "<group>"; };
+		DA1F22AA1C91D6CF00BE2458 /* vplayfinishpointscell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vplayfinishpointscell.h; sourceTree = "<group>"; };
+		DA1F22AB1C91D6CF00BE2458 /* vplayfinishpointscell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vplayfinishpointscell.m; sourceTree = "<group>"; };
 		DA2A09B51C88C385003A19F6 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA2A09B61C88C385003A19F6 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA2A09B71C88D022003A19F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -463,6 +469,10 @@
 				DA894E671C90BE7200EDD0F4 /* vplayfinishfails.m */,
 				DA894E7B1C90D11000EDD0F4 /* vplayfinishgeneral.h */,
 				DA894E7C1C90D11000EDD0F4 /* vplayfinishgeneral.m */,
+				DA1F22A71C91D3CD00BE2458 /* vplayfinishpoints.h */,
+				DA1F22A81C91D3CD00BE2458 /* vplayfinishpoints.m */,
+				DA1F22AA1C91D6CF00BE2458 /* vplayfinishpointscell.h */,
+				DA1F22AB1C91D6CF00BE2458 /* vplayfinishpointscell.m */,
 			);
 			path = playfinish;
 			sourceTree = "<group>";
@@ -930,6 +940,7 @@
 				DA894E831C90ED1C00EDD0F4 /* vtoast.m in Sources */,
 				DAD676311C88BD6D00AC41FD /* mdbcreate.m in Sources */,
 				DA894E651C90BB4100EDD0F4 /* vplayfinishbar.m in Sources */,
+				DA1F22A91C91D3CD00BE2458 /* vplayfinishpoints.m in Sources */,
 				DA46B9C61C8FB1E300AA8421 /* vclock.m in Sources */,
 				DA894E5B1C90B42300EDD0F4 /* vplayitemchallengetriviainput.m in Sources */,
 				DA894E561C90B42300EDD0F4 /* vplayitemchallengeequals.m in Sources */,
@@ -947,6 +958,7 @@
 				DA46B9C91C8FB31D00AA8421 /* vclockline.m in Sources */,
 				DACCC1571C8E471400754C2C /* mplayitemcellresult.m in Sources */,
 				DA2A09D71C891B80003A19F6 /* vstatsinfo.m in Sources */,
+				DA1F22AC1C91D6CF00BE2458 /* vplayfinishpointscell.m in Sources */,
 				DA2A09FE1C893F3F003A19F6 /* vstatsheader.m in Sources */,
 				DA894E801C90ECAA00EDD0F4 /* ctoast.m in Sources */,
 				DA894E541C90B42300EDD0F4 /* vplayitembar.m in Sources */,
