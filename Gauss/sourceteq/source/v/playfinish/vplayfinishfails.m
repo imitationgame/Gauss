@@ -1,6 +1,6 @@
 #import "vplayfinishfails.h"
 
-static CGFloat const delta = 0.02;
+static CGFloat const delta = 0.035;
 static NSUInteger const margin = 100;
 
 @implementation vplayfinishfails
@@ -57,11 +57,14 @@ static NSUInteger const margin = 100;
     CGContextAddArc(context, width_2, height_2, radius_m, 0.0001, 0, 0);
     CGContextDrawPath(context, kCGPathFill);
     
-    CGContextSetFillColorWithColor(context, colormain.CGColor);
-    CGContextMoveToPoint(context, width_2, height_2);
-    CGContextAddArc(context, width_2, height_2, radius_m, 0.0001, current, 0);
-    CGContextClosePath(context);
-    CGContextDrawPath(context, kCGPathFill);
+    if(self.breackpoint > 0)
+    {
+        CGContextSetFillColorWithColor(context, colormain.CGColor);
+        CGContextMoveToPoint(context, width_2, height_2);
+        CGContextAddArc(context, width_2, height_2, radius_m, 0.0001, current, 0);
+        CGContextClosePath(context);
+        CGContextDrawPath(context, kCGPathFill);
+    }
     
 }
 
@@ -75,6 +78,8 @@ static NSUInteger const margin = 100;
     else
     {
         [timer invalidate];
+        current = self.breackpoint;
+        [self setNeedsDisplay];
     }
 }
 
