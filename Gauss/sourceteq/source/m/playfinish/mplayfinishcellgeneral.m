@@ -5,7 +5,6 @@
 -(instancetype)init:(mcourseitemchapter*)chapter
 {
     self = [super init:chapter];
-    
     self.cellheight = 260;
     
     NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont fontWithName:fontregularname size:20], NSForegroundColorAttributeName:[UIColor blackColor]};

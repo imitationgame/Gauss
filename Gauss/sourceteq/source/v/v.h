@@ -25,5 +25,5 @@
 #import "vplayfinish.h"
 #import "vplayfinishcell.h"
 #import "vplayfinishbar.h"
-#import "vplayfinishpaychart.h"
+#import "vplayfinishfails.h"
 #import "vplayfinishgeneral.h"
