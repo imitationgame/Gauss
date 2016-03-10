@@ -25,8 +25,8 @@
     UIButton *buttonstore = [[UIButton alloc] init];
     [buttonstore setClipsToBounds:YES];
     [buttonstore setBackgroundColor:colormain];
-    [buttonstore setTitleColor:colorsecond forState:UIControlStateNormal];
-    [buttonstore setTitleColor:[colorsecond colorWithAlphaComponent:0.2] forState:UIControlStateHighlighted];
+    [buttonstore setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [buttonstore setTitleColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
     [buttonstore setTitle:NSLocalizedString(@"chapter_cel_buttonstore", nil) forState:UIControlStateNormal];
     [buttonstore.titleLabel setFont:[UIFont fontWithName:fontboldname size:14]];
     [buttonstore.layer setCornerRadius:4];
@@ -46,7 +46,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[indicator(6)]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[indicator]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[buttonstore(34)]-20-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[buttonstore(80)]-20-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[buttonstore(75)]-20-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
