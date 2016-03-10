@@ -26,18 +26,29 @@
     [labelnotice setFont:[UIFont fontWithName:fontregularname size:16]];
     self.labelnotice = labelnotice;
     
+    UILabel *labelelapsed = [[UILabel alloc] init];
+    [labelelapsed setBackgroundColor:[UIColor clearColor]];
+    [labelelapsed setUserInteractionEnabled:NO];
+    [labelelapsed setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [labelelapsed setTextColor:[UIColor colorWithWhite:0 alpha:0.5]];
+    [labelelapsed setFont:[UIFont fontWithName:fontregularname size:16]];
+    self.labelelapsed = labelelapsed;
+    
     [self addSubview:labelindex];
     [self addSubview:labelnotice];
+    [self addSubview:labelelapsed];
     [self addSubview:status];
     
-    NSDictionary *views = @{@"labelindex":labelindex, @"status":status, @"labelnotice":labelnotice};
+    NSDictionary *views = @{@"labelindex":labelindex, @"status":status, @"labelnotice":labelnotice, @"labelelapsed":labelelapsed};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-12-[status]-8-[labelindex]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-12-[labelnotice]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-12-[labelelapsed]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-21-[status]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[labelindex]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[labelnotice]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[labelelapsed]" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -87,11 +98,15 @@
     NSUInteger score = model.maxscore;
     NSString *indexstring = [NSString stringWithFormat:@"%@", @(model.index)];
     NSString *notice = @"";
+    NSString *elapsed = @"";
     
     if(modelstatus)
     {
         if(timestamp)
         {
+            NSString *timestr = [tools elapsedtimefrom:timestamp];
+            elapsed = [NSString stringWithFormat:NSLocalizedString(@"elapsedtime_title", nil), timestr];
+            
             labelnoticehidden = YES;
         }
         else
@@ -106,6 +121,8 @@
     
     [self.labelnotice setText:notice];
     [self.labelnotice setHidden:labelnoticehidden];
+    [self.labelelapsed setText:elapsed];
+    [self.labelelapsed setHidden:!labelnoticehidden];
     [self.labelindex setText:indexstring];
     [self.status changestatus:modelstatus];
     

@@ -26,6 +26,7 @@
 
 "toast_continue"="Continue";
 
+"elapsedtime_title"="Taken %@ ago";
 "elapsedtime_days"="%@ days";
 "elapsedtime_hours"="%@ hours";
 "elapsedtime_minutes"="%@ minutes";
