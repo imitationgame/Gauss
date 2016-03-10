@@ -52,6 +52,7 @@ static NSString* const timerfont = @"Courier";
 
 -(void)actionback:(UIButton*)button
 {
+    self.controller.submited = YES;
     [self.controller.timer pause];
     [((vplayitem*)self.controller.view).controls deactivate];
     [self.controller back];

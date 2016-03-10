@@ -15,6 +15,7 @@
     self = [super init];
 
     self.submited = YES;
+    self.activated = NO;
     self.play = play;
     self.challenge = challenge;
     self.timer = [timerbg millis:150 delegate:self background:NO];
@@ -80,6 +81,7 @@
     [self.view.controls start];
     [self.view start];
     self.submited = NO;
+    self.activated = YES;
 }
 
 -(void)startclock
@@ -128,15 +130,21 @@
 
 -(void)alertView:(UIAlertView*)alert clickedButtonAtIndex:(NSInteger)index
 {
+    self.submited = YES;
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+    
     if(index)
     {
-        [[UIApplication sharedApplication].keyWindow endEditing:YES];
         [[cmain singleton].pages sectionstats:UIPageViewControllerNavigationDirectionReverse animated:YES];
     }
     else
     {
-        [self.timer resume];
-        [self.view.controls reactivate];
+        if(self.activated)
+        {
+            [self.timer resume];
+            [self.view.controls reactivate];
+            self.submited = NO;
+        }
     }
 }
 

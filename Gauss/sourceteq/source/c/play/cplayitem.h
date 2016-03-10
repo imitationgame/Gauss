@@ -17,5 +17,6 @@
 @property(strong, nonatomic)mchallenge *challenge;
 @property(weak, nonatomic)timerbg *timer;
 @property(nonatomic)BOOL submited;
+@property(nonatomic)BOOL activated;
 
 @end
