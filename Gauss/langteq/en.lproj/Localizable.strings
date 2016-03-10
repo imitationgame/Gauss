@@ -19,5 +19,7 @@
 "play_finish_newrecord"="\nNew max score!";
 "play_finish_bar_button"="Done";
 "play_finish_fails_badge"="Passed";
+"play_finish_points_maxscore"="Max score";
+"play_finish_points_currentscore"="Current score";
 
 "toast_continue"="Continue";
