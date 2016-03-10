@@ -1,13 +1,36 @@
-//
-//  cstore.m
-//  Gauss
-//
-//  Created by zero on 3/10/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "cstore.h"
 
+@interface cstore ()
+
+@property(strong, nonatomic)vstore *view;
+
+@end
+
 @implementation cstore
+
++(void)show
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^
+                   {
+                       cstore *controller = [[cstore alloc] init];
+                       [[cmain singleton] pushViewController:controller animated:YES];
+                   });
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
+-(void)loadView
+{
+    self.view = [[vstore alloc] init:self];
+}
 
 @end

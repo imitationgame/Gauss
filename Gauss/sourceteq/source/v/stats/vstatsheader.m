@@ -55,7 +55,7 @@
 
 -(void)actionstore:(UIButton*)button
 {
-    
+    [cstore show];
 }
 
 #pragma mark public

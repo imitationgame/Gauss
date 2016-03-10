@@ -31,3 +31,5 @@
 #import "vplayfinishchapterscell.h"
 #import "vplayfinishpoints.h"
 #import "vplayfinishpointscell.h"
+#import "vstore.h"
+#import "vstorebar.h"
