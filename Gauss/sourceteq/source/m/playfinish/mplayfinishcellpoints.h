@@ -1,10 +1,12 @@
 #import "appdel.h"
 #import "mplayfinishcell.h"
 
+@class mplayfinishcellpointscell;
+
 @interface mplayfinishcellpoints:mplayfinishcell
 
 @property(strong, nonatomic)NSArray<mplayfinishcellpointscell*> *cells;
-@property(nonatomic)CGFloat marginvr;
-@property(nonatomic)CGFloat cellheight;
+@property(nonatomic)NSUInteger marginvr;
+@property(nonatomic)NSUInteger incellheight;
 
 @end

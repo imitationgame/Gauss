@@ -48,7 +48,7 @@ static NSString* const pointcellid = @"cellid";
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    CGSize size = CGSizeMake(col.bounds.size.width, self.model.cellheight);
+    CGSize size = CGSizeMake(col.bounds.size.width, self.model.incellheight);
     
     return size;
 }
@@ -67,7 +67,10 @@ static NSString* const pointcellid = @"cellid";
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
+    NSUInteger item = index.item;
+    
     vplayfinishpointscell *cell = [col dequeueReusableCellWithReuseIdentifier:pointcellid forIndexPath:index];
+    [cell config:self.model.cells[item]];
     
     return cell;
 }
