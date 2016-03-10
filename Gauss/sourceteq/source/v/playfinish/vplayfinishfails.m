@@ -1,6 +1,6 @@
 #import "vplayfinishfails.h"
 
-static CGFloat const delta = 0.05;
+static CGFloat const delta = 0.03;
 static NSUInteger const margin = 100;
 
 @implementation vplayfinishfails
@@ -28,7 +28,7 @@ static NSUInteger const margin = 100;
     first = YES;
     current = 0;
     
-    timer = [NSTimer scheduledTimerWithTimeInterval:0.02 target:self selector:@selector(tick) userInfo:nil repeats:YES];
+    timer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(tick) userInfo:nil repeats:YES];
     
     return self;
 }
