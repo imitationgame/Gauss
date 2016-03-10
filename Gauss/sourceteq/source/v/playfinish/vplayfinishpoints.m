@@ -1,18 +1,17 @@
 #import "vplayfinishpoints.h"
 
 static NSString* const pointcellid = @"cellid";
-static NSUInteger const marginvr = 50;
-static NSUInteger const cellheight = 50;
 
 @implementation vplayfinishpoints
 
--(instancetype)init
+-(instancetype)init:(mplayfinishcellpoints*)model
 {
     self = [super init];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self setUserInteractionEnabled:NO];
+    self.model = model;
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setHeaderReferenceSize:CGSizeZero];
@@ -20,7 +19,7 @@ static NSUInteger const cellheight = 50;
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:0];
     [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
-    [flow setSectionInset:UIEdgeInsetsMake(marginvr, 0, marginvr, 0)];
+    [flow setSectionInset:UIEdgeInsetsMake(model.marginvr, 0, model.marginvr, 0)];
     
     UICollectionView *collection = [[UICollectionView alloc] init];
     [collection setClipsToBounds:YES];
@@ -49,7 +48,7 @@ static NSUInteger const cellheight = 50;
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    CGSize size = CGSizeMake(col.bounds.size.width, cellheight);
+    CGSize size = CGSizeMake(col.bounds.size.width, self.model.cellheight);
     
     return size;
 }
@@ -61,7 +60,7 @@ static NSUInteger const cellheight = 50;
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    NSInteger count;
+    NSInteger count = self.model.cells.count;
     
     return count;
 }

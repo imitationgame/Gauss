@@ -16,7 +16,7 @@
 
 -(void)configure:(vplayfinishcell*)cell
 {
-    vplayfinishfails *overview = [[vplayfinishfails alloc] init:breakpoint];
+    vplayfinishpoints *overview = [[vplayfinishpoints alloc] init];
     [cell configure:overview];
 }
 
