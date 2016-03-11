@@ -112,6 +112,7 @@ static NSUInteger const itempricesize = 14;
                 case SKPaymentTransactionStatePurchased:
                     
                     item.status = [[mstorestatuspurchased alloc] init];
+                    [mcourse opencourse:NSClassFromString(item.courseclass)];
                     
                     break;
                     

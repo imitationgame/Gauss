@@ -12,9 +12,12 @@
         
         if([incourse isKindOfClass:courseclass])
         {
-            [incourse open];
-            mcourseitemchapter *firstchapter = incourse.chapters[0];
-            [firstchapter open];
+            if(!incourse.available)
+            {
+                [incourse open];
+                mcourseitemchapter *firstchapter = incourse.chapters[0];
+                [firstchapter open];
+            }
             
             break;
         }
