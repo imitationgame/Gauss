@@ -20,14 +20,22 @@
                    });
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    [self setExtendedLayoutIncludesOpaqueBars:NO];
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+}
+
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    if(!self.puchases)
+    if(!self.purchases)
     {
-        self.puchases = [[mstorepurchases alloc] init];
-        [[mstore singleton] checkavailabilities:self.puchases];
+        self.purchases = [[mstorepurchases alloc] init];
+        [[mstore singleton] checkavailabilities:self.purchases];
     }
 }
 

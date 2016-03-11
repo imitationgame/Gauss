@@ -7,6 +7,6 @@
 +(void)show;
 -(void)back;
 
-@property(strong, nonatomic)mstorepurchases *puchases;
+@property(strong, nonatomic)mstorepurchases *purchases;
 
 @end

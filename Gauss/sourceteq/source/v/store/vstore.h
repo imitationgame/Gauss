@@ -4,5 +4,6 @@
 @interface vstore:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property(weak, nonatomic)UICollectionView *collection;
+@property(weak, nonatomic)UIActivityIndicatorView *spinner;
 
 @end
