@@ -21,25 +21,6 @@
     }
 }
 
-+(BOOL)opennextchapter:(mcourseitemchapter*)chapter
-{
-    BOOL hasnext = NO;
-    
-    NSArray *chapters = chapter.course.chapters;
-    NSUInteger count = chapters.count;
-    NSUInteger currentindex = [chapters indexOfObject:chapter];
-    
-    if(currentindex < count - 1)
-    {
-        mcourseitemchapter *nextchapter = chapters[currentindex + 1];
-        [nextchapter open];
-        
-        hasnext = YES;
-    }
-        
-    return hasnext;
-}
-
 +(instancetype)singleton
 {
     static mcourse *single;

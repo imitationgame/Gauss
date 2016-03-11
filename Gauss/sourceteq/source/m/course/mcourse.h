@@ -6,7 +6,6 @@
 @interface mcourse:NSObject
 
 +(void)opencourse:(Class)courseclass;
-+(BOOL)opennextchapter:(mcourseitemchapter*)chapter;
 +(instancetype)singleton;
 -(void)ready;
 

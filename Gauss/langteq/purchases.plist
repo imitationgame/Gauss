@@ -9,6 +9,8 @@
 		<string>purchase_substraction_title</string>
 		<key>descr</key>
 		<string>purchase_substraction_descr</string>
+        <key>courseclass</key>
+        <string>mcourseitemsubs</string>
 	</dict>
     <dict>
         <key>id</key>
@@ -17,6 +19,8 @@
         <string>purchase_multiplication_title</string>
         <key>descr</key>
         <string>purchase_multiplication_descr</string>
+        <key>courseclass</key>
+        <string>mcourseitemmult</string>
     </dict>
     <dict>
         <key>id</key>
@@ -25,6 +29,8 @@
         <string>purchase_division_title</string>
         <key>descr</key>
         <string>purchase_division_descr</string>
+        <key>courseclass</key>
+        <string>mcourseitemdiv</string>
     </dict>
 </array>
 </plist>

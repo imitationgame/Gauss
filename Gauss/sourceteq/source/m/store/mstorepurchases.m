@@ -25,12 +25,14 @@ static NSUInteger const itempricesize = 14;
         NSString *itemid = rawitem[@"id"];
         NSString *itemtitle = rawitem[@"title"];
         NSString *itemdescr = rawitem[@"descr"];
+        NSString *courseclass = rawitem[@"courseclass"];
         
         mstorepurchasesitem *item = [[mstorepurchasesitem alloc] init];
         item.itemid = itemid;
         item.itemtitle = NSLocalizedString(itemtitle, nil);
         item.itemdescr = NSLocalizedString(itemdescr, nil);
         item.status = [[mstorestatusnew alloc] init];
+        item.courseclass = courseclass;
         
         self.dictitems[itemid] = item;
         [self.items addObject:item];

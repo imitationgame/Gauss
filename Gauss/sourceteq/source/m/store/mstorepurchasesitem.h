@@ -12,6 +12,7 @@
 @property(copy, nonatomic)NSString *itemid;
 @property(copy, nonatomic)NSString *itemtitle;
 @property(copy, nonatomic)NSString *itemdescr;
+@property(copy, nonatomic)NSString *courseclass;
 @property(copy, nonatomic)NSString *pricestring;
 
 @end
