@@ -6,6 +6,4 @@
 -(void)sectionstats:(UIPageViewControllerNavigationDirection)direction animated:(BOOL)animated;
 -(void)sectionoptions;
 
-@property(weak, nonatomic)UIImageView *titleview;
-
 @end

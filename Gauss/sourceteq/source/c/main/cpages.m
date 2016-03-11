@@ -5,14 +5,6 @@
 -(instancetype)init
 {
     self = [super initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-    
-    UIImageView *titleview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-    [titleview setUserInteractionEnabled:NO];
-    [titleview setClipsToBounds:YES];
-    [titleview setContentMode:UIViewContentModeScaleAspectFit];
-    [titleview setTintColor:[UIColor whiteColor]];
-    [self.navigationItem setTitleView:titleview];
-    self.titleview = titleview;
     [self sectionstats:UIPageViewControllerNavigationDirectionForward animated:NO];
     
     return self;
