@@ -1,13 +1,8 @@
-//
-//  mstorepurchases.h
-//  Gauss
-//
-//  Created by zero on 3/10/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@interface mstorepurchases:NSObject
 
-@interface mstorepurchases : NSObject
+@property(strong, nonatomic)NSMutableArray<mstorepurchasesitem*> *items;
+@property(strong, nonatomic)NSNumberFormatter *priceformater;
 
 @end

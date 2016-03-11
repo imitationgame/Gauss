@@ -31,6 +31,11 @@
 
 -(void)checkavailabilities
 {
+    if(!self.purchases)
+    {
+        self.purchases = [[mstorepurchases alloc] init];
+    }
+    
     SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:[[modperks sha] asaset]];
     request.delegate = self;
     [request start];
@@ -69,7 +74,7 @@
 }
 
 -(void)paymentQueue:(SKPaymentQueue*)_queue updatedTransactions:(NSArray*)_transactions
-{
+{/*
     NSInteger qty = _transactions.count;
     for(NSInteger i = 0; i < qty; i++)
     {
@@ -113,11 +118,11 @@
         }
     }
     
-    [self sendnotification];
+    [self sendnotification];*/
 }
 
 -(void)paymentQueue:(SKPaymentQueue*)_queue removedTransactions:(NSArray*)_transactions
-{
+{/*
     NSInteger qty = _transactions.count;
     for(NSInteger i = 0; i < qty; i++)
     {
@@ -158,7 +163,7 @@
         }
     }
     
-    [self sendnotification];
+    [self sendnotification];*/
 }
 
 -(void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue*)_queue
