@@ -38,6 +38,10 @@
 
 -(void)loadskproduct:(SKProduct*)skproduct
 {
+    NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:18], NSForegroundColorAttributeName:colormain};
+    NSDictionary *dictdescr = @{NSFontAttributeName:[UIFont fontWithName:fontregularname size:18], NSForegroundColorAttributeName:colorthird};
+    NSDictionary *dictprice = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:16], NSForegroundColorAttributeName:[UIColor blackColor]};
+    
     NSString *prodid = skproduct.productIdentifier;
     NSInteger qty = self.items.count;
     
@@ -51,6 +55,8 @@
             NSString *strprice = [self.priceformater stringFromNumber:skproduct.price];
             initem.pricestring = strprice;
             initem.skproduct = skproduct;
+            
+            NSMutableAttributedString *mut = [[NSMutableAttributedString alloc] init];
             
             break;
         }
