@@ -32,3 +32,5 @@
 #import "mplayfinishcellpointscellcurrentscore.h"
 #import "mplayfinishcellpointscellmaxcourse.h"
 #import "mstore.h"
+#import "mstorepurchases.h"
+#import "mstorepurchasesitem.h"

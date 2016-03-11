@@ -33,3 +33,12 @@
 "elapsedtime_minutes"="%@ minutes";
 
 "store_title"="Store";
+
+"error_connectionfailed"="Internet connection failed, try again";
+
+"purchase_substraction_title"="Substraction";
+"purchase_substraction_descr"="Unlock the substraction course and play its chapters one by one";
+"purchase_multiplication_title"="Multiplication";
+"purchase_multiplication_descr"="Unlock the Multiplication course and play its chapters one by one";
+"purchase_division_title"="Division";
+"purchase_division_descr"="Unlock the Division course and play its chapters one by one";

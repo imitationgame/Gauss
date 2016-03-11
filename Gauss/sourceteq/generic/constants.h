@@ -6,6 +6,7 @@
 
 #define notcoursesloaded        @"coursesloaded"
 #define notscoreready           @"scoreready"
+#define notpurchaseupd          @"purchaseupdate"
 
 // font
 

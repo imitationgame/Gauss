@@ -106,6 +106,9 @@
 		DAD6763E1C88BE9F00AC41FD /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6763D1C88BE9F00AC41FD /* valert.m */; };
 		DAEB85C81C925E00000FD40D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEB85C71C925E00000FD40D /* StoreKit.framework */; };
 		DAEB85CC1C925E93000FD40D /* mstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB85CB1C925E93000FD40D /* mstore.m */; };
+		DAEB85CE1C9260B9000FD40D /* purchases.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAEB85CD1C9260B9000FD40D /* purchases.plist */; };
+		DAEB85D11C926280000FD40D /* mstorepurchases.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB85D01C926280000FD40D /* mstorepurchases.m */; };
+		DAEB85D41C92628B000FD40D /* mstorepurchasesitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB85D31C92628B000FD40D /* mstorepurchasesitem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -312,6 +315,11 @@
 		DAEB85C71C925E00000FD40D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DAEB85CA1C925E93000FD40D /* mstore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mstore.h; sourceTree = "<group>"; };
 		DAEB85CB1C925E93000FD40D /* mstore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstore.m; sourceTree = "<group>"; };
+		DAEB85CD1C9260B9000FD40D /* purchases.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = purchases.plist; sourceTree = "<group>"; };
+		DAEB85CF1C926280000FD40D /* mstorepurchases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mstorepurchases.h; sourceTree = "<group>"; };
+		DAEB85D01C926280000FD40D /* mstorepurchases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstorepurchases.m; sourceTree = "<group>"; };
+		DAEB85D21C92628B000FD40D /* mstorepurchasesitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mstorepurchasesitem.h; sourceTree = "<group>"; };
+		DAEB85D31C92628B000FD40D /* mstorepurchasesitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstorepurchasesitem.m; sourceTree = "<group>"; };
 		F731575245052EA2617E6541 /* libPods-Gauss.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gauss.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -658,6 +666,7 @@
 				DAD675DF1C88BD6D00AC41FD /* analytics.plist */,
 				DAD675E01C88BD6D00AC41FD /* defs.plist */,
 				DAD675E11C88BD6D00AC41FD /* Localizable.strings */,
+				DAEB85CD1C9260B9000FD40D /* purchases.plist */,
 			);
 			path = langteq;
 			sourceTree = "<group>";
@@ -863,6 +872,10 @@
 			children = (
 				DAEB85CA1C925E93000FD40D /* mstore.h */,
 				DAEB85CB1C925E93000FD40D /* mstore.m */,
+				DAEB85CF1C926280000FD40D /* mstorepurchases.h */,
+				DAEB85D01C926280000FD40D /* mstorepurchases.m */,
+				DAEB85D21C92628B000FD40D /* mstorepurchasesitem.h */,
+				DAEB85D31C92628B000FD40D /* mstorepurchasesitem.m */,
 			);
 			path = store;
 			sourceTree = "<group>";
@@ -940,6 +953,7 @@
 				DA2A09B81C88D022003A19F6 /* Images.xcassets in Resources */,
 				DAD676241C88BD6D00AC41FD /* defs.plist in Resources */,
 				DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */,
+				DAEB85CE1C9260B9000FD40D /* purchases.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,6 +1017,7 @@
 				DA1F22CF1C9240F300BE2458 /* vstorecell.m in Sources */,
 				DAD6763E1C88BE9F00AC41FD /* valert.m in Sources */,
 				DAD6762E1C88BD6D00AC41FD /* cmain.m in Sources */,
+				DAEB85D41C92628B000FD40D /* mstorepurchasesitem.m in Sources */,
 				DACCC13E1C8E1A3400754C2C /* mchallengeoperandint.m in Sources */,
 				DACCC1311C8DED0600754C2C /* scourseadd1.m in Sources */,
 				DA894E5D1C90B42300EDD0F4 /* vplayitemloader.m in Sources */,
@@ -1034,6 +1049,7 @@
 				DA2A09C71C88E4A8003A19F6 /* cplayitem.m in Sources */,
 				DACCC1351C8DF12200754C2C /* moperation.m in Sources */,
 				DACCC1481C8E433400754C2C /* mplayitem.m in Sources */,
+				DAEB85D11C926280000FD40D /* mstorepurchases.m in Sources */,
 				DAD676261C88BD6D00AC41FD /* appdel.m in Sources */,
 				DAD676331C88BD6D00AC41FD /* mdirs.m in Sources */,
 				DA1F22B51C91DAC300BE2458 /* mplayfinishcellpointscellcurrentscore.m in Sources */,
