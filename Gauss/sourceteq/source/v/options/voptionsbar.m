@@ -16,6 +16,7 @@
     [labeltitle setTranslatesAutoresizingMaskIntoConstraints:NO];
     [labeltitle setTextColor:[UIColor whiteColor]];
     [labeltitle setTextAlignment:NSTextAlignmentCenter];
+    [labeltitle setText:@"Hello world"];
     [self addSubview:labeltitle];
     
     NSDictionary *views = @{@"labeltitle":labeltitle};

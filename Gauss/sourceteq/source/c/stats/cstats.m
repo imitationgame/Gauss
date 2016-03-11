@@ -36,4 +36,9 @@
     [[cmain singleton].pages sectionplay:chapter];
 }
 
+-(void)openoptions
+{
+    [[cmain singleton].pages sectionoptions];
+}
+
 @end

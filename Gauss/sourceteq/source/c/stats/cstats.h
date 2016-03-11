@@ -5,5 +5,6 @@
 @interface cstats:UIViewController
 
 -(void)play:(mcourseitemchapter*)chapter;
+-(void)openoptions;
 
 @end

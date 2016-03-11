@@ -2,12 +2,13 @@
 
 @implementation vstatsbar
 
--(instancetype)init
+-(instancetype)init:(cstats*)controller
 {
     self = [super init];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:colormain];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.controller = controller;
     
     UIImageView *image = [[UIImageView alloc] init];
     [image setClipsToBounds:YES];
@@ -45,7 +46,7 @@
 
 -(void)actionoptions:(UIButton*)button
 {
-    [[cmain singleton].pages sectionoptions];
+    [self.controller openoptions];
 }
 
 @end

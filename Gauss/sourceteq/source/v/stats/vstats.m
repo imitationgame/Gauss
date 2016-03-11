@@ -27,7 +27,7 @@ static NSUInteger const footerspacing = 50;
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor colorWithWhite:0.95 alpha:1]];
 
-    vstatsbar *bar = [[vstatsbar alloc] init];
+    vstatsbar *bar = [[vstatsbar alloc] init:controller];
     self.bar = bar;
     
     vstatsinfo *info = [[vstatsinfo alloc] init];
