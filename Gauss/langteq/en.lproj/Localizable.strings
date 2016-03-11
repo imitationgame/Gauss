@@ -42,3 +42,9 @@
 "purchase_multiplication_descr"="Unlock the Multiplication course and play its chapters one by one";
 "purchase_division_title"="Division";
 "purchase_division_descr"="Unlock the Division course and play its chapters one by one";
+
+"purchase_status_purchased"="Purchased";
+"purchase_status_new"="New";
+"purchase_status_purchasing"="Purchasing";
+"purchase_status_deferred"="Deferred";
+"purchase_status_notsupported"="Not supported";

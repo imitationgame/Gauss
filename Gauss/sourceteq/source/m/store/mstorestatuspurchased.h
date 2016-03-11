@@ -1,6 +1,6 @@
 #import "appdel.h"
 #import "mstorestatus.h"
 
-@interface mstorestatuspurchased : NSObject
+@interface mstorestatuspurchased:mstorestatus
 
 @end

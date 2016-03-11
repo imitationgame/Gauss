@@ -1,13 +1,6 @@
-//
-//  mstorestatusnew.h
-//  Gauss
-//
-//  Created by zero on 3/10/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mstorestatus.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mstorestatusnew : NSObject
+@interface mstorestatusnew:mstorestatus
 
 @end

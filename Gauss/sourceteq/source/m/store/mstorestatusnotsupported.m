@@ -1,13 +1,13 @@
-//
-//  mstorestatusnotsupported.m
-//  Gauss
-//
-//  Created by zero on 3/10/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mstorestatusnotsupported.h"
 
 @implementation mstorestatusnotsupported
+
+-(instancetype)init
+{
+    self = [super init];
+    self.name = NSLocalizedString(@"purchase_status_notsupported", nil);
+    
+    return self;
+}
 
 @end

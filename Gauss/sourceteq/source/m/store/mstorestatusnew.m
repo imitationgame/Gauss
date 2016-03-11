@@ -1,13 +1,13 @@
-//
-//  mstorestatusnew.m
-//  Gauss
-//
-//  Created by zero on 3/10/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mstorestatusnew.h"
 
 @implementation mstorestatusnew
+
+-(instancetype)init
+{
+    self = [super init];
+    self.name = NSLocalizedString(@"purchase_status_new", nil);
+    
+    return self;
+}
 
 @end
