@@ -82,7 +82,7 @@
         NSUInteger tried = [rawchapter[@"tried"] unsignedIntegerValue];
         NSUInteger passed = [rawchapter[@"passed"] unsignedIntegerValue];
         BOOL available = [rawchapter[@"available"] boolValue];
-        NSUInteger countchapters = localcourses.count;
+        NSUInteger countchapters = localchapters.count;
         
         for(NSUInteger j = 0; j < countchapters; j++)
         {
