@@ -109,6 +109,7 @@
 		DAEB85CE1C9260B9000FD40D /* purchases.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAEB85CD1C9260B9000FD40D /* purchases.plist */; };
 		DAEB85D11C926280000FD40D /* mstorepurchases.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB85D01C926280000FD40D /* mstorepurchases.m */; };
 		DAEB85D41C92628B000FD40D /* mstorepurchasesitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB85D31C92628B000FD40D /* mstorepurchasesitem.m */; };
+		DAEB85D71C9269D6000FD40D /* mstorestatus.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB85D61C9269D6000FD40D /* mstorestatus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -320,6 +321,8 @@
 		DAEB85D01C926280000FD40D /* mstorepurchases.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstorepurchases.m; sourceTree = "<group>"; };
 		DAEB85D21C92628B000FD40D /* mstorepurchasesitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mstorepurchasesitem.h; sourceTree = "<group>"; };
 		DAEB85D31C92628B000FD40D /* mstorepurchasesitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstorepurchasesitem.m; sourceTree = "<group>"; };
+		DAEB85D51C9269D6000FD40D /* mstorestatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mstorestatus.h; sourceTree = "<group>"; };
+		DAEB85D61C9269D6000FD40D /* mstorestatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstorestatus.m; sourceTree = "<group>"; };
 		F731575245052EA2617E6541 /* libPods-Gauss.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gauss.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -876,6 +879,8 @@
 				DAEB85D01C926280000FD40D /* mstorepurchases.m */,
 				DAEB85D21C92628B000FD40D /* mstorepurchasesitem.h */,
 				DAEB85D31C92628B000FD40D /* mstorepurchasesitem.m */,
+				DAEB85D51C9269D6000FD40D /* mstorestatus.h */,
+				DAEB85D61C9269D6000FD40D /* mstorestatus.m */,
 			);
 			path = store;
 			sourceTree = "<group>";
@@ -1039,6 +1044,7 @@
 				DACCC1381C8DF21700754C2C /* moperationadd.m in Sources */,
 				DA894E7D1C90D11000EDD0F4 /* vplayfinishgeneral.m in Sources */,
 				DA2A09FB1C892586003A19F6 /* mcoursesubs2.m in Sources */,
+				DAEB85D71C9269D6000FD40D /* mstorestatus.m in Sources */,
 				DA2A09F51C89256F003A19F6 /* mcourseadd2.m in Sources */,
 				DA894E621C90B49400EDD0F4 /* vplayfinish.m in Sources */,
 				DAD676301C88BD6D00AC41FD /* mdb.m in Sources */,

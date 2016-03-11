@@ -29,14 +29,10 @@
 
 #pragma mark public
 
--(void)checkavailabilities
+-(void)checkavailabilities:(mstorepurchases*)purchases
 {
-    if(!self.purchases)
-    {
-        self.purchases = [[mstorepurchases alloc] init];
-    }
-    
-    SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:[[modperks sha] asaset]];
+    self.purchases = purchases;
+    SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:purchases.asset];
     request.delegate = self;
     [request start];
 }
@@ -54,15 +50,15 @@
 #pragma mark -
 #pragma mark sk del
 
--(void)request:(SKRequest*)_request didFailWithError:(NSError*)_error
+-(void)request:(SKRequest*)request didFailWithError:(NSError*)error
 {
     self.error = NSLocalizedString(@"error_connectionfailed", nil);
     [self sendnotification];
 }
 
--(void)productsRequest:(SKProductsRequest*)_request didReceiveResponse:(SKProductsResponse*)_response
+-(void)productsRequest:(SKProductsRequest*)request didReceiveResponse:(SKProductsResponse*)response
 {
-    NSArray *prods = _response.products;
+    NSArray *prods = response.products;
     NSInteger qty = prods.count;
     
     for(NSInteger i = 0; i < qty; i++)
@@ -173,8 +169,8 @@
 
 -(void)paymentQueue:(SKPaymentQueue*)_queue restoreCompletedTransactionsFailedWithError:(NSError*)_error
 {
-    error = _error.localizedDescription;
-    [self sendnotification];
+//    error = _error.localizedDescription;
+//    [self sendnotification];
 }
 
 @end
