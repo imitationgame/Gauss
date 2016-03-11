@@ -1,12 +1,14 @@
 #import "appdel.h"
 
+@class mstorestatus;
+
 @interface mstorepurchasesitem:NSObject
 
+@property(strong, nonatomic)mstorestatus *status;
 @property(strong, nonatomic)SKProduct *skproduct;
-@property(copy, nonatomic)NSString *prodid;
-@property(copy, nonatomic)NSString *title;
-@property(copy, nonatomic)NSString *descr;
-@property(copy, nonatomic)NSString *pricestr;
-@property(nonatomic)perkstatus status;
+@property(copy, nonatomic)NSString *itemid;
+@property(copy, nonatomic)NSString *itemtitle;
+@property(copy, nonatomic)NSString *itemdescr;
+@property(copy, nonatomic)NSString *pricestring;
 
 @end
