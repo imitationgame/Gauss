@@ -4,7 +4,7 @@
 
 -(void)sectionplay:(mcourseitemchapter*)chapter;
 -(void)sectionstats:(UIPageViewControllerNavigationDirection)direction animated:(BOOL)animated;
--(void)sectionconfig;
+-(void)sectionoptions;
 
 @property(weak, nonatomic)UIImageView *titleview;
 

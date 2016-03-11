@@ -58,8 +58,9 @@
     [self changecontroller:[[cstats alloc] init] direction:direction animated:animated];
 }
 
--(void)sectionconfig
+-(void)sectionoptions
 {
+    [self changecontroller:[[coptions alloc] init] direction:UIPageViewControllerNavigationDirectionReverse animated:YES];
 }
 
 @end
