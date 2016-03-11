@@ -84,7 +84,7 @@
 		DACCC15A1C8E472B00754C2C /* mplayitemcelltrivia.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1591C8E472B00754C2C /* mplayitemcelltrivia.m */; };
 		DAD309021C935AB80028E934 /* coptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309011C935AB80028E934 /* coptions.m */; };
 		DAD309061C935B2E0028E934 /* voptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309051C935B2E0028E934 /* voptions.m */; };
-		DAD309091C93790B0028E934 /* voptionsbars.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309081C93790B0028E934 /* voptionsbars.m */; };
+		DAD309091C93790B0028E934 /* voptionsbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309081C93790B0028E934 /* voptionsbar.m */; };
 		DAD676211C88BD6D00AC41FD /* gauss.db in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DC1C88BD6D00AC41FD /* gauss.db */; };
 		DAD676221C88BD6D00AC41FD /* imateq.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */; };
 		DAD676231C88BD6D00AC41FD /* analytics.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD675DF1C88BD6D00AC41FD /* analytics.plist */; };
@@ -277,8 +277,8 @@
 		DAD309011C935AB80028E934 /* coptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coptions.m; sourceTree = "<group>"; };
 		DAD309041C935B2E0028E934 /* voptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voptions.h; sourceTree = "<group>"; };
 		DAD309051C935B2E0028E934 /* voptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = voptions.m; sourceTree = "<group>"; };
-		DAD309071C93790B0028E934 /* voptionsbars.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voptionsbars.h; sourceTree = "<group>"; };
-		DAD309081C93790B0028E934 /* voptionsbars.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = voptionsbars.m; sourceTree = "<group>"; };
+		DAD309071C93790B0028E934 /* voptionsbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voptionsbar.h; sourceTree = "<group>"; };
+		DAD309081C93790B0028E934 /* voptionsbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = voptionsbar.m; sourceTree = "<group>"; };
 		DAD675DC1C88BD6D00AC41FD /* gauss.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gauss.db; sourceTree = "<group>"; };
 		DAD675DD1C88BD6D00AC41FD /* imateq.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = imateq.xcassets; sourceTree = "<group>"; };
 		DAD675DF1C88BD6D00AC41FD /* analytics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = analytics.plist; sourceTree = "<group>"; };
@@ -690,8 +690,8 @@
 			children = (
 				DAD309041C935B2E0028E934 /* voptions.h */,
 				DAD309051C935B2E0028E934 /* voptions.m */,
-				DAD309071C93790B0028E934 /* voptionsbars.h */,
-				DAD309081C93790B0028E934 /* voptionsbars.m */,
+				DAD309071C93790B0028E934 /* voptionsbar.h */,
+				DAD309081C93790B0028E934 /* voptionsbar.m */,
 			);
 			path = options;
 			sourceTree = "<group>";
@@ -1107,7 +1107,7 @@
 				DACCC1351C8DF12200754C2C /* moperation.m in Sources */,
 				DACCC1481C8E433400754C2C /* mplayitem.m in Sources */,
 				DAEB85D11C926280000FD40D /* mstorepurchases.m in Sources */,
-				DAD309091C93790B0028E934 /* voptionsbars.m in Sources */,
+				DAD309091C93790B0028E934 /* voptionsbar.m in Sources */,
 				DAD676261C88BD6D00AC41FD /* appdel.m in Sources */,
 				DAD676331C88BD6D00AC41FD /* mdirs.m in Sources */,
 				DA1F22B51C91DAC300BE2458 /* mplayfinishcellpointscellcurrentscore.m in Sources */,
