@@ -29,7 +29,7 @@ static NSString* const timerfont = @"Courier";
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setTextAlignment:NSTextAlignmentRight];
     [label setTextColor:[UIColor whiteColor]];
-    [label setFont:[UIFont fontWithName:timerfont size:15]];
+    [label setFont:[UIFont fontWithName:timerfont size:17]];
     self.label = label;
     
     [self addSubview:label];
