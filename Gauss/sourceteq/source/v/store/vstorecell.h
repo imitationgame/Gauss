@@ -10,7 +10,7 @@
 @property(weak, nonatomic)NSLayoutConstraint *layoutlabelheight;
 @property(weak, nonatomic)UILabel *label;
 @property(weak, nonatomic)UILabel *statuslabel;
-@property(weak, nonatomic)UILabel *statusicon;
+@property(weak, nonatomic)UIImageView *statusicon;
 @property(weak, nonatomic)UIButton *button;
 
 @end

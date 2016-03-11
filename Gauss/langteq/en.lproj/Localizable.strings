@@ -48,3 +48,4 @@
 "purchase_status_purchasing"="Purchasing";
 "purchase_status_deferred"="Deferred";
 "purchase_status_notsupported"="Not supported";
+"purchase_button_purchase"="Purchase";

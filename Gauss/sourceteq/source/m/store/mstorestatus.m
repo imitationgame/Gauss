@@ -2,4 +2,8 @@
 
 @implementation mstorestatus
 
+-(void)config:(vstorecell*)cell
+{
+}
+
 @end

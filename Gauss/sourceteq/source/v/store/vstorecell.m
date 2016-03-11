@@ -38,20 +38,32 @@ static NSUInteger const labelmarginright = 150;
     [statusicon setImage:[UIImage imageNamed:@"success"]];
     self.statusicon = statusicon;
     
+    UIButton *button = [[UIButton alloc] init];
+    [button setBackgroundColor:colormain];
+    [button setClipsToBounds:YES];
+    [button setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [button.layer setCornerRadius:4];
+    [button.titleLabel setFont:[UIFont fontWithName:fontboldname size:15]];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
+    [button setTitle:NSLocalizedString(@"purchase_button_purchase", nil) forState:UIControlStateNormal];
+    
     [self addSubview:label];
     [self addSubview:statuslabel];
     [self addSubview:statusicon];
+    [self addSubview:button];
     
-    NSDictionary *views = @{@"label":label, @"statuslabel":statuslabel, @"statusicon":statusicon};
+    NSDictionary *views = @{@"label":label, @"statuslabel":statuslabel, @"statusicon":statusicon, @"button":button};
     NSDictionary *metrics = @{@"labelmarginleft":@(labelmarginleft), @"labelmarginright":@(labelmarginright)};
     
     self.layoutlabelheight = [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:1];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(labelmarginleft)-[label]-(labelmarginright)-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[statuslabel]-20-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[statuslabel]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[statuslabel]-5-[button(34)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[statusicon(40)]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[statusicon(40)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[button(100)]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutlabelheight];
     
     return self;
@@ -66,6 +78,8 @@ static NSUInteger const labelmarginright = 150;
     self.item = item;
     self.layoutlabelheight.constant = labelheight;
     self.label.attributedText = item.attributestring;
+    
+    [item.status config:self];
 }
 
 @end
