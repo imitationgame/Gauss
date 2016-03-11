@@ -34,3 +34,8 @@
 #import "mstore.h"
 #import "mstorepurchases.h"
 #import "mstorepurchasesitem.h"
+#import "mstorestatuspurchased.h"
+#import "mstorestatusnew.h"
+#import "mstorestatuspurchasing.h"
+#import "mstorestatusdeferred.h"
+#import "mstorestatusnotsupported.h"

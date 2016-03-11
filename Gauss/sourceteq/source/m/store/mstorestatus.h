@@ -1,13 +1,7 @@
-//
-//  mstorestatus.h
-//  Gauss
-//
-//  Created by zero on 3/10/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import <UIKit/UIKit.h>
 
-#import <Foundation/Foundation.h>
+@interface mstorestatus:NSObject
 
-@interface mstorestatus : NSObject
+@property(copy, nonatomic)NSString *name;
 
 @end
