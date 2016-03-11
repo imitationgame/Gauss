@@ -21,6 +21,7 @@
 		DA1F22C51C922CE200BE2458 /* cstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22C41C922CE200BE2458 /* cstore.m */; };
 		DA1F22C91C9236AB00BE2458 /* vstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22C81C9236AB00BE2458 /* vstore.m */; };
 		DA1F22CC1C92389C00BE2458 /* vstorebar.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22CB1C92389C00BE2458 /* vstorebar.m */; };
+		DA1F22CF1C9240F300BE2458 /* vstorecell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1F22CE1C9240F300BE2458 /* vstorecell.m */; };
 		DA2A09B81C88D022003A19F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA2A09B71C88D022003A19F6 /* Images.xcassets */; };
 		DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BB1C88DA99003A19F6 /* cstats.m */; };
 		DA2A09C01C88DAD0003A19F6 /* vstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A09BF1C88DAD0003A19F6 /* vstats.m */; };
@@ -134,6 +135,8 @@
 		DA1F22C81C9236AB00BE2458 /* vstore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstore.m; sourceTree = "<group>"; };
 		DA1F22CA1C92389C00BE2458 /* vstorebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstorebar.h; sourceTree = "<group>"; };
 		DA1F22CB1C92389C00BE2458 /* vstorebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstorebar.m; sourceTree = "<group>"; };
+		DA1F22CD1C9240F300BE2458 /* vstorecell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstorecell.h; sourceTree = "<group>"; };
+		DA1F22CE1C9240F300BE2458 /* vstorecell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstorecell.m; sourceTree = "<group>"; };
 		DA2A09B51C88C385003A19F6 /* private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = private.h; sourceTree = "<group>"; };
 		DA2A09B61C88C385003A19F6 /* privateconstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = privateconstants.h; sourceTree = "<group>"; };
 		DA2A09B71C88D022003A19F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -354,6 +357,8 @@
 				DA1F22C81C9236AB00BE2458 /* vstore.m */,
 				DA1F22CA1C92389C00BE2458 /* vstorebar.h */,
 				DA1F22CB1C92389C00BE2458 /* vstorebar.m */,
+				DA1F22CD1C9240F300BE2458 /* vstorecell.h */,
+				DA1F22CE1C9240F300BE2458 /* vstorecell.m */,
 			);
 			path = store;
 			sourceTree = "<group>";
@@ -972,6 +977,7 @@
 			files = (
 				DAD676341C88BD6D00AC41FD /* msettings.m in Sources */,
 				DA1F22BE1C91F59900BE2458 /* vplayfinishchapters.m in Sources */,
+				DA1F22CF1C9240F300BE2458 /* vstorecell.m in Sources */,
 				DAD6763E1C88BE9F00AC41FD /* valert.m in Sources */,
 				DAD6762E1C88BD6D00AC41FD /* cmain.m in Sources */,
 				DACCC13E1C8E1A3400754C2C /* mchallengeoperandint.m in Sources */,

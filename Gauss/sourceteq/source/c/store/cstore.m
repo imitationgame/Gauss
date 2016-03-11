@@ -33,4 +33,11 @@
     self.view = [[vstore alloc] init:self];
 }
 
+#pragma mark public
+
+-(void)back
+{
+    [[cmain singleton] popViewControllerAnimated:YES];
+}
+
 @end

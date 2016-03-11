@@ -33,3 +33,4 @@
 #import "vplayfinishpointscell.h"
 #import "vstore.h"
 #import "vstorebar.h"
+#import "vstorecell.h"

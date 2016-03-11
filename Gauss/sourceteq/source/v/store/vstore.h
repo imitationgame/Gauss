@@ -1,6 +1,8 @@
 #import "appdel.h"
 #import "viewbase.h"
 
-@interface vstore:viewbase
+@interface vstore:viewbase<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+
+@property(weak, nonatomic)UICollectionView *collection;
 
 @end

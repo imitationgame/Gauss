@@ -1,13 +1,11 @@
-//
-//  vstorebar.h
-//  Gauss
-//
-//  Created by zero on 3/10/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@class cstore;
 
-@interface vstorebar : NSObject
+@interface vstorebar:UIView
+
+-(instancetype)init:(cstore*)controller;
+
+@property(weak, nonatomic)cstore *controller;
 
 @end
