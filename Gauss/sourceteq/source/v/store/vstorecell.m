@@ -47,13 +47,18 @@ static NSUInteger const labelmarginright = 20;
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
     [button setTitle:NSLocalizedString(@"purchase_button_purchase", nil) forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(actionpurchase:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
+    self.spinner = spinner;
     
     [self addSubview:label];
     [self addSubview:statuslabel];
     [self addSubview:statusicon];
     [self addSubview:button];
     
-    NSDictionary *views = @{@"label":label, @"statuslabel":statuslabel, @"statusicon":statusicon, @"button":button};
+    NSDictionary *views = @{@"label":label, @"statuslabel":statuslabel, @"statusicon":statusicon, @"button":button, @"spinner":spinner};
     NSDictionary *metrics = @{@"labelmarginleft":@(labelmarginleft), @"labelmarginright":@(labelmarginright)};
     
     self.layoutlabelheight = [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:1];
@@ -65,6 +70,8 @@ static NSUInteger const labelmarginright = 20;
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[statusicon(40)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[button(120)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[statuslabel]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[spinner]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[spinner]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutlabelheight];
     
     return self;
@@ -74,8 +81,9 @@ static NSUInteger const labelmarginright = 20;
 
 -(void)actionpurchase:(UIButton*)button
 {
-    [button setUserInteractionEnabled:NO];
-    self.item.status = [[mstorestatuspurchasing alloc] init];
+    [button setHidden:YES];
+    [self.spinner setHidden:NO];
+    [self.spinner startAnimating];
     [self.item purchase];
 }
 
@@ -83,7 +91,7 @@ static NSUInteger const labelmarginright = 20;
 
 -(void)config:(mstorepurchasesitem*)item
 {
-    [self.button setUserInteractionEnabled:YES];
+    [self.spinner setHidden:YES];
     
     CGFloat width = self.bounds.size.width;
     CGFloat labelwidth = width - marginleftright;

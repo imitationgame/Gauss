@@ -12,5 +12,6 @@
 @property(weak, nonatomic)UILabel *statuslabel;
 @property(weak, nonatomic)UIImageView *statusicon;
 @property(weak, nonatomic)UIButton *button;
+@property(weak, nonatomic)UIActivityIndicatorView *spinner;
 
 @end
