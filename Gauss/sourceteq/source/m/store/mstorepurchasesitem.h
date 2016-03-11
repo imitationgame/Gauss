@@ -4,6 +4,8 @@
 
 @interface mstorepurchasesitem:NSObject
 
+-(void)purchase;
+
 @property(strong, nonatomic)mstorestatus *status;
 @property(strong, nonatomic)SKProduct *skproduct;
 @property(strong, nonatomic)NSAttributedString *attributestring;

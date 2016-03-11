@@ -24,7 +24,7 @@
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setTextAlignment:NSTextAlignmentCenter];
-    [label setFont:[UIFont fontWithName:fontregularname size:16]];
+    [label setFont:[UIFont fontWithName:fontregularname size:18]];
     [label setTextColor:[UIColor whiteColor]];
     [label setText:NSLocalizedString(@"store_title", nil)];
     

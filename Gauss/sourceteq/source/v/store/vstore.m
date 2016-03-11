@@ -1,7 +1,7 @@
 #import "vstore.h"
 
 static NSString* const storecell = @"celid";
-static NSUInteger const cellheight = 180;
+static NSUInteger const cellheight = 170;
 
 @interface vstore ()
 

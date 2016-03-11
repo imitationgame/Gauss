@@ -16,8 +16,7 @@
 -(void)config:(vstorecell*)cell
 {
     [cell.button setHidden:NO];
-    [cell.statuslabel setHidden:NO];
-    [cell.statuslabel setText:self.name];
+    [cell.statuslabel setHidden:YES];
     [cell.statusicon setHidden:YES];
 }
 
