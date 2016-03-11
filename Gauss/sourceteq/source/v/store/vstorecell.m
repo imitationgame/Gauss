@@ -70,8 +70,21 @@ static NSUInteger const labelmarginright = 20;
     return self;
 }
 
+#pragma mark actions
+
+-(void)actionpurchase:(UIButton*)button
+{
+    [button setUserInteractionEnabled:NO];
+    self.item.status = [[mstorestatuspurchasing alloc] init];
+    [self.item purchase];
+}
+
+#pragma mark public
+
 -(void)config:(mstorepurchasesitem*)item
 {
+    [self.button setUserInteractionEnabled:YES];
+    
     CGFloat width = self.bounds.size.width;
     CGFloat labelwidth = width - marginleftright;
     CGFloat labelheight = ceilf([item.attributestring boundingRectWithSize:CGSizeMake(labelwidth, 1000) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size.height);

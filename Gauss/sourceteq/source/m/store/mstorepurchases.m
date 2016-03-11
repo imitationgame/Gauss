@@ -12,6 +12,7 @@ static NSUInteger const itempricesize = 14;
     
     self.priceformater = [[NSNumberFormatter alloc] init];
     [self.priceformater setNumberStyle:NSNumberFormatterCurrencyStyle];
+    self.dictitems = [NSMutableDictionary dictionary];
     self.items = [NSMutableArray array];
     self.asset = [NSMutableSet set];
     
@@ -31,6 +32,7 @@ static NSUInteger const itempricesize = 14;
         item.itemdescr = NSLocalizedString(itemdescr, nil);
         item.status = [[mstorestatusnew alloc] init];
         
+        self.dictitems[itemid] = item;
         [self.items addObject:item];
         [self.asset addObject:itemid];
     }
@@ -75,6 +77,54 @@ static NSUInteger const itempricesize = 14;
             initem.attributestring = mut;
             
             break;
+        }
+    }
+}
+
+
+-(void)updatetransactions:(NSArray<SKPaymentTransaction*>*)transactions
+{
+    NSUInteger qty = transactions.count;
+    for(NSUInteger i = 0; i < qty; i++)
+    {
+        SKPaymentTransaction *tran = transactions[i];
+        NSString *prodid = tran.payment.productIdentifier;
+        mstorepurchasesitem *item = self.dictitems[prodid];
+        
+        if(item)
+        {
+            switch(tran.transactionState)
+            {
+                case SKPaymentTransactionStateDeferred:
+                    
+                    item.status = [[mstorestatusdeferred alloc] init];
+                    
+                    break;
+                    
+                case SKPaymentTransactionStateFailed:
+                    
+                    item.status = [[mstorestatusnew alloc] init];
+                    
+                    break;
+                    
+                case SKPaymentTransactionStatePurchased:
+                    
+                    item.status = [[mstorestatuspurchased alloc] init];
+                    
+                    break;
+                    
+                case SKPaymentTransactionStatePurchasing:
+                    
+                    item.status = [[mstorestatuspurchasing alloc] init];
+                    
+                    break;
+                    
+                case SKPaymentTransactionStateRestored:
+                    
+                    item.status = [[mstorestatuspurchased alloc] init];
+                    
+                    break;
+            }
         }
     }
 }

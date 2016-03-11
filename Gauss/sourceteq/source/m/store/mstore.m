@@ -39,6 +39,7 @@
 
 -(void)purchase:(SKProduct*)product
 {
+    [self sendnotification];
     SKPayment *payment = [SKMutablePayment paymentWithProduct:product];
     [[SKPaymentQueue defaultQueue] addPayment:payment];
 }
@@ -71,97 +72,16 @@
     [self restorepurchases];
 }
 
--(void)paymentQueue:(SKPaymentQueue*)_queue updatedTransactions:(NSArray*)_transactions
-{/*
-    NSInteger qty = _transactions.count;
-    for(NSInteger i = 0; i < qty; i++)
-    {
-        SKPaymentTransaction *tran = _transactions[i];
-        NSString *prodid = tran.payment.productIdentifier;
-        
-        switch(tran.transactionState)
-        {
-            case SKPaymentTransactionStateDeferred:
-                
-                [[modperks sha] productdeferred:prodid];
-                
-                break;
-                
-            case SKPaymentTransactionStateFailed:
-                
-                [[modperks sha] productcanceled:prodid];
-                [[SKPaymentQueue defaultQueue] finishTransaction:tran];
-                
-                break;
-                
-            case SKPaymentTransactionStatePurchased:
-                
-                [[modperks sha] productpurchased:prodid];
-                [[SKPaymentQueue defaultQueue] finishTransaction:tran];
-                
-                break;
-                
-            case SKPaymentTransactionStatePurchasing:
-                
-                [[modperks sha] productpurchasing:prodid];
-                
-                break;
-                
-            case SKPaymentTransactionStateRestored:
-                
-                [[modperks sha] productpurchased:prodid];
-                [[SKPaymentQueue defaultQueue] finishTransaction:tran];
-                
-                break;
-        }
-    }
-    
-    [self sendnotification];*/
+-(void)paymentQueue:(SKPaymentQueue*)queue updatedTransactions:(NSArray*)transactions
+{
+    [self.purchases updatetransactions:transactions];
+    [self sendnotification];
 }
 
 -(void)paymentQueue:(SKPaymentQueue*)queue removedTransactions:(NSArray*)transactions
-{/*
-    NSInteger qty = _transactions.count;
-    for(NSInteger i = 0; i < qty; i++)
-    {
-        SKPaymentTransaction *tran = _transactions[i];
-        NSString *prodid = tran.payment.productIdentifier;
-        
-        switch(tran.transactionState)
-        {
-            case SKPaymentTransactionStateDeferred:
-                
-                [[modperks sha] productdeferred:prodid];
-                
-                break;
-                
-            case SKPaymentTransactionStateFailed:
-                
-                [[modperks sha] productcanceled:prodid];
-                
-                break;
-                
-            case SKPaymentTransactionStatePurchased:
-                
-                [[modperks sha] productpurchased:prodid];
-                
-                break;
-                
-            case SKPaymentTransactionStatePurchasing:
-                
-                [[modperks sha] productpurchasing:prodid];
-                
-                break;
-                
-            case SKPaymentTransactionStateRestored:
-                
-                [[modperks sha] productpurchased:prodid];
-                
-                break;
-        }
-    }
-    
-    [self sendnotification];*/
+{
+    [self.purchases updatetransactions:transactions];
+    [self sendnotification];
 }
 
 -(void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue*)queue
