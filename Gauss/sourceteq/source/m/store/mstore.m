@@ -29,17 +29,15 @@
 
 #pragma mark public
 
--(void)checkavailabilities:(mstorepurchases*)purchases
+-(void)checkavailabilities
 {
-    self.purchases = purchases;
-    SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:purchases.asset];
+    SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:self.purchases.asset];
     request.delegate = self;
     [request start];
 }
 
 -(void)purchase:(SKProduct*)product
 {
-    [self sendnotification];
     SKPayment *payment = [SKMutablePayment paymentWithProduct:product];
     [[SKPaymentQueue defaultQueue] addPayment:payment];
 }

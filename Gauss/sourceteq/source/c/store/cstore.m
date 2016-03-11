@@ -35,7 +35,9 @@
     if(!self.purchases)
     {
         self.purchases = [[mstorepurchases alloc] init];
-        [[mstore singleton] checkavailabilities:self.purchases];
+        [mstore singleton].purchases = self.purchases;
+        [[SKPaymentQueue defaultQueue] addTransactionObserver:[mstore singleton]];
+        [[mstore singleton] checkavailabilities];
     }
 }
 

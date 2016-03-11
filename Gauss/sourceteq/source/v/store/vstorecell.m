@@ -48,6 +48,7 @@ static NSUInteger const labelmarginright = 20;
     [button setTitleColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
     [button setTitle:NSLocalizedString(@"purchase_button_purchase", nil) forState:UIControlStateNormal];
     [button addTarget:self action:@selector(actionpurchase:) forControlEvents:UIControlEventTouchUpInside];
+    self.button = button;
     
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -82,7 +83,7 @@ static NSUInteger const labelmarginright = 20;
 
 -(void)actionpurchase:(UIButton*)button
 {
-    [button setHidden:YES];
+    [self.button setHidden:YES];
     [self.spinner setHidden:NO];
     [self.spinner startAnimating];
     [self.item purchase];
@@ -101,8 +102,6 @@ static NSUInteger const labelmarginright = 20;
     self.item = item;
     self.layoutlabelheight.constant = labelheight;
     self.label.attributedText = item.attributestring;
-    
-    [item.status config:self];
 }
 
 @end

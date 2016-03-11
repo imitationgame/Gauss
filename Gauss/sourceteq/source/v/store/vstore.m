@@ -78,8 +78,8 @@ static NSUInteger const cellheight = 170;
                    ^
                    {
                        [self.spinner removeFromSuperview];
-                       [self.collection reloadData];
                        [self.collection setHidden:NO];
+                       [self.collection reloadData];
                    });
 }
 
@@ -111,6 +111,8 @@ static NSUInteger const cellheight = 170;
     
     vstorecell *cell = [col dequeueReusableCellWithReuseIdentifier:storecell forIndexPath:index];
     [cell config:item];
+    
+    [item.status config:cell];
     
     return cell;
 }
