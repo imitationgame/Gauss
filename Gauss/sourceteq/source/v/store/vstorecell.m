@@ -22,14 +22,36 @@ static NSUInteger const labelmarginright = 150;
     [label setNumberOfLines:0];
     self.label = label;
     
-    [self addSubview:label];
+    UILabel *statuslabel = [[UILabel alloc] init];
+    [statuslabel setBackgroundColor:[UIColor clearColor]];
+    [statuslabel setUserInteractionEnabled:NO];
+    [statuslabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [statuslabel setFont:[UIFont fontWithName:fontregularname size:16]];
+    [statuslabel setTextColor:colorthird];
+    self.statuslabel = statuslabel;
     
-    NSDictionary *views = @{@"label":label};
+    UIImageView *statusicon = [[UIImageView alloc] init];
+    [statusicon setClipsToBounds:YES];
+    [statusicon setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [statusicon setContentMode:UIViewContentModeScaleAspectFit];
+    [statusicon setUserInteractionEnabled:NO];
+    [statusicon setImage:[UIImage imageNamed:@"success"]];
+    self.statusicon = statusicon;
+    
+    [self addSubview:label];
+    [self addSubview:statuslabel];
+    [self addSubview:statusicon];
+    
+    NSDictionary *views = @{@"label":label, @"statuslabel":statuslabel, @"statusicon":statusicon};
     NSDictionary *metrics = @{@"labelmarginleft":@(labelmarginleft), @"labelmarginright":@(labelmarginright)};
     
     self.layoutlabelheight = [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:1];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(labelmarginleft)-[label]-(labelmarginright)-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[statuslabel]-20-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[statuslabel]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[statusicon(40)]-20-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[statusicon(40)]" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutlabelheight];
     
     return self;
