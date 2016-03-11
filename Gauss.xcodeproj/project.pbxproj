@@ -104,6 +104,8 @@
 		DAD676381C88BD6D00AC41FD /* vspinner.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6761F1C88BD6D00AC41FD /* vspinner.m */; };
 		DAD6763B1C88BE5E00AC41FD /* cpages.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6763A1C88BE5E00AC41FD /* cpages.m */; };
 		DAD6763E1C88BE9F00AC41FD /* valert.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD6763D1C88BE9F00AC41FD /* valert.m */; };
+		DAEB85C81C925E00000FD40D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAEB85C71C925E00000FD40D /* StoreKit.framework */; };
+		DAEB85CC1C925E93000FD40D /* mstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB85CB1C925E93000FD40D /* mstore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -307,6 +309,9 @@
 		DAD6763A1C88BE5E00AC41FD /* cpages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cpages.m; sourceTree = "<group>"; };
 		DAD6763C1C88BE9F00AC41FD /* valert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = valert.h; sourceTree = "<group>"; };
 		DAD6763D1C88BE9F00AC41FD /* valert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = valert.m; sourceTree = "<group>"; };
+		DAEB85C71C925E00000FD40D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		DAEB85CA1C925E93000FD40D /* mstore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mstore.h; sourceTree = "<group>"; };
+		DAEB85CB1C925E93000FD40D /* mstore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstore.m; sourceTree = "<group>"; };
 		F731575245052EA2617E6541 /* libPods-Gauss.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gauss.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -318,6 +323,7 @@
 				DAD6762D1C88BD6D00AC41FD /* libtimerbg.a in Frameworks */,
 				DAD6762C1C88BD6D00AC41FD /* libdb.a in Frameworks */,
 				B642C6369DAE6F51A02864A5 /* libPods-Gauss.a in Frameworks */,
+				DAEB85C81C925E00000FD40D /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +333,7 @@
 		26A064D774832D3F7BF05FED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAEB85C71C925E00000FD40D /* StoreKit.framework */,
 				F731575245052EA2617E6541 /* libPods-Gauss.a */,
 			);
 			name = Frameworks;
@@ -759,6 +766,7 @@
 		DAD676031C88BD6D00AC41FD /* m */ = {
 			isa = PBXGroup;
 			children = (
+				DAEB85C91C925E88000FD40D /* store */,
 				DA894E5F1C90B47400EDD0F4 /* playfinish */,
 				DACCC1451C8E431400754C2C /* playitem */,
 				DACCC1321C8DF11800754C2C /* operation */,
@@ -850,6 +858,15 @@
 			path = general;
 			sourceTree = "<group>";
 		};
+		DAEB85C91C925E88000FD40D /* store */ = {
+			isa = PBXGroup;
+			children = (
+				DAEB85CA1C925E93000FD40D /* mstore.h */,
+				DAEB85CB1C925E93000FD40D /* mstore.m */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -885,6 +902,11 @@
 					DA40FBAF1C88A4F5009B974B = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 7AMWG3RLHN;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -994,6 +1016,7 @@
 				DACCC14B1C8E443900754C2C /* mplayitemcell.m in Sources */,
 				DA2A09DB1C892232003A19F6 /* mcourse.m in Sources */,
 				DACCC1411C8E1A4100754C2C /* mchallengeoperanddouble.m in Sources */,
+				DAEB85CC1C925E93000FD40D /* mstore.m in Sources */,
 				DA2A09D41C891890003A19F6 /* vstatsbar.m in Sources */,
 				DA894E571C90B42300EDD0F4 /* vplayitemchallengeoperand.m in Sources */,
 				DA2A09BC1C88DA99003A19F6 /* cstats.m in Sources */,

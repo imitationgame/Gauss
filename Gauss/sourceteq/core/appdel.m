@@ -15,6 +15,7 @@
     [window setRootViewController:[cmain singleton]];
     
     [updater launch];
+    [[SKPaymentQueue defaultQueue] addTransactionObserver:[skman sha]];
     
     return YES;
 }

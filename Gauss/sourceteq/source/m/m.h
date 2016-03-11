@@ -31,3 +31,4 @@
 #import "mplayfinishcellpointscellmaxscore.h"
 #import "mplayfinishcellpointscellcurrentscore.h"
 #import "mplayfinishcellpointscellmaxcourse.h"
+#import "mstore.h"
