@@ -47,8 +47,6 @@
         
         if([initem.itemid isEqualToString:prodid])
         {
-            NSLog(@"purchase: %@", prodid);
-            
             [self.priceformater setLocale:skproduct.priceLocale];
             NSString *strprice = [self.priceformater stringFromNumber:skproduct.price];
             initem.pricestring = strprice;

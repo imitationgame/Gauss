@@ -39,7 +39,8 @@
 
 -(void)purchase:(SKProduct*)product
 {
-    [[SKPaymentQueue defaultQueue] addPayment:[SKMutablePayment paymentWithProduct:product]];
+    SKPayment *payment = [SKMutablePayment paymentWithProduct:product];
+    [[SKPaymentQueue defaultQueue] addPayment:payment];
 }
 
 -(void)restorepurchases
@@ -66,6 +67,8 @@
         SKProduct *skproduct = products[i];
         [self.purchases loadskproduct:skproduct];
     }
+    
+    [self restorepurchases];
 }
 
 -(void)paymentQueue:(SKPaymentQueue*)_queue updatedTransactions:(NSArray*)_transactions
@@ -116,7 +119,7 @@
     [self sendnotification];*/
 }
 
--(void)paymentQueue:(SKPaymentQueue*)_queue removedTransactions:(NSArray*)_transactions
+-(void)paymentQueue:(SKPaymentQueue*)queue removedTransactions:(NSArray*)transactions
 {/*
     NSInteger qty = _transactions.count;
     for(NSInteger i = 0; i < qty; i++)
@@ -161,15 +164,15 @@
     [self sendnotification];*/
 }
 
--(void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue*)_queue
+-(void)paymentQueueRestoreCompletedTransactionsFinished:(SKPaymentQueue*)queue
 {
     [self sendnotification];
 }
 
--(void)paymentQueue:(SKPaymentQueue*)_queue restoreCompletedTransactionsFailedWithError:(NSError*)_error
+-(void)paymentQueue:(SKPaymentQueue*)queue restoreCompletedTransactionsFailedWithError:(NSError*)error
 {
-//    error = _error.localizedDescription;
-//    [self sendnotification];
+    self.error = error.localizedDescription;
+    [self sendnotification];
 }
 
 @end

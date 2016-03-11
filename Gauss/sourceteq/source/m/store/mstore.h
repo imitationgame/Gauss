@@ -6,6 +6,8 @@
 
 +(instancetype)singleton;
 -(void)checkavailabilities:(mstorepurchases*)purchases;
+-(void)purchase:(SKProduct*)product;
+-(void)restorepurchases;
 
 @property(weak, nonatomic)mstorepurchases *purchases;
 @property(strong, nonatomic)NSNotification *notification;
