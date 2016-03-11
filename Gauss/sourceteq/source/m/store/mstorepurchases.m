@@ -27,6 +27,7 @@
         item.itemdescr = itemdescr;
         item.status = [[mstorestatusnew alloc] init];
         
+        [self.items addObject:item];
         [self.asset addObject:itemid];
     }
     

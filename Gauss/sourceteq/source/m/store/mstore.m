@@ -58,15 +58,14 @@
 
 -(void)productsRequest:(SKProductsRequest*)request didReceiveResponse:(SKProductsResponse*)response
 {
-    NSArray *prods = response.products;
-    NSInteger qty = prods.count;
+    NSArray *products = response.products;
+    NSInteger qty = products.count;
     
-    for(NSInteger i = 0; i < qty; i++)
+    for(NSUInteger i = 0; i < qty; i++)
     {
-        [[modperks sha] loadperk:prods[i]];
+        SKProduct *skproduct = products[i];
+        [self.purchases loadskproduct:skproduct];
     }
-    
-    [self sendnotification];
 }
 
 -(void)paymentQueue:(SKPaymentQueue*)_queue updatedTransactions:(NSArray*)_transactions
