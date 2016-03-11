@@ -20,11 +20,22 @@
     [buttonback.imageView setClipsToBounds:YES];
     [buttonback addTarget:self action:@selector(actionback:) forControlEvents:UIControlEventTouchUpInside];
     
+    UILabel *label = [[UILabel alloc] init];
+    [label setUserInteractionEnabled:NO];
+    [label setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [label setTextAlignment:NSTextAlignmentCenter];
+    [label setFont:[UIFont fontWithName:fontregularname size:16]];
+    [label setTextColor:[UIColor whiteColor]];
+    [label setText:NSLocalizedString(@"store_title", nil)];
+    
+    [self addSubview:label];
     [self addSubview:buttonback];
     
-    NSDictionary *views = @{@"buttonback":buttonback};
+    NSDictionary *views = @{@"buttonback":buttonback, @"label":label};
     NSDictionary *metrics = @{};
     
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-15-[label(50)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[buttonback(60)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-15-[buttonback(50)]" options:0 metrics:metrics views:views]];
     

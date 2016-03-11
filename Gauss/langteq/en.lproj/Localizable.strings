@@ -31,3 +31,5 @@
 "elapsedtime_days"="%@ days";
 "elapsedtime_hours"="%@ hours";
 "elapsedtime_minutes"="%@ minutes";
+
+"store_title"="Store";

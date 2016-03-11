@@ -18,7 +18,7 @@ static NSString* const storecell = @"celid";
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:1]];
     
-    vstorebar *bar = [[vstorebar alloc] init];
+    vstorebar *bar = [[vstorebar alloc] init:controller];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setHeaderReferenceSize:CGSizeZero];
@@ -40,6 +40,7 @@ static NSString* const storecell = @"celid";
     [collection registerClass:[vstorecell class] forCellWithReuseIdentifier:storecell];
     self.collection = collection;
     
+    [self addSubview:collection];
     [self addSubview:bar];
     
     NSDictionary *views = @{@"bar":bar, @"col":collection};
