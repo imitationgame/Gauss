@@ -2,11 +2,11 @@
 
 @interface coptions ()
 
-@property(strong, nonatomic)vstats *view;
+@property(strong, nonatomic)voptions *view;
 
 @end
 
-@implementation cstats
+@implementation coptions
 
 @dynamic view;
 
@@ -26,14 +26,7 @@
 
 -(void)loadView
 {
-    self.view = [[vstats alloc] init:self];
-}
-
-#pragma mark public
-
--(void)play:(mcourseitemchapter*)chapter
-{
-    [[cmain singleton].pages sectionplay:chapter];
+    self.view = [[voptions alloc] init:self];
 }
 
 @end
