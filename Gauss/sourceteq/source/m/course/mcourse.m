@@ -22,6 +22,8 @@
             break;
         }
     }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:notcoursesloaded object:nil];
 }
 
 +(instancetype)singleton

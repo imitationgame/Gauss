@@ -149,7 +149,7 @@ static NSUInteger const footerspacing = 50;
     
     if(section)
     {
-        insets = UIEdgeInsetsMake(linespacing, 0, footerspacing, 0);
+        insets = UIEdgeInsetsMake(0, 0, footerspacing, 0);
     }
     else
     {
