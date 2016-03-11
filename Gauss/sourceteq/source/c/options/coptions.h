@@ -2,4 +2,6 @@
 
 @interface coptions:UIViewController
 
+-(void)openstats;
+
 @end

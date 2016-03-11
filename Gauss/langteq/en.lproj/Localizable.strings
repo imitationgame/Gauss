@@ -32,6 +32,8 @@
 "elapsedtime_hours"="%@ hours";
 "elapsedtime_minutes"="%@ minutes";
 
+"options_title"="Configuration";
+
 "store_title"="Store";
 
 "error_connectionfailed"="Internet connection failed, try again";

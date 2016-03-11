@@ -29,4 +29,11 @@
     self.view = [[voptions alloc] init:self];
 }
 
+#pragma mark public
+
+-(void)openstats
+{
+    [[cmain singleton].pages sectionstats:UIPageViewControllerNavigationDirectionForward animated:YES];
+}
+
 @end
