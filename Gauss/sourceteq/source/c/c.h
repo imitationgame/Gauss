@@ -6,3 +6,4 @@
 #import "cplayitem.h"
 #import "cplayfinish.h"
 #import "cstore.h"
+#import "coptions.h"
