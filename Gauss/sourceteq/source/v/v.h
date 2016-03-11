@@ -35,3 +35,4 @@
 #import "vstorebar.h"
 #import "vstorecell.h"
 #import "voptions.h"
+#import "voptionsbar.h"

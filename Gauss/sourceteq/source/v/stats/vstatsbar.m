@@ -45,7 +45,7 @@
 
 -(void)actionoptions:(UIButton*)button
 {
-    
+    [[cmain singleton].pages sectionoptions];
 }
 
 @end
