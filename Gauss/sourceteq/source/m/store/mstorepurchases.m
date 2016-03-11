@@ -1,8 +1,8 @@
 #import "mstorepurchases.h"
 
-static NSUInteger const itemtitlesize = 18;
-static NSUInteger const itemdescrsize = 18;
-static NSUInteger const itempricesize = 16;
+static NSUInteger const itemtitlesize = 17;
+static NSUInteger const itemdescrsize = 17;
+static NSUInteger const itempricesize = 14;
 
 @implementation mstorepurchases
 
@@ -27,8 +27,8 @@ static NSUInteger const itempricesize = 16;
         
         mstorepurchasesitem *item = [[mstorepurchasesitem alloc] init];
         item.itemid = itemid;
-        item.itemtitle = itemtitle;
-        item.itemdescr = itemdescr;
+        item.itemtitle = NSLocalizedString(itemtitle, nil);
+        item.itemdescr = NSLocalizedString(itemdescr, nil);
         item.status = [[mstorestatusnew alloc] init];
         
         [self.items addObject:item];

@@ -39,7 +39,7 @@ static NSUInteger const labelmarginright = 150;
 {
     CGFloat width = self.bounds.size.width;
     CGFloat labelwidth = width - marginleftright;
-    CGFloat labelheight = ([item.attributestring boundingRectWithSize:CGSizeMake(labelwidth, 1000) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin context:nil].size.height);
+    CGFloat labelheight = ceilf([item.attributestring boundingRectWithSize:CGSizeMake(labelwidth, 1000) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size.height);
     
     self.item = item;
     self.layoutlabelheight.constant = labelheight;
