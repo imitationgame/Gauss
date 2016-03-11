@@ -114,7 +114,6 @@
 		DAEB85DD1C926B26000FD40D /* mstorestatusnew.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB85DC1C926B26000FD40D /* mstorestatusnew.m */; };
 		DAEB85E01C926B36000FD40D /* mstorestatuspurchasing.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB85DF1C926B36000FD40D /* mstorestatuspurchasing.m */; };
 		DAEB85E31C926B44000FD40D /* mstorestatusdeferred.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB85E21C926B44000FD40D /* mstorestatusdeferred.m */; };
-		DAEB85E61C926B54000FD40D /* mstorestatusnotsupported.m in Sources */ = {isa = PBXBuildFile; fileRef = DAEB85E51C926B54000FD40D /* mstorestatusnotsupported.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -336,8 +335,6 @@
 		DAEB85DF1C926B36000FD40D /* mstorestatuspurchasing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstorestatuspurchasing.m; sourceTree = "<group>"; };
 		DAEB85E11C926B44000FD40D /* mstorestatusdeferred.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mstorestatusdeferred.h; sourceTree = "<group>"; };
 		DAEB85E21C926B44000FD40D /* mstorestatusdeferred.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstorestatusdeferred.m; sourceTree = "<group>"; };
-		DAEB85E41C926B54000FD40D /* mstorestatusnotsupported.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mstorestatusnotsupported.h; sourceTree = "<group>"; };
-		DAEB85E51C926B54000FD40D /* mstorestatusnotsupported.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstorestatusnotsupported.m; sourceTree = "<group>"; };
 		F731575245052EA2617E6541 /* libPods-Gauss.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gauss.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -904,8 +901,6 @@
 				DAEB85DF1C926B36000FD40D /* mstorestatuspurchasing.m */,
 				DAEB85E11C926B44000FD40D /* mstorestatusdeferred.h */,
 				DAEB85E21C926B44000FD40D /* mstorestatusdeferred.m */,
-				DAEB85E41C926B54000FD40D /* mstorestatusnotsupported.h */,
-				DAEB85E51C926B54000FD40D /* mstorestatusnotsupported.m */,
 			);
 			path = store;
 			sourceTree = "<group>";
@@ -1044,7 +1039,6 @@
 			files = (
 				DAD676341C88BD6D00AC41FD /* msettings.m in Sources */,
 				DA1F22BE1C91F59900BE2458 /* vplayfinishchapters.m in Sources */,
-				DAEB85E61C926B54000FD40D /* mstorestatusnotsupported.m in Sources */,
 				DA1F22CF1C9240F300BE2458 /* vstorecell.m in Sources */,
 				DAD6763E1C88BE9F00AC41FD /* valert.m in Sources */,
 				DAD6762E1C88BD6D00AC41FD /* cmain.m in Sources */,
