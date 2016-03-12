@@ -101,7 +101,7 @@ static NSUInteger const labelmarginright = 20;
     
     self.item = item;
     self.layoutlabelheight.constant = labelheight;
-    self.label.attributedText = item.attributestring;
+    [self.label setAttributedText:item.attributestring];
 }
 
 @end

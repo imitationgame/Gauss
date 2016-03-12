@@ -1,7 +1,7 @@
 #import "voptions.h"
 
 static NSString* const optionscell = @"cellid";
-static NSUInteger const cellheight = 70;
+static NSUInteger const cellheight = 75;
 
 @interface voptions ()
 
@@ -86,6 +86,12 @@ static NSUInteger const cellheight = 70;
     [cell config:item];
     
     return cell;
+}
+
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    moptionsitem *item = self.model.items[index.item];
+    [item selected];
 }
 
 @end

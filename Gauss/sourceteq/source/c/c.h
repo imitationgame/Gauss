@@ -7,3 +7,4 @@
 #import "cplayfinish.h"
 #import "cstore.h"
 #import "coptions.h"
+#import "ccontact.h"

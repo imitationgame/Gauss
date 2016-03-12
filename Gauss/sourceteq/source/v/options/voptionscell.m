@@ -44,7 +44,7 @@
 {
     if(self.isSelected || self.isHighlighted)
     {
-        [self setBackgroundColor:[UIColor colorWithRed:0.3 green:0.7 blue:0.8 alpha:0.2]];
+        [self setBackgroundColor:[UIColor colorWithRed:0.3 green:0.7 blue:0.8 alpha:0.3]];
     }
     else
     {
