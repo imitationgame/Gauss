@@ -78,4 +78,14 @@ static NSUInteger const cellheight = 100;
     return count;
 }
 
+-(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
+{
+    moptionsitem *item = self.model.items[index.item];
+    
+    voptionscell *cell = [col dequeueReusableCellWithReuseIdentifier:optionscell forIndexPath:index];
+    [cell config:item];
+    
+    return cell;
+}
+
 @end

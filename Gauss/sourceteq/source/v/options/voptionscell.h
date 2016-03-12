@@ -6,4 +6,6 @@
 
 -(void)config:(moptionsitem*)model;
 
+@property(weak, nonatomic)UILabel *label;
+
 @end
