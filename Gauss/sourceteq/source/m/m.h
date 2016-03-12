@@ -38,3 +38,4 @@
 #import "mstorestatusnew.h"
 #import "mstorestatuspurchasing.h"
 #import "mstorestatusdeferred.h"
+#import "moptions.h"
