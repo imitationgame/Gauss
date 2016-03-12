@@ -2,7 +2,7 @@
 
 @interface ccontact ()
 
-@property(strong, nonatomic)vstore *view;
+@property(strong, nonatomic)vcontact *view;
 
 @end
 
@@ -40,7 +40,7 @@
 
 -(void)loadView
 {
-    self.view = [[vstore alloc] init:self];
+    self.view = [[vcontact alloc] init:self];
 }
 
 #pragma mark public
