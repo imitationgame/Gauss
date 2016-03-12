@@ -1,6 +1,6 @@
 #import "appdel.h"
 #import "moptionsitem.h"
 
-@interface moptionsitemrate:moptionsitem
+@interface moptionsitemcontact:moptionsitem
 
 @end

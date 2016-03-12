@@ -40,4 +40,5 @@
 #import "mstorestatusdeferred.h"
 #import "moptions.h"
 #import "moptionsitemstore.h"
+#import "moptionsitemcontact.h"
 #import "moptionsitemrate.h"

@@ -34,6 +34,8 @@
 
 "options_title"="Configuration";
 "options_item_store_title"="Store";
+"options_item_store_contact"="Contact";
+"options_item_store_rate"="Review in the App Store";
 
 "store_title"="Store";
 

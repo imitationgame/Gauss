@@ -71,6 +71,7 @@
 		DAAFC9961C939A5200045AE0 /* moptionsitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC9951C939A5200045AE0 /* moptionsitem.m */; };
 		DAAFC9991C939ACB00045AE0 /* moptionsitemstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC9981C939ACB00045AE0 /* moptionsitemstore.m */; };
 		DAAFC99C1C939E0C00045AE0 /* moptionsitemrate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC99B1C939E0C00045AE0 /* moptionsitemrate.m */; };
+		DAAFC99F1C939EC200045AE0 /* moptionsitemcontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC99E1C939EC200045AE0 /* moptionsitemcontact.m */; };
 		DACCC1251C8DC86B00754C2C /* mchallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1241C8DC86B00754C2C /* mchallenge.m */; };
 		DACCC1281C8DE42700754C2C /* mchallengetime.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1271C8DE42700754C2C /* mchallengetime.m */; };
 		DACCC12E1C8DE5D500754C2C /* scourse.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC12D1C8DE5D500754C2C /* scourse.m */; };
@@ -256,6 +257,8 @@
 		DAAFC9981C939ACB00045AE0 /* moptionsitemstore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moptionsitemstore.m; sourceTree = "<group>"; };
 		DAAFC99A1C939E0C00045AE0 /* moptionsitemrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moptionsitemrate.h; sourceTree = "<group>"; };
 		DAAFC99B1C939E0C00045AE0 /* moptionsitemrate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moptionsitemrate.m; sourceTree = "<group>"; };
+		DAAFC99D1C939EC200045AE0 /* moptionsitemcontact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moptionsitemcontact.h; sourceTree = "<group>"; };
+		DAAFC99E1C939EC200045AE0 /* moptionsitemcontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moptionsitemcontact.m; sourceTree = "<group>"; };
 		DACCC1231C8DC86B00754C2C /* mchallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallenge.h; sourceTree = "<group>"; };
 		DACCC1241C8DC86B00754C2C /* mchallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mchallenge.m; sourceTree = "<group>"; };
 		DACCC1261C8DE42700754C2C /* mchallengetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallengetime.h; sourceTree = "<group>"; };
@@ -626,6 +629,8 @@
 				DAAFC9951C939A5200045AE0 /* moptionsitem.m */,
 				DAAFC9971C939ACB00045AE0 /* moptionsitemstore.h */,
 				DAAFC9981C939ACB00045AE0 /* moptionsitemstore.m */,
+				DAAFC99D1C939EC200045AE0 /* moptionsitemcontact.h */,
+				DAAFC99E1C939EC200045AE0 /* moptionsitemcontact.m */,
 				DAAFC99A1C939E0C00045AE0 /* moptionsitemrate.h */,
 				DAAFC99B1C939E0C00045AE0 /* moptionsitemrate.m */,
 			);
@@ -1197,6 +1202,7 @@
 				DACCC14E1C8E46C500754C2C /* mplayitemcelloperand.m in Sources */,
 				DA894E551C90B42300EDD0F4 /* vplayitemchallenge.m in Sources */,
 				DAAFC98F1C93989200045AE0 /* voptionscell.m in Sources */,
+				DAAFC99F1C939EC200045AE0 /* moptionsitemcontact.m in Sources */,
 				DA894E681C90BE7200EDD0F4 /* vplayfinishfails.m in Sources */,
 				DA894E7A1C90C45100EDD0F4 /* mplayfinishcellpoints.m in Sources */,
 				DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */,
