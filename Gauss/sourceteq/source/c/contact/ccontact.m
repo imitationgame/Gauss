@@ -1,12 +1,12 @@
-#import "cstore.h"
+#import "ccontact.h"
 
-@interface cstore ()
+@interface ccontact ()
 
 @property(strong, nonatomic)vstore *view;
 
 @end
 
-@implementation cstore
+@implementation ccontact
 
 @dynamic view;
 
@@ -15,7 +15,7 @@
     dispatch_async(dispatch_get_main_queue(),
                    ^
                    {
-                       cstore *controller = [[cstore alloc] init];
+                       ccontact *controller = [[ccontact alloc] init];
                        [[cmain singleton] pushViewController:controller animated:YES];
                    });
 }
@@ -26,19 +26,6 @@
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     [self setExtendedLayoutIncludesOpaqueBars:NO];
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    if(!self.purchases)
-    {
-        self.purchases = [[mstorepurchases alloc] init];
-        [mstore singleton].purchases = self.purchases;
-        [[SKPaymentQueue defaultQueue] addTransactionObserver:[mstore singleton]];
-        [[mstore singleton] checkavailabilities];
-    }
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle

@@ -2,4 +2,7 @@
 
 @interface ccontact:UIViewController
 
++(void)show;
+-(void)back;
+
 @end
