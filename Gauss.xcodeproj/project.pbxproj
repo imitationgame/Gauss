@@ -89,6 +89,7 @@
 		DACCC1541C8E470700754C2C /* mplayitemcellequals.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1531C8E470700754C2C /* mplayitemcellequals.m */; };
 		DACCC1571C8E471400754C2C /* mplayitemcellresult.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1561C8E471400754C2C /* mplayitemcellresult.m */; };
 		DACCC15A1C8E472B00754C2C /* mplayitemcelltrivia.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1591C8E472B00754C2C /* mplayitemcelltrivia.m */; };
+		DACE0E7E1C94BB840093E0C9 /* vcontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE0E7D1C94BB840093E0C9 /* vcontact.m */; };
 		DAD309021C935AB80028E934 /* coptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309011C935AB80028E934 /* coptions.m */; };
 		DAD309061C935B2E0028E934 /* voptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309051C935B2E0028E934 /* voptions.m */; };
 		DAD309091C93790B0028E934 /* voptionsbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309081C93790B0028E934 /* voptionsbar.m */; };
@@ -294,6 +295,8 @@
 		DACCC1561C8E471400754C2C /* mplayitemcellresult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayitemcellresult.m; sourceTree = "<group>"; };
 		DACCC1581C8E472B00754C2C /* mplayitemcelltrivia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mplayitemcelltrivia.h; sourceTree = "<group>"; };
 		DACCC1591C8E472B00754C2C /* mplayitemcelltrivia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mplayitemcelltrivia.m; sourceTree = "<group>"; };
+		DACE0E7C1C94BB840093E0C9 /* vcontact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcontact.h; sourceTree = "<group>"; };
+		DACE0E7D1C94BB840093E0C9 /* vcontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcontact.m; sourceTree = "<group>"; };
 		DAD309001C935AB80028E934 /* coptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coptions.h; sourceTree = "<group>"; };
 		DAD309011C935AB80028E934 /* coptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coptions.m; sourceTree = "<group>"; };
 		DAD309041C935B2E0028E934 /* voptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voptions.h; sourceTree = "<group>"; };
@@ -723,6 +726,15 @@
 			path = playitem;
 			sourceTree = "<group>";
 		};
+		DACE0E7B1C94BB790093E0C9 /* contact */ = {
+			isa = PBXGroup;
+			children = (
+				DACE0E7C1C94BB840093E0C9 /* vcontact.h */,
+				DACE0E7D1C94BB840093E0C9 /* vcontact.m */,
+			);
+			path = contact;
+			sourceTree = "<group>";
+		};
 		DAD308FF1C935AA90028E934 /* options */ = {
 			isa = PBXGroup;
 			children = (
@@ -931,6 +943,7 @@
 		DAD676151C88BD6D00AC41FD /* v */ = {
 			isa = PBXGroup;
 			children = (
+				DACE0E7B1C94BB790093E0C9 /* contact */,
 				DAD309031C935B240028E934 /* options */,
 				DA1F22C61C92368B00BE2458 /* store */,
 				DA894E5E1C90B45000EDD0F4 /* playfinish */,
@@ -1219,6 +1232,7 @@
 				DAAFC99F1C939EC200045AE0 /* moptionsitemcontact.m in Sources */,
 				DA894E681C90BE7200EDD0F4 /* vplayfinishfails.m in Sources */,
 				DA894E7A1C90C45100EDD0F4 /* mplayfinishcellpoints.m in Sources */,
+				DACE0E7E1C94BB840093E0C9 /* vcontact.m in Sources */,
 				DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */,
 				DA894E591C90B42300EDD0F4 /* vplayitemchallengeresult.m in Sources */,
 				DA1F22C51C922CE200BE2458 /* cstore.m in Sources */,

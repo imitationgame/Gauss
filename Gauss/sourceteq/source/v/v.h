@@ -37,3 +37,4 @@
 #import "voptions.h"
 #import "voptionsbar.h"
 #import "voptionscell.h"
+#import "vcontact.h"
