@@ -1,13 +1,66 @@
-//
-//  ccontact.m
-//  Gauss
-//
-//  Created by zero on 3/11/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "cstore.h"
 
-#import "ccontact.h"
+@interface cstore ()
 
-@implementation ccontact
+@property(strong, nonatomic)vstore *view;
+
+@end
+
+@implementation cstore
+
+@dynamic view;
+
++(void)show
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^
+                   {
+                       cstore *controller = [[cstore alloc] init];
+                       [[cmain singleton] pushViewController:controller animated:YES];
+                   });
+}
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    [self setEdgesForExtendedLayout:UIRectEdgeNone];
+    [self setExtendedLayoutIncludesOpaqueBars:NO];
+    [self setAutomaticallyAdjustsScrollViewInsets:NO];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if(!self.purchases)
+    {
+        self.purchases = [[mstorepurchases alloc] init];
+        [mstore singleton].purchases = self.purchases;
+        [[SKPaymentQueue defaultQueue] addTransactionObserver:[mstore singleton]];
+        [[mstore singleton] checkavailabilities];
+    }
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
+}
+
+-(void)loadView
+{
+    self.view = [[vstore alloc] init:self];
+}
+
+#pragma mark public
+
+-(void)back
+{
+    [[cmain singleton] popViewControllerAnimated:YES];
+}
 
 @end

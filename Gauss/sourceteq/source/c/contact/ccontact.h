@@ -1,5 +1,5 @@
 #import "appdel.h"
 
-@interface ccontact:
+@interface ccontact:UIViewController
 
 @end
