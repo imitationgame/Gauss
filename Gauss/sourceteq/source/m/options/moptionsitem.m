@@ -2,4 +2,10 @@
 
 @implementation moptionsitem
 
+#pragma mark public
+
+-(void)selected
+{
+}
+
 @end

@@ -33,6 +33,7 @@
 "elapsedtime_minutes"="%@ minutes";
 
 "options_title"="Configuration";
+"options_item_store_title"="Store";
 
 "store_title"="Store";
 

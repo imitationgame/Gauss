@@ -1,6 +1,6 @@
 #import "voptions.h"
 
-static NSString const optionscell = @"cellid";
+static NSString* const optionscell = @"cellid";
 static NSUInteger const cellheight = 100;
 
 @interface voptions ()

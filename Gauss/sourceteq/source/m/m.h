@@ -39,3 +39,5 @@
 #import "mstorestatuspurchasing.h"
 #import "mstorestatusdeferred.h"
 #import "moptions.h"
+#import "moptionsitemstore.h"
+#import "moptionsitemrate.h"

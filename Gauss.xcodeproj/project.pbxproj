@@ -69,6 +69,8 @@
 		DAAFC98F1C93989200045AE0 /* voptionscell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC98E1C93989200045AE0 /* voptionscell.m */; };
 		DAAFC9931C939A2600045AE0 /* moptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC9921C939A2600045AE0 /* moptions.m */; };
 		DAAFC9961C939A5200045AE0 /* moptionsitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC9951C939A5200045AE0 /* moptionsitem.m */; };
+		DAAFC9991C939ACB00045AE0 /* moptionsitemstore.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC9981C939ACB00045AE0 /* moptionsitemstore.m */; };
+		DAAFC99C1C939E0C00045AE0 /* moptionsitemrate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC99B1C939E0C00045AE0 /* moptionsitemrate.m */; };
 		DACCC1251C8DC86B00754C2C /* mchallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1241C8DC86B00754C2C /* mchallenge.m */; };
 		DACCC1281C8DE42700754C2C /* mchallengetime.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1271C8DE42700754C2C /* mchallengetime.m */; };
 		DACCC12E1C8DE5D500754C2C /* scourse.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC12D1C8DE5D500754C2C /* scourse.m */; };
@@ -250,6 +252,10 @@
 		DAAFC9921C939A2600045AE0 /* moptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moptions.m; sourceTree = "<group>"; };
 		DAAFC9941C939A5200045AE0 /* moptionsitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moptionsitem.h; sourceTree = "<group>"; };
 		DAAFC9951C939A5200045AE0 /* moptionsitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moptionsitem.m; sourceTree = "<group>"; };
+		DAAFC9971C939ACB00045AE0 /* moptionsitemstore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moptionsitemstore.h; sourceTree = "<group>"; };
+		DAAFC9981C939ACB00045AE0 /* moptionsitemstore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moptionsitemstore.m; sourceTree = "<group>"; };
+		DAAFC99A1C939E0C00045AE0 /* moptionsitemrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moptionsitemrate.h; sourceTree = "<group>"; };
+		DAAFC99B1C939E0C00045AE0 /* moptionsitemrate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moptionsitemrate.m; sourceTree = "<group>"; };
 		DACCC1231C8DC86B00754C2C /* mchallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallenge.h; sourceTree = "<group>"; };
 		DACCC1241C8DC86B00754C2C /* mchallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mchallenge.m; sourceTree = "<group>"; };
 		DACCC1261C8DE42700754C2C /* mchallengetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallengetime.h; sourceTree = "<group>"; };
@@ -618,6 +624,10 @@
 				DAAFC9921C939A2600045AE0 /* moptions.m */,
 				DAAFC9941C939A5200045AE0 /* moptionsitem.h */,
 				DAAFC9951C939A5200045AE0 /* moptionsitem.m */,
+				DAAFC9971C939ACB00045AE0 /* moptionsitemstore.h */,
+				DAAFC9981C939ACB00045AE0 /* moptionsitemstore.m */,
+				DAAFC99A1C939E0C00045AE0 /* moptionsitemrate.h */,
+				DAAFC99B1C939E0C00045AE0 /* moptionsitemrate.m */,
 			);
 			path = options;
 			sourceTree = "<group>";
@@ -1100,6 +1110,7 @@
 				DACCC13E1C8E1A3400754C2C /* mchallengeoperandint.m in Sources */,
 				DACCC1311C8DED0600754C2C /* scourseadd1.m in Sources */,
 				DA894E5D1C90B42300EDD0F4 /* vplayitemloader.m in Sources */,
+				DAAFC99C1C939E0C00045AE0 /* moptionsitemrate.m in Sources */,
 				DACCC1541C8E470700754C2C /* mplayitemcellequals.m in Sources */,
 				DACCC1251C8DC86B00754C2C /* mchallenge.m in Sources */,
 				DAD676281C88BD6D00AC41FD /* main.m in Sources */,
@@ -1108,6 +1119,7 @@
 				DA1F22C91C9236AB00BE2458 /* vstore.m in Sources */,
 				DA2A09ED1C892499003A19F6 /* mcourseitemchapter.m in Sources */,
 				DACCC14B1C8E443900754C2C /* mplayitemcell.m in Sources */,
+				DAAFC9991C939ACB00045AE0 /* moptionsitemstore.m in Sources */,
 				DA2A09DB1C892232003A19F6 /* mcourse.m in Sources */,
 				DAAFC9931C939A2600045AE0 /* moptions.m in Sources */,
 				DACCC1411C8E1A4100754C2C /* mchallengeoperanddouble.m in Sources */,
