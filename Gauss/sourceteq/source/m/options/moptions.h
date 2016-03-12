@@ -4,6 +4,6 @@
 
 @interface moptions:NSObject
 
-@property(weak, nonatomic)NSArray<moptionsitem*> *items;
+@property(strong, nonatomic)NSArray<moptionsitem*> *items;
 
 @end

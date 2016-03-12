@@ -5,7 +5,11 @@
 -(instancetype)init
 {
     self = [super init];
-    self.items = @[];
+    self.items = @[
+                   [[moptionsitemstore alloc] init],
+                   [[moptionsitemcontact alloc] init],
+                   [[moptionsitemrate alloc] init],
+                   ];
     
     return self;
 }

@@ -18,7 +18,8 @@ static NSUInteger const cellheight = 100;
     self = [super init:controller];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:1]];
-
+    self.model = [[moptions alloc] init];
+    
     voptionsbar *bar = [[voptionsbar alloc] init:controller];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
@@ -36,17 +37,20 @@ static NSUInteger const cellheight = 100;
     [collection setShowsVerticalScrollIndicator:NO];
     [collection setAlwaysBounceVertical:YES];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
-    
-    
+    [collection setDelegate:self];
+    [collection setDataSource:self];
+    [collection registerClass:[voptionscell class] forCellWithReuseIdentifier:optionscell];
     self.collection = collection;
     
+    [self addSubview:collection];
     [self addSubview:bar];
     
-    NSDictionary *views = @{@"bar":bar};
+    NSDictionary *views = @{@"bar":bar, @"col":collection};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar(65)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar(65)]-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
@@ -56,8 +60,8 @@ static NSUInteger const cellheight = 100;
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    CGFloat height = col.bounds.size.height;
-    CGSize size = CGSizeMake(col.bounds.size.width, height);
+    CGFloat width = col.bounds.size.height;
+    CGSize size = CGSizeMake(width, cellheight);
     
     return size;
 }
@@ -69,7 +73,9 @@ static NSUInteger const cellheight = 100;
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    return 0;
+    NSUInteger count = self.model.items.count;
+    
+    return count;
 }
 
 @end
