@@ -1,7 +1,7 @@
 #import "voptions.h"
 
 static NSString* const optionscell = @"cellid";
-static NSUInteger const cellheight = 100;
+static NSUInteger const cellheight = 70;
 
 @interface voptions ()
 
@@ -60,7 +60,7 @@ static NSUInteger const cellheight = 100;
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    CGFloat width = col.bounds.size.height;
+    CGFloat width = col.bounds.size.width;
     CGSize size = CGSizeMake(width, cellheight);
     
     return size;
