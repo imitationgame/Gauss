@@ -18,6 +18,7 @@ static NSUInteger const headerminheight = 150;
     self = [super init:controller];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
+    self.model = [[mcontact alloc] init];
     
     vcontactheader *header = [[vcontactheader alloc] init:controller];
     self.header = header;
@@ -92,6 +93,15 @@ static NSUInteger const headerminheight = 150;
 
 #pragma mark col del
 
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
+{
+    CGFloat width = col.bounds.size.width;
+    CGFloat height = self.model.items[index.item].cellheight;
+    CGSize size = CGSizeMake(width, height);
+    
+    return size;
+}
+
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
     return 1;
@@ -99,9 +109,17 @@ static NSUInteger const headerminheight = 150;
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    NSUInteger count;
+    NSUInteger count = self.model.items.count;
     
     return count;
+}
+
+-(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
+{
+    mcontactitem *model = self.model.items[index.item];
+    UICollectionViewCell *cell = [col dequeueReusableCellWithReuseIdentifier:model.reusableid forIndexPath:index];
+    
+    return cell;
 }
 
 @end
