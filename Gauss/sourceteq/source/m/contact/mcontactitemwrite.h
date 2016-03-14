@@ -1,13 +1,6 @@
-//
-//  mcontactitemwrite.h
-//  Gauss
-//
-//  Created by zero on 3/14/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mcontactitem.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mcontactitemwrite : NSObject
+@interface mcontactitemwrite:mcontactitem
 
 @end

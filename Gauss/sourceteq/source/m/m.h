@@ -43,3 +43,5 @@
 #import "moptionsitemcontact.h"
 #import "moptionsitemrate.h"
 #import "mcontact.h"
+#import "mcontactitememail.h"
+#import "mcontactitemwrite.h"

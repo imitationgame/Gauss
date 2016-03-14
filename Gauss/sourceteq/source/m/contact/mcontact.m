@@ -1,13 +1,16 @@
-//
-//  mcontact.m
-//  Gauss
-//
-//  Created by zero on 3/14/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mcontact.h"
 
 @implementation mcontact
+
+-(instancetype)init
+{
+    self = [super init];
+    self.items = @[
+                   [[mcontactitememail alloc] init],
+                   [[mcontactitemwrite alloc] init]
+                   ];
+    
+    return self;
+}
 
 @end
