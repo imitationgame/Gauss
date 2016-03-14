@@ -91,6 +91,8 @@
 		DACCC15A1C8E472B00754C2C /* mplayitemcelltrivia.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1591C8E472B00754C2C /* mplayitemcelltrivia.m */; };
 		DACE0E7E1C94BB840093E0C9 /* vcontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE0E7D1C94BB840093E0C9 /* vcontact.m */; };
 		DACE0E961C9747EB0093E0C9 /* vcontactheader.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE0E951C9747EB0093E0C9 /* vcontactheader.m */; };
+		DACE0E991C9760240093E0C9 /* vcontactemail.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE0E981C9760240093E0C9 /* vcontactemail.m */; };
+		DACE0E9C1C9760300093E0C9 /* vcontactwrite.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE0E9B1C9760300093E0C9 /* vcontactwrite.m */; };
 		DAD309021C935AB80028E934 /* coptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309011C935AB80028E934 /* coptions.m */; };
 		DAD309061C935B2E0028E934 /* voptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309051C935B2E0028E934 /* voptions.m */; };
 		DAD309091C93790B0028E934 /* voptionsbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309081C93790B0028E934 /* voptionsbar.m */; };
@@ -300,6 +302,10 @@
 		DACE0E7D1C94BB840093E0C9 /* vcontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcontact.m; sourceTree = "<group>"; };
 		DACE0E941C9747EB0093E0C9 /* vcontactheader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcontactheader.h; sourceTree = "<group>"; };
 		DACE0E951C9747EB0093E0C9 /* vcontactheader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcontactheader.m; sourceTree = "<group>"; };
+		DACE0E971C9760240093E0C9 /* vcontactemail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcontactemail.h; sourceTree = "<group>"; };
+		DACE0E981C9760240093E0C9 /* vcontactemail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcontactemail.m; sourceTree = "<group>"; };
+		DACE0E9A1C9760300093E0C9 /* vcontactwrite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcontactwrite.h; sourceTree = "<group>"; };
+		DACE0E9B1C9760300093E0C9 /* vcontactwrite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcontactwrite.m; sourceTree = "<group>"; };
 		DAD309001C935AB80028E934 /* coptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coptions.h; sourceTree = "<group>"; };
 		DAD309011C935AB80028E934 /* coptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coptions.m; sourceTree = "<group>"; };
 		DAD309041C935B2E0028E934 /* voptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voptions.h; sourceTree = "<group>"; };
@@ -736,6 +742,10 @@
 				DACE0E7D1C94BB840093E0C9 /* vcontact.m */,
 				DACE0E941C9747EB0093E0C9 /* vcontactheader.h */,
 				DACE0E951C9747EB0093E0C9 /* vcontactheader.m */,
+				DACE0E971C9760240093E0C9 /* vcontactemail.h */,
+				DACE0E981C9760240093E0C9 /* vcontactemail.m */,
+				DACE0E9A1C9760300093E0C9 /* vcontactwrite.h */,
+				DACE0E9B1C9760300093E0C9 /* vcontactwrite.m */,
 			);
 			path = contact;
 			sourceTree = "<group>";
@@ -1230,6 +1240,7 @@
 				DA2A09C41C88E3C6003A19F6 /* cplay.m in Sources */,
 				DAEB85E01C926B36000FD40D /* mstorestatuspurchasing.m in Sources */,
 				DA2A09DE1C892277003A19F6 /* mcourseitem.m in Sources */,
+				DACE0E9C1C9760300093E0C9 /* vcontactwrite.m in Sources */,
 				DA1098AD1C89E7A4007AB688 /* vstatsstatus.m in Sources */,
 				DA1F22C11C91F5A300BE2458 /* vplayfinishchapterscell.m in Sources */,
 				DACCC14E1C8E46C500754C2C /* mplayitemcelloperand.m in Sources */,
@@ -1242,6 +1253,7 @@
 				DAD676371C88BD6D00AC41FD /* viewbase.m in Sources */,
 				DA894E591C90B42300EDD0F4 /* vplayitemchallengeresult.m in Sources */,
 				DA1F22C51C922CE200BE2458 /* cstore.m in Sources */,
+				DACE0E991C9760240093E0C9 /* vcontactemail.m in Sources */,
 				DA2A09E71C892347003A19F6 /* mcourseitemadd.m in Sources */,
 				DAEB85DD1C926B26000FD40D /* mstorestatusnew.m in Sources */,
 				DAD6762B1C88BD6D00AC41FD /* updater.m in Sources */,

@@ -2,7 +2,6 @@
 
 static NSUInteger const headermaxheight = 200;
 static NSUInteger const headerminheight = 150;
-static NSUInteger const scrollcontentheight = 1200;
 
 @interface vcontact ()
 
@@ -23,11 +22,15 @@ static NSUInteger const scrollcontentheight = 1200;
     vcontactheader *header = [[vcontactheader alloc] init:controller];
     self.header = header;
     
-    UIScrollView *scroll = [[UIScrollView alloc] init];
-    [scroll setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [scroll setClipsToBounds:YES];
-    [scroll setDelegate:self];
-    self.scroll = scroll;
+    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    
+    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [collection setBackgroundColor:[UIColor clearColor]];
+    [collection setClipsToBounds:YES];
+    [collection setDataSource:self];
+    [collection setDelegate:self];
+    self.collection = collection;
     
     [self addSubview:header];
     [self addSubview:scroll];
