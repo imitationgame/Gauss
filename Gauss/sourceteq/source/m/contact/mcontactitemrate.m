@@ -5,7 +5,8 @@
 -(instancetype)init
 {
     self = [super init];
-    self.cellclass = [];
+    self.cellclass = [vcontactrate class];
+    self.cellheight = 250;
     
     return self;
 }

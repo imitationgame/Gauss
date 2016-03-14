@@ -6,6 +6,7 @@
 {
     self = [super init];
     self.items = @[
+                   [[mcontactitemrate alloc] init],
                    [[mcontactitememail alloc] init],
                    [[mcontactitemwrite alloc] init]
                    ];
