@@ -1,8 +1,8 @@
 #import "vcontactrate.h"
 
 static NSString* const ratecell = @"cellid";
-static NSUInteger const colheight = 100;
-static NSUInteger const cellwidth = 50;
+static NSUInteger const colheight = 200;
+static NSUInteger const cellwidth = 55;
 static NSUInteger const starsnum = 5;
 
 @implementation vcontactrate
@@ -21,9 +21,10 @@ static NSUInteger const starsnum = 5;
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setNumberOfLines:0];
-    [label setFont:[UIFont fontWithName:fontregularname size:16]];
+    [label setFont:[UIFont fontWithName:fontregularname size:18]];
     [label setTextColor:colorthird];
     [label setBackgroundColor:[UIColor clearColor]];
+    [label setText:NSLocalizedString(@"contact_rate_title", nil)];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setHeaderReferenceSize:CGSizeZero];
@@ -42,6 +43,7 @@ static NSUInteger const starsnum = 5;
     [collection setDataSource:self];
     [collection setDelegate:self];
     [collection registerClass:[vcontactratecell class] forCellWithReuseIdentifier:ratecell];
+    [collection setAllowsSelection:YES];
     self.collection = collection;
     
     [self addSubview:label];
@@ -50,12 +52,24 @@ static NSUInteger const starsnum = 5;
     NSDictionary *views = @{@"label":label, @"col":collection};
     NSDictionary *metrics = @{@"colheight":@(colheight)};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label]-20-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-40-[label]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[col(colheight)]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark functionality
+
+-(void)selectindex:(NSUInteger)index
+{
+    for(NSUInteger i = 0; i < starsnum; i++)
+    {
+        BOOL selected = i <= index;
+        NSIndexPath *indexpath = [NSIndexPath indexPathForItem:i inSection:0];
+        [[self.collection cellForItemAtIndexPath:indexpath] setSelected:selected];
+    }
 }
 
 #pragma mark -
@@ -86,6 +100,11 @@ static NSUInteger const starsnum = 5;
     vcontactratecell *cell = [col dequeueReusableCellWithReuseIdentifier:ratecell forIndexPath:index];
     
     return cell;
+}
+
+-(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
+{
+    [self selectindex:index.item];
 }
 
 @end
