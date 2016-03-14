@@ -771,12 +771,12 @@
 				DACE0E951C9747EB0093E0C9 /* vcontactheader.m */,
 				DACE0EAD1C9773710093E0C9 /* vcontactrate.h */,
 				DACE0EAE1C9773710093E0C9 /* vcontactrate.m */,
+				DACE0EB01C9776DF0093E0C9 /* vcontactratecell.h */,
+				DACE0EB11C9776DF0093E0C9 /* vcontactratecell.m */,
 				DACE0E971C9760240093E0C9 /* vcontactemail.h */,
 				DACE0E981C9760240093E0C9 /* vcontactemail.m */,
 				DACE0E9A1C9760300093E0C9 /* vcontactwrite.h */,
 				DACE0E9B1C9760300093E0C9 /* vcontactwrite.m */,
-				DACE0EB01C9776DF0093E0C9 /* vcontactratecell.h */,
-				DACE0EB11C9776DF0093E0C9 /* vcontactratecell.m */,
 			);
 			path = contact;
 			sourceTree = "<group>";

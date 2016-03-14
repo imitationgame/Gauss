@@ -24,28 +24,14 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(-5)-[image]-(-5)-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(-5)-[image]-(-5)-|" options:0 metrics:metrics views:views]];
     
-    [self hover];
-    
     return self;
 }
 
--(void)setSelected:(BOOL)selected
-{
-    [super setSelected:selected];
-    [self hover];
-}
+#pragma mark public
 
--(void)setHighlighted:(BOOL)highlighted
+-(void)hover:(BOOL)selected
 {
-    [super setHighlighted:highlighted];
-    [self hover];
-}
-
-#pragma mark functionality
-
--(void)hover
-{
-    if(self.isSelected || self.isHighlighted)
+    if(selected)
     {
         [self.image setTintColor:colormain];
     }

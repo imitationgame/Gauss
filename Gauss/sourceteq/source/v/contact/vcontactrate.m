@@ -3,7 +3,6 @@
 static NSString* const ratecell = @"cellid";
 static NSUInteger const colheight = 200;
 static NSUInteger const cellwidth = 55;
-static NSUInteger const starsnum = 5;
 
 @implementation vcontactrate
 {
@@ -15,7 +14,8 @@ static NSUInteger const starsnum = 5;
     self = [super initWithFrame:frame];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
-    cellshorizontal = cellwidth * starsnum;
+    self.model = [[mcontactrate alloc] init];
+    cellshorizontal = cellwidth * self.model.stars.count;
 
     UILabel *label = [[UILabel alloc] init];
     [label setUserInteractionEnabled:NO];
@@ -60,18 +60,6 @@ static NSUInteger const starsnum = 5;
     return self;
 }
 
-#pragma mark functionality
-
--(void)selectindex:(NSUInteger)index
-{
-    for(NSUInteger i = 0; i < starsnum; i++)
-    {
-        BOOL selected = i <= index;
-        NSIndexPath *indexpath = [NSIndexPath indexPathForItem:i inSection:0];
-        [[self.collection cellForItemAtIndexPath:indexpath] setSelected:selected];
-    }
-}
-
 #pragma mark -
 #pragma mark col del
 
@@ -92,12 +80,15 @@ static NSUInteger const starsnum = 5;
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    return starsnum;
+    NSUInteger count = self.model.stars.count;
+    
+    return count;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
     vcontactratecell *cell = [col dequeueReusableCellWithReuseIdentifier:ratecell forIndexPath:index];
+    [cell hover:self.model.stars[index.item].selected];
     
     return cell;
 }

@@ -19,4 +19,15 @@ static NSUInteger const starsnum = 5;
     return self;
 }
 
+#pragma mark public
+
+-(void)selectstar:(NSUInteger)index
+{
+    for(NSUInteger i = 0; i < starsnum; i++)
+    {
+        mcontactrateitem *star = self.stars[i];
+        star.selected = i <= index;
+    }
+}
+
 @end
