@@ -42,3 +42,4 @@
 #import "vcontactemail.h"
 #import "vcontactwrite.h"
 #import "vcontactrate.h"
+#import "vcontactratecell.h"
