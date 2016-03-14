@@ -95,7 +95,10 @@ static NSUInteger const cellwidth = 55;
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    [self selectindex:index.item];
+    [self.model selectstar:index.item];
+    [self.collection reloadData];
+    
+    [valert alert:NSLocalizedString(@"contact_rate_rated", nil) inview:self offsettop:0];
 }
 
 @end

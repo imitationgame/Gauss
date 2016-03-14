@@ -27,14 +27,14 @@
     [self setAlpha:0];
     [self setUserInteractionEnabled:NO];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self setBackgroundColor:colorsecond];
+    [self setBackgroundColor:colormain];
     
     UILabel *lbl = [[UILabel alloc] init];
     [lbl setBackgroundColor:[UIColor clearColor]];
     [lbl setUserInteractionEnabled:NO];
     [lbl setNumberOfLines:0];
     [lbl setTextAlignment:NSTextAlignmentCenter];
-    [lbl setTextColor:[UIColor whiteColor]];
+    [lbl setTextColor:colorsecond];
     [lbl setFont:[UIFont fontWithName:fontregularname size:18]];
     [lbl setText:message];
     [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -47,7 +47,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[lbl]-20-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-11-[lbl]-11-|" options:0 metrics:metrics views:views]];
     
-    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(timeout:) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timeout:) userInfo:nil repeats:NO];
     
     return self;
 }
