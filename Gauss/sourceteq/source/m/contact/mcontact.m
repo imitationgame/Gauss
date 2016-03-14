@@ -13,4 +13,14 @@
     return self;
 }
 
+#pragma mark public
+
+-(void)registercollection:(UICollectionView*)collection
+{
+    for(mcontactitem *item in self.items)
+    {
+        [collection registerClass:item.cellclass forCellWithReuseIdentifier:item.reusableid];
+    }
+}
+
 @end
