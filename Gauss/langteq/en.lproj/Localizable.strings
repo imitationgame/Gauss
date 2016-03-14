@@ -37,6 +37,8 @@
 "options_item_store_contact"="Contact us";
 "options_item_store_rate"="Review in the App Store";
 
+"contact_title"="Contact";
+
 "store_title"="Store";
 
 "error_connectionfailed"="Internet connection failed, try again";
