@@ -46,6 +46,8 @@ static NSUInteger const fireminheight = 10;
     [imagefire setTintColor:[UIColor blackColor]];
     [imagefire setImage:[[UIImage imageNamed:@"fire"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     [imagefire setContentMode:UIViewContentModeScaleAspectFit];
+    [imagefire setAlpha:0];
+    self.imagefire = imagefire;
     
     [self addSubview:label];
     [self addSubview:imagefire];
@@ -56,14 +58,17 @@ static NSUInteger const fireminheight = 10;
     NSDictionary *metrics = @{@"rocketheight":@(rocketheight)};
     
     self.layoutfireheight = [NSLayoutConstraint constraintWithItem:imagefire attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:fireminheight];
+    self.layoutrocketbottom = [NSLayoutConstraint constraintWithItem:imagerocket attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1 constant:-((CGFloat)fireminheight)];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[buttonback(60)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-15-[buttonback(50)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[label]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-15-[label(50)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[imagefire]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[imagerocket(rocketheight)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[imagerocket]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[imagefire]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[imagerocket(rocketheight)]-(-5)-[imagefire]-50-|" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutfireheight];
+    [self addConstraint:self.layoutrocketbottom];
     
     return self;
 }
