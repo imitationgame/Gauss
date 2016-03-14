@@ -17,7 +17,7 @@ static NSUInteger const headerminheight = 150;
 {
     self = [super init:controller];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
+    [self setBackgroundColor:[UIColor colorWithWhite:0.97 alpha:1]];
     self.model = [[mcontact alloc] init];
     
     vcontactheader *header = [[vcontactheader alloc] init:controller];
@@ -41,9 +41,10 @@ static NSUInteger const headerminheight = 150;
     [collection setDataSource:self];
     [collection setDelegate:self];
     self.collection = collection;
+    [self.model registercollection:collection];
     
-    [self addSubview:header];
     [self addSubview:collection];
+    [self addSubview:header];
     
     NSDictionary *views = @{@"header":header, @"col":collection};
     NSDictionary *metrics = @{};

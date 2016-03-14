@@ -6,7 +6,7 @@
 {
     self = [super init];
     self.cellclass = [vcontactwrite class];
-    self.cellheight = 800;
+    self.cellheight = 400;
     
     return self;
 }
