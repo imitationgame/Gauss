@@ -46,3 +46,4 @@
 #import "mcontactitemrate.h"
 #import "mcontactitememail.h"
 #import "mcontactitemwrite.h"
+#import "mcontactrate.h"
