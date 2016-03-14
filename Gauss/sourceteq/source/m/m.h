@@ -42,3 +42,4 @@
 #import "moptionsitemstore.h"
 #import "moptionsitemcontact.h"
 #import "moptionsitemrate.h"
+#import "mcontact.h"
