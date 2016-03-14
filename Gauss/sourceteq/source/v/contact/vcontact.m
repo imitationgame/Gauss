@@ -18,7 +18,7 @@ static NSUInteger const headermaxheight = 300;
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor whiteColor]];
     
-    vcontactheader *header = [[vcontactheader alloc] init];
+    vcontactheader *header = [[vcontactheader alloc] init:controller];
     
     [self addSubview:header];
     
