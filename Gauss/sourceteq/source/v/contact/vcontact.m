@@ -23,44 +23,39 @@ static NSUInteger const headerminheight = 150;
     self.header = header;
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    [flow setHeaderReferenceSize:CGSizeZero];
+    [flow setFooterReferenceSize:CGSizeZero];
+    [flow setScrollDirection:UICollectionViewScrollDirectionVertical];
+    [flow setMinimumInteritemSpacing:0];
+    [flow setMinimumLineSpacing:2];
+    [flow setSectionInset:UIEdgeInsetsMake(headermaxheight, 0, 40, 0)];
     
     UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
     [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
     [collection setBackgroundColor:[UIColor clearColor]];
     [collection setClipsToBounds:YES];
+    [collection setShowsHorizontalScrollIndicator:NO];
+    [collection setShowsVerticalScrollIndicator:NO];
+    [collection setAlwaysBounceVertical:YES];
     [collection setDataSource:self];
     [collection setDelegate:self];
     self.collection = collection;
     
     [self addSubview:header];
-    [self addSubview:scroll];
+    [self addSubview:collection];
     
-    NSDictionary *views = @{@"header":header, @"scroll":scroll};
+    NSDictionary *views = @{@"header":header, @"scroll":collection};
     NSDictionary *metrics = @{};
     
     self.layoutheaderheight = [NSLayoutConstraint constraintWithItem:header attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:headermaxheight];
     self.layoutheadertop = [NSLayoutConstraint constraintWithItem:header attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1 constant:0];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[header]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[scroll]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[header]-0-[scroll]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[header]-0-[collection]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutheaderheight];
     [self addConstraint:self.layoutheadertop];
     
     return self;
-}
-
--(void)layoutSubviews
-{
-    CGFloat width = self.bounds.size.width;
-    CGSize size = CGSizeMake(width, scrollcontentheight);
-    
-    dispatch_async(dispatch_get_main_queue(),
-                   ^
-                   {
-                       [self.scroll setContentSize:size];
-                   });
-    
-    [super layoutSubviews];
 }
 
 #pragma mark -
@@ -93,6 +88,20 @@ static NSUInteger const headerminheight = 150;
     self.header.layoutfireheight.constant = newfireheight;
     self.header.layoutrocketbottom.constant = -newrocketbottom;
     [self.header.imagefire setAlpha:firealpha];
+}
+
+#pragma mark col del
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
+{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
+{
+    NSUInteger count;
+    
+    return count;
 }
 
 @end
