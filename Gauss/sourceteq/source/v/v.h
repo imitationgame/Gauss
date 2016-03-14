@@ -41,3 +41,4 @@
 #import "vcontactheader.h"
 #import "vcontactemail.h"
 #import "vcontactwrite.h"
+#import "vcontactrate.h"

@@ -98,6 +98,7 @@
 		DACE0EA61C976B9B0093E0C9 /* mcontactitememail.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE0EA51C976B9B0093E0C9 /* mcontactitememail.m */; };
 		DACE0EA91C976BA60093E0C9 /* mcontactitemwrite.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE0EA81C976BA60093E0C9 /* mcontactitemwrite.m */; };
 		DACE0EAC1C97731F0093E0C9 /* mcontactitemrate.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE0EAB1C97731F0093E0C9 /* mcontactitemrate.m */; };
+		DACE0EAF1C9773710093E0C9 /* vcontactrate.m in Sources */ = {isa = PBXBuildFile; fileRef = DACE0EAE1C9773710093E0C9 /* vcontactrate.m */; };
 		DAD309021C935AB80028E934 /* coptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309011C935AB80028E934 /* coptions.m */; };
 		DAD309061C935B2E0028E934 /* voptions.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309051C935B2E0028E934 /* voptions.m */; };
 		DAD309091C93790B0028E934 /* voptionsbar.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD309081C93790B0028E934 /* voptionsbar.m */; };
@@ -321,6 +322,8 @@
 		DACE0EA81C976BA60093E0C9 /* mcontactitemwrite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcontactitemwrite.m; sourceTree = "<group>"; };
 		DACE0EAA1C97731F0093E0C9 /* mcontactitemrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcontactitemrate.h; sourceTree = "<group>"; };
 		DACE0EAB1C97731F0093E0C9 /* mcontactitemrate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcontactitemrate.m; sourceTree = "<group>"; };
+		DACE0EAD1C9773710093E0C9 /* vcontactrate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vcontactrate.h; sourceTree = "<group>"; };
+		DACE0EAE1C9773710093E0C9 /* vcontactrate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcontactrate.m; sourceTree = "<group>"; };
 		DAD309001C935AB80028E934 /* coptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coptions.h; sourceTree = "<group>"; };
 		DAD309011C935AB80028E934 /* coptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = coptions.m; sourceTree = "<group>"; };
 		DAD309041C935B2E0028E934 /* voptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = voptions.h; sourceTree = "<group>"; };
@@ -761,6 +764,8 @@
 				DACE0E981C9760240093E0C9 /* vcontactemail.m */,
 				DACE0E9A1C9760300093E0C9 /* vcontactwrite.h */,
 				DACE0E9B1C9760300093E0C9 /* vcontactwrite.m */,
+				DACE0EAD1C9773710093E0C9 /* vcontactrate.h */,
+				DACE0EAE1C9773710093E0C9 /* vcontactrate.m */,
 			);
 			path = contact;
 			sourceTree = "<group>";
@@ -1203,6 +1208,7 @@
 				DA2A09DB1C892232003A19F6 /* mcourse.m in Sources */,
 				DAAFC9931C939A2600045AE0 /* moptions.m in Sources */,
 				DACCC1411C8E1A4100754C2C /* mchallengeoperanddouble.m in Sources */,
+				DACE0EAF1C9773710093E0C9 /* vcontactrate.m in Sources */,
 				DAEB85CC1C925E93000FD40D /* mstore.m in Sources */,
 				DA2A09D41C891890003A19F6 /* vstatsbar.m in Sources */,
 				DA894E571C90B42300EDD0F4 /* vplayitemchallengeoperand.m in Sources */,
