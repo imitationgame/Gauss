@@ -1,13 +1,9 @@
-//
-//  mcontactrate.h
-//  Gauss
-//
-//  Created by zero on 3/14/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
 
-#import <Foundation/Foundation.h>
+@class mcontactrateitem;
 
-@interface mcontactrate : NSObject
+@interface mcontactrate:NSObject
+
+@property(strong, nonatomic)NSMutableArray<mcontactrateitem*> *stars;
 
 @end
