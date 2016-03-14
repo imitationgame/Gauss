@@ -15,7 +15,7 @@
 
 -(void)selected
 {
-    [cstore show];
+    [ccontact show];
 }
 
 @end
