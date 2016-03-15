@@ -5,8 +5,6 @@
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
 
     UIFont *font = [UIFont fontWithName:fontregularname size:20];
     UIColor *textcolor = [UIColor colorWithWhite:0.2 alpha:1];
@@ -177,8 +175,29 @@
     
     if(!messagestring.length)
     {
+        NSMutableString *string = [NSMutableString string];
         
+        if(namestring)
+        {
+            [string appendFormat:@"Name: %@;", namestring];
+        }
+        
+        if(emailstring)
+        {
+            [string appendFormat:@"Email: %@;", emailstring];
+        }
+        
+        [string appendFormat:@"Message:%@", messagestring];
+        nslog(@"%@", string);
+        
+#warning "analytics"
     }
+    
+    [self.fieldname setText:@""];
+    [self.fieldemail setText:@""];
+    [self.messageview setText:@""];
+    
+    [valert alert:NSLocalizedString(@"contact_write_messagesent", nil) inview:self.viewcontact offsettop:0];
 }
 
 #pragma mark -

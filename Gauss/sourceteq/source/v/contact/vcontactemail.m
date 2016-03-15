@@ -7,8 +7,6 @@ static NSString* const mailurl = @"mailto:gauss@iturbi.de";
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
     
     NSDictionary *dicttitle = @{NSFontAttributeName:[UIFont fontWithName:fontregularname size:21], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.4]};
     NSDictionary *dictsubtitle = @{NSFontAttributeName:[UIFont fontWithName:fontregularname size:17], NSForegroundColorAttributeName:[UIColor colorWithWhite:0 alpha:0.6]};

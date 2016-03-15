@@ -12,8 +12,6 @@ static NSUInteger const cellwidth = 55;
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
-    [self setClipsToBounds:YES];
-    [self setBackgroundColor:[UIColor whiteColor]];
     self.model = [[mcontactrate alloc] init];
     cellshorizontal = cellwidth * self.model.stars.count;
 

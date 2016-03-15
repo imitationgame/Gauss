@@ -154,7 +154,8 @@ static NSUInteger const headerminheight = 150;
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
     mcontactitem *model = self.model.items[index.item];
-    UICollectionViewCell *cell = [col dequeueReusableCellWithReuseIdentifier:model.reusableid forIndexPath:index];
+    vcontactcell *cell = [col dequeueReusableCellWithReuseIdentifier:model.reusableid forIndexPath:index];
+    cell.viewcontact = self;
     
     return cell;
 }
