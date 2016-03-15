@@ -48,3 +48,5 @@
 #import "mcontactitemwrite.h"
 #import "mcontactrate.h"
 #import "mcontactrateitem.h"
+#import "mstatsm.h"
+#import "mstatsitem.h"

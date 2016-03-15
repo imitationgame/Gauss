@@ -42,7 +42,7 @@
 		DA2A0A011C894007003A19F6 /* vstatscell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2A0A001C894007003A19F6 /* vstatscell.m */; };
 		DA2B28071C98B26A002083FA /* vcontactcell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B28061C98B26A002083FA /* vcontactcell.m */; };
 		DA2B280A1C98B914002083FA /* vstatsinfocell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B28091C98B914002083FA /* vstatsinfocell.m */; };
-		DA2B280E1C98BA0B002083FA /* mstats.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B280D1C98BA0B002083FA /* mstats.m */; };
+		DA2B280E1C98BA0B002083FA /* mstatsm.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B280D1C98BA0B002083FA /* mstatsm.m */; };
 		DA2B28111C98BA1B002083FA /* mstatsitem.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2B28101C98BA1B002083FA /* mstatsitem.m */; };
 		DA46B9C61C8FB1E300AA8421 /* vclock.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46B9C51C8FB1E300AA8421 /* vclock.m */; };
 		DA46B9C91C8FB31D00AA8421 /* vclockline.m in Sources */ = {isa = PBXBuildFile; fileRef = DA46B9C81C8FB31D00AA8421 /* vclockline.m */; };
@@ -215,8 +215,8 @@
 		DA2B28061C98B26A002083FA /* vcontactcell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vcontactcell.m; sourceTree = "<group>"; };
 		DA2B28081C98B914002083FA /* vstatsinfocell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vstatsinfocell.h; sourceTree = "<group>"; };
 		DA2B28091C98B914002083FA /* vstatsinfocell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vstatsinfocell.m; sourceTree = "<group>"; };
-		DA2B280C1C98BA0B002083FA /* mstats.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mstats.h; sourceTree = "<group>"; };
-		DA2B280D1C98BA0B002083FA /* mstats.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstats.m; sourceTree = "<group>"; };
+		DA2B280C1C98BA0B002083FA /* mstatsm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mstatsm.h; sourceTree = "<group>"; };
+		DA2B280D1C98BA0B002083FA /* mstatsm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstatsm.m; sourceTree = "<group>"; };
 		DA2B280F1C98BA1B002083FA /* mstatsitem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mstatsitem.h; sourceTree = "<group>"; };
 		DA2B28101C98BA1B002083FA /* mstatsitem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mstatsitem.m; sourceTree = "<group>"; };
 		DA3AB4231C9066F600D233AE /* vclockprotocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vclockprotocol.h; sourceTree = "<group>"; };
@@ -568,8 +568,8 @@
 		DA2B280B1C98BA02002083FA /* stats */ = {
 			isa = PBXGroup;
 			children = (
-				DA2B280C1C98BA0B002083FA /* mstats.h */,
-				DA2B280D1C98BA0B002083FA /* mstats.m */,
+				DA2B280C1C98BA0B002083FA /* mstatsm.h */,
+				DA2B280D1C98BA0B002083FA /* mstatsm.m */,
 				DA2B280F1C98BA1B002083FA /* mstatsitem.h */,
 				DA2B28101C98BA1B002083FA /* mstatsitem.m */,
 			);
@@ -1306,7 +1306,7 @@
 				DA894E531C90B42300EDD0F4 /* vplayitem.m in Sources */,
 				DA1F22CC1C92389C00BE2458 /* vstorebar.m in Sources */,
 				DACCC15A1C8E472B00754C2C /* mplayitemcelltrivia.m in Sources */,
-				DA2B280E1C98BA0B002083FA /* mstats.m in Sources */,
+				DA2B280E1C98BA0B002083FA /* mstatsm.m in Sources */,
 				DAAFC9A31C93A73F00045AE0 /* ccontact.m in Sources */,
 				DA894E581C90B42300EDD0F4 /* vplayitemchallengeoperation.m in Sources */,
 				DA894E6B1C90C08200EDD0F4 /* vplayfinishcell.m in Sources */,
