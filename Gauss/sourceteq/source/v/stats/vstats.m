@@ -4,7 +4,6 @@ static NSString* const coursehaderid = @"course";
 static NSString* const chaptercellid = @"chapter";
 static NSUInteger const barmaxheight = 65;
 static NSUInteger const barminheight = 20;
-static NSUInteger const infostartingheight = 300;
 static NSUInteger const infominheight = 100;
 static NSUInteger const headerheight = 120;
 static NSUInteger const cellheight = 80;
@@ -60,7 +59,7 @@ static NSUInteger const footerspacing = 50;
     NSDictionary *metrics = @{};
     
     self.layoutbarheight = [NSLayoutConstraint constraintWithItem:bar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:barmaxheight];
-    self.layoutinfoheight = [NSLayoutConstraint constraintWithItem:info attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:infostartingheight];
+    self.layoutinfoheight = [NSLayoutConstraint constraintWithItem:info attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:info.collectionheight];
     self.layoutinfotop = [NSLayoutConstraint constraintWithItem:info attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1 constant:barmaxheight];
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
@@ -115,7 +114,7 @@ static NSUInteger const footerspacing = 50;
 {
     CGFloat offsety = scroll.contentOffset.y;
     CGFloat newbarheight = barmaxheight - offsety;
-    CGFloat newinfoheight = infostartingheight - offsety;
+    CGFloat newinfoheight = self.info.collectionheight - offsety;
     CGFloat newinfotop;
     
     if(newbarheight > barmaxheight)
@@ -153,7 +152,7 @@ static NSUInteger const footerspacing = 50;
     }
     else
     {
-        insets = UIEdgeInsetsMake(infostartingheight, 0, 0, 0);
+        insets = UIEdgeInsetsMake(self.info.collectionheight, 0, 0, 0);
     }
     
     return insets;

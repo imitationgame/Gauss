@@ -1,5 +1,8 @@
 #import "vstatsinfo.h"
 
+static NSUInteger const itemseparation = 10;
+static NSUInteger const colheight = 300;
+
 @implementation vstatsinfo
 
 -(instancetype)init
@@ -8,22 +11,35 @@
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor clearColor]];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self setUserInteractionEnabled:NO];
+    self.collectionheight = colheight;
     
-    UIImageView *image = [[UIImageView alloc] init];
-    [image setClipsToBounds:YES];
-    [image setContentMode:UIViewContentModeScaleAspectFit];
-    [image setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [image setUserInteractionEnabled:NO];
-    [image setImage:[[UIImage imageNamed:@"rocket"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
-    [image setTintColor:colorsecond];
+    UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
+    [flow setHeaderReferenceSize:CGSizeZero];
+    [flow setFooterReferenceSize:CGSizeZero];
+    [flow setMinimumInteritemSpacing:0];
+    [flow setMinimumLineSpacing:itemseparation];
+    [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
+    [flow setSectionInset:UIEdgeInsetsMake(0, itemseparation, 0, itemseparation)];
     
-    [self addSubview:image];
+    UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:flow];
+    [collection setClipsToBounds:YES];
+    [collection setBackgroundColor:[UIColor clearColor]];
+    [collection setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [collection setScrollEnabled:NO];
+    [collection setBounces:NO];
+    [collection setUserInteractionEnabled:NO];
+    [collection setDataSource:self];
+    [collection setDelegate:self];
     
-    NSDictionary *views = @{@"image":image};
-    NSDictionary *metrics = @{};
+    self.collection = collection;
+    [self addSubview:collection];
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[image]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[image]-0-|" options:0 metrics:metrics views:views]];
+    NSDictionary *views = @{@"col":collection};
+    NSDictionary *metrics = @{@"colheight":@(colheight)};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col(colheight)]" options:0 metrics:metrics views:views]];
     
     return self;
 }
