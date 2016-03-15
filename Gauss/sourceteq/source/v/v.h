@@ -10,6 +10,7 @@
 #import "vstatscell.h"
 #import "vstatsbar.h"
 #import "vstatsinfo.h"
+#import "vstatsinfocell.h"
 #import "vstatsstatus.h"
 #import "vplayitem.h"
 #import "vplayitembar.h"

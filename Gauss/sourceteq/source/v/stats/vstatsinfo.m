@@ -1,5 +1,6 @@
 #import "vstatsinfo.h"
 
+static NSString* const infocell = @"cellid";
 static NSUInteger const itemseparation = 10;
 static NSUInteger const colheight = 300;
 
@@ -31,8 +32,9 @@ static NSUInteger const colheight = 300;
     [collection setUserInteractionEnabled:NO];
     [collection setDataSource:self];
     [collection setDelegate:self];
-    
+    [collection registerClass:[vstatsinfocell class] forCellWithReuseIdentifier:infocell];
     self.collection = collection;
+    
     [self addSubview:collection];
     
     NSDictionary *views = @{@"col":collection};
@@ -42,6 +44,26 @@ static NSUInteger const colheight = 300;
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col(colheight)]" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark -
+#pragma mark col del
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
+{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
+{
+    return 0;
+}
+
+-(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
+{
+    vstatsinfocell *cell = [col dequeueReusableCellWithReuseIdentifier:infocell forIndexPath:index];
+    
+    return cell;
 }
 
 @end
