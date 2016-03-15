@@ -6,7 +6,7 @@
 {
     self = [super init];
     self.cellclass = [vcontactemail class];
-    self.cellheight = 150;
+    self.cellheight = 200;
     
     return self;
 }

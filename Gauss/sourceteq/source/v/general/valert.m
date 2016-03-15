@@ -35,7 +35,7 @@
     [lbl setNumberOfLines:0];
     [lbl setTextAlignment:NSTextAlignmentCenter];
     [lbl setTextColor:colorsecond];
-    [lbl setFont:[UIFont fontWithName:fontregularname size:18]];
+    [lbl setFont:[UIFont fontWithName:fontregularname size:20]];
     [lbl setText:message];
     [lbl setTranslatesAutoresizingMaskIntoConstraints:NO];
     
@@ -45,7 +45,7 @@
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[lbl]-20-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-11-[lbl]-11-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-15-[lbl]-15-|" options:0 metrics:metrics views:views]];
     
     [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(timeout:) userInfo:nil repeats:NO];
     

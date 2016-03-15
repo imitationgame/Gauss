@@ -21,8 +21,9 @@ static NSUInteger const cellwidth = 55;
     [label setUserInteractionEnabled:NO];
     [label setTranslatesAutoresizingMaskIntoConstraints:NO];
     [label setNumberOfLines:0];
-    [label setFont:[UIFont fontWithName:fontregularname size:18]];
+    [label setFont:[UIFont fontWithName:fontregularname size:20]];
     [label setTextColor:colorthird];
+    [label setTextAlignment:NSTextAlignmentCenter];
     [label setBackgroundColor:[UIColor clearColor]];
     [label setText:NSLocalizedString(@"contact_rate_title", nil)];
     
@@ -52,8 +53,8 @@ static NSUInteger const cellwidth = 55;
     NSDictionary *views = @{@"label":label, @"col":collection};
     NSDictionary *metrics = @{@"colheight":@(colheight)};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-40-[label]-20-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[label]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[label]-20-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-60-[label]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[col(colheight)]-0-|" options:0 metrics:metrics views:views]];
     
@@ -95,10 +96,16 @@ static NSUInteger const cellwidth = 55;
 
 -(void)collectionView:(UICollectionView*)col didSelectItemAtIndexPath:(NSIndexPath*)index
 {
-    [self.model selectstar:index.item];
+    NSUInteger stars = index.item + 1;
+    
+    [self.model selectstar:stars];
     [self.collection reloadData];
     
     [valert alert:NSLocalizedString(@"contact_rate_rated", nil) inview:self offsettop:0];
+    [msettings singleton].starsrated = stars;
+    [[msettings singleton] save];
+    
+#warning "analytics"
 }
 
 @end

@@ -16,6 +16,8 @@ static NSUInteger const starsnum = 5;
         [self.stars addObject:star];
     }
     
+    [self selectstar:[msettings singleton].starsrated];
+    
     return self;
 }
 
@@ -26,7 +28,7 @@ static NSUInteger const starsnum = 5;
     for(NSUInteger i = 0; i < starsnum; i++)
     {
         mcontactrateitem *star = self.stars[i];
-        star.selected = i <= index;
+        star.selected = i < index;
     }
 }
 
