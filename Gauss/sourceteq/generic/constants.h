@@ -7,6 +7,7 @@
 #define notcoursesloaded        @"coursesloaded"
 #define notscoreready           @"scoreready"
 #define notpurchaseupd          @"purchaseupdate"
+#define notstatsready           @"statsready"
 
 // font
 

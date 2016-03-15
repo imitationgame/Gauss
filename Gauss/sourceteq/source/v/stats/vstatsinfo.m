@@ -43,7 +43,25 @@ static NSUInteger const colheight = 300;
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col(colheight)]" options:0 metrics:metrics views:views]];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedstatsready:) name:notstatsready object:nil];
+    
     return self;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark notified
+
+-(void)notifiedstatsready:(NSNotification*)notification
+{
+    dispatch_async(dispatch_get_main_queue(),
+                   ^
+                   {
+                       [self.collection reloadData];
+                   });
 }
 
 #pragma mark -
