@@ -49,15 +49,51 @@ static NSUInteger const headerminheight = 150;
     NSDictionary *views = @{@"header":header, @"col":collection};
     NSDictionary *metrics = @{};
     
+    self.layoutcollectionbottom = [NSLayoutConstraint constraintWithItem:collection attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1 constant:0];
     self.layoutheaderheight = [NSLayoutConstraint constraintWithItem:header attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:headermaxheight];
     self.layoutheadertop = [NSLayoutConstraint constraintWithItem:header attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1 constant:0];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[header]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col]" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutheaderheight];
     [self addConstraint:self.layoutheadertop];
+    [self addConstraint:self.layoutcollectionbottom];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedkeyboardchange:) name:UIKeyboardWillChangeFrameNotification object:nil];
     
     return self;
+}
+
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark notified
+
+-(void)notifiedkeyboardchange:(NSNotification*)notification
+{
+    CGFloat ypos;
+    CGRect keyrect = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    CGFloat origin = keyrect.origin.y;
+    CGFloat screenheight = [UIScreen mainScreen].bounds.size.height;
+    
+    if(origin < screenheight)
+    {
+        ypos = -(screenheight - origin);
+    }
+    else
+    {
+        ypos = 0;
+    }
+    
+    self.layoutcollectionbottom.constant = ypos;
+    
+    [UIView animateWithDuration:1.5 animations:
+     ^
+     {
+         [self layoutIfNeeded];
+     }];
 }
 
 #pragma mark -
