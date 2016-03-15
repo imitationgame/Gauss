@@ -1,8 +1,9 @@
 #import "appdel.h"
 
-@interface vcontactwrite:UICollectionViewCell
+@interface vcontactwrite:UICollectionViewCell<UITextFieldDelegate>
 
-@property(weak, nonatomic)UITextField *field;
+@property(weak, nonatomic)UITextField *fieldname;
+@property(weak, nonatomic)UITextField *fieldemail;
 @property(weak, nonatomic)UITextView *text;
 
 @end

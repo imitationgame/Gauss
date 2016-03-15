@@ -43,6 +43,10 @@
 "contact_email_button"="Email us";
 "contact_email_title"="Any questions?";
 "contact_email_subtitle"="\nSend us an email, be sure we are going to read it and get back to you as soon as possible.";
+"contact_write_generaltitle"="Send us a message";
+"contact_write_nametitle"="Your name (optional)";
+"contact_write_emailtitle"="Your email (optional)";
+"contact_write_messagetitle"="Message";
 
 "store_title"="Store";
 
