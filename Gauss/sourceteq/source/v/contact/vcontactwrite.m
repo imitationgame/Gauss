@@ -172,8 +172,9 @@
     NSString *namestring = self.fieldname.text;
     NSString *emailstring = self.fieldemail.text;
     NSString *messagestring = self.messageview.text;
+    NSString *alertmsg;
     
-    if(!messagestring.length)
+    if(messagestring.length > 2)
     {
         NSMutableString *string = [NSMutableString string];
         
@@ -188,16 +189,22 @@
         }
         
         [string appendFormat:@"Message:%@", messagestring];
-        nslog(@"%@", string);
+        NSLog(@"%@", string);
         
 #warning "analytics"
+        
+        [self.fieldname setText:@""];
+        [self.fieldemail setText:@""];
+        [self.messageview setText:@""];
+        
+        alertmsg = NSLocalizedString(@"contact_write_messagesent", nil);
+    }
+    else
+    {
+        alertmsg = NSLocalizedString(@"contact_write_emptymessage", nil);
     }
     
-    [self.fieldname setText:@""];
-    [self.fieldemail setText:@""];
-    [self.messageview setText:@""];
-    
-    [valert alert:NSLocalizedString(@"contact_write_messagesent", nil) inview:self.viewcontact offsettop:0];
+    [valert alert:alertmsg inview:self.viewcontact offsettop:0];
 }
 
 #pragma mark -

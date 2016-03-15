@@ -48,6 +48,7 @@
 "contact_write_emailtitle"="Your email (optional)";
 "contact_write_messagetitle"="Message";
 "contact_write_buttonsend"="Send message";
+"contact_write_emptymessage"="Message was empty!";
 "contact_write_messagesent"="Thank you! We have received your message";
 
 "store_title"="Store";

@@ -99,7 +99,7 @@ static NSUInteger const cellwidth = 55;
     [self.model selectstar:stars];
     [self.collection reloadData];
     
-    [valert alert:NSLocalizedString(@"contact_rate_rated", nil) inview:self offsettop:0];
+    [valert alert:NSLocalizedString(@"contact_rate_rated", nil) inview:self.viewcontact offsettop:0];
     [msettings singleton].starsrated = stars;
     [[msettings singleton] save];
     
