@@ -1,7 +1,8 @@
 #import "vstatsinfo.h"
 
 static NSString* const infocell = @"cellid";
-static NSUInteger const itemseparation = 10;
+static NSUInteger const itemseparation = 2;
+static NSUInteger const cellwidth = 20;
 static NSUInteger const colheight = 300;
 
 @implementation vstatsinfo
@@ -19,6 +20,7 @@ static NSUInteger const colheight = 300;
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setHeaderReferenceSize:CGSizeZero];
     [flow setFooterReferenceSize:CGSizeZero];
+    [flow setItemSize:CGSizeMake(cellwidth, colheight)];
     [flow setMinimumInteritemSpacing:0];
     [flow setMinimumLineSpacing:itemseparation];
     [flow setScrollDirection:UICollectionViewScrollDirectionHorizontal];
@@ -97,18 +99,6 @@ static NSUInteger const colheight = 300;
 
 #pragma mark -
 #pragma mark col del
-
--(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
-{
-    CGFloat maxwidth = col.bounds.size.width;
-    CGFloat width_left = maxwidth - itemseparation;
-    CGFloat totalitems = self.model.items.count;
-    CGFloat cellrawwidth = floorf(width_left / totalitems);
-    CGFloat cellwidth = cellrawwidth - itemseparation;
-    CGSize size = CGSizeMake(cellwidth, colheight);
-    
-    return size;
-}
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {

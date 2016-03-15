@@ -13,6 +13,9 @@
     query = @"CREATE TABLE chapter (id INTEGER PRIMARY KEY, uniqueid TEXT COLLATE NOCASE, timestamp INTEGER, score INTEGER, available INTEGER, tried INTEGER, passed INTEGER);";
     [dbcon query:query];
     
+    query = @"CREATE TABLE logger (id INTEGER PRIMARY KEY, tried INTEGER, passed INTEGER);";
+    [dbcon query:query];
+    
     [mdbcreate addcourse:dbcon class:[mcourseitemadd class]];
     [mdbcreate addcourse:dbcon class:[mcourseitemsubs class]];
     

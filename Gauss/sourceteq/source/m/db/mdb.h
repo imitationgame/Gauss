@@ -10,5 +10,6 @@
 +(void)opencourse:(NSUInteger)dbid;
 +(void)openchapter:(NSUInteger)dbid;
 +(void)updatechapter:(mcourseitemchapter*)chapter;
++(NSArray*)logs;
 
 @end

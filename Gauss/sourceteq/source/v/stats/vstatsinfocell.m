@@ -1,29 +1,30 @@
 #import "vstatsinfocell.h"
 
-static NSUInteger const bottomborderheight = 6;
-
 @implementation vstatsinfocell
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     [self setClipsToBounds:YES];
-    [self setBackgroundColor:colormain];
+    [self setBackgroundColor:[UIColor clearColor]];
     [self setUserInteractionEnabled:NO];
  
-    UIView *bottomborder = [[UIView alloc] init];
-    [bottomborder setBackgroundColor:colorsecond];
-    [bottomborder setUserInteractionEnabled:NO];
-    [bottomborder setClipsToBounds:YES];
-    [bottomborder setTranslatesAutoresizingMaskIntoConstraints:NO];
+    UIView *bar = [[UIView alloc] init];
+    [bar setBackgroundColor:colorsecond];
+    [bar setUserInteractionEnabled:NO];
+    [bar setClipsToBounds:YES];
+    [bar setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    [self addSubview:bottomborder];
+    UILabel *label = [[UILabel alloc] init];
     
-    NSDictionary *views = @{@"bottomborder":bottomborder};
-    NSDictionary *metrics = @{@"bottomborderheight":@(bottomborderheight)};
+    [self addSubview:bar];
+    [self addSubview:label];
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bottomborder]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bottomborder(bottomborderheight)]-0-|" options:0 metrics:metrics views:views]];
+    NSDictionary *views = @{@"bar":bar};
+    NSDictionary *metrics = @{};
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bar]-0-|" options:0 metrics:metrics views:views]];
     
     return self;
 }
