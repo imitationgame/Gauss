@@ -5,9 +5,6 @@ static NSUInteger const itemseparation = 10;
 static NSUInteger const colheight = 300;
 
 @implementation vstatsinfo
-{
-    CGFloat cellwidth;
-}
 
 -(instancetype)init
 {
@@ -18,7 +15,7 @@ static NSUInteger const colheight = 300;
     [self setUserInteractionEnabled:NO];
     self.collectionheight = colheight;
     self.model = [[mstatsm alloc] init];
-    cellwidth = 0;
+    self.cellwidth = 0;
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setHeaderReferenceSize:CGSizeZero];
@@ -63,6 +60,20 @@ static NSUInteger const colheight = 300;
 
 -(void)notifiedstatsready:(NSNotification*)notification
 {
+    CGFloat maxwidth = self.collection.bounds.size.width;
+    CGFloat width_left = maxwidth - itemseparation;
+    NSUInteger totalitems = self.model.items.count;
+    
+    if(totalitems)
+    {
+        CGFloat cellrawwidth = floorf(width_left / totalitems);
+        self.cellwidth = cellrawwidth - itemseparation;
+    }
+    else
+    {
+        self.cellwidth = 0;
+    }
+    
     dispatch_async(dispatch_get_main_queue(),
                    ^
                    {
@@ -75,7 +86,7 @@ static NSUInteger const colheight = 300;
 
 -(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    CGSize size = CGSizeMake(cellwidth, colheight);
+    CGSize size = CGSizeMake(self.cellwidth, colheight);
     
     return size;
 }
