@@ -18,7 +18,7 @@ static NSUInteger const maxitems = 5;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                    ^
                    {
-                       self.items = [NSMutableArray array];
+                       NSMutableArray *rawitems = [NSMutableArray array];
                        NSUInteger totalcourses = [mcourse singleton].courses.count;
                        
                        for(NSUInteger i = 0; i < totalcourses; i++)
@@ -33,10 +33,27 @@ static NSUInteger const maxitems = 5;
                                if(chapter.timestmap)
                                {
                                    mstatsitem *item = [[mstatsitem alloc] init:chapter];
-                                   [self.items addObject:item];
+                                   [rawitems addObject:item];
                                }
                            }
                        }
+                       
+                       self.items = [rawitems sortedArrayUsingComparator:
+                                     ^NSComparisonResult(mstatsitem* _Nonnull item1, mstatsitem* _Nonnull item2)
+                       {
+                           NSComparisonResult result = NSOrderedSame;
+                           
+                           if(item1.timestamp > item2.timestamp)
+                           {
+                               result = NSOrderedAscending;
+                           }
+                           else if(item2.timestamp > item1.timestamp)
+                           {
+                               result = NSOrderedDescending;
+                           }
+                           
+                           return result;
+                       }];
                        
                        [[NSNotificationCenter defaultCenter] postNotificationName:notstatsready object:nil];
                    });

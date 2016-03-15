@@ -6,4 +6,6 @@
 
 -(instancetype)init:(mcourseitemchapter*)chapter;
 
+@property(nonatomic)NSUInteger timestamp;
+
 @end
