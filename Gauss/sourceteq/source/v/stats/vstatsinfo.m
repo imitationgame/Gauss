@@ -5,6 +5,9 @@ static NSUInteger const itemseparation = 10;
 static NSUInteger const colheight = 300;
 
 @implementation vstatsinfo
+{
+    CGFloat cellwidth;
+}
 
 -(instancetype)init
 {
@@ -14,6 +17,8 @@ static NSUInteger const colheight = 300;
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self setUserInteractionEnabled:NO];
     self.collectionheight = colheight;
+    self.model = [[mstatsm alloc] init];
+    cellwidth = 0;
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setHeaderReferenceSize:CGSizeZero];
@@ -44,6 +49,7 @@ static NSUInteger const colheight = 300;
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col(colheight)]" options:0 metrics:metrics views:views]];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedstatsready:) name:notstatsready object:nil];
+    [self.model refresh];
     
     return self;
 }
@@ -67,9 +73,9 @@ static NSUInteger const colheight = 300;
 #pragma mark -
 #pragma mark col del
 
--(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)col sizeForItemAtIndexPath:(NSIndexPath*)index
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)layout sizeForItemAtIndexPath:(NSIndexPath*)index
 {
-    CGSize size;
+    CGSize size = CGSizeMake(cellwidth, colheight);
     
     return size;
 }
@@ -81,7 +87,9 @@ static NSUInteger const colheight = 300;
 
 -(NSInteger)collectionView:(UICollectionView*)col numberOfItemsInSection:(NSInteger)section
 {
-    return 0;
+    NSUInteger count = self.model.items.count;
+    
+    return count;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
