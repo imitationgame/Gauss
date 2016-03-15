@@ -1,5 +1,7 @@
 #import "vcontactemail.h"
 
+static NSString* const mailurl = @"mailto:gauss@iturbi.de";
+
 @implementation vcontactemail
 
 -(instancetype)initWithFrame:(CGRect)frame
@@ -32,6 +34,7 @@
     [button setTitle:NSLocalizedString(@"contact_email_button", nil) forState:UIControlStateNormal];
     [button.titleLabel setFont:[UIFont fontWithName:fontboldname size:16]];
     [button.layer setCornerRadius:4];
+    [button addTarget:self action:@selector(actionsendemail:) forControlEvents:UIControlEventTouchUpInside];
     
     [self addSubview:label];
     [self addSubview:button];
@@ -45,6 +48,14 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[button(40)]-20-|" options:0 metrics:metrics views:views]];
     
     return self;
+}
+
+#pragma mark actions
+
+-(void)actionsendemail:(UIButton*)button
+{
+    NSURL *url = [NSURL URLWithString:mailurl];
+    [[UIApplication sharedApplication] openURL:url];
 }
 
 @end
