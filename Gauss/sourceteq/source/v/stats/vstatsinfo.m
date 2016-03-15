@@ -42,13 +42,15 @@ static NSUInteger const colheight = 300;
     [labelempty setUserInteractionEnabled:NO];
     [labelempty setTranslatesAutoresizingMaskIntoConstraints:NO];
     [labelempty setTextAlignment:NSTextAlignmentCenter];
-    [labelempty setFont:[UIFont fontWithName:fontregularname size:16]];
+    [labelempty setFont:[UIFont fontWithName:fontregularname size:18]];
     [labelempty setTextColor:colorthird];
+    [labelempty setNumberOfLines:0];
     [labelempty setText:NSLocalizedString(@"stats_empty", nil)];
     [labelempty setHidden:YES];
     self.labelempty = labelempty;
     
     [self addSubview:collection];
+    [self addSubview:labelempty];
     
     NSDictionary *views = @{@"col":collection, @"labelempty":labelempty};
     NSDictionary *metrics = @{@"colheight":@(colheight)};
@@ -90,6 +92,15 @@ static NSUInteger const colheight = 300;
     dispatch_async(dispatch_get_main_queue(),
                    ^
                    {
+                       if(self.model.items.count)
+                       {
+                           [self.labelempty setHidden:YES];
+                       }
+                       else
+                       {
+                           [self.labelempty setHidden:NO];
+                       }
+                       
                        [self.collection reloadData];
                    });
 }
