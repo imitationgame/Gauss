@@ -105,7 +105,10 @@ static NSUInteger const colheight = 300;
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
+    mstatsitem *model = self.model.items[index.item];
+    
     vstatsinfocell *cell = [col dequeueReusableCellWithReuseIdentifier:infocell forIndexPath:index];
+    [cell config:model];
     
     return cell;
 }
