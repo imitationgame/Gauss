@@ -55,6 +55,11 @@ static NSUInteger const maxitems = 5;
                            return result;
                        }];
                        
+                       if(self.items.count > maxitems)
+                       {
+                           self.items = [self.items subarrayWithRange:NSMakeRange(0, maxitems)];
+                       }
+                       
                        [[NSNotificationCenter defaultCenter] postNotificationName:notstatsready object:nil];
                    });
 }

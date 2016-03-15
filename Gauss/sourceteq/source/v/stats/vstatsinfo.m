@@ -37,13 +37,26 @@ static NSUInteger const colheight = 300;
     [collection registerClass:[vstatsinfocell class] forCellWithReuseIdentifier:infocell];
     self.collection = collection;
     
+    UILabel *labelempty = [[UILabel alloc] init];
+    [labelempty setBackgroundColor:[UIColor clearColor]];
+    [labelempty setUserInteractionEnabled:NO];
+    [labelempty setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [labelempty setTextAlignment:NSTextAlignmentCenter];
+    [labelempty setFont:[UIFont fontWithName:fontregularname size:16]];
+    [labelempty setTextColor:colorthird];
+    [labelempty setText:NSLocalizedString(@"stats_empty", nil)];
+    [labelempty setHidden:YES];
+    self.labelempty = labelempty;
+    
     [self addSubview:collection];
     
-    NSDictionary *views = @{@"col":collection};
+    NSDictionary *views = @{@"col":collection, @"labelempty":labelempty};
     NSDictionary *metrics = @{@"colheight":@(colheight)};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col(colheight)]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[labelempty]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[labelempty]" options:0 metrics:metrics views:views]];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedstatsready:) name:notstatsready object:nil];
     [self.model refresh];

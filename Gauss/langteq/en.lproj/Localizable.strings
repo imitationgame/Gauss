@@ -3,6 +3,8 @@
 "course_add_name"="Addition";
 "course_subs_name"="Substraction";
 
+"stats_empty"="No stats to show yet";
+
 "chapter_cel_notactive"="Chapter not active";
 "chapter_cel_nevertaken"="Chapter never taken";
 "chapter_cel_buttonstore"="Store";
