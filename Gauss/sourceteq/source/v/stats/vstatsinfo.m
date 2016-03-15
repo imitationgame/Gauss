@@ -49,6 +49,13 @@ static NSUInteger const colheight = 300;
 #pragma mark -
 #pragma mark col del
 
+-(CGSize)collectionView:(UICollectionView*)col layout:(UICollectionViewLayout*)col sizeForItemAtIndexPath:(NSIndexPath*)index
+{
+    CGSize size;
+    
+    return size;
+}
+
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)col
 {
     return 1;
