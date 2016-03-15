@@ -47,6 +47,7 @@
 "contact_write_nametitle"="Your name (optional)";
 "contact_write_emailtitle"="Your email (optional)";
 "contact_write_messagetitle"="Message";
+"contact_write_buttonsend"="Send message";
 
 "store_title"="Store";
 

@@ -4,6 +4,6 @@
 
 @property(weak, nonatomic)UITextField *fieldname;
 @property(weak, nonatomic)UITextField *fieldemail;
-@property(weak, nonatomic)UITextView *text;
+@property(weak, nonatomic)UITextView *messageview;
 
 @end
