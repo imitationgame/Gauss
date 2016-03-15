@@ -2,10 +2,10 @@
 
 @implementation mstatsitem
 
--(instancetype)init:(mcourseitemchapter*)chapter
+-(instancetype)init:(CGFloat)percent
 {
     self = [super init];
-    self.timestamp = chapter.timestmap;
+    self.percent = percent;
     
     return self;
 }

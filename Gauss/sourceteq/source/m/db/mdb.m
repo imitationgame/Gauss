@@ -121,6 +121,8 @@
 
 +(void)updatechapter:(mcourseitemchapter*)chapter
 {
+    db *dbcon = [db begin];
+    
     NSString *query = [NSString stringWithFormat:
                        @"UPDATE chapter SET "
                        "score=%@, tried=%@, passed=%@, timestamp=%@ "
@@ -128,7 +130,15 @@
                        @(chapter.maxscore), @(chapter.totaltried), @(chapter.totalpassed),
                        @(chapter.timestmap), @(chapter.dbid)];
     
-    [db query:query];
+    [dbcon query:query];
+    query = [NSString stringWithFormat:
+             @"INSERT INTO logger "
+             "(tried, passed) "
+             "VALUES(%@, %@);",
+             @(chapter.totaltried), @(chapter.totalpassed)];
+    
+    [dbcon query:query];
+    [dbcon commit];
 }
 
 +(NSArray*)logs

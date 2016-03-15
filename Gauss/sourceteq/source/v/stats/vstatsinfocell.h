@@ -6,6 +6,6 @@
 
 -(void)config:(mstatsitem*)model;
 
-@property(weak, nonatomic)NSLayoutConstraint *layoutbar;
+@property(weak, nonatomic)NSLayoutConstraint *layoutbarheight;
 
 @end

@@ -6,6 +6,6 @@
 
 -(void)refresh;
 
-@property(strong, nonatomic)NSArray<mstatsitem*> *items;
+@property(strong, nonatomic)NSMutableArray<mstatsitem*> *items;
 
 @end

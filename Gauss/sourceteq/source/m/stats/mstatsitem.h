@@ -4,8 +4,8 @@
 
 @interface mstatsitem:NSObject
 
--(instancetype)init:(mcourseitemchapter*)chapter;
+-(instancetype)init:(CGFloat)percent;
 
-@property(nonatomic)NSUInteger timestamp;
+@property(nonatomic)CGFloat percent;
 
 @end
