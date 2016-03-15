@@ -162,7 +162,23 @@
 
 -(void)actionsendmessage:(UIButton*)buttonsend
 {
+    [self sendmessage];
+}
+
+#pragma mark functionality
+
+-(void)sendmessage
+{
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
     
+    NSString *namestring = self.fieldname.text;
+    NSString *emailstring = self.fieldemail.text;
+    NSString *messagestring = self.messageview.text;
+    
+    if(!messagestring.length)
+    {
+        
+    }
 }
 
 #pragma mark -
