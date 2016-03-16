@@ -1,13 +1,13 @@
-//
-//  mcoursemult6.m
-//  Gauss
-//
-//  Created by zero on 3/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mcoursemult6.h"
 
 @implementation mcoursemult6
+
+-(instancetype)init
+{
+    self = [super init];
+    self.strategy = [[scoursemult6 alloc] init];
+    
+    return self;
+}
 
 @end
