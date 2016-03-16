@@ -15,6 +15,7 @@
 
 -(void)selected
 {
+    [[analytics singleton] trackevent:ga_event_review action:ga_action_optin label:nil];
     [tools rateapp];
 }
 

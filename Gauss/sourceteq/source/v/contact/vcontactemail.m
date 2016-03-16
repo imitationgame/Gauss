@@ -52,6 +52,8 @@ static NSString* const mailurl = @"mailto:gauss@iturbi.de";
 
 -(void)actionsendemail:(UIButton*)button
 {
+    [[analytics singleton] trackevent:ga_event_email action:ga_action_optin label:nil];
+    
     NSURL *url = [NSURL URLWithString:mailurl];
     [[UIApplication sharedApplication] openURL:url];
 }

@@ -103,7 +103,7 @@ static NSUInteger const cellwidth = 55;
     [msettings singleton].starsrated = stars;
     [[msettings singleton] save];
     
-#warning "analytics"
+    [[analytics singleton] trackevent:ga_event_rate action:ga_action_optin label:[NSString stringWithFormat:@"%@", @(stars)]];
 }
 
 @end
