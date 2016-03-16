@@ -41,7 +41,9 @@
     
     self.courses = @[
                      [[mcourseitemadd alloc] init],
-                     [[mcourseitemsubs alloc] init]
+                     [[mcourseitemsubs alloc] init],
+                     [[mcourseitemmult alloc] init],
+                     [[mcourseitemdiv alloc] init]
                      ];
     
     return self;
