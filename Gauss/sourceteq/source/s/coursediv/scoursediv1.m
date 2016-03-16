@@ -6,9 +6,9 @@
 {
     self = [super init];
     
-    self.timeout = 6;
+    self.timeout = 8;
     self.operations = @[
-                        [[moperationmult alloc] init]
+                        [[moperationdiv alloc] init]
                         ];
     
     return self;

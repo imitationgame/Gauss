@@ -1,13 +1,20 @@
-//
-//  scoursediv5.m
-//  Gauss
-//
-//  Created by zero on 3/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "scoursediv5.h"
 
 @implementation scoursediv5
+
+-(instancetype)init
+{
+    self = [super init];
+    
+    self.minnumber = -50;
+    self.maxnumber = 50;
+    self.maxoperands = 3;
+    self.timeout = 23;
+    self.operations = @[
+                        [[moperationdiv alloc] init]
+                        ];
+    
+    return self;
+}
 
 @end

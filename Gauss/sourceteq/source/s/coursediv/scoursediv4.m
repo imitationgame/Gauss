@@ -1,13 +1,20 @@
-//
-//  scoursediv4.m
-//  Gauss
-//
-//  Created by zero on 3/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "scoursediv4.h"
 
 @implementation scoursediv4
+
+-(instancetype)init
+{
+    self = [super init];
+    
+    self.minnumber = -25;
+    self.maxnumber = 25;
+    self.maxoperands = 3;
+    self.timeout = 18;
+    self.operations = @[
+                        [[moperationdiv alloc] init]
+                        ];
+    
+    return self;
+}
 
 @end

@@ -6,7 +6,7 @@
 {
     self = [super init];
     
-    self.minnumber = 25;
+    self.minnumber = -25;
     self.maxnumber = 25;
     self.maxoperands = 3;
     self.timeout = 10;
