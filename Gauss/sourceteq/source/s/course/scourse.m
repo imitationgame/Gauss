@@ -36,7 +36,7 @@ static NSUInteger const defaultoperands = 2;
     return operation;
 }
 
--(mchallengeoperand*)randomoperand
+-(mchallengeoperand*)randomoperand:(BOOL)zerovalid
 {
     mchallengeoperand *operand;
     CGFloat maxnumber = (self.maxnumber + 1) * multiplier;
@@ -46,6 +46,11 @@ static NSUInteger const defaultoperands = 2;
     BOOL isdecimal = NO;
     value /= multiplier;
     value += self.minnumber;
+    
+    if(!value && !zerovalid)
+    {
+        value = 1;
+    }
     
     if(self.decimals)
     {
@@ -116,6 +121,7 @@ static NSUInteger const defaultoperands = 2;
     mchallengeoperand *result;
     NSInteger totaloperands = self.maxoperands - defaultoperands;
     NSUInteger triviaoperand;
+    BOOL zerovalid = YES;
     
     if(totaloperands < 1)
     {
@@ -130,7 +136,12 @@ static NSUInteger const defaultoperands = 2;
     
     for(NSUInteger i = 0; i < totaloperands; i++)
     {
-        mchallengeoperand *operand = [self randomoperand];
+        mchallengeoperand *operand = [self randomoperand:zerovalid];
+        
+        if(!operand.value)
+        {
+            zerovalid = NO;
+        }
         
         if(i == triviaoperand)
         {
