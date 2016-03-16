@@ -4,15 +4,24 @@
 <dict>
 	<key>screens</key>
 	<array>
-		<string>play</string>
+		<string>stats</string>
+        <string>options</string>
+        <string>options/contact</string>
+        <string>store</string>
+        <string>play</string>
+        <string>play/finish</string>
 	</array>
 	<key>events</key>
 	<array>
-		<string>play</string>
+		<string>purchase</string>
+        <string>rate</string>
+        <string>review</string>
+        <string>email</string>
+        <string>message</string>
 	</array>
 	<key>actions</key>
 	<array>
-		<string>like</string>
+        <string>optin</string>
 	</array>
 </dict>
 </plist>
