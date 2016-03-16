@@ -1,13 +1,28 @@
-//
-//  moperationdiv.m
-//  Gauss
-//
-//  Created by zero on 3/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "moperationdiv.h"
 
 @implementation moperationdiv
+
+
+-(instancetype)init
+{
+    self = [super init];
+    
+    self.symbol = @"/";
+    
+    return self;
+}
+
+#pragma mark -
+#pragma mark operation
+
+-(CGFloat)operate:(CGFloat)valuea with:(CGFloat)valueb
+{
+    CGFloat result;
+    
+    result = valuea / valueb;
+    
+    return result;
+}
+
 
 @end

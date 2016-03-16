@@ -1,6 +1,6 @@
 #import "appdel.h"
 #import "moperation.h"
 
-@interface moperatonmultiply:moperation
+@interface moperationmult:moperation
 
 @end

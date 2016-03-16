@@ -26,6 +26,8 @@
 #import "mchallengetime.h"
 #import "moperationadd.h"
 #import "moperationsubs.h"
+#import "moperationmult.h"
+#import "moperationdiv.h"
 #import "mplayitem.h"
 #import "mplayitemcelloperand.h"
 #import "mplayitemcelloperation.h"

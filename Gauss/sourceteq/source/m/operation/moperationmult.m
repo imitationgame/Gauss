@@ -1,13 +1,26 @@
-//
-//  moperatonmultiply.m
-//  Gauss
-//
-//  Created by zero on 3/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "moperationmult.h"
 
-#import "moperatonmultiply.h"
+@implementation moperationmult
 
-@implementation moperatonmultiply
+-(instancetype)init
+{
+    self = [super init];
+    
+    self.symbol = @"x";
+    
+    return self;
+}
+
+#pragma mark -
+#pragma mark operation
+
+-(CGFloat)operate:(CGFloat)valuea with:(CGFloat)valueb
+{
+    CGFloat result;
+    
+    result = valuea * valueb;
+    
+    return result;
+}
 
 @end
