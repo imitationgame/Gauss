@@ -39,7 +39,7 @@
     
 #if DEBUG
     
-    [[GAI sharedInstance] setDryRun:YES];
+//    [[GAI sharedInstance] setDryRun:YES];
     
 #endif
     

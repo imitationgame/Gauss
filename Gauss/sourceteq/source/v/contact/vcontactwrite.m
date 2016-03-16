@@ -190,7 +190,7 @@
         
         [string appendFormat:@"Message:%@", messagestring];
         
-        [[analytics singleton] trackevent:ga_event_message action:ga_action_optin label:messagestring];
+        [[analytics singleton] trackevent:ga_event_message action:ga_action_optin label:string];
         
         [self.fieldname setText:@""];
         [self.fieldemail setText:@""];
