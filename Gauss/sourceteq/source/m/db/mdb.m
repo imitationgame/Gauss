@@ -135,7 +135,7 @@
              @"INSERT INTO logger "
              "(tried, passed) "
              "VALUES(%@, %@);",
-             @(chapter.totaltried), @(chapter.totalpassed)];
+             @(chapter.totalchallenges), @(chapter.passedchallenges)];
     
     [dbcon query:query];
     [dbcon commit];

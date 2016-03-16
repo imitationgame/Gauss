@@ -16,6 +16,7 @@ static NSUInteger const colheight = 300;
     [self setUserInteractionEnabled:NO];
     self.collectionheight = colheight;
     self.model = [[mstatsm alloc] init];
+    [self.model refresh];
     
     UICollectionViewFlowLayout *flow = [[UICollectionViewFlowLayout alloc] init];
     [flow setHeaderReferenceSize:CGSizeZero];
@@ -50,16 +51,25 @@ static NSUInteger const colheight = 300;
     [labelempty setHidden:YES];
     self.labelempty = labelempty;
     
+    UIView *border = [[UIView alloc] init];
+    [border setBackgroundColor:colorsecond];
+    [border setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [border setClipsToBounds:YES];
+    [border setUserInteractionEnabled:NO];
+    
     [self addSubview:collection];
     [self addSubview:labelempty];
+    [self addSubview:border];
     
-    NSDictionary *views = @{@"col":collection, @"labelempty":labelempty};
+    NSDictionary *views = @{@"col":collection, @"labelempty":labelempty, @"border":border};
     NSDictionary *metrics = @{@"colheight":@(colheight)};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[col]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[col(colheight)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[labelempty]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-50-[labelempty]" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[border]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[border(1)]-0-|" options:0 metrics:metrics views:views]];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedcoursesloaded:) name:notcoursesloaded object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(notifiedstatsready:) name:notstatsready object:nil];
