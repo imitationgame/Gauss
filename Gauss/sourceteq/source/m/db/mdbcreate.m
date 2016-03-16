@@ -21,6 +21,10 @@
     
     [mdbcreate addchapter:dbcon class:[mcourseadd1 class]];
     [mdbcreate addchapter:dbcon class:[mcourseadd2 class]];
+    [mdbcreate addchapter:dbcon class:[mcourseadd3 class]];
+    [mdbcreate addchapter:dbcon class:[mcourseadd4 class]];
+    [mdbcreate addchapter:dbcon class:[mcourseadd5 class]];
+    [mdbcreate addchapter:dbcon class:[mcourseadd6 class]];
     [mdbcreate addchapter:dbcon class:[mcoursesubs1 class]];
     [mdbcreate addchapter:dbcon class:[mcoursesubs2 class]];
     

@@ -1,13 +1,13 @@
-//
-//  mcourseadd5.m
-//  Gauss
-//
-//  Created by zero on 3/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "mcourseadd5.h"
 
 @implementation mcourseadd5
+
+-(instancetype)init
+{
+    self = [super init];
+    self.strategy = [[scourseadd2 alloc] init];
+    
+    return self;
+}
 
 @end
