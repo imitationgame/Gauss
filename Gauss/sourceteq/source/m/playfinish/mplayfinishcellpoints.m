@@ -27,8 +27,14 @@ static NSUInteger const cellvertical = 34;
         }
     }
     
-    CGFloat currentpercent = currentscore / maxcourse;
-    CGFloat maxpercent = maxscore / maxcourse;
+    CGFloat currentpercent = 0;
+    CGFloat maxpercent = 0;
+    
+    if(maxcourse != 0)
+    {
+        currentpercent = currentscore / maxcourse;
+        maxpercent = maxscore / maxcourse;
+    }
     
     self.cells = @[
                    [[mplayfinishcellpointscellcurrentscore alloc] init:currentpercent],

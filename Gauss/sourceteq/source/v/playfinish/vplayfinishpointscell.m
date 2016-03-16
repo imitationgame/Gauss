@@ -59,15 +59,18 @@ static NSUInteger const barright = 30;
     
     [self.label setText:model.name];
     
+    __weak typeof(self.layoutbarwidth) weaklayout = self.layoutbarwidth;
+    __weak typeof(self) weakself = self;
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_MSEC * 100), dispatch_get_main_queue(),
                    ^
                    {
-                       self.layoutbarwidth.constant = barwidth;
+                       weaklayout.constant = barwidth;
                        
                        [UIView animateWithDuration:duration animations:
                         ^
                         {
-                            [self layoutIfNeeded];
+                            [weakself layoutIfNeeded];
                         }];
                    });
 }

@@ -37,15 +37,18 @@ static NSUInteger const marginvertical = 60;
     CGFloat maxheight = self.bounds.size.height - marginvertical;
     CGFloat height = maxheight * model.percent;
     
+    __weak typeof(self.layoutbarheight) weaklayout = self.layoutbarheight;
+    __weak typeof(self) weakself = self;
+    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_MSEC * 100), dispatch_get_main_queue(),
                    ^
                    {
-                       self.layoutbarheight.constant = height;
+                       weaklayout.constant = height;
                        
                        [UIView animateWithDuration:1.2 animations:
                         ^
                         {
-                            [self layoutIfNeeded];
+                            [weakself layoutIfNeeded];
                         }];
                    });
 }
