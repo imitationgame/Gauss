@@ -47,11 +47,6 @@ static NSUInteger const defaultoperands = 2;
     value /= multiplier;
     value += self.minnumber;
     
-    if(!value && !zerovalid)
-    {
-        value = 1;
-    }
-    
     if(self.decimals)
     {
         NSUInteger shoulddecimal = arc4random_uniform(2);
@@ -69,6 +64,11 @@ static NSUInteger const defaultoperands = 2;
     else
     {
         operand = [[mchallengeoperandint alloc] init:value];
+    }
+    
+    if(!operand.value && !zerovalid)
+    {
+        operand.value = 1;
     }
     
     return operand;

@@ -6,6 +6,7 @@
 {
     self = [super init];
  
+    self.maxnumber = 1;
     self.operations = @[
                         [[moperationadd alloc] init]
                         ];
