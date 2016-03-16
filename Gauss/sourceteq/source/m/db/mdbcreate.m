@@ -18,6 +18,8 @@
     
     [mdbcreate addcourse:dbcon class:[mcourseitemadd class]];
     [mdbcreate addcourse:dbcon class:[mcourseitemsubs class]];
+    [mdbcreate addcourse:dbcon class:[mcourseitemmult class]];
+    [mdbcreate addcourse:dbcon class:[mcourseitemdiv class]];
     
     [mdbcreate addchapter:dbcon class:[mcourseadd1 class]];
     [mdbcreate addchapter:dbcon class:[mcourseadd2 class]];
@@ -31,6 +33,18 @@
     [mdbcreate addchapter:dbcon class:[mcoursesubs4 class]];
     [mdbcreate addchapter:dbcon class:[mcoursesubs5 class]];
     [mdbcreate addchapter:dbcon class:[mcoursesubs6 class]];
+    [mdbcreate addchapter:dbcon class:[mcoursemult1 class]];
+    [mdbcreate addchapter:dbcon class:[mcoursemult2 class]];
+    [mdbcreate addchapter:dbcon class:[mcoursemult3 class]];
+    [mdbcreate addchapter:dbcon class:[mcoursemult4 class]];
+    [mdbcreate addchapter:dbcon class:[mcoursemult5 class]];
+    [mdbcreate addchapter:dbcon class:[mcoursemult6 class]];
+    [mdbcreate addchapter:dbcon class:[mcoursediv1 class]];
+    [mdbcreate addchapter:dbcon class:[mcoursediv2 class]];
+    [mdbcreate addchapter:dbcon class:[mcoursediv3 class]];
+    [mdbcreate addchapter:dbcon class:[mcoursediv4 class]];
+    [mdbcreate addchapter:dbcon class:[mcoursediv5 class]];
+    [mdbcreate addchapter:dbcon class:[mcoursediv6 class]];
     
     [dbcon commit];
 }
