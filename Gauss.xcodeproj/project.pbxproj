@@ -86,6 +86,10 @@
 		DAC39C261C98E31900FABCCA /* scourseadd4.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C251C98E31900FABCCA /* scourseadd4.m */; };
 		DAC39C291C98E32300FABCCA /* scourseadd5.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C281C98E32300FABCCA /* scourseadd5.m */; };
 		DAC39C2C1C98E33300FABCCA /* scourseadd6.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C2B1C98E33300FABCCA /* scourseadd6.m */; };
+		DAC39C2F1C98E69600FABCCA /* mcoursesubs3.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C2E1C98E69600FABCCA /* mcoursesubs3.m */; };
+		DAC39C321C98E6A300FABCCA /* mcoursesubs4.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C311C98E6A300FABCCA /* mcoursesubs4.m */; };
+		DAC39C351C98E6AD00FABCCA /* mcoursesubs5.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C341C98E6AD00FABCCA /* mcoursesubs5.m */; };
+		DAC39C381C98E6B600FABCCA /* mcoursesubs6.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C371C98E6B600FABCCA /* mcoursesubs6.m */; };
 		DACCC1251C8DC86B00754C2C /* mchallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1241C8DC86B00754C2C /* mchallenge.m */; };
 		DACCC1281C8DE42700754C2C /* mchallengetime.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1271C8DE42700754C2C /* mchallengetime.m */; };
 		DACCC12E1C8DE5D500754C2C /* scourse.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC12D1C8DE5D500754C2C /* scourse.m */; };
@@ -314,6 +318,14 @@
 		DAC39C281C98E32300FABCCA /* scourseadd5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scourseadd5.m; sourceTree = "<group>"; };
 		DAC39C2A1C98E33300FABCCA /* scourseadd6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scourseadd6.h; sourceTree = "<group>"; };
 		DAC39C2B1C98E33300FABCCA /* scourseadd6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scourseadd6.m; sourceTree = "<group>"; };
+		DAC39C2D1C98E69600FABCCA /* mcoursesubs3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcoursesubs3.h; sourceTree = "<group>"; };
+		DAC39C2E1C98E69600FABCCA /* mcoursesubs3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcoursesubs3.m; sourceTree = "<group>"; };
+		DAC39C301C98E6A300FABCCA /* mcoursesubs4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcoursesubs4.h; sourceTree = "<group>"; };
+		DAC39C311C98E6A300FABCCA /* mcoursesubs4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcoursesubs4.m; sourceTree = "<group>"; };
+		DAC39C331C98E6AD00FABCCA /* mcoursesubs5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcoursesubs5.h; sourceTree = "<group>"; };
+		DAC39C341C98E6AD00FABCCA /* mcoursesubs5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcoursesubs5.m; sourceTree = "<group>"; };
+		DAC39C361C98E6B600FABCCA /* mcoursesubs6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcoursesubs6.h; sourceTree = "<group>"; };
+		DAC39C371C98E6B600FABCCA /* mcoursesubs6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcoursesubs6.m; sourceTree = "<group>"; };
 		DACCC1231C8DC86B00754C2C /* mchallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallenge.h; sourceTree = "<group>"; };
 		DACCC1241C8DC86B00754C2C /* mchallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mchallenge.m; sourceTree = "<group>"; };
 		DACCC1261C8DE42700754C2C /* mchallengetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallengetime.h; sourceTree = "<group>"; };
@@ -596,6 +608,14 @@
 				DA2A09F71C89257B003A19F6 /* mcoursesubs1.m */,
 				DA2A09F91C892586003A19F6 /* mcoursesubs2.h */,
 				DA2A09FA1C892586003A19F6 /* mcoursesubs2.m */,
+				DAC39C2D1C98E69600FABCCA /* mcoursesubs3.h */,
+				DAC39C2E1C98E69600FABCCA /* mcoursesubs3.m */,
+				DAC39C301C98E6A300FABCCA /* mcoursesubs4.h */,
+				DAC39C311C98E6A300FABCCA /* mcoursesubs4.m */,
+				DAC39C331C98E6AD00FABCCA /* mcoursesubs5.h */,
+				DAC39C341C98E6AD00FABCCA /* mcoursesubs5.m */,
+				DAC39C361C98E6B600FABCCA /* mcoursesubs6.h */,
+				DAC39C371C98E6B600FABCCA /* mcoursesubs6.m */,
 			);
 			path = coursesubs;
 			sourceTree = "<group>";
@@ -1276,6 +1296,7 @@
 				DAD676341C88BD6D00AC41FD /* msettings.m in Sources */,
 				DACE0EA31C976B900093E0C9 /* mcontactitem.m in Sources */,
 				DA1F22BE1C91F59900BE2458 /* vplayfinishchapters.m in Sources */,
+				DAC39C351C98E6AD00FABCCA /* mcoursesubs5.m in Sources */,
 				DAC39C2C1C98E33300FABCCA /* scourseadd6.m in Sources */,
 				DA1F22CF1C9240F300BE2458 /* vstorecell.m in Sources */,
 				DAD6763E1C88BE9F00AC41FD /* valert.m in Sources */,
@@ -1299,6 +1320,7 @@
 				DAAFC9991C939ACB00045AE0 /* moptionsitemstore.m in Sources */,
 				DA2A09DB1C892232003A19F6 /* mcourse.m in Sources */,
 				DAAFC9931C939A2600045AE0 /* moptions.m in Sources */,
+				DAC39C321C98E6A300FABCCA /* mcoursesubs4.m in Sources */,
 				DACCC1411C8E1A4100754C2C /* mchallengeoperanddouble.m in Sources */,
 				DACE0EB81C9783860093E0C9 /* mcontactrateitem.m in Sources */,
 				DACE0EAF1C9773710093E0C9 /* vcontactrate.m in Sources */,
@@ -1321,6 +1343,7 @@
 				DACE0EA91C976BA60093E0C9 /* mcontactitemwrite.m in Sources */,
 				DA2A09F81C89257B003A19F6 /* mcoursesubs1.m in Sources */,
 				DA2A09F21C892563003A19F6 /* mcourseadd1.m in Sources */,
+				DAC39C381C98E6B600FABCCA /* mcoursesubs6.m in Sources */,
 				DA2A09C71C88E4A8003A19F6 /* cplayitem.m in Sources */,
 				DAAFC9961C939A5200045AE0 /* moptionsitem.m in Sources */,
 				DAC39C231C98E31000FABCCA /* scourseadd3.m in Sources */,
@@ -1339,6 +1362,7 @@
 				DA2B28111C98BA1B002083FA /* mstatsitem.m in Sources */,
 				DACE0EB51C9783430093E0C9 /* mcontactrate.m in Sources */,
 				DA1F22A91C91D3CD00BE2458 /* vplayfinishpoints.m in Sources */,
+				DAC39C2F1C98E69600FABCCA /* mcoursesubs3.m in Sources */,
 				DA1F22AF1C91D98900BE2458 /* mplayfinishcellpointscell.m in Sources */,
 				DAD309061C935B2E0028E934 /* voptions.m in Sources */,
 				DAC39C141C98DEA200FABCCA /* scourseadd2.m in Sources */,
