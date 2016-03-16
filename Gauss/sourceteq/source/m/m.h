@@ -25,6 +25,7 @@
 #import "mchallengeoperanddouble.h"
 #import "mchallengetime.h"
 #import "moperationadd.h"
+#import "moperationsubs.h"
 #import "mplayitem.h"
 #import "mplayitemcelloperand.h"
 #import "mplayitemcelloperation.h"
