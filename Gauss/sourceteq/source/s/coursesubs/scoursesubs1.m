@@ -7,7 +7,6 @@
     self = [super init];
     
     self.operations = @[
-                        [[moperationadd alloc] init],
                         [[moperationsubs alloc] init],
                         ];
     

@@ -11,7 +11,6 @@
     self.maxoperands = 3;
     self.timeout = 14;
     self.operations = @[
-                        [[moperationadd alloc] init],
                         [[moperationsubs alloc] init],
                         ];
     
