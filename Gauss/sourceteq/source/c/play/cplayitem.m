@@ -62,12 +62,6 @@
         
         score = self.challenge.chapter.index * extratime;
         [self.challenge.chapter success:score];
-        
-        NSLog(@"scored %@", @(score));
-    }
-    else
-    {
-        NSLog(@"expected: %@, received: %@", @(expected), @(received));
     }
     
     [self.play scorecomputed];

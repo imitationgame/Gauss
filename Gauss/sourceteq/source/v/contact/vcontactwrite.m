@@ -189,7 +189,6 @@
         }
         
         [string appendFormat:@"Message:%@", messagestring];
-        NSLog(@"%@", string);
         
 #warning "analytics"
         
