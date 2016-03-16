@@ -1,13 +1,6 @@
-//
-//  mcoursediv6.h
-//  Gauss
-//
-//  Created by zero on 3/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mcourseitemchapter.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mcoursediv6 : NSObject
+@interface mcoursediv6:mcourseitemchapter
 
 @end

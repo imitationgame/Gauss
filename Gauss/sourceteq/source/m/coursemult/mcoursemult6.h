@@ -1,13 +1,6 @@
-//
-//  mcoursemult6.h
-//  Gauss
-//
-//  Created by zero on 3/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "mcourseitemchapter.h"
 
-#import <Foundation/Foundation.h>
-
-@interface mcoursemult6 : NSObject
+@interface mcoursemult6:mcourseitemchapter
 
 @end
