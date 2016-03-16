@@ -7,7 +7,7 @@
     self = [super init];
     
     self.maxnumber = 20;
-    self.timeout = 7;
+    self.timeout = 8;
     self.operations = @[
                         [[moperationmult alloc] init]
                         ];

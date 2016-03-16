@@ -8,7 +8,7 @@
     
     self.minnumber = -5;
     self.maxnumber = 20;
-    self.timeout = 11;
+    self.timeout = 15;
     self.operations = @[
                         [[moperationdiv alloc] init]
                         ];
