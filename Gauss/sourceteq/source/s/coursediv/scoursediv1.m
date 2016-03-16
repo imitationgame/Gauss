@@ -1,13 +1,17 @@
-//
-//  scoursediv1.m
-//  Gauss
-//
-//  Created by zero on 3/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
-
 #import "scoursediv1.h"
 
 @implementation scoursediv1
+
+-(instancetype)init
+{
+    self = [super init];
+    
+    self.timeout = 6;
+    self.operations = @[
+                        [[moperationmult alloc] init]
+                        ];
+    
+    return self;
+}
 
 @end

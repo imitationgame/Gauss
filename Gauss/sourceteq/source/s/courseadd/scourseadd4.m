@@ -6,10 +6,10 @@
 {
     self = [super init];
     
-    self.minnumber = -20;
-    self.maxnumber = 20;
+    self.minnumber = 25;
+    self.maxnumber = 25;
     self.maxoperands = 3;
-    self.timeout = 14;
+    self.timeout = 10;
     self.operations = @[
                         [[moperationadd alloc] init]
                         ];

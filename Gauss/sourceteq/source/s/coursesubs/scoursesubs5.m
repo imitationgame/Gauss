@@ -8,8 +8,8 @@
     
     self.minnumber = -50;
     self.maxnumber = 50;
-    self.maxoperands = 4;
-    self.timeout = 18;
+    self.maxoperands = 3;
+    self.timeout = 12;
     self.operations = @[
                         [[moperationadd alloc] init],
                         [[moperationsubs alloc] init]
