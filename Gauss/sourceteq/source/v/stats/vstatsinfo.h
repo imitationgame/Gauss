@@ -7,6 +7,7 @@
 @property(strong, nonatomic)mstatsm *model;
 @property(weak, nonatomic)UICollectionView *collection;
 @property(weak, nonatomic)UILabel *labelempty;
+@property(weak, nonatomic)UILabel *labeltitle;
 @property(nonatomic)NSUInteger collectionheight;
 
 @end

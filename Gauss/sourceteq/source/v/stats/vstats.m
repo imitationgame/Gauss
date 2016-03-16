@@ -6,7 +6,7 @@ static NSUInteger const barmaxheight = 65;
 static NSUInteger const barminheight = 20;
 static NSUInteger const infominheight = 100;
 static NSUInteger const headerheight = 80;
-static NSUInteger const cellheight = 80;
+static NSUInteger const cellheight = 100;
 static NSUInteger const linespacing = 2;
 static NSUInteger const footerspacing = 50;
 

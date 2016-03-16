@@ -1,6 +1,6 @@
 #import "vstatsinfocell.h"
 
-static NSUInteger const marginvertical = 30;
+static NSUInteger const marginvertical = 60;
 
 @implementation vstatsinfocell
 
@@ -12,7 +12,7 @@ static NSUInteger const marginvertical = 30;
     [self setUserInteractionEnabled:NO];
  
     UIView *bar = [[UIView alloc] init];
-    [bar setBackgroundColor:colorsecond];
+    [bar setBackgroundColor:[colorsecond colorWithAlphaComponent:0.7]];
     [bar setUserInteractionEnabled:NO];
     [bar setClipsToBounds:YES];
     [bar setTranslatesAutoresizingMaskIntoConstraints:NO];

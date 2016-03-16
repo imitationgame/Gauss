@@ -144,7 +144,7 @@
 +(NSArray*)logs
 {
     NSArray *logs;
-    NSString *query = @"SELECT id, tried, passed FROM logger ORDER BY id ASC;";
+    NSString *query = @"SELECT id, tried, passed FROM logger ORDER BY id DESC;";
     logs = [db rows:query];
     
     return logs;
