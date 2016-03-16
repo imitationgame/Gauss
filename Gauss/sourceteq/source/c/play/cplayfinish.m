@@ -18,6 +18,13 @@
     return self;
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [[analytics singleton] trackscreen:ga_screen_play_finish];
+}
+
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleLightContent;

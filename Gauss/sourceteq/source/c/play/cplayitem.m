@@ -28,6 +28,13 @@
     [self.timer pause];
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [[analytics singleton] trackscreen:ga_screen_play];
+}
+
 -(void)loadView
 {
     self.view = [[vplayitem alloc] init:self];
