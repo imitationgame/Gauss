@@ -77,6 +77,7 @@
 		DAAFC99C1C939E0C00045AE0 /* moptionsitemrate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC99B1C939E0C00045AE0 /* moptionsitemrate.m */; };
 		DAAFC99F1C939EC200045AE0 /* moptionsitemcontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC99E1C939EC200045AE0 /* moptionsitemcontact.m */; };
 		DAAFC9A31C93A73F00045AE0 /* ccontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC9A21C93A73F00045AE0 /* ccontact.m */; };
+		DAC39C141C98DEA200FABCCA /* scourseadd2.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C131C98DEA200FABCCA /* scourseadd2.m */; };
 		DACCC1251C8DC86B00754C2C /* mchallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1241C8DC86B00754C2C /* mchallenge.m */; };
 		DACCC1281C8DE42700754C2C /* mchallengetime.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1271C8DE42700754C2C /* mchallengetime.m */; };
 		DACCC12E1C8DE5D500754C2C /* scourse.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC12D1C8DE5D500754C2C /* scourse.m */; };
@@ -287,6 +288,8 @@
 		DAAFC99E1C939EC200045AE0 /* moptionsitemcontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = moptionsitemcontact.m; sourceTree = "<group>"; };
 		DAAFC9A11C93A73F00045AE0 /* ccontact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ccontact.h; sourceTree = "<group>"; };
 		DAAFC9A21C93A73F00045AE0 /* ccontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ccontact.m; sourceTree = "<group>"; };
+		DAC39C121C98DEA200FABCCA /* scourseadd2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scourseadd2.h; sourceTree = "<group>"; };
+		DAC39C131C98DEA200FABCCA /* scourseadd2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scourseadd2.m; sourceTree = "<group>"; };
 		DACCC1231C8DC86B00754C2C /* mchallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallenge.h; sourceTree = "<group>"; };
 		DACCC1241C8DC86B00754C2C /* mchallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mchallenge.m; sourceTree = "<group>"; };
 		DACCC1261C8DE42700754C2C /* mchallengetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallengetime.h; sourceTree = "<group>"; };
@@ -744,6 +747,8 @@
 			children = (
 				DACCC12F1C8DED0600754C2C /* scourseadd1.h */,
 				DACCC1301C8DED0600754C2C /* scourseadd1.m */,
+				DAC39C121C98DEA200FABCCA /* scourseadd2.h */,
+				DAC39C131C98DEA200FABCCA /* scourseadd2.m */,
 			);
 			path = courseadd;
 			sourceTree = "<group>";
@@ -1291,6 +1296,7 @@
 				DA1F22A91C91D3CD00BE2458 /* vplayfinishpoints.m in Sources */,
 				DA1F22AF1C91D98900BE2458 /* mplayfinishcellpointscell.m in Sources */,
 				DAD309061C935B2E0028E934 /* voptions.m in Sources */,
+				DAC39C141C98DEA200FABCCA /* scourseadd2.m in Sources */,
 				DA1F22BB1C91F04900BE2458 /* mplayfinishcellchapters.m in Sources */,
 				DAEB85E31C926B44000FD40D /* mstorestatusdeferred.m in Sources */,
 				DA1F22B81C91ECF400BE2458 /* mplayfinishcellpointscellmaxcourse.m in Sources */,
