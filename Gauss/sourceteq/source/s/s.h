@@ -1,2 +1,6 @@
 #import "scourseadd1.h"
 #import "scourseadd2.h"
+#import "scourseadd3.h"
+#import "scourseadd4.h"
+#import "scourseadd5.h"
+#import "scourseadd6.h"

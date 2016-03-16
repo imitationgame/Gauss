@@ -5,7 +5,7 @@
 -(instancetype)init
 {
     self = [super init];
-    self.strategy = [[scourseadd2 alloc] init];
+    self.strategy = [[scourseadd5 alloc] init];
     
     return self;
 }
