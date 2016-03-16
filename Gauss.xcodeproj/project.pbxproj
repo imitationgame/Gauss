@@ -78,6 +78,10 @@
 		DAAFC99F1C939EC200045AE0 /* moptionsitemcontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC99E1C939EC200045AE0 /* moptionsitemcontact.m */; };
 		DAAFC9A31C93A73F00045AE0 /* ccontact.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFC9A21C93A73F00045AE0 /* ccontact.m */; };
 		DAC39C141C98DEA200FABCCA /* scourseadd2.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C131C98DEA200FABCCA /* scourseadd2.m */; };
+		DAC39C171C98DFD000FABCCA /* mcourseadd3.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C161C98DFD000FABCCA /* mcourseadd3.m */; };
+		DAC39C1A1C98DFE900FABCCA /* mcourseadd4.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C191C98DFE900FABCCA /* mcourseadd4.m */; };
+		DAC39C1D1C98DFF600FABCCA /* mcourseadd5.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C1C1C98DFF600FABCCA /* mcourseadd5.m */; };
+		DAC39C201C98E00000FABCCA /* mcourseadd6.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C1F1C98E00000FABCCA /* mcourseadd6.m */; };
 		DACCC1251C8DC86B00754C2C /* mchallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1241C8DC86B00754C2C /* mchallenge.m */; };
 		DACCC1281C8DE42700754C2C /* mchallengetime.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1271C8DE42700754C2C /* mchallengetime.m */; };
 		DACCC12E1C8DE5D500754C2C /* scourse.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC12D1C8DE5D500754C2C /* scourse.m */; };
@@ -290,6 +294,14 @@
 		DAAFC9A21C93A73F00045AE0 /* ccontact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ccontact.m; sourceTree = "<group>"; };
 		DAC39C121C98DEA200FABCCA /* scourseadd2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scourseadd2.h; sourceTree = "<group>"; };
 		DAC39C131C98DEA200FABCCA /* scourseadd2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scourseadd2.m; sourceTree = "<group>"; };
+		DAC39C151C98DFD000FABCCA /* mcourseadd3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcourseadd3.h; sourceTree = "<group>"; };
+		DAC39C161C98DFD000FABCCA /* mcourseadd3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcourseadd3.m; sourceTree = "<group>"; };
+		DAC39C181C98DFE900FABCCA /* mcourseadd4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcourseadd4.h; sourceTree = "<group>"; };
+		DAC39C191C98DFE900FABCCA /* mcourseadd4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcourseadd4.m; sourceTree = "<group>"; };
+		DAC39C1B1C98DFF600FABCCA /* mcourseadd5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcourseadd5.h; sourceTree = "<group>"; };
+		DAC39C1C1C98DFF600FABCCA /* mcourseadd5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcourseadd5.m; sourceTree = "<group>"; };
+		DAC39C1E1C98E00000FABCCA /* mcourseadd6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcourseadd6.h; sourceTree = "<group>"; };
+		DAC39C1F1C98E00000FABCCA /* mcourseadd6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcourseadd6.m; sourceTree = "<group>"; };
 		DACCC1231C8DC86B00754C2C /* mchallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallenge.h; sourceTree = "<group>"; };
 		DACCC1241C8DC86B00754C2C /* mchallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mchallenge.m; sourceTree = "<group>"; };
 		DACCC1261C8DE42700754C2C /* mchallengetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallengetime.h; sourceTree = "<group>"; };
@@ -553,6 +565,14 @@
 				DA2A09F11C892563003A19F6 /* mcourseadd1.m */,
 				DA2A09F31C89256F003A19F6 /* mcourseadd2.h */,
 				DA2A09F41C89256F003A19F6 /* mcourseadd2.m */,
+				DAC39C151C98DFD000FABCCA /* mcourseadd3.h */,
+				DAC39C161C98DFD000FABCCA /* mcourseadd3.m */,
+				DAC39C181C98DFE900FABCCA /* mcourseadd4.h */,
+				DAC39C191C98DFE900FABCCA /* mcourseadd4.m */,
+				DAC39C1B1C98DFF600FABCCA /* mcourseadd5.h */,
+				DAC39C1C1C98DFF600FABCCA /* mcourseadd5.m */,
+				DAC39C1E1C98E00000FABCCA /* mcourseadd6.h */,
+				DAC39C1F1C98E00000FABCCA /* mcourseadd6.m */,
 			);
 			path = courseadd;
 			sourceTree = "<group>";
@@ -1238,6 +1258,7 @@
 				DA1F22BE1C91F59900BE2458 /* vplayfinishchapters.m in Sources */,
 				DA1F22CF1C9240F300BE2458 /* vstorecell.m in Sources */,
 				DAD6763E1C88BE9F00AC41FD /* valert.m in Sources */,
+				DAC39C201C98E00000FABCCA /* mcourseadd6.m in Sources */,
 				DAD6762E1C88BD6D00AC41FD /* cmain.m in Sources */,
 				DAEB85D41C92628B000FD40D /* mstorepurchasesitem.m in Sources */,
 				DACCC13E1C8E1A3400754C2C /* mchallengeoperandint.m in Sources */,
@@ -1259,6 +1280,7 @@
 				DACCC1411C8E1A4100754C2C /* mchallengeoperanddouble.m in Sources */,
 				DACE0EB81C9783860093E0C9 /* mcontactrateitem.m in Sources */,
 				DACE0EAF1C9773710093E0C9 /* vcontactrate.m in Sources */,
+				DAC39C171C98DFD000FABCCA /* mcourseadd3.m in Sources */,
 				DAEB85CC1C925E93000FD40D /* mstore.m in Sources */,
 				DA2A09D41C891890003A19F6 /* vstatsbar.m in Sources */,
 				DA894E571C90B42300EDD0F4 /* vplayitemchallengeoperand.m in Sources */,
@@ -1299,8 +1321,10 @@
 				DAC39C141C98DEA200FABCCA /* scourseadd2.m in Sources */,
 				DA1F22BB1C91F04900BE2458 /* mplayfinishcellchapters.m in Sources */,
 				DAEB85E31C926B44000FD40D /* mstorestatusdeferred.m in Sources */,
+				DAC39C1D1C98DFF600FABCCA /* mcourseadd5.m in Sources */,
 				DA1F22B81C91ECF400BE2458 /* mplayfinishcellpointscellmaxcourse.m in Sources */,
 				DA46B9C61C8FB1E300AA8421 /* vclock.m in Sources */,
+				DAC39C1A1C98DFE900FABCCA /* mcourseadd4.m in Sources */,
 				DAEB85DA1C926B1A000FD40D /* mstorestatuspurchased.m in Sources */,
 				DA894E5B1C90B42300EDD0F4 /* vplayitemchallengetriviainput.m in Sources */,
 				DA894E561C90B42300EDD0F4 /* vplayitemchallengeequals.m in Sources */,

@@ -54,7 +54,7 @@ static NSUInteger const colheight = 300;
     [labeltitle setBackgroundColor:[UIColor clearColor]];
     [labeltitle setUserInteractionEnabled:NO];
     [labeltitle setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [labeltitle setFont:[UIFont fontWithName:fontregularname size:18]];
+    [labeltitle setFont:[UIFont fontWithName:fontregularname size:15]];
     [labeltitle setTextColor:colorthird];
     [labeltitle setNumberOfLines:0];
     [labeltitle setText:NSLocalizedString(@"stats_title", nil)];
