@@ -121,6 +121,14 @@
 
 +(void)updatechapter:(mcourseitemchapter*)chapter
 {
+    NSUInteger logchallenges = chapter.totalchallenges;
+    NSUInteger logpassed = chapter.passedchallenges;
+    
+    if(logpassed > logchallenges)
+    {
+        logpassed = logchallenges;
+    }
+    
     db *dbcon = [db begin];
     
     NSString *query = [NSString stringWithFormat:
@@ -135,7 +143,7 @@
              @"INSERT INTO logger "
              "(tried, passed) "
              "VALUES(%@, %@);",
-             @(chapter.totalchallenges), @(chapter.passedchallenges)];
+             @(logchallenges), @(logpassed)];
     
     [dbcon query:query];
     [dbcon commit];
