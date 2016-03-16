@@ -3,9 +3,6 @@
 static NSUInteger const marginvertical = 30;
 
 @implementation vstatsinfocell
-{
-    CGFloat marginvertical2;
-}
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
@@ -19,7 +16,6 @@ static NSUInteger const marginvertical = 30;
     [bar setUserInteractionEnabled:NO];
     [bar setClipsToBounds:YES];
     [bar setTranslatesAutoresizingMaskIntoConstraints:NO];
-    marginvertical2 = marginvertical * 2;
     
     [self addSubview:bar];
     
@@ -28,7 +24,7 @@ static NSUInteger const marginvertical = 30;
     
     self.layoutbarheight = [NSLayoutConstraint constraintWithItem:bar attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1 constant:0];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bar]-(marginvertical)-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bar]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraint:self.layoutbarheight];
     
     return self;
@@ -38,7 +34,7 @@ static NSUInteger const marginvertical = 30;
 
 -(void)config:(mstatsitem*)model
 {
-    CGFloat maxheight = self.bounds.size.height - marginvertical2;
+    CGFloat maxheight = self.bounds.size.height - marginvertical;
     CGFloat height = maxheight * model.percent;
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_MSEC * 100), dispatch_get_main_queue(),
@@ -46,7 +42,7 @@ static NSUInteger const marginvertical = 30;
                    {
                        self.layoutbarheight.constant = height;
                        
-                       [UIView animateWithDuration:1 animations:
+                       [UIView animateWithDuration:1.2 animations:
                         ^
                         {
                             [self layoutIfNeeded];
