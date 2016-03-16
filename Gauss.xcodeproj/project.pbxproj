@@ -82,6 +82,10 @@
 		DAC39C1A1C98DFE900FABCCA /* mcourseadd4.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C191C98DFE900FABCCA /* mcourseadd4.m */; };
 		DAC39C1D1C98DFF600FABCCA /* mcourseadd5.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C1C1C98DFF600FABCCA /* mcourseadd5.m */; };
 		DAC39C201C98E00000FABCCA /* mcourseadd6.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C1F1C98E00000FABCCA /* mcourseadd6.m */; };
+		DAC39C231C98E31000FABCCA /* scourseadd3.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C221C98E31000FABCCA /* scourseadd3.m */; };
+		DAC39C261C98E31900FABCCA /* scourseadd4.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C251C98E31900FABCCA /* scourseadd4.m */; };
+		DAC39C291C98E32300FABCCA /* scourseadd5.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C281C98E32300FABCCA /* scourseadd5.m */; };
+		DAC39C2C1C98E33300FABCCA /* scourseadd6.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC39C2B1C98E33300FABCCA /* scourseadd6.m */; };
 		DACCC1251C8DC86B00754C2C /* mchallenge.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1241C8DC86B00754C2C /* mchallenge.m */; };
 		DACCC1281C8DE42700754C2C /* mchallengetime.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC1271C8DE42700754C2C /* mchallengetime.m */; };
 		DACCC12E1C8DE5D500754C2C /* scourse.m in Sources */ = {isa = PBXBuildFile; fileRef = DACCC12D1C8DE5D500754C2C /* scourse.m */; };
@@ -302,6 +306,14 @@
 		DAC39C1C1C98DFF600FABCCA /* mcourseadd5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcourseadd5.m; sourceTree = "<group>"; };
 		DAC39C1E1C98E00000FABCCA /* mcourseadd6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mcourseadd6.h; sourceTree = "<group>"; };
 		DAC39C1F1C98E00000FABCCA /* mcourseadd6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mcourseadd6.m; sourceTree = "<group>"; };
+		DAC39C211C98E31000FABCCA /* scourseadd3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scourseadd3.h; sourceTree = "<group>"; };
+		DAC39C221C98E31000FABCCA /* scourseadd3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scourseadd3.m; sourceTree = "<group>"; };
+		DAC39C241C98E31900FABCCA /* scourseadd4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scourseadd4.h; sourceTree = "<group>"; };
+		DAC39C251C98E31900FABCCA /* scourseadd4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scourseadd4.m; sourceTree = "<group>"; };
+		DAC39C271C98E32300FABCCA /* scourseadd5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scourseadd5.h; sourceTree = "<group>"; };
+		DAC39C281C98E32300FABCCA /* scourseadd5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scourseadd5.m; sourceTree = "<group>"; };
+		DAC39C2A1C98E33300FABCCA /* scourseadd6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scourseadd6.h; sourceTree = "<group>"; };
+		DAC39C2B1C98E33300FABCCA /* scourseadd6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scourseadd6.m; sourceTree = "<group>"; };
 		DACCC1231C8DC86B00754C2C /* mchallenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallenge.h; sourceTree = "<group>"; };
 		DACCC1241C8DC86B00754C2C /* mchallenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mchallenge.m; sourceTree = "<group>"; };
 		DACCC1261C8DE42700754C2C /* mchallengetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mchallengetime.h; sourceTree = "<group>"; };
@@ -769,6 +781,14 @@
 				DACCC1301C8DED0600754C2C /* scourseadd1.m */,
 				DAC39C121C98DEA200FABCCA /* scourseadd2.h */,
 				DAC39C131C98DEA200FABCCA /* scourseadd2.m */,
+				DAC39C211C98E31000FABCCA /* scourseadd3.h */,
+				DAC39C221C98E31000FABCCA /* scourseadd3.m */,
+				DAC39C241C98E31900FABCCA /* scourseadd4.h */,
+				DAC39C251C98E31900FABCCA /* scourseadd4.m */,
+				DAC39C271C98E32300FABCCA /* scourseadd5.h */,
+				DAC39C281C98E32300FABCCA /* scourseadd5.m */,
+				DAC39C2A1C98E33300FABCCA /* scourseadd6.h */,
+				DAC39C2B1C98E33300FABCCA /* scourseadd6.m */,
 			);
 			path = courseadd;
 			sourceTree = "<group>";
@@ -1256,10 +1276,12 @@
 				DAD676341C88BD6D00AC41FD /* msettings.m in Sources */,
 				DACE0EA31C976B900093E0C9 /* mcontactitem.m in Sources */,
 				DA1F22BE1C91F59900BE2458 /* vplayfinishchapters.m in Sources */,
+				DAC39C2C1C98E33300FABCCA /* scourseadd6.m in Sources */,
 				DA1F22CF1C9240F300BE2458 /* vstorecell.m in Sources */,
 				DAD6763E1C88BE9F00AC41FD /* valert.m in Sources */,
 				DAC39C201C98E00000FABCCA /* mcourseadd6.m in Sources */,
 				DAD6762E1C88BD6D00AC41FD /* cmain.m in Sources */,
+				DAC39C291C98E32300FABCCA /* scourseadd5.m in Sources */,
 				DAEB85D41C92628B000FD40D /* mstorepurchasesitem.m in Sources */,
 				DACCC13E1C8E1A3400754C2C /* mchallengeoperandint.m in Sources */,
 				DACCC1311C8DED0600754C2C /* scourseadd1.m in Sources */,
@@ -1301,6 +1323,7 @@
 				DA2A09F21C892563003A19F6 /* mcourseadd1.m in Sources */,
 				DA2A09C71C88E4A8003A19F6 /* cplayitem.m in Sources */,
 				DAAFC9961C939A5200045AE0 /* moptionsitem.m in Sources */,
+				DAC39C231C98E31000FABCCA /* scourseadd3.m in Sources */,
 				DACCC1351C8DF12200754C2C /* moperation.m in Sources */,
 				DACCC1481C8E433400754C2C /* mplayitem.m in Sources */,
 				DACE0E961C9747EB0093E0C9 /* vcontactheader.m in Sources */,
@@ -1349,6 +1372,7 @@
 				DACE0EA61C976B9B0093E0C9 /* mcontactitememail.m in Sources */,
 				DA2A09D71C891B80003A19F6 /* vstatsinfo.m in Sources */,
 				DA1F22AC1C91D6CF00BE2458 /* vplayfinishpointscell.m in Sources */,
+				DAC39C261C98E31900FABCCA /* scourseadd4.m in Sources */,
 				DA2A09FE1C893F3F003A19F6 /* vstatsheader.m in Sources */,
 				DA894E801C90ECAA00EDD0F4 /* ctoast.m in Sources */,
 				DA894E541C90B42300EDD0F4 /* vplayitembar.m in Sources */,
