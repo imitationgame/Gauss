@@ -17,9 +17,12 @@
 
 -(CGFloat)operate:(CGFloat)valuea with:(CGFloat)valueb
 {
-    CGFloat result;
+    CGFloat result = 0;
     
-    result = valuea / valueb;
+    if(valueb != 0)
+    {
+        result = valuea / valueb;
+    }
     
     return result;
 }
