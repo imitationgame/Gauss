@@ -4,30 +4,23 @@
 <dict>
 	<key>screens</key>
 	<array>
-		<string>play</string>
-        <string>liked</string>
-        <string>detail</string>
-        <string>detail/contact</string>
-        <string>detail/location</string>
-        <string>config</string>
-        <string>config/location</string>
-        <string>config/likes</string>
-        <string>config/discarded</string>
+		<string>stats</string>
+        <string>options</string>
+        <string>options/contact</string>
+        <string>store</string>
+        <string>play</string>
+        <string>play/finish</string>
 	</array>
 	<key>events</key>
 	<array>
-		<string>play</string>
-        <string>location</string>
-        <string>clear</string>
-        <string>call</string>
-        <string>viewmore</string>
+		<string>purchase</string>
+        <string>rate</string>
+        <string>review</string>
+        <string>email</string>
+        <string>message</string>
 	</array>
 	<key>actions</key>
 	<array>
-		<string>like</string>
-        <string>no</string>
-        <string>map</string>
-        <string>list</string>
         <string>optin</string>
 	</array>
 </dict>

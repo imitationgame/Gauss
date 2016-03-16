@@ -5,4 +5,6 @@
 +(instancetype)singleton;
 -(void)save;
 
+@property(nonatomic)NSUInteger starsrated;
+
 @end

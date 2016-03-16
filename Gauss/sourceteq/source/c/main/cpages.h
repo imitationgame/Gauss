@@ -2,6 +2,8 @@
 
 @interface cpages:UIPageViewController
 
-@property(weak, nonatomic)UIImageView *titleview;
+-(void)sectionplay:(mcourseitemchapter*)chapter;
+-(void)sectionstats:(UIPageViewControllerNavigationDirection)direction animated:(BOOL)animated;
+-(void)sectionoptions;
 
 @end

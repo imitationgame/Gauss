@@ -1,33 +1,15 @@
-// color
-
-#define colormain               [UIColor colorWithRed:0.2666 green:0.3333 blue:0.4 alpha:1]
-#define colorsecond             [UIColor colorWithRed:0.5607 green:0.6 blue:0.6392 alpha:1]
-
-// font
-
-#define fontname                @"AppleSDGothicNeo-Light"
-#define fontboldname            @"AppleSDGothicNeo-Medium"
-
-// ids
-
-#define celid                   @"cel"
-#define footerid                @"footer"
-#define headerid                @"header"
-
-// sizes
-
-#define deltaline               300
-#define coorddelta              1000000.0
+#define colormain               [UIColor colorWithRed:0.84313 green:0.21568 blue:0.26274 alpha:1]
+#define colorsecond             [UIColor colorWithRed:0.8549 green:0.8549 blue:0.8549 alpha:1]
+#define colorthird              [UIColor colorWithWhite:0.55294 alpha:1]
 
 // notifications
 
-#define notflowschanged         @"flowschanged"
-#define notflowsreload          @"flowsreload"
-#define notimageloaded          @"imageloaded"
-#define notloclistitemfetched   @"loclistitemfetched"
-#define notitemsloaded          @"itemsloaded"
-#define notlikedloaded          @"likedloaded"
+#define notcoursesloaded        @"coursesloaded"
+#define notscoreready           @"scoreready"
+#define notpurchaseupd          @"purchaseupdate"
+#define notstatsready           @"statsready"
 
-// extra
+// font
 
-#define stringdrawing           NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin
+#define fontregularname         @"AppleSDGothicNeo-Light"
+#define fontboldname            @"AppleSDGothicNeo-Medium"
