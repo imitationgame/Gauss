@@ -30,7 +30,7 @@
 "play_finish_points_maxcourse"="Maximo en el curso";
 "play_finish_chapters_title"="Capitulos en el curso";
 
-"toast_continue"="Continar";
+"toast_continue"="Continuar";
 
 "elapsedtime_title"="Hace %@";
 "elapsedtime_days"="%@ dias";
