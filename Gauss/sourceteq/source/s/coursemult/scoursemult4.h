@@ -1,13 +1,6 @@
-//
-//  scoursemult4.h
-//  Gauss
-//
-//  Created by zero on 3/15/16.
-//  Copyright © 2016 Iturbide. All rights reserved.
-//
+#import "appdel.h"
+#import "scourse.h"
 
-#import <Foundation/Foundation.h>
-
-@interface scoursemult4 : NSObject
+@interface scoursemult4:scourse
 
 @end
