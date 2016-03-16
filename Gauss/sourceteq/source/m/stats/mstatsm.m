@@ -15,7 +15,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                    ^
                    {
-                       self.items = [NSMutableArray array];
+                       NSMutableArray *rawitems = [NSMutableArray array];
                        NSArray *rawlogs = [mdb logs];
                        NSUInteger count = rawlogs.count;
                        
@@ -27,10 +27,15 @@
                            CGFloat percent = passed / (CGFloat)tried;
                            
                            mstatsitem *item = [[mstatsitem alloc] init:percent];
-                           [self.items addObject:item];
+                           [rawitems addObject:item];
                        }
                        
-                       [[NSNotificationCenter defaultCenter] postNotificationName:notstatsready object:nil];
+                       dispatch_async(dispatch_get_main_queue(),
+                                      ^
+                                      {
+                                          self.items = rawitems;
+                                          [[NSNotificationCenter defaultCenter] postNotificationName:notstatsready object:nil];
+                                      });
                    });
 }
 

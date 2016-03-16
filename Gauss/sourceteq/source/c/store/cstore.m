@@ -32,13 +32,13 @@
 {
     [super viewDidAppear:animated];
     
-    if(!self.purchases)
+    if(![mstore singleton].purchases)
     {
-        self.purchases = [[mstorepurchases alloc] init];
-        [mstore singleton].purchases = self.purchases;
+        [mstore singleton].purchases = [[mstorepurchases alloc] init];
         [[SKPaymentQueue defaultQueue] addTransactionObserver:[mstore singleton]];
-        [[mstore singleton] checkavailabilities];
     }
+    
+    [[mstore singleton] checkavailabilities];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle

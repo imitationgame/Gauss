@@ -100,14 +100,14 @@ static NSUInteger const cellheight = 170;
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    NSUInteger count = self.controller.purchases.items.count;
+    NSUInteger count = [mstore singleton].purchases.items.count;
     
     return count;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    mstorepurchasesitem *item = self.controller.purchases.items[index.item];
+    mstorepurchasesitem *item = [mstore singleton].purchases.items[index.item];
     
     vstorecell *cell = [col dequeueReusableCellWithReuseIdentifier:storecell forIndexPath:index];
     [cell config:item];

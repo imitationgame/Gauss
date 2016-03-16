@@ -51,35 +51,28 @@ static NSUInteger const itempricesize = 14;
     NSDictionary *dictprice = @{NSFontAttributeName:[UIFont fontWithName:fontboldname size:itempricesize], NSForegroundColorAttributeName:[UIColor blackColor]};
     
     NSString *prodid = skproduct.productIdentifier;
-    NSInteger qty = self.items.count;
+    mstorepurchasesitem *initem = self.dictitems[prodid];
     
-    for(NSUInteger i = 0; i < qty; i++)
+    if(initem)
     {
-        mstorepurchasesitem *initem = self.items[i];
+        [self.priceformater setLocale:skproduct.priceLocale];
+        NSString *strprice = [self.priceformater stringFromNumber:skproduct.price];
+        initem.pricestring = strprice;
+        initem.skproduct = skproduct;
         
-        if([initem.itemid isEqualToString:prodid])
-        {
-            [self.priceformater setLocale:skproduct.priceLocale];
-            NSString *strprice = [self.priceformater stringFromNumber:skproduct.price];
-            initem.pricestring = strprice;
-            initem.skproduct = skproduct;
- 
-            NSString *stringtitle = initem.itemtitle;
-            NSString *stringdescr = [NSString stringWithFormat:@"\n%@", initem.itemdescr];
-            NSString *stringprice = [NSString stringWithFormat:@"\n%@", strprice];
-            
-            NSAttributedString *attrtitle = [[NSAttributedString alloc] initWithString:stringtitle attributes:dicttitle];
-            NSAttributedString *attrdescr = [[NSAttributedString alloc] initWithString:stringdescr attributes:dictdescr];
-            NSAttributedString *attrprice = [[NSAttributedString alloc] initWithString:stringprice attributes:dictprice];
-            
-            NSMutableAttributedString *mut = [[NSMutableAttributedString alloc] init];
-            [mut appendAttributedString:attrtitle];
-            [mut appendAttributedString:attrdescr];
-            [mut appendAttributedString:attrprice];
-            initem.attributestring = mut;
-            
-            break;
-        }
+        NSString *stringtitle = initem.itemtitle;
+        NSString *stringdescr = [NSString stringWithFormat:@"\n%@", initem.itemdescr];
+        NSString *stringprice = [NSString stringWithFormat:@"\n%@", strprice];
+        
+        NSAttributedString *attrtitle = [[NSAttributedString alloc] initWithString:stringtitle attributes:dicttitle];
+        NSAttributedString *attrdescr = [[NSAttributedString alloc] initWithString:stringdescr attributes:dictdescr];
+        NSAttributedString *attrprice = [[NSAttributedString alloc] initWithString:stringprice attributes:dictprice];
+        
+        NSMutableAttributedString *mut = [[NSMutableAttributedString alloc] init];
+        [mut appendAttributedString:attrtitle];
+        [mut appendAttributedString:attrdescr];
+        [mut appendAttributedString:attrprice];
+        initem.attributestring = mut;
     }
 }
 
@@ -92,7 +85,7 @@ static NSUInteger const itempricesize = 14;
         SKPaymentTransaction *tran = transactions[i];
         NSString *prodid = tran.payment.productIdentifier;
         mstorepurchasesitem *item = self.dictitems[prodid];
-        
+
         if(item)
         {
             switch(tran.transactionState)
