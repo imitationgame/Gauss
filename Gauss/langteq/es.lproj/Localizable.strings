@@ -1,19 +1,19 @@
-"course_open"="Chapter %@ in %@\nunlocked!";
+"course_open"="Capitulo %@ en %@\ndesbloqueado!";
 
-"course_add_name"="Addition";
-"course_subs_name"="Substraction";
-"course_mult_name"="Multiplication";
+"course_add_name"="Suma";
+"course_subs_name"="Resta";
+"course_mult_name"="Multiplicacion";
 "course_div_name"="Division";
 
-"stats_empty"="No stats to show yet";
-"stats_title"="Last games";
+"stats_empty"="No hay estadisticas aun";
+"stats_title"="Ultimos juegos";
 
-"chapter_cel_notactive"="Chapter not active";
-"chapter_cel_nevertaken"="Chapter never taken";
-"chapter_cel_buttonstore"="Store";
+"chapter_cel_notactive"="Capitulo no activado";
+"chapter_cel_nevertaken"="Capitulo nunca tomado";
+"chapter_cel_buttonstore"="Tienda";
 
-"play_back_alert_title"="Stop playing?";
-"play_back_alert_message"="All progress will be lost";
+"play_back_alert_title"="¿Para juego?";
+"play_back_alert_message"="Tu avance se perdera";
 "play_back_alert_accept"="Stop";
 "play_back_alert_cancel"="Keep playing";
 "play_loader_subtitle"="\nChapter %@";
