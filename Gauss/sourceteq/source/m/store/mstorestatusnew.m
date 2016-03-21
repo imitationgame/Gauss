@@ -15,9 +15,17 @@
 
 -(void)config:(vstorecell*)cell
 {
-    [cell.button setHidden:NO];
     [cell.statuslabel setHidden:YES];
     [cell.statusicon setHidden:YES];
+    
+    if(cell.item.skproduct)
+    {
+        [cell.button setHidden:NO];
+    }
+    else
+    {
+        [cell.button setHidden:YES];
+    }
 }
 
 @end

@@ -17,7 +17,15 @@
 {
     [cell.button setHidden:YES];
     [cell.statuslabel setHidden:YES];
-    [cell.statusicon setHidden:NO];
+    
+    if(cell.item.skproduct)
+    {
+        [cell.statusicon setHidden:NO];
+    }
+    else
+    {
+        [cell.statusicon setHidden:YES];
+    }
 }
 
 @end

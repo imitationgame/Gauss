@@ -94,14 +94,17 @@ static NSUInteger const labelmarginright = 20;
 -(void)config:(mstorepurchasesitem*)item
 {
     [self.spinner setHidden:YES];
-    
-    CGFloat width = self.bounds.size.width;
-    CGFloat labelwidth = width - marginleftright;
-    CGFloat labelheight = ceilf([item.attributestring boundingRectWithSize:CGSizeMake(labelwidth, 1000) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size.height);
-    
     self.item = item;
-    self.layoutlabelheight.constant = labelheight;
-    [self.label setAttributedText:item.attributestring];
+    
+    if(item.skproduct)
+    {
+        CGFloat width = self.bounds.size.width;
+        CGFloat labelwidth = width - marginleftright;
+        CGFloat labelheight = ceilf([item.attributestring boundingRectWithSize:CGSizeMake(labelwidth, 1000) options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin context:nil].size.height);
+        
+        self.layoutlabelheight.constant = labelheight;
+        [self.label setAttributedText:item.attributestring];
+    }
 }
 
 @end
