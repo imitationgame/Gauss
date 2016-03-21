@@ -52,6 +52,7 @@ static NSUInteger const cellheight = 170;
     [buttontryagain setTitle:NSLocalizedString(@"store_tryagain", nil) forState:UIControlStateNormal];
     [buttontryagain setTranslatesAutoresizingMaskIntoConstraints:NO];
     [buttontryagain setHidden:YES];
+    [buttontryagain addTarget:self action:@selector(actiontryagain:) forControlEvents:UIControlEventTouchUpInside];
     self.buttontryagain = buttontryagain;
     
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
@@ -92,7 +93,7 @@ static NSUInteger const cellheight = 170;
     dispatch_async(dispatch_get_main_queue(),
                    ^
                    {
-                       [self.spinner removeFromSuperview];
+                       [self.spinner stopAnimating];
                        [self.collection reloadData];
                        
                        if([mstore singleton].error)
@@ -107,6 +108,15 @@ static NSUInteger const cellheight = 170;
                            [self.collection setHidden:NO];
                        }
                    });
+}
+
+#pragma mark actions
+
+-(void)actiontryagain:(UIButton*)button
+{
+    [self.spinner startAnimating];
+    [self.buttontryagain setHidden:YES];
+    [[mstore singleton] checkavailabilities];
 }
 
 #pragma mark -

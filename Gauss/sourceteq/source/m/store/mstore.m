@@ -31,6 +31,7 @@
 
 -(void)checkavailabilities
 {
+    self.error = nil;
     SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:self.purchases.asset];
     request.delegate = self;
     [request start];
