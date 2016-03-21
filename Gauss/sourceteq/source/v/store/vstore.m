@@ -42,6 +42,18 @@ static NSUInteger const cellheight = 170;
     [collection setHidden:YES];
     self.collection = collection;
     
+    UIButton *buttontryagain = [[UIButton alloc] init];
+    [buttontryagain setBackgroundColor:colormain];
+    [buttontryagain setClipsToBounds:YES];
+    [buttontryagain.layer setCornerRadius:4];
+    [buttontryagain setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [buttontryagain setTitleColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
+    [buttontryagain.titleLabel setFont:[UIFont fontWithName:fontregularname size:16]];
+    [buttontryagain setTitle:NSLocalizedString(@"store_tryagain", nil) forState:UIControlStateNormal];
+    [buttontryagain setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [buttontryagain setHidden:YES];
+    self.buttontryagain = buttontryagain;
+    
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
     [spinner startAnimating];
@@ -51,10 +63,12 @@ static NSUInteger const cellheight = 170;
     [self addSubview:spinner];
     [self addSubview:bar];
     
-    NSDictionary *views = @{@"bar":bar, @"col":collection, @"spinner":spinner};
+    NSDictionary *views = @{@"bar":bar, @"col":collection, @"spinner":spinner, @"button":buttontryagain};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-50-[button]-50-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-170-[button(40)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[spinner]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bar]-0-[spinner]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar(65)]-0-[col]-0-|" options:0 metrics:metrics views:views]];
@@ -78,8 +92,19 @@ static NSUInteger const cellheight = 170;
                    ^
                    {
                        [self.spinner removeFromSuperview];
-                       [self.collection setHidden:NO];
                        [self.collection reloadData];
+                       
+                       if([mstore singleton].error)
+                       {
+                           [valert alert:[mstore singleton].error inview:self offsettop:65];
+                           [self.buttontryagain setHidden:NO];
+                           [self.collection setHidden:YES];
+                       }
+                       else
+                       {
+                           [self.buttontryagain setHidden:YES];
+                           [self.collection setHidden:NO];
+                       }
                    });
 }
 

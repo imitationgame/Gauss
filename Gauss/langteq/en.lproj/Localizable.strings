@@ -57,6 +57,7 @@
 "contact_write_messagesent"="Thank you! We have received your message";
 
 "store_title"="Store";
+"store_tryagain"="Try again";
 
 "error_connectionfailed"="Internet connection failed, try again";
 
