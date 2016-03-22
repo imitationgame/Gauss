@@ -2,10 +2,26 @@
 
 @implementation mstore
 
++(instancetype)singleton
+{
+    static mstore *single;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^(void) { single = [[self alloc] init]; });
+    
+    return single;
+}
+
 +(void)purchase:(SKProduct*)product
 {
-    SKPayment *payment = [SKMutablePayment paymentWithProduct:product];
-    [[SKPaymentQueue defaultQueue] addPayment:payment];
+    if(product)
+    {
+        SKPayment *payment = [SKMutablePayment paymentWithProduct:product];
+        
+        if(payment)
+        {
+            [[SKPaymentQueue defaultQueue] addPayment:payment];
+        }
+    }
 }
 
 -(instancetype)init
@@ -59,7 +75,7 @@
         [self.purchases loadskproduct:skproduct];
     }
     
-    [self sendnotification];
+    [self restorepurchases];
 }
 
 -(void)paymentQueue:(SKPaymentQueue*)queue updatedTransactions:(NSArray*)transactions

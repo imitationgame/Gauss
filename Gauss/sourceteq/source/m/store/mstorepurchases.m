@@ -88,41 +88,42 @@ static NSUInteger const itempricesize = 14;
 
         if(item)
         {
-            if(item.skproduct)
+            switch(tran.transactionState)
             {
-                switch(tran.transactionState)
-                {
-                    case SKPaymentTransactionStateDeferred:
-                        
-                        item.status = [[mstorestatusdeferred alloc] init];
-                        
-                        break;
-                        
-                    case SKPaymentTransactionStateFailed:
-                        
-                        item.status = [[mstorestatusnew alloc] init];
-                        
-                        break;
-                        
-                    case SKPaymentTransactionStatePurchased:
-                        
-                        item.status = [[mstorestatuspurchased alloc] init];
-                        [mcourse opencourse:NSClassFromString(item.courseclass)];
-                        
-                        break;
-                        
-                    case SKPaymentTransactionStatePurchasing:
-                        
-                        item.status = [[mstorestatuspurchasing alloc] init];
-                        
-                        break;
-                        
-                    case SKPaymentTransactionStateRestored:
-                        
-                        item.status = [[mstorestatuspurchased alloc] init];
-                        
-                        break;
-                }
+                case SKPaymentTransactionStateDeferred:
+                    
+                    item.status = [[mstorestatusdeferred alloc] init];
+                    
+                    break;
+                    
+                case SKPaymentTransactionStateFailed:
+                    
+                    item.status = [[mstorestatusnew alloc] init];
+                    [[SKPaymentQueue defaultQueue] finishTransaction:tran];
+                    
+                    break;
+                    
+                case SKPaymentTransactionStatePurchased:
+                    
+                    item.status = [[mstorestatuspurchased alloc] init];
+                    [mcourse opencourse:NSClassFromString(item.courseclass)];
+                    [[SKPaymentQueue defaultQueue] finishTransaction:tran];
+                    
+                    break;
+                    
+                case SKPaymentTransactionStatePurchasing:
+                    
+                    item.status = [[mstorestatuspurchasing alloc] init];
+                    
+                    break;
+                    
+                case SKPaymentTransactionStateRestored:
+                    
+                    item.status = [[mstorestatuspurchased alloc] init];
+                    [mcourse opencourse:NSClassFromString(item.courseclass)];
+                    [[SKPaymentQueue defaultQueue] finishTransaction:tran];
+                    
+                    break;
             }
         }
     }

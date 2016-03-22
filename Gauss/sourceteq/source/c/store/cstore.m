@@ -28,7 +28,7 @@
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     
     [[analytics singleton] trackscreen:ga_screen_store];
-    self.model = [[mstore alloc] init];
+    self.model = [mstore singleton];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -38,7 +38,6 @@
     if(!self.model.purchases)
     {
         self.model.purchases = [[mstorepurchases alloc] init];
-        [[SKPaymentQueue defaultQueue] addTransactionObserver:self.model];
     }
     
     [self.model checkavailabilities];
