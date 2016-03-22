@@ -11,6 +11,19 @@
     return single;
 }
 
++(void)purchase:(SKProduct*)product
+{
+    if(product)
+    {
+        SKPayment *payment = [SKMutablePayment paymentWithProduct:product];
+        
+        if(payment)
+        {
+            [[SKPaymentQueue defaultQueue] addPayment:payment];
+        }
+    }
+}
+
 -(instancetype)init
 {
     self = [super init];
@@ -31,15 +44,10 @@
 
 -(void)checkavailabilities
 {
+    self.error = nil;
     SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:self.purchases.asset];
     request.delegate = self;
     [request start];
-}
-
--(void)purchase:(SKProduct*)product
-{
-    SKPayment *payment = [SKMutablePayment paymentWithProduct:product];
-    [[SKPaymentQueue defaultQueue] addPayment:payment];
 }
 
 -(void)restorepurchases

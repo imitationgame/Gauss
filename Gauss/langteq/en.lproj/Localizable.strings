@@ -1,7 +1,7 @@
 "course_open"="Chapter %@ in %@\nunlocked!";
 
 "course_add_name"="Addition";
-"course_subs_name"="Substraction";
+"course_subs_name"="Subtraction";
 "course_mult_name"="Multiplication";
 "course_div_name"="Division";
 
@@ -57,10 +57,12 @@
 "contact_write_messagesent"="Thank you! We have received your message";
 
 "store_title"="Store";
+"store_tryagain"="Try again";
+"store_restore"="Restore";
 
 "error_connectionfailed"="Internet connection failed, try again";
 
-"purchase_substraction_title"="Substraction";
+"purchase_substraction_title"="Subtraction";
 "purchase_substraction_descr"="Unlock the first chapter of this course";
 "purchase_multiplication_title"="Multiplication";
 "purchase_multiplication_descr"="Unlock the first chapter of this course";

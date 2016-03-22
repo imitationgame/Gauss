@@ -42,19 +42,35 @@ static NSUInteger const cellheight = 170;
     [collection setHidden:YES];
     self.collection = collection;
     
+    UIButton *buttontryagain = [[UIButton alloc] init];
+    [buttontryagain setBackgroundColor:colormain];
+    [buttontryagain setClipsToBounds:YES];
+    [buttontryagain.layer setCornerRadius:4];
+    [buttontryagain setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [buttontryagain setTitleColor:[UIColor colorWithWhite:1 alpha:0.2] forState:UIControlStateHighlighted];
+    [buttontryagain.titleLabel setFont:[UIFont fontWithName:fontregularname size:16]];
+    [buttontryagain setTitle:NSLocalizedString(@"store_tryagain", nil) forState:UIControlStateNormal];
+    [buttontryagain setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [buttontryagain setHidden:YES];
+    [buttontryagain addTarget:self action:@selector(actiontryagain:) forControlEvents:UIControlEventTouchUpInside];
+    self.buttontryagain = buttontryagain;
+    
     UIActivityIndicatorView *spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     [spinner setTranslatesAutoresizingMaskIntoConstraints:NO];
     [spinner startAnimating];
     self.spinner = spinner;
     
     [self addSubview:collection];
+    [self addSubview:buttontryagain];
     [self addSubview:spinner];
     [self addSubview:bar];
     
-    NSDictionary *views = @{@"bar":bar, @"col":collection, @"spinner":spinner};
+    NSDictionary *views = @{@"bar":bar, @"col":collection, @"spinner":spinner, @"button":buttontryagain};
     NSDictionary *metrics = @{};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[bar]-0-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-50-[button]-50-|" options:0 metrics:metrics views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-170-[button(40)]" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[spinner]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[bar]-0-[spinner]-0-|" options:0 metrics:metrics views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-0-[bar(65)]-0-[col]-0-|" options:0 metrics:metrics views:views]];
@@ -77,10 +93,30 @@ static NSUInteger const cellheight = 170;
     dispatch_async(dispatch_get_main_queue(),
                    ^
                    {
-                       [self.spinner removeFromSuperview];
-                       [self.collection setHidden:NO];
+                       [self.spinner stopAnimating];
                        [self.collection reloadData];
+                       
+                       if(self.controller.model.error)
+                       {
+                           [valert alert:self.controller.model.error inview:self offsettop:65];
+                           [self.buttontryagain setHidden:NO];
+                           [self.collection setHidden:YES];
+                       }
+                       else
+                       {
+                           [self.buttontryagain setHidden:YES];
+                           [self.collection setHidden:NO];
+                       }
                    });
+}
+
+#pragma mark actions
+
+-(void)actiontryagain:(UIButton*)button
+{
+    [self.spinner startAnimating];
+    [self.buttontryagain setHidden:YES];
+    [self.controller.model checkavailabilities];
 }
 
 #pragma mark -
@@ -100,14 +136,14 @@ static NSUInteger const cellheight = 170;
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    NSUInteger count = [mstore singleton].purchases.items.count;
+    NSUInteger count = self.controller.model.purchases.items.count;
     
     return count;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    mstorepurchasesitem *item = [mstore singleton].purchases.items[index.item];
+    mstorepurchasesitem *item = self.controller.model.purchases.items[index.item];
     
     vstorecell *cell = [col dequeueReusableCellWithReuseIdentifier:storecell forIndexPath:index];
     [cell config:item];

@@ -18,7 +18,7 @@
 -(void)purchase
 {
     [[analytics singleton] trackevent:ga_event_purchase action:ga_action_optin label:self.itemid];
-    [[mstore singleton] purchase:self.skproduct];
+    [mstore purchase:self.skproduct];
 }
 
 @end
