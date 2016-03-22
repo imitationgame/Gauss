@@ -28,19 +28,20 @@
     [self setAutomaticallyAdjustsScrollViewInsets:NO];
     
     [[analytics singleton] trackscreen:ga_screen_store];
+    self.model = [[mstore alloc] init];
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    if(![mstore singleton].purchases)
+    if(!self.model.purchases)
     {
-        [mstore singleton].purchases = [[mstorepurchases alloc] init];
-        [[SKPaymentQueue defaultQueue] addTransactionObserver:[mstore singleton]];
+        self.model.purchases = [[mstorepurchases alloc] init];
+        [[SKPaymentQueue defaultQueue] addTransactionObserver:self.model];
     }
     
-    [[mstore singleton] checkavailabilities];
+    [self.model checkavailabilities];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle

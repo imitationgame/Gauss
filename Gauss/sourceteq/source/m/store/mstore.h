@@ -4,8 +4,8 @@
 
 @interface mstore:NSObject<SKProductsRequestDelegate, SKPaymentTransactionObserver, SKRequestDelegate>
 
++(void)purchase:(SKProduct*)product;
 -(void)checkavailabilities;
--(void)purchase:(SKProduct*)product;
 -(void)restorepurchases;
 
 @property(strong, nonatomic)mstorepurchases *purchases;

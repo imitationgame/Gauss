@@ -96,9 +96,9 @@ static NSUInteger const cellheight = 170;
                        [self.spinner stopAnimating];
                        [self.collection reloadData];
                        
-                       if([mstore singleton].error)
+                       if(self.controller.model.error)
                        {
-                           [valert alert:[mstore singleton].error inview:self offsettop:65];
+                           [valert alert:self.controller.model.error inview:self offsettop:65];
                            [self.buttontryagain setHidden:NO];
                            [self.collection setHidden:YES];
                        }
@@ -116,7 +116,7 @@ static NSUInteger const cellheight = 170;
 {
     [self.spinner startAnimating];
     [self.buttontryagain setHidden:YES];
-    [[mstore singleton] checkavailabilities];
+    [self.controller.model checkavailabilities];
 }
 
 #pragma mark -
@@ -136,14 +136,14 @@ static NSUInteger const cellheight = 170;
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    NSUInteger count = [mstore singleton].purchases.items.count;
+    NSUInteger count = self.controller.model.purchases.items.count;
     
     return count;
 }
 
 -(UICollectionViewCell*)collectionView:(UICollectionView*)col cellForItemAtIndexPath:(NSIndexPath*)index
 {
-    mstorepurchasesitem *item = [mstore singleton].purchases.items[index.item];
+    mstorepurchasesitem *item = self.controller.model.purchases.items[index.item];
     
     vstorecell *cell = [col dequeueReusableCellWithReuseIdentifier:storecell forIndexPath:index];
     [cell config:item];
