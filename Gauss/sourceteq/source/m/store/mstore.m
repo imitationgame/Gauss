@@ -2,15 +2,6 @@
 
 @implementation mstore
 
-+(instancetype)singleton
-{
-    static mstore *single;
-    static dispatch_once_t once;
-    dispatch_once(&once, ^(void) { single = [[self alloc] init]; });
-    
-    return single;
-}
-
 -(instancetype)init
 {
     self = [super init];
@@ -67,8 +58,6 @@
         SKProduct *skproduct = products[i];
         [self.purchases loadskproduct:skproduct];
     }
-    
-    [self restorepurchases];
 }
 
 -(void)paymentQueue:(SKPaymentQueue*)queue updatedTransactions:(NSArray*)transactions

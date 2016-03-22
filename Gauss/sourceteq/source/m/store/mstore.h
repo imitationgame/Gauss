@@ -4,7 +4,6 @@
 
 @interface mstore:NSObject<SKProductsRequestDelegate, SKPaymentTransactionObserver, SKRequestDelegate>
 
-+(instancetype)singleton;
 -(void)checkavailabilities;
 -(void)purchase:(SKProduct*)product;
 -(void)restorepurchases;
