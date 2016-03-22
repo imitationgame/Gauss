@@ -58,6 +58,8 @@
         SKProduct *skproduct = products[i];
         [self.purchases loadskproduct:skproduct];
     }
+    
+    [self sendnotification];
 }
 
 -(void)paymentQueue:(SKPaymentQueue*)queue updatedTransactions:(NSArray*)transactions
