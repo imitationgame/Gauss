@@ -59,6 +59,7 @@
 "store_title"="Store";
 "store_tryagain"="Try again";
 "store_restore"="Restore";
+"store_restoring"="Restoring purchases";
 
 "error_connectionfailed"="Internet connection failed, try again";
 
