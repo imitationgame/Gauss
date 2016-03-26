@@ -27,6 +27,7 @@
     [buttonrestore setTitle:NSLocalizedString(@"store_restore", nil) forState:UIControlStateNormal];
     [buttonrestore.titleLabel setFont:[UIFont fontWithName:fontboldname size:18]];
     [buttonrestore addTarget:self action:@selector(actionrestore:) forControlEvents:UIControlEventTouchUpInside];
+    self.buttonrestore = buttonrestore;
     
     UILabel *label = [[UILabel alloc] init];
     [label setUserInteractionEnabled:NO];
@@ -35,8 +36,6 @@
     [label setFont:[UIFont fontWithName:fontregularname size:18]];
     [label setTextColor:[UIColor whiteColor]];
     [label setText:NSLocalizedString(@"store_title", nil)];
-    
-    [buttonrestore setHidden:YES];
     
     [self addSubview:label];
     [self addSubview:buttonback];
@@ -69,7 +68,7 @@
     dispatch_async(dispatch_get_main_queue(),
                    ^
                    {
-                       [self setUserInteractionEnabled:YES];
+                       [self.buttonrestore setUserInteractionEnabled:YES];
                    });
 }
 
@@ -82,8 +81,10 @@
 
 -(void)actionrestore:(UIButton*)button
 {
-    [self setUserInteractionEnabled:NO];
+    [button setUserInteractionEnabled:NO];
     [self.controller.model restorepurchases];
+    
+    [valert alert:NSLocalizedString(@"store_restoring", nil) inview:self.superview offsettop:65];
 }
 
 @end
